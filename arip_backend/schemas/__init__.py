@@ -13,6 +13,7 @@ from .batch import (
 from .control import ControlPackage, InterlockConfig, PressureLoopConfig, ThermalLoopConfig
 from .decision import DecisionOutput, InterlockAction, SafetyStatus
 from .ekf import FusedStateEstimate
+from .explainer import OperatorAdvisory
 from .equipment import (
     ARCInstrument,
     AgitatedNutscheFilter,
@@ -56,6 +57,7 @@ __all__ = [
     "DecisionOutput",
     "FusedStateEstimate",
     "InterlockAction",
+    "OperatorAdvisory",
     "RefinedPrediction",
     "ResidualCorrection",
     "SafetyStatus",
