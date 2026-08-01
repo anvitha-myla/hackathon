@@ -15,11 +15,8 @@ from typing import Any
 from pydantic import ValidationError
 
 from arip_backend.schemas.equipment import (
-    CalorimetryTool,
-    DosingPump,
+    EquipmentModel,
     EquipmentType,
-    STBRReactor,
-    ThermalControlUnit,
     parse_equipment_package,
 )
 from arip_backend.schemas.reaction import ReactionPackage
@@ -30,8 +27,6 @@ logger = logging.getLogger(__name__)
 _BACKEND_ROOT = Path(__file__).resolve().parent
 DEFAULT_EQUIPMENT_ROOT = _BACKEND_ROOT / "equipment_packages"
 DEFAULT_REACTION_ROOT = _BACKEND_ROOT / "reaction_packages"
-
-EquipmentModel = STBRReactor | ThermalControlUnit | DosingPump | CalorimetryTool
 
 # In-memory registry populated by :func:`load_all_packages`.
 # Structure:

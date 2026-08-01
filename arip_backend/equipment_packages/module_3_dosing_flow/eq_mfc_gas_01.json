@@ -1,0 +1,25 @@
+{
+  "equipment_id": "EQ-MFC-GAS-01",
+  "name": "Gas Mass Flow Controller",
+  "equipment_type": "mfc",
+  "manufacturer": "Bronkhorst",
+  "model_number": "EL-FLOW-Select",
+  "material_of_construction": "SS316L",
+  "max_operating_pressure_barg": 64.0,
+  "thermal_limits": {
+    "t_min_c": 0.0,
+    "t_max_c": 70.0
+  },
+  "gas_species": "H2",
+  "min_flow_sccm": 2.0,
+  "max_flow_sccm": 2000.0,
+  "accuracy_pct_FS": 0.5,
+  "inlet_pressure_max_barg": 10.0,
+  "control_signal": "0-5V",
+  "tags": [
+    "module_3",
+    "mfc",
+    "gas"
+  ],
+  "description": "Thermal MFC calibrated for hydrogen gas feed."
+}

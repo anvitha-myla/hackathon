@@ -1,0 +1,30 @@
+{
+  "equipment_id": "EQ-WFE-01",
+  "name": "Wiped Film Evaporator",
+  "equipment_type": "wfe",
+  "manufacturer": "UIC",
+  "model_number": "KDL-5",
+  "material_of_construction": "SS316L",
+  "evaporating_area_m2": 0.05,
+  "max_operating_pressure_barg": 0.5,
+  "thermal_limits": {
+    "t_min_c": 20.0,
+    "t_max_c": 350.0
+  },
+  "heat_transfer": {
+    "U_W_m2K": 700.0,
+    "A_m2": 0.05,
+    "side": "evaporator"
+  },
+  "feed_rate_max_kg_h": 10.0,
+  "vacuum_min_mbar": 0.01,
+  "rotor_max_rpm": 500.0,
+  "condenser_area_m2": 0.08,
+  "tags": [
+    "module_5",
+    "purification",
+    "wfe",
+    "evaporator"
+  ],
+  "description": "Short-path wiped-film evaporator for high-vacuum purification."
+}

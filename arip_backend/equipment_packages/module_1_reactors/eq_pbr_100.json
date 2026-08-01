@@ -1,0 +1,31 @@
+{
+  "equipment_id": "EQ-PBR-100",
+  "name": "Packed Bed Reactor 100 L bed",
+  "equipment_type": "pbr",
+  "manufacturer": "Parr",
+  "model_number": "PBR-100",
+  "material_of_construction": "SS316L",
+  "bed_volume_L": 100.0,
+  "bed_diameter_m": 0.25,
+  "bed_length_m": 2.0,
+  "void_fraction": 0.4,
+  "max_catalyst_mass_kg": 80.0,
+  "max_operating_pressure_barg": 40.0,
+  "thermal_limits": {
+    "t_min_c": 20.0,
+    "t_max_c": 450.0
+  },
+  "heat_transfer": {
+    "U_W_m2K": 120.0,
+    "A_m2": 1.6,
+    "side": "jacket"
+  },
+  "tube_count": 1,
+  "flow_orientation": "downflow",
+  "tags": [
+    "module_1",
+    "reactor",
+    "pbr"
+  ],
+  "description": "Pilot packed-bed catalytic reactor with 100 L bed volume."
+}

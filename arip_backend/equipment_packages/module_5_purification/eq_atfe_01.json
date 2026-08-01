@@ -1,0 +1,30 @@
+{
+  "equipment_id": "EQ-ATFE-01",
+  "name": "Agitated Thin Film Evaporator",
+  "equipment_type": "atfe",
+  "manufacturer": "VTA",
+  "model_number": "ATFE-pilot",
+  "material_of_construction": "SS316L",
+  "evaporating_area_m2": 0.1,
+  "max_operating_pressure_barg": 1.0,
+  "thermal_limits": {
+    "t_min_c": 20.0,
+    "t_max_c": 300.0
+  },
+  "heat_transfer": {
+    "U_W_m2K": 800.0,
+    "A_m2": 0.1,
+    "side": "evaporator"
+  },
+  "feed_rate_max_kg_h": 25.0,
+  "vacuum_min_mbar": 0.1,
+  "rotor_max_rpm": 400.0,
+  "condenser_area_m2": 0.15,
+  "tags": [
+    "module_5",
+    "purification",
+    "atfe",
+    "evaporator"
+  ],
+  "description": "Pilot agitated thin-film evaporator for thermally sensitive products."
+}

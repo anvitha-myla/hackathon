@@ -1,0 +1,26 @@
+{
+  "equipment_id": "EQ-ARC-254",
+  "name": "NETZSCH ARC 254",
+  "equipment_type": "arc",
+  "manufacturer": "NETZSCH",
+  "model_number": "ARC-254",
+  "material_of_construction": "Hastelloy / titanium bombs",
+  "max_operating_pressure_barg": 200.0,
+  "thermal_limits": {
+    "t_min_c": 20.0,
+    "t_max_c": 500.0
+  },
+  "bomb_volume_mL": 10.0,
+  "heat_detection_threshold_C_min": 0.02,
+  "phi_factor_min": 1.05,
+  "max_operating_temperature_c": 500.0,
+  "supports_adiabatic": true,
+  "supports_isothermal": false,
+  "tags": [
+    "module_6",
+    "calorimetry",
+    "arc",
+    "thermal_hazard"
+  ],
+  "description": "Accelerating rate calorimeter for runaway reaction characterisation."
+}

@@ -1,6 +1,6 @@
 {
-  "equipment_id": "CAL-001",
-  "name": "Reaction Calorimeter RC1e",
+  "equipment_id": "EQ-METTLER-RC1E",
+  "name": "Mettler Toledo RC1e Reaction Calorimeter",
   "equipment_type": "calorimetry",
   "manufacturer": "Mettler Toledo",
   "model_number": "RC1e",
@@ -22,5 +22,10 @@
   },
   "supports_isothermal": true,
   "supports_adiabatic": false,
-  "description": "Isothermal reaction calorimeter for ΔH_rxn measurement."
+  "tags": [
+    "module_6",
+    "calorimetry",
+    "rc1e"
+  ],
+  "description": "Isothermal reaction calorimeter for \u0394H_rxn and heat-release profiling."
 }

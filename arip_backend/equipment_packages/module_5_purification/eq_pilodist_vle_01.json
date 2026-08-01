@@ -1,0 +1,33 @@
+{
+  "equipment_id": "EQ-PILODIST-VLE-01",
+  "name": "Pilodist VLE Apparatus",
+  "equipment_type": "vle",
+  "manufacturer": "Pilodist",
+  "model_number": "VLE-100",
+  "material_of_construction": "borosilicate glass",
+  "working_volume_L": 0.5,
+  "max_operating_pressure_barg": 1.0,
+  "thermal_limits": {
+    "t_min_c": 20.0,
+    "t_max_c": 200.0
+  },
+  "heat_transfer": {
+    "U_W_m2K": 250.0,
+    "A_m2": 0.02,
+    "side": "jacket"
+  },
+  "pressure_range_min_mbar": 10.0,
+  "pressure_range_max_barg": 1.0,
+  "composition_analysis": [
+    "GC",
+    "densitometry",
+    "refractometry"
+  ],
+  "tags": [
+    "module_5",
+    "purification",
+    "vle",
+    "pilodist"
+  ],
+  "description": "Vapor\u2013liquid equilibrium measurement cell for thermodynamic modelling."
+}
