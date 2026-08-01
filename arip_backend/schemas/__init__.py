@@ -49,7 +49,11 @@ from .reaction import (
     parse_reaction_document,
 )
 
+# Re-export EKF fused estimate model for API consumers
+from arip_backend.ekf_estimator import FusedStateEstimate  # noqa: E402
+
 __all__ = [
+    "FusedStateEstimate",
     "ARCInstrument",
     "AgitatedNutscheFilter",
     "BatchPackage",
