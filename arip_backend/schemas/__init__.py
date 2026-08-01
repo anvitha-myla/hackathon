@@ -11,6 +11,7 @@ from .batch import (
     parse_batch_package,
 )
 from .control import ControlPackage, InterlockConfig, PressureLoopConfig, ThermalLoopConfig
+from .ekf import FusedStateEstimate
 from .equipment import (
     ARCInstrument,
     AgitatedNutscheFilter,
@@ -48,9 +49,6 @@ from .reaction import (
     build_kinetic_memory,
     parse_reaction_document,
 )
-
-# Re-export EKF fused estimate model for API consumers
-from arip_backend.ekf_estimator import FusedStateEstimate  # noqa: E402
 
 __all__ = [
     "FusedStateEstimate",

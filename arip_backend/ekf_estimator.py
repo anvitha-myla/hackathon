@@ -20,8 +20,9 @@ from dataclasses import dataclass, field
 from typing import Any, Optional, Sequence
 
 import numpy as np
-from pydantic import BaseModel, ConfigDict, Field, field_validator
 from scipy.integrate import solve_ivp
+
+from arip_backend.schemas.ekf import FusedStateEstimate
 
 R_GAS = 8.314462618  # J/(mol·K)
 
@@ -43,43 +44,6 @@ MEASUREMENT_NAMES = ["T_reactor", "P_headspace", "MFC_H2_rate"]
 N_MEAS = 3
 
 
-class FusedStateEstimate(BaseModel):
-    """Posterior EKF estimate after a predict+update cycle."""
-
-    model_config = ConfigDict(arbitrary_types_allowed=True)
-
-    fused_state: dict[str, float] = Field(
-        ...,
-        description="Posterior state estimate x̂_k keyed by EKF_STATE_NAMES",
-    )
-    sensor_residuals: dict[str, float] = Field(
-        ...,
-        description="Innovation ν = z − h(x̂⁻) for each measurement channel",
-    )
-    covariance_matrix: list[list[float]] = Field(
-        ...,
-        description="Posterior error covariance P_k (6×6)",
-    )
-    confidence_score: float = Field(
-        ...,
-        ge=0.0,
-        le=100.0,
-        description="0–100% confidence from Tr(P_k)",
-    )
-    timestamp_s: float = Field(0.0, description="Filter time stamp [s]")
-    kalman_gain: Optional[list[list[float]]] = Field(
-        default=None,
-        description="Optional Kalman gain K_k (6×3) for diagnostics",
-    )
-
-    @field_validator("covariance_matrix")
-    @classmethod
-    def _check_cov_shape(cls, v: list[list[float]]) -> list[list[float]]:
-        if len(v) != N_STATE or any(len(row) != N_STATE for row in v):
-            raise ValueError(f"covariance_matrix must be {N_STATE}×{N_STATE}")
-        return v
-
-
 @dataclass
 class ProcessModelParams:
     """Reduced-order hydrogenation kinetics + thermal / pressure params."""
@@ -96,7 +60,7 @@ class ProcessModelParams:
     Cp: float = 2100.0
     V: float = 3.2
     c_cat: float = 3.90625  # kg/m³
-    UA: float = 22000.0  # W/K
+    UA: float = 55000.0  # W/K (jacket + coil effective)
     T_jacket: float = 80.0  # °C (held for estimator plant model)
     P_sp: float = 10.0
     tau_p: float = 25.0
