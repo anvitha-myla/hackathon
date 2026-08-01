@@ -49,9 +49,13 @@ from .reaction import (
     build_kinetic_memory,
     parse_reaction_document,
 )
+from .residual import RefinedPrediction, ResidualCorrection, ScientificFeatures
 
 __all__ = [
     "FusedStateEstimate",
+    "RefinedPrediction",
+    "ResidualCorrection",
+    "ScientificFeatures",
     "ARCInstrument",
     "AgitatedNutscheFilter",
     "BatchPackage",
