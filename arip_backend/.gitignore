@@ -9,3 +9,4 @@ venv/
 *.egg
 dist/
 build/
+simulation_output/

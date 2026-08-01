@@ -1,0 +1,40 @@
+{
+  "control_id": "CTRL-NX-H2-001",
+  "name": "Nitroxylene H2 — TCU & Pressure Control",
+  "description": "Isothermal jacket control with H2 pressure regulation and RHA/temperature interlocks.",
+  "thermal_loop": {
+    "loop_id": "TCU_TEMP",
+    "mode": "isothermal",
+    "setpoint_c": 85.0,
+    "jacket_setpoint_c": 85.0,
+    "pid": {
+      "Kp": 2.5,
+      "Ki": 0.05,
+      "Kd": 0.0,
+      "output_min": -30.0,
+      "output_max": 200.0
+    },
+    "ua_override_W_K": 45.0,
+    "max_jacket_temp_c": 200.0,
+    "min_jacket_temp_c": -30.0
+  },
+  "pressure_loop": {
+    "loop_id": "H2_PRESSURE",
+    "setpoint_bar": 10.0,
+    "pid": {
+      "Kp": 1.2,
+      "Ki": 0.02,
+      "Kd": 0.0,
+      "output_min": 2.0,
+      "output_max": 16.0
+    },
+    "max_pressure_bar": 16.0,
+    "min_pressure_bar": 2.0
+  },
+  "interlocks": {
+    "max_reactor_temp_c": 110.0,
+    "max_rha_mole_fraction": 0.05,
+    "max_pressure_bar": 16.0,
+    "trip_on_interlock": true
+  }
+}

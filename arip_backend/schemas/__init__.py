@@ -1,5 +1,7 @@
 """Pydantic schemas for ARIP Digital Twin equipment and reaction packages."""
 
+from .batch import BatchPackage, FeedPulse, GasFeedSpec, InitialCharge
+from .control import ControlPackage, InterlockConfig, PressureLoopConfig, ThermalLoopConfig
 from .equipment import (
     ARCInstrument,
     AgitatedNutscheFilter,
@@ -40,17 +42,24 @@ from .reaction import (
 __all__ = [
     "ARCInstrument",
     "AgitatedNutscheFilter",
+    "BatchPackage",
     "CSTRPFRSystem",
     "CalorimetryTool",
+    "ControlPackage",
     "DSCInstrument",
     "DistillationUnit",
     "DosingPump",
     "EquipmentMeta",
+    "FeedPulse",
+    "GasFeedSpec",
     "HPOXReactor",
+    "InitialCharge",
+    "InterlockConfig",
     "MassFlowController",
     "MasterReactionPackage",
     "OperatingWindow",
     "PackedBedReactor",
+    "PressureLoopConfig",
     "PressureNutscheFilter",
     "ReactionCalorimeter",
     "ReactionKinetics",
@@ -63,6 +72,7 @@ __all__ = [
     "SpeciesProperty",
     "Stoichiometry",
     "ThermalControlUnit",
+    "ThermalLoopConfig",
     "ThermodynamicPropertiesPackage",
     "ThinFilmEvaporatorATFE",
     "ThinFilmEvaporatorWFE",
