@@ -167,8 +167,9 @@ class EKFStateEstimator:
         dC_xyl = r3
         dC_h2 = R_transfer - 2.0 * r1 - 1.0 * r3
 
-        # r [kmol/m³·s] · ΔH [J/mol] · V [m³] · 1000 [mol/kmol] → W
-        Q_rxn = (r1 * (-p.dH_1) + r3 * (-p.dH_3)) * p.V * 1000.0
+        # Consistent with package convention: r [kmol/m³·s], ΔH [J/mol] ≈ kJ/kmol
+        # → r·(−ΔH) treated as W/m³ (kW/m³ × 1000 with ΔH in kJ/mol)
+        Q_rxn = (r1 * (-p.dH_1) + r3 * (-p.dH_3)) * p.V
         Q_rem = p.UA * (T - T_j)
         dT = (Q_rxn - Q_rem) / (p.V * p.rho * p.Cp)
 
