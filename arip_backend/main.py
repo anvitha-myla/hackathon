@@ -38,6 +38,7 @@ from arip_backend.schemas.telemetry import (
 from arip_backend.twin_runtime import TwinOrchestrator
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
+FRONTEND_DIST = Path(__file__).resolve().parent.parent / "arip_frontend" / "dist"
 
 # Shared process twin (single-batch demo runtime)
 _runtime: Optional[TwinOrchestrator] = None
@@ -76,16 +77,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+if FRONTEND_DIST.exists():
+    app.mount("/assets", StaticFiles(directory=str(FRONTEND_DIST / "assets")), name="frontend-assets")
 if STATIC_DIR.exists():
     app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 
 @app.get("/")
 async def dashboard_root():
-    index = STATIC_DIR / "dashboard.html"
+    """Prefer the desktop-class React workbench build; fall back to legacy HTML."""
+    index = FRONTEND_DIST / "index.html"
     if index.exists():
         return FileResponse(index)
-    return JSONResponse({"message": "ARIP twin API", "docs": "/docs"})
+    legacy = STATIC_DIR / "dashboard.html"
+    if legacy.exists():
+        return FileResponse(legacy)
+    return JSONResponse({"message": "ARIP twin API", "docs": "/docs", "frontend": "build arip_frontend"})
 
 
 # ---------------------------------------------------------------------------
