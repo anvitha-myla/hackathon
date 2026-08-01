@@ -27,8 +27,11 @@ from .equipment import (
 from .reaction import (
     KineticParameters,
     OperatingWindow,
+    ReactionMasterPackage,
     ReactionPackage,
     StoichiometricSpecies,
+    ThermodynamicPropertiesPackage,
+    parse_reaction_document,
 )
 
 __all__ = [
@@ -47,6 +50,7 @@ __all__ = [
     "PackedBedReactor",
     "PressureNutscheFilter",
     "ReactionCalorimeter",
+    "ReactionMasterPackage",
     "ReactionPackage",
     "ReactorSkid",
     "RotaryConeVacuumDryer",
@@ -54,8 +58,10 @@ __all__ = [
     "SCHEMA_BY_EQUIPMENT_ID",
     "StoichiometricSpecies",
     "ThermalControlUnit",
+    "ThermodynamicPropertiesPackage",
     "ThinFilmEvaporatorATFE",
     "ThinFilmEvaporatorWFE",
     "VLEApparatus",
     "parse_equipment_package",
+    "parse_reaction_document",
 ]

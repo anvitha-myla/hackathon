@@ -1,0 +1,98 @@
+{
+  "package_type": "reaction_master",
+  "reaction_id": "RXN-NITROXYLENE-H2-MASTER",
+  "name": "Catalytic Hydrogenation of Nitroxylene to Xylidine",
+  "version": "1.0.0",
+  "description": "Three-step catalytic hydrogenation of 2-nitro-m-xylene (nitroxylene) to 2,4-xylidine via nitroso and hydroxylamine intermediates. Overall: ArNO2 + 3 H2 \u2192 ArNH2 + 2 H2O.",
+  "chemistry_family": "nitroaromatic_hydrogenation",
+  "overall_stoichiometry": [
+    {
+      "species_id": "NX",
+      "name": "2-nitro-m-xylene",
+      "coefficient": -1.0,
+      "role": "reactant"
+    },
+    {
+      "species_id": "H2",
+      "name": "hydrogen",
+      "coefficient": -3.0,
+      "role": "reactant"
+    },
+    {
+      "species_id": "XYL",
+      "name": "2,4-xylidine",
+      "coefficient": 1.0,
+      "role": "product"
+    },
+    {
+      "species_id": "H2O",
+      "name": "water",
+      "coefficient": 2.0,
+      "role": "product"
+    }
+  ],
+  "overall_kinetics": {
+    "rate_law": "langmuir_hinshelwood",
+    "k0": 45000.0,
+    "Ea_J_mol": 52000.0,
+    "delta_H_rxn_J_mol": -485000.0,
+    "reaction_orders": {
+      "NX": 1.0,
+      "H2": 0.5
+    },
+    "reference_temperature_K": 353.15,
+    "notes": "Lumped overall rate for digital-twin screening; prefer step-resolved kinetics for calorimetry."
+  },
+  "operating_window": {
+    "t_min_c": 40.0,
+    "t_max_c": 120.0,
+    "p_min_barg": 2.0,
+    "p_max_barg": 30.0,
+    "concentration_min_mol_L": {
+      "NX": 0.05
+    },
+    "concentration_max_mol_L": {
+      "NX": 2.0
+    },
+    "max_addition_rate_mol_s": 0.005
+  },
+  "catalyst": {
+    "name": "Pd/C 5%",
+    "type": "supported noble metal",
+    "active_metal": "Pd",
+    "support": "activated carbon",
+    "metal_loading_wt_pct": 5.0,
+    "typical_loading_g_L": 2.5
+  },
+  "solvent": "MeOH",
+  "steps": [
+    {
+      "step_index": 1,
+      "reaction_id": "RXN-NX-STEP1-NITRO-TO-NITROSO",
+      "relative_path": "reaction_steps/step1_nitro_to_nitroso.json",
+      "name": "Nitroxylene \u2192 Nitrosxylene"
+    },
+    {
+      "step_index": 2,
+      "reaction_id": "RXN-NX-STEP2-NITROSO-TO-HYDROXYLAMINE",
+      "relative_path": "reaction_steps/step2_nitroso_to_hydroxylamine.json",
+      "name": "Nitrosxylene \u2192 Xylylhydroxylamine"
+    },
+    {
+      "step_index": 3,
+      "reaction_id": "RXN-NX-STEP3-HYDROXYLAMINE-TO-XYLIDINE",
+      "relative_path": "reaction_steps/step3_hydroxylamine_to_xylidine.json",
+      "name": "Xylylhydroxylamine \u2192 Xylidine"
+    }
+  ],
+  "thermodynamic_properties_path": "thermodynamic_properties.json",
+  "hazard_notes": [
+    "Highly exothermic multi-step hydrogenation; heat-release rate limited by H2 mass transfer.",
+    "Arylhydroxylamine intermediate can accumulate and pose thermal runaway risk if H2-starved.",
+    "Monitor q_rxn and adiabatic temperature rise via RC1e / ARC packages."
+  ],
+  "references": [
+    "digital-twin-demo-nitroxylene-hydrogenation",
+    "Haber's nitroaromatic reduction sequence (ArNO2 \u2192 ArNO \u2192 ArNHOH \u2192 ArNH2)"
+  ]
+}

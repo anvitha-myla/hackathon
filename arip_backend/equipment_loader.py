@@ -14,7 +14,12 @@ from typing import Any, Optional
 from pydantic import BaseModel, ValidationError
 
 from arip_backend.schemas.equipment import parse_equipment_package
-from arip_backend.schemas.reaction import ReactionPackage
+from arip_backend.schemas.reaction import (
+    ReactionMasterPackage,
+    ReactionPackage,
+    ThermodynamicPropertiesPackage,
+    parse_reaction_document,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -123,36 +128,142 @@ class EquipmentRegistry:
 REGISTRY: dict[str, Any] = {
     "equipment": {},
     "reactions": {},
+    "reaction_masters": {},
+    "reaction_steps": {},
+    "thermodynamics": {},
     "errors": [],
     "sources": {},
     "equipment_registry": None,
+    "reaction_registry": None,
 }
 
 
-def load_reaction_packages(root: Path | str | None = None) -> dict[str, ReactionPackage]:
-    """Scan reaction_packages/ and validate against ReactionPackage schema."""
-    root_path = Path(root) if root is not None else DEFAULT_REACTION_ROOT
-    loaded: dict[str, ReactionPackage] = {}
-    if not root_path.exists():
-        logger.warning("Reaction packages directory not found: %s", root_path)
-        return loaded
+class ReactionRegistry:
+    """In-memory registry for master, step, and thermodynamic reaction packages."""
 
-    for path in sorted(root_path.glob("**/*.json")):
-        try:
-            with open(path, "r", encoding="utf-8") as fh:
-                raw = json.load(fh)
-            package = ReactionPackage.model_validate(raw)
-            if package.reaction_id in loaded or package.reaction_id in REGISTRY["reactions"]:
-                raise ValueError(f"Duplicate reaction_id={package.reaction_id!r}")
-            loaded[package.reaction_id] = package
-            REGISTRY["reactions"][package.reaction_id] = package
-            REGISTRY["sources"][package.reaction_id] = str(path)
-            logger.info("Loaded reaction %s from %s", package.reaction_id, path)
-        except (OSError, json.JSONDecodeError, ValidationError, ValueError) as exc:
-            message = f"{type(exc).__name__}: {exc}"
-            REGISTRY["errors"].append({"path": str(path), "kind": "reaction", "error": message})
-            logger.error("Failed to load reaction package %s: %s", path, message)
-    return loaded
+    def __init__(
+        self,
+        packages_dir: str | Path | None = None,
+        *,
+        validate: bool = True,
+        auto_load: bool = True,
+    ) -> None:
+        self.packages_dir = Path(packages_dir) if packages_dir is not None else DEFAULT_REACTION_ROOT
+        self.registry: dict[str, dict[str, Any]] = {}
+        self.masters: dict[str, dict[str, Any]] = {}
+        self.steps: dict[str, dict[str, Any]] = {}
+        self.thermodynamics: dict[str, dict[str, Any]] = {}
+        self.errors: list[dict[str, str]] = []
+        self.validate = validate
+        if auto_load:
+            self.load_all_packages()
+
+    def load_all_packages(self) -> None:
+        """Recursively scan reaction_packages/ and load all JSON documents."""
+        self.registry.clear()
+        self.masters.clear()
+        self.steps.clear()
+        self.thermodynamics.clear()
+        self.errors.clear()
+
+        if not self.packages_dir.exists():
+            print(f"Directory '{self.packages_dir}' not found.")
+            logger.warning("Reaction packages directory not found: %s", self.packages_dir)
+            return
+
+        json_files = sorted(self.packages_dir.glob("**/*.json"))
+        print(f"Found {len(json_files)} reaction JSON files. Loading...")
+        logger.info("Found %d reaction JSON files under %s", len(json_files), self.packages_dir)
+
+        for file_path in json_files:
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if not isinstance(data, dict):
+                    raise ValueError(f"JSON root must be an object, got {type(data).__name__}")
+
+                model = parse_reaction_document(data, source_name=str(file_path)) if self.validate else None
+
+                if isinstance(model, ReactionMasterPackage) or data.get("package_type") == "reaction_master":
+                    key = data.get("reaction_id", file_path.stem)
+                    bucket = self.masters
+                    kind = "master"
+                elif isinstance(model, ThermodynamicPropertiesPackage) or data.get("package_type") == "thermodynamic_properties":
+                    key = data.get("package_id", file_path.stem)
+                    bucket = self.thermodynamics
+                    kind = "thermodynamics"
+                else:
+                    key = data.get("reaction_id", file_path.stem)
+                    bucket = self.steps
+                    kind = "step"
+
+                if key in self.registry:
+                    raise ValueError(f"Duplicate reaction document id={key!r}")
+
+                entry = {"path": str(file_path), "data": data, "model": model, "kind": kind}
+                self.registry[key] = entry
+                bucket[key] = entry
+            except (OSError, json.JSONDecodeError, ValidationError, ValueError) as exc:
+                message = f"{type(exc).__name__}: {exc}"
+                self.errors.append({"path": str(file_path), "error": message})
+                print(f"Failed to parse {file_path}: {exc}")
+                logger.error("Failed to parse %s: %s", file_path, message)
+
+        print(
+            f"Successfully loaded {len(self.registry)} reaction documents "
+            f"({len(self.masters)} masters, {len(self.steps)} steps, "
+            f"{len(self.thermodynamics)} thermo packages).\n"
+        )
+
+    def get_reaction(self, reaction_id: str) -> Optional[dict[str, Any]]:
+        """Retrieve reaction JSON by ID (master or step)."""
+        item = self.registry.get(reaction_id)
+        return item["data"] if item else None
+
+    def list_steps(self, parent_reaction_id: str) -> dict[str, dict[str, Any]]:
+        """Return elementary steps belonging to a master reaction."""
+        return {
+            rid: item["data"]
+            for rid, item in self.steps.items()
+            if item["data"].get("parent_reaction_id") == parent_reaction_id
+        }
+
+    def summary(self) -> dict[str, Any]:
+        return {
+            "document_count": len(self.registry),
+            "master_ids": sorted(self.masters),
+            "step_ids": sorted(self.steps),
+            "thermo_ids": sorted(self.thermodynamics),
+            "errors": list(self.errors),
+        }
+
+
+def load_reaction_packages(root: Path | str | None = None) -> dict[str, Any]:
+    """Scan reaction_packages/ into REGISTRY via ReactionRegistry."""
+    rxn_db = ReactionRegistry(root, validate=True, auto_load=True)
+    REGISTRY["reaction_registry"] = rxn_db
+
+    for key, item in rxn_db.masters.items():
+        REGISTRY["reaction_masters"][key] = item["model"] or item["data"]
+        REGISTRY["reactions"][key] = item["model"] or item["data"]
+        REGISTRY["sources"][key] = item["path"]
+        logger.info("Loaded reaction master %s from %s", key, item["path"])
+
+    for key, item in rxn_db.steps.items():
+        REGISTRY["reaction_steps"][key] = item["model"] or item["data"]
+        REGISTRY["reactions"][key] = item["model"] or item["data"]
+        REGISTRY["sources"][key] = item["path"]
+        logger.info("Loaded reaction step %s from %s", key, item["path"])
+
+    for key, item in rxn_db.thermodynamics.items():
+        REGISTRY["thermodynamics"][key] = item["model"] or item["data"]
+        REGISTRY["sources"][key] = item["path"]
+        logger.info("Loaded thermo package %s from %s", key, item["path"])
+
+    for err in rxn_db.errors:
+        REGISTRY["errors"].append({"path": err["path"], "kind": "reaction", "error": err["error"]})
+
+    return REGISTRY["reactions"]
 
 
 def load_all_packages(
@@ -164,6 +275,9 @@ def load_all_packages(
     """Load equipment + reaction packages into :data:`REGISTRY`."""
     REGISTRY["equipment"] = {}
     REGISTRY["reactions"] = {}
+    REGISTRY["reaction_masters"] = {}
+    REGISTRY["reaction_steps"] = {}
+    REGISTRY["thermodynamics"] = {}
     REGISTRY["errors"] = []
     REGISTRY["sources"] = {}
 
@@ -186,8 +300,8 @@ def get_equipment(equipment_id: str) -> dict[str, Any]:
     return REGISTRY["equipment"][equipment_id]
 
 
-def get_reaction(reaction_id: str) -> ReactionPackage:
-    """Fetch a validated reaction package from the registry."""
+def get_reaction(reaction_id: str) -> Any:
+    """Fetch a validated reaction master or step from the registry."""
     if reaction_id not in REGISTRY["reactions"]:
         raise KeyError(f"Reaction {reaction_id!r} not found in registry")
     return REGISTRY["reactions"][reaction_id]
@@ -196,15 +310,23 @@ def get_reaction(reaction_id: str) -> ReactionPackage:
 def registry_summary() -> dict[str, Any]:
     """Return a JSON-serialisable summary of the current module registry."""
     eq_db: EquipmentRegistry | None = REGISTRY.get("equipment_registry")
+    rxn_db: ReactionRegistry | None = REGISTRY.get("reaction_registry")
     modules = eq_db.summary()["modules"] if eq_db else []
     return {
         "equipment_count": len(REGISTRY["equipment"]),
         "reaction_count": len(REGISTRY["reactions"]),
+        "reaction_master_count": len(REGISTRY["reaction_masters"]),
+        "reaction_step_count": len(REGISTRY["reaction_steps"]),
+        "thermo_count": len(REGISTRY["thermodynamics"]),
         "equipment_ids": sorted(REGISTRY["equipment"]),
         "reaction_ids": sorted(REGISTRY["reactions"]),
+        "reaction_master_ids": sorted(REGISTRY["reaction_masters"]),
+        "reaction_step_ids": sorted(REGISTRY["reaction_steps"]),
+        "thermo_ids": sorted(REGISTRY["thermodynamics"]),
         "modules": modules,
         "errors": list(REGISTRY["errors"]),
         "sources": dict(REGISTRY["sources"]),
+        "reaction_registry_summary": rxn_db.summary() if rxn_db else {},
     }
 
 
@@ -229,7 +351,21 @@ if __name__ == "__main__":
     for eq_id, spec in calorimetry_suite.items():
         print(f" • [{eq_id}] {spec['name']}")
 
-    # Also load reactions into module REGISTRY and emit machine-readable summary
+    # Load reactions
+    rxn_db = ReactionRegistry(DEFAULT_REACTION_ROOT)
+    master = rxn_db.get_reaction("RXN-NITROXYLENE-H2-MASTER")
+    if master:
+        print("\n--- Nitroxylene Hydrogenation Master ---")
+        print(f"ID: {master['reaction_id']}")
+        print(f"Name: {master['name']}")
+        print(f"Steps: {len(master.get('steps', []))}")
+        print(f"Overall ΔH_rxn: {master['overall_kinetics']['delta_H_rxn_J_mol']} J/mol")
+
+    print("\n--- Reaction Steps ---")
+    for rid, spec in rxn_db.list_steps("RXN-NITROXYLENE-H2-MASTER").items():
+        print(f" • [{rid}] {spec['name']} | Ea={spec['kinetics']['Ea_J_mol']} J/mol")
+
+    # Full registry summary
     load_all_packages()
     print("\n--- Registry Summary ---")
     print(json.dumps(registry_summary(), indent=2))

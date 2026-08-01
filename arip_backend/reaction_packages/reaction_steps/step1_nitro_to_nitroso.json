@@ -1,0 +1,57 @@
+{
+  "reaction_id": "RXN-NX-STEP1-NITRO-TO-NITROSO",
+  "name": "Nitroxylene to Nitrosxylene",
+  "version": "1.0.0",
+  "description": "First hydrogenation step: Ar\u2013NO2 + H2 \u2192 Ar\u2013NO + H2O.",
+  "step_index": 1,
+  "parent_reaction_id": "RXN-NITROXYLENE-H2-MASTER",
+  "stoichiometry": [
+    {
+      "species_id": "NX",
+      "name": "2-nitro-m-xylene",
+      "coefficient": -1.0,
+      "role": "reactant"
+    },
+    {
+      "species_id": "H2",
+      "name": "hydrogen",
+      "coefficient": -1.0,
+      "role": "reactant"
+    },
+    {
+      "species_id": "NSX",
+      "name": "2-nitroso-m-xylene",
+      "coefficient": 1.0,
+      "role": "intermediate"
+    },
+    {
+      "species_id": "H2O",
+      "name": "water",
+      "coefficient": 1.0,
+      "role": "product"
+    }
+  ],
+  "kinetics": {
+    "rate_law": "arrhenius_power_law",
+    "k0": 180000.0,
+    "Ea_J_mol": 48000.0,
+    "delta_H_rxn_J_mol": -125000.0,
+    "reaction_orders": {
+      "NX": 1.0,
+      "H2": 0.5
+    },
+    "reference_temperature_K": 353.15,
+    "notes": "Often rate-influencing under H2-rich conditions on Pd/C."
+  },
+  "operating_window": {
+    "t_min_c": 40.0,
+    "t_max_c": 120.0,
+    "p_min_barg": 2.0,
+    "p_max_barg": 30.0
+  },
+  "solvent": "MeOH",
+  "catalyst": "Pd/C 5%",
+  "references": [
+    "Haber's sequence \u2014 nitro \u2192 nitroso"
+  ]
+}
