@@ -28,9 +28,68 @@ html, body, #root { height: 100%; margin: 0; overflow: hidden; background: var(-
 /* Desktop engineering chrome */
 .arip-app {
   display: grid;
-  grid-template-rows: 28px 34px 1fr 22px;
+  grid-template-rows: 28px auto 1fr 22px;
   height: 100%;
   background: var(--arip-bg);
+}
+
+.arip-body.view-analytics {
+  grid-template-columns: 1fr;
+}
+.arip-body.view-safety {
+  grid-template-columns: 260px 1fr;
+}
+.arip-body.view-process {
+  grid-template-columns: 260px 1fr 300px;
+}
+
+.view-switcher {
+  display: flex;
+  gap: 2px;
+  background: #1a1d21;
+  border: 1px solid var(--arip-border);
+  padding: 2px;
+  border-radius: 3px;
+}
+.view-btn {
+  border: 0;
+  background: transparent;
+  color: var(--arip-muted);
+  padding: 4px 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+}
+.view-btn.active {
+  background: #0d4f86;
+  color: #dcefff;
+}
+.view-btn:hover:not(.active) {
+  background: #343a42;
+  color: var(--arip-text);
+}
+
+.phys-pill {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--arip-border);
+  font-family: ui-monospace, monospace;
+}
+.phys-pill.pure {
+  color: #3ddc84;
+  border-color: #2a5a3a;
+  background: #152218;
+}
+.phys-pill.hybrid {
+  color: #c084fc;
+  border-color: #4a3a5a;
+  background: #22182a;
+}
+
+.arip-toolbtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .arip-menubar {

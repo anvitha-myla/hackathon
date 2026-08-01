@@ -64,14 +64,32 @@ class StreamControlMessage(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
 
-    action: Literal["start", "pause", "reset", "configure"] = "start"
-    dt_s: float = Field(0.1, gt=0.0, le=5.0, description="Stream physics step [s]")
+    action: Literal["start", "pause", "reset", "configure", "ack"] = "start"
+    dt_s: float = Field(0.1, gt=0.0, le=30.0, description="Base physics step at 1× [s]")
     hz: float = Field(10.0, gt=0.0, le=50.0, description="Telemetry publish rate")
+    speed_x: Literal[1, 5, 10] = Field(1, description="Live real-time speed multiplier")
     include_ai_advisory: bool = False
     agitator_rpm: Optional[float] = None
     T_jacket_c: Optional[float] = None
     P_sp_bar: Optional[float] = None
     T_sp_c: Optional[float] = None
+
+
+class TwinJumpRequest(BaseModel):
+    """Mode B — instant time scrub / jump."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    t_min: Optional[float] = Field(default=None, ge=0.0, description="Target batch time [min]")
+    t_s: Optional[float] = Field(default=None, ge=0.0, description="Target batch time [s]")
+    keyframe_every_s: float = Field(10.0, gt=0.0, le=120.0)
+
+    def target_seconds(self) -> float:
+        if self.t_s is not None:
+            return float(self.t_s)
+        if self.t_min is not None:
+            return float(self.t_min) * 60.0
+        raise ValueError("Provide t_min or t_s")
 
 
 class UnifiedTwinFrame(BaseModel):

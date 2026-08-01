@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useAppStore } from '@/store/appStore'
-import { postReset } from '@/api/twinClient'
 
 type Props = {
   onRun: () => void
@@ -56,6 +55,7 @@ export function MenuBar({ onRun, onPause, onReset }: Props) {
   const pushLog = useAppStore((s) => s.pushLog)
   const openExpert = useAppStore((s) => s.openExpert)
   const selected = useAppStore((s) => s.selectedEquipmentId)
+  const setPrimaryView = useAppStore((s) => s.setPrimaryView)
 
   useEffect(() => {
     const close = () => setOpen(null)
@@ -68,16 +68,16 @@ export function MenuBar({ onRun, onPause, onReset }: Props) {
     if (!action) return
     if (action === 'run') onRun()
     else if (action === 'pause') onPause()
-    else if (action === 'reset') {
-      void postReset()
-      onReset()
-    } else if (action === 'expert') openExpert(selected ?? 'EQ-STBR-5000L')
+    else if (action === 'reset') onReset()
+    else if (action === 'expert') openExpert(selected ?? 'EQ-STBR-5000L')
     else if (action === 'about')
       pushLog('info', 'ARIP Digital Twin — desktop-class PFD / Dockview / Input Expert workbench')
     else if (action === 'interlocks') {
+      setPrimaryView('safety')
       const d = useAppStore.getState().twin?.decision
       pushLog('warn', `Interlocks: ${(d?.active_interlocks || []).join(', ') || 'none'}`)
-    } else pushLog('info', `Menu action: ${action}`)
+    } else if (action === 'layout') setPrimaryView('process')
+    else pushLog('info', `Menu action: ${action}`)
   }
 
   return (

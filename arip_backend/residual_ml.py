@@ -28,6 +28,27 @@ from arip_backend.schemas.residual import (
 
 BACKEND_ROOT = Path(__file__).resolve().parent
 DEFAULT_MODELS_DIR = BACKEND_ROOT / "models"
+# Prefer repo data/; also honor /data when present (container mount)
+DEFAULT_DATA_DIRS = (
+    BACKEND_ROOT / "data",
+    Path("/data"),
+)
+
+LAB_DATASET_GLOBS = ("*.csv", "*.parquet", "*.jsonl", "lab_*.json", "*_history.json")
+
+
+def has_lab_historical_dataset(data_dirs: Sequence[Path] | None = None) -> bool:
+    """True only when a real lab history file exists (README does not count)."""
+    dirs = list(data_dirs) if data_dirs is not None else list(DEFAULT_DATA_DIRS)
+    for d in dirs:
+        root = Path(d)
+        if not root.is_dir():
+            continue
+        for pat in LAB_DATASET_GLOBS:
+            for p in root.glob(pat):
+                if p.is_file() and p.name.upper() != "README.MD" and p.stat().st_size > 0:
+                    return True
+    return False
 
 # Fixed feature / target column order for sklearn estimators
 FEATURE_NAMES = [
@@ -65,13 +86,21 @@ class ResidualCorrectionEngine:
         self,
         models_dir: str | Path | None = None,
         model_filename: str | None = None,
+        data_dirs: Sequence[str | Path] | None = None,
+        *,
+        require_lab_dataset: bool = True,
     ) -> None:
         self.models_dir = Path(models_dir) if models_dir else DEFAULT_MODELS_DIR
         self.models_dir.mkdir(parents=True, exist_ok=True)
+        self.data_dirs = (
+            [Path(p) for p in data_dirs] if data_dirs is not None else list(DEFAULT_DATA_DIRS)
+        )
+        self.require_lab_dataset = require_lab_dataset
         self.model: Any | None = None
         self.model_path: Path | None = None
         self.model_name: str | None = None
         self.is_pure_physics: bool = True
+        self.lab_dataset_present: bool = has_lab_historical_dataset(self.data_dirs)
         self._load_error: str | None = None
 
         self._try_load_model(model_filename)
@@ -99,7 +128,23 @@ class ResidualCorrectionEngine:
         )
         return found
 
+    def _force_pure_physics(self, reason: str) -> None:
+        self.model = None
+        self.model_path = None
+        self.model_name = None
+        self.is_pure_physics = True
+        self._load_error = reason
+
     def _try_load_model(self, model_filename: str | None = None) -> None:
+        self.lab_dataset_present = has_lab_historical_dataset(self.data_dirs)
+        # Strict policy: no lab history ⇒ ML residual fully disabled (δ=0)
+        if self.require_lab_dataset and not self.lab_dataset_present:
+            self._force_pure_physics(
+                "No historical lab dataset in /data (or arip_backend/data) — "
+                "strict pure-physics mode: δ_ML = 0.0"
+            )
+            return
+
         for path in self._candidate_paths(model_filename):
             if not path.exists() or not path.is_file():
                 continue
@@ -125,15 +170,10 @@ class ResidualCorrectionEngine:
             return
 
         # Cold-start fallback
-        self.model = None
-        self.model_path = None
-        self.model_name = None
-        self.is_pure_physics = True
-        if self._load_error is None:
-            self._load_error = (
-                f"No trained residual model found in {self.models_dir} "
-                "(cold-start: δ_ML = 0, is_pure_physics=True)"
-            )
+        self._force_pure_physics(
+            f"No trained residual model found in {self.models_dir} "
+            "(cold-start: δ_ML = 0, is_pure_physics=True)"
+        )
 
     @staticmethod
     def _unwrap_estimator(obj: Any) -> Any | None:
@@ -314,6 +354,8 @@ class ResidualCorrectionEngine:
                 "architecture": "y_real = y_physics + f_ML(x)",
                 "load_message": self._load_error,
                 "models_dir": str(self.models_dir),
+                "lab_dataset_present": self.lab_dataset_present,
+                "strict_pure_physics": self.is_pure_physics,
             },
         )
 

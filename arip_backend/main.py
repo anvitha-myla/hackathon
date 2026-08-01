@@ -32,10 +32,12 @@ from pathlib import Path
 from arip_backend import __version__
 from arip_backend.schemas.telemetry import (
     StreamControlMessage,
+    TwinJumpRequest,
     TwinStepRequest,
     UnifiedTwinFrame,
 )
 from arip_backend.twin_runtime import TwinOrchestrator
+from arip_backend.residual_ml import has_lab_historical_dataset
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 FRONTEND_DIST = Path(__file__).resolve().parent.parent / "arip_frontend" / "dist"
@@ -193,11 +195,75 @@ async def twin_advisory() -> dict[str, Any]:
     }
 
 
+@app.get("/api/v1/twin/physics-mode")
+async def physics_mode() -> dict[str, Any]:
+    """Report strict pure-physics gate status (δ_ML = 0 when no lab dataset)."""
+    rt = get_runtime()
+    # Zero-feature sample proves residual contribution is identically off
+    sample = rt.residual.predict_residual(
+        {
+            "conversion": 0.0,
+            "Q_rxn_W": 0.0,
+            "mass_transfer_ratio": 1.0,
+            "T_reactor_c": 80.0,
+            "agitator_rpm": 200.0,
+        }
+    )
+    return {
+        "is_pure_physics": bool(rt.residual.is_pure_physics),
+        "lab_dataset_present": bool(getattr(rt.residual, "lab_dataset_present", False)),
+        "has_lab_dataset_scan": has_lab_historical_dataset(),
+        "model_name": rt.residual.model_name,
+        "message": rt.residual._load_error,
+        "sample": {
+            "dT_K": float(sample.delta_T_exotherm_c),
+            "delta_T_exotherm_c": float(sample.delta_T_exotherm_c),
+            "delta_C_nitro": float(sample.delta_C_nitro),
+            "delta_yield": float(sample.delta_yield),
+        },
+    }
+
+
+@app.post("/api/v1/twin/jump")
+async def twin_jump(body: TwinJumpRequest) -> dict[str, Any]:
+    """Mode B: instant time scrub — evaluate exact state at t without live wait."""
+    rt = get_runtime()
+    try:
+        target = body.target_seconds()
+    except ValueError as exc:
+        return JSONResponse({"detail": str(exc)}, status_code=422)
+    frame, keyframes = await rt.jump_to(target, keyframe_every_s=body.keyframe_every_s)
+    return {
+        "ok": True,
+        "mode": "time_jump",
+        "t_s": frame.t_s,
+        "t_min": frame.t_min,
+        "frame": frame.model_dump(),
+        "keyframes": keyframes,
+        "n_keyframes": len(keyframes),
+        "is_pure_physics": frame.residual.get("is_pure_physics"),
+    }
+
+
 @app.post("/api/v1/twin/reset")
 async def reset_twin() -> dict[str, Any]:
+    """Reset batch to t=0 and leave the twin idle (does not auto-start Mode A)."""
     rt = get_runtime()
     rt.reset()
-    return {"ok": True, "batch_id": rt.batch_id, "t_s": rt.t_s, "stage": rt.stage_index}
+    # Snapshot IC frame for UI hydration without advancing the batch clock
+    frame = await rt.step(
+        TwinStepRequest(dt_s=1e-6, include_ai_advisory=False, sensor_noise=False)
+    )
+    rt.t_s = 0.0
+    return {
+        "ok": True,
+        "batch_id": rt.batch_id,
+        "t_s": rt.t_s,
+        "stage": rt.stage_index,
+        "is_pure_physics": rt.residual.is_pure_physics,
+        "status": {"running": False, "t_s": rt.t_s, "stage": rt.stage_index},
+        "frame": frame.model_dump(),
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -216,37 +282,38 @@ async def twin_step(body: TwinStepRequest) -> UnifiedTwinFrame:
 # ---------------------------------------------------------------------------
 @app.websocket("/ws/v1/twin/stream")
 async def twin_stream(websocket: WebSocket) -> None:
-    """Continuous batch telemetry stream for SCADA / LabPlot dashboards.
+    """Mode A: live real-time stream at 1× / 5× / 10× speed.
 
-    Client may send JSON control messages::
-
-        {"action": "start"|"pause"|"reset"|"configure", "hz": 10, "dt_s": 0.1}
-
-    Server publishes ``UnifiedTwinFrame`` JSON at the configured rate.
+    Does **not** auto-start. Client must send ``{"action":"start"}`` so UI
+    trigger events stay decoupled from the WebSocket lifecycle.
     """
     await websocket.accept()
     _stream_clients.add(websocket)
     rt = get_runtime()
 
     hz = 10.0
-    dt_s = 0.1
+    dt_s = 0.1  # sim seconds per tick at 1×
+    speed_x = 1
     include_ai = False
-    running = True
+    running = False  # idle until explicit start
     stop = asyncio.Event()
 
     await websocket.send_json(
         {
             "type": "hello",
             "schema_version": "arip.twin.v1",
-            "message": "ARIP twin stream connected",
+            "message": "ARIP twin stream connected (paused — send start)",
             "default_hz": hz,
+            "speed_x": speed_x,
+            "running": False,
             "batch_id": rt.batch_id,
+            "is_pure_physics": rt.residual.is_pure_physics,
             "units_endpoint": "/api/v1/twin/units",
         }
     )
 
     async def _recv_loop() -> None:
-        nonlocal hz, dt_s, include_ai, running
+        nonlocal hz, dt_s, include_ai, running, speed_x
         try:
             while not stop.is_set():
                 raw = await websocket.receive_text()
@@ -259,11 +326,13 @@ async def twin_stream(websocket: WebSocket) -> None:
 
                 if msg.action == "pause":
                     running = False
+                    await websocket.send_json(
+                        {"type": "pause_ack", "t_s": rt.t_s, "running": False}
+                    )
                 elif msg.action in ("start", "configure"):
-                    if msg.action == "start":
-                        running = True
                     hz = float(msg.hz)
                     dt_s = float(msg.dt_s)
+                    speed_x = int(msg.speed_x)
                     include_ai = bool(msg.include_ai_advisory)
                     if msg.agitator_rpm is not None:
                         rt.agitator_rpm = float(msg.agitator_rpm)
@@ -273,15 +342,40 @@ async def twin_stream(websocket: WebSocket) -> None:
                         rt.P_sp_bar = float(msg.P_sp_bar)
                     if msg.T_sp_c is not None:
                         rt.T_sp_c = float(msg.T_sp_c)
+                    if msg.action == "start":
+                        running = True
+                        await websocket.send_json(
+                            {
+                                "type": "start_ack",
+                                "t_s": rt.t_s,
+                                "running": True,
+                                "speed_x": speed_x,
+                                "dt_s": dt_s * speed_x,
+                            }
+                        )
+                    else:
+                        await websocket.send_json(
+                            {
+                                "type": "configure_ack",
+                                "speed_x": speed_x,
+                                "hz": hz,
+                                "dt_s": dt_s,
+                                "running": running,
+                            }
+                        )
                 elif msg.action == "reset":
+                    running = False
                     rt.reset()
-                    await websocket.send_json({"type": "reset_ack", "t_s": rt.t_s})
+                    await websocket.send_json(
+                        {"type": "reset_ack", "t_s": rt.t_s, "running": False}
+                    )
         except WebSocketDisconnect:
             stop.set()
         except Exception:  # noqa: BLE001
             stop.set()
 
     recv_task = asyncio.create_task(_recv_loop())
+    last_heartbeat = 0.0
 
     try:
         while not stop.is_set():
@@ -289,7 +383,7 @@ async def twin_stream(websocket: WebSocket) -> None:
             try:
                 if running:
                     req = TwinStepRequest(
-                        dt_s=dt_s,
+                        dt_s=float(dt_s) * float(speed_x),
                         include_ai_advisory=include_ai,
                         sensor_noise=True,
                         agitator_rpm=rt.agitator_rpm,
@@ -297,22 +391,34 @@ async def twin_stream(websocket: WebSocket) -> None:
                         P_sp_bar=rt.P_sp_bar,
                     )
                     frame = await rt.step(req)
-                    await websocket.send_json({"type": "frame", "payload": frame.model_dump()})
-                else:
                     await websocket.send_json(
                         {
-                            "type": "heartbeat",
-                            "t_s": rt.t_s,
-                            "running": False,
-                            "scada_badge": "IDLE",
+                            "type": "frame",
+                            "payload": frame.model_dump(),
+                            "speed_x": speed_x,
                         }
                     )
+                else:
+                    # Idle keepalive at ~1 Hz — do not flood at telemetry hz
+                    now = asyncio.get_event_loop().time()
+                    if now - last_heartbeat >= 1.0:
+                        last_heartbeat = now
+                        await websocket.send_json(
+                            {
+                                "type": "heartbeat",
+                                "t_s": rt.t_s,
+                                "running": False,
+                                "scada_badge": "IDLE",
+                                "speed_x": speed_x,
+                            }
+                        )
             except WebSocketDisconnect:
                 break
 
             elapsed = asyncio.get_event_loop().time() - loop_start
+            tick = (1.0 / hz) if running else 0.2
             try:
-                await asyncio.wait_for(stop.wait(), timeout=max(0.0, (1.0 / hz) - elapsed))
+                await asyncio.wait_for(stop.wait(), timeout=max(0.0, tick - elapsed))
                 break
             except asyncio.TimeoutError:
                 continue

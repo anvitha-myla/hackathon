@@ -119,7 +119,7 @@ function useAnimatedEdges(running: boolean): Edge[] {
 }
 
 export function PfdCanvas() {
-  const running = useAppStore((s) => s.running)
+  const running = useAppStore((s) => s.simPhase === 'running')
   const openExpert = useAppStore((s) => s.openExpert)
   const selectEquipment = useAppStore((s) => s.selectEquipment)
   const edges = useAnimatedEdges(running)

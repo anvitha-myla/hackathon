@@ -293,34 +293,60 @@ class TwinOrchestrator:
         # Industrial metric table
         U = self.params.UA / max(self.params.V ** (2.0 / 3.0), 1.0)  # rough display U
         metrics = [
-            _metric("BATCH.TIME", self.t_s, "s", "Batch Time", "status", 1),
-            _metric("RX.T", T_op, "°C", "Reactor Temperature", "thermal", 2),
-            _metric("RX.TJ", float(self.T_jacket_c), "°C", "Jacket Temperature", "thermal", 2),
-            _metric("RX.P", float(fused_map["P_headspace"]), "bar", "Headspace Pressure", "pressure", 2),
-            _metric("RX.C_NITRO", C_nitro_op, "mol/L", "Nitroxylene Conc.", "composition", 4),
-            _metric("RX.C_XYL", float(fused_map["C_xylidine"]), "mol/L", "Xylidine Conc.", "composition", 4),
-            _metric("PHY.C_NITRO", float(physics_state["C_nitro"]), "mol/L", "Physics C_nitro", "composition", 4),
-            _metric("PHY.C_XYL", float(physics_state["C_xylidine"]), "mol/L", "Physics C_xylidine", "composition", 4),
-            _metric("PHY.T", float(physics_state["T_reactor_c"]), "°C", "Physics T_reactor", "thermal", 2),
-            _metric("EKF.T", float(fused_map["T_reactor"]), "°C", "EKF T_reactor", "thermal", 2),
-            _metric("EKF.C_NITRO", float(fused_map["C_nitro"]), "mol/L", "EKF C_nitro", "composition", 4),
-            _metric("EKF.C_XYL", float(fused_map["C_xylidine"]), "mol/L", "EKF C_xylidine", "composition", 4),
-            _metric("RX.C_H2", float(fused_map["C_H2"]), "mol/L", "Dissolved H₂", "composition", 5),
-            _metric("RX.C_OH", float(fused_map["C_hydroxyl"]), "mol/L", "Hydroxylamine Conc.", "composition", 4),
-            _metric("RX.CONV", conversion * 100.0, "%", "Nitro Conversion", "quality", 2),
+            _metric("BATCH.TIME", self.t_s, "s", "Batch Elapsed Time", "status", 1),
+            _metric("RX.T", T_op, "°C", "Reactor Temperature (T_reactor)", "thermal", 2),
+            _metric("RX.TJ", float(self.T_jacket_c), "°C", "Jacket Temperature (T_jacket)", "thermal", 2),
+            _metric("RX.P", float(fused_map["P_headspace"]), "bar", "Headspace Pressure (P_headspace)", "pressure", 2),
+            _metric("RX.C_NITRO", C_nitro_op, "mol/L", "Nitroxylene Concentration", "composition", 4),
+            _metric("RX.C_XYL", float(fused_map["C_xylidine"]), "mol/L", "Xylidine Concentration", "composition", 4),
+            _metric("PHY.C_NITRO", float(physics_state["C_nitro"]), "mol/L", "Physics Nitroxylene Concentration", "composition", 4),
+            _metric("PHY.C_XYL", float(physics_state["C_xylidine"]), "mol/L", "Physics Xylidine Concentration", "composition", 4),
+            _metric("PHY.T", float(physics_state["T_reactor_c"]), "°C", "Physics Reactor Temperature", "thermal", 2),
+            _metric("EKF.T", float(fused_map["T_reactor"]), "°C", "EKF Fused Reactor Temperature", "thermal", 2),
+            _metric("EKF.C_NITRO", float(fused_map["C_nitro"]), "mol/L", "EKF Fused Nitroxylene Concentration", "composition", 4),
+            _metric("EKF.C_XYL", float(fused_map["C_xylidine"]), "mol/L", "EKF Fused Xylidine Concentration", "composition", 4),
+            _metric("RX.C_H2", float(fused_map["C_H2"]), "mol/L", "Dissolved Hydrogen Concentration", "composition", 5),
+            _metric(
+                "RX.C_OH",
+                float(fused_map["C_hydroxyl"]),
+                "mol/L",
+                "Intermediate Hydroxylamine Concentration",
+                "composition",
+                4,
+            ),
+            _metric("RX.CONV", conversion * 100.0, "%", "Nitroxylene Conversion", "quality", 2),
             _metric("RX.YIELD", yield_op * 100.0, "%", "Xylidine Yield", "quality", 2),
-            _metric("RX.Q_RXN", rates["Q_rxn_W"] / 1000.0, "kW", "Heat Release Rate", "energy", 2),
-            _metric("RX.R", rates["r_rxn"], "mol/L·s", "Reaction Rate", "kinetics", 6),
-            _metric("RX.MT_RATIO", rates["mass_transfer_ratio"], "—", "Mass Transfer Ratio 3r/kLaC*", "kinetics", 3),
-            _metric("RX.U", float(U), "W/m²K", "Effective HTC (display)", "thermal", 1),
-            _metric("AG.RPM", self.agitator_rpm, "RPM", "Agitator Speed", "mechanical", 0),
-            _metric("H2.MFC", float(z[2]), "kg/min", "H₂ MFC Rate (meas)", "mechanical", 3),
-            _metric("EKF.CONF", float(fused.confidence_score), "%", "EKF Confidence", "quality", 1),
+            _metric("RX.Q_RXN", rates["Q_rxn_W"] / 1000.0, "kW", "Instantaneous Heat Release Rate (Q_rxn)", "energy", 2),
+            _metric("RX.R", rates["r_rxn"], "mol/L·s", "Chemical Reaction Rate", "kinetics", 6),
+            _metric(
+                "RX.MT_RATIO",
+                rates["mass_transfer_ratio"],
+                "—",
+                "Mass Transfer Bottleneck Ratio 3r/(k_L a · C_H2*)",
+                "kinetics",
+                3,
+            ),
+            _metric("RX.U", float(U), "W/m²K", "Overall Heat Transfer Coefficient (U)", "thermal", 1),
+            _metric("AG.RPM", self.agitator_rpm, "RPM", "Agitator Rotational Speed", "mechanical", 0),
+            _metric("H2.MFC", float(z[2]), "kg/min", "Hydrogen Mass-Flow Controller Rate", "mechanical", 3),
+            _metric(
+                "JACKET.FLOW",
+                (
+                    12.0
+                    if decision.actuator_overrides.cooling_jacket_flow_pct == 100.0
+                    else float(2.0 + 0.2 * max(T_op - self.T_sp_c, 0.0))
+                ),
+                "kg/min",
+                "Jacket Inlet Flow Rate",
+                "mechanical",
+                2,
+            ),
+            _metric("EKF.CONF", float(fused.confidence_score), "%", "EKF State Estimation Confidence", "quality", 1),
             _metric(
                 "ML.dT",
                 float(refined.residual.delta_T_exotherm_c),
                 "°C",
-                "Residual ΔT_exotherm",
+                "ML Residual Temperature Correction (ΔT_exotherm)",
                 "quality",
                 3,
                 quality="SUBSTITUTE" if refined.is_pure_physics else "GOOD",
@@ -369,7 +395,9 @@ class TwinOrchestrator:
             residual={
                 "is_pure_physics": refined.is_pure_physics,
                 "model_name": refined.model_name,
+                "lab_dataset_present": bool(getattr(self.residual, "lab_dataset_present", False)),
                 "delta": refined.residual.model_dump(),
+                "mode": "pure_physics" if refined.is_pure_physics else "hybrid_ml",
             },
             ai_advisory=ai_payload,
             trend_point=trend_point,
@@ -377,3 +405,41 @@ class TwinOrchestrator:
             pipeline_ms=timings,
             overlays=overlays,
         )
+
+    async def jump_to(
+        self,
+        t_target_s: float,
+        *,
+        keyframe_every_s: float = 10.0,
+        max_dt_s: float = 2.0,
+    ) -> tuple[UnifiedTwinFrame, list[dict[str, float]]]:
+        """Mode B: instant time scrub — integrate from t=0 to ``t_target_s``.
+
+        Returns the final unified frame plus sparse keyframes for plot rebuild.
+        """
+        target = max(0.0, float(t_target_s))
+        self.reset()
+        keyframes: list[dict[str, float]] = []
+        next_kf = 0.0
+
+        # Capture IC keyframe
+        ic_frame = await self.step(
+            TwinStepRequest(dt_s=1e-6, include_ai_advisory=False, sensor_noise=False)
+        )
+        keyframes.append(dict(ic_frame.trend_point))
+
+        while self.t_s + 1e-9 < target:
+            dt = min(max_dt_s, target - self.t_s)
+            frame = await self.step(
+                TwinStepRequest(dt_s=dt, include_ai_advisory=False, sensor_noise=False)
+            )
+            if self.t_s >= next_kf - 1e-9:
+                keyframes.append(dict(frame.trend_point))
+                next_kf = self.t_s + keyframe_every_s
+
+        final = await self.step(
+            TwinStepRequest(dt_s=1e-6, include_ai_advisory=True, sensor_noise=False)
+        )
+        if not keyframes or abs(keyframes[-1].get("t_s", -1) - final.t_s) > 1e-6:
+            keyframes.append(dict(final.trend_point))
+        return final, keyframes
