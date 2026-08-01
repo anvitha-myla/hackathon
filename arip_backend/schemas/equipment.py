@@ -115,6 +115,59 @@ class ReactorSkid(EquipmentMeta):
     limits: PressureTempLimits
 
 
+class STBRDimensions(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    total_volume_m3: float = Field(..., gt=0)
+    working_volume_m3: float = Field(..., gt=0)
+    inner_diameter_m: Optional[float] = Field(default=None, gt=0)
+    straight_side_height_m: Optional[float] = Field(default=None, gt=0)
+
+    @model_validator(mode="after")
+    def _check_volumes(self) -> STBRDimensions:
+        if self.working_volume_m3 > self.total_volume_m3:
+            raise ValueError("working_volume_m3 must be <= total_volume_m3")
+        return self
+
+
+class STBRThermalParameters(BaseModel):
+    """Jacket heat-transfer characterisation (U and A)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    overall_heat_transfer_coeff_U_W_m2K: float = Field(..., gt=0, description="U [W/(m²·K)]")
+    jacket_heat_transfer_area_m2: float = Field(..., gt=0, description="Jacket area A [m²]")
+    jacket_volume_m3: Optional[float] = Field(default=None, gt=0)
+
+
+class STBRAgitation(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    impeller_type: str
+    max_agitator_speed_rpm: float = Field(..., gt=0)
+    power_number: Optional[float] = Field(default=None, ge=0)
+    baffled: bool = True
+
+
+class STBRLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    max_operating_pressure_bar: float = Field(..., ge=0)
+    max_operating_temp_c: float
+    min_operating_temp_c: float
+
+
+class STBRReactor(EquipmentMeta):
+    """EQ-STBR-5000L — stirred-tank batch reactor with jacket U·A."""
+
+    reactor_type: str
+    construction_material: str
+    dimensions: STBRDimensions
+    thermal_parameters: STBRThermalParameters
+    agitation: STBRAgitation
+    limits: STBRLimits
+
+
 class HPOXDimensions(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -473,6 +526,7 @@ SCHEMA_BY_EQUIPMENT_ID: dict[str, type[BaseModel]] = {
     "EQ-PBR-100": PackedBedReactor,
     "EQ-CSTR-PFR-01": CSTRPFRSystem,
     "EQ-SKID-MINI-01": ReactorSkid,
+    "EQ-STBR-5000L": STBRReactor,
     "EQ-HPOX-050": HPOXReactor,
     "EQ-TCU-SF-01": ThermalControlUnit,
     "EQ-SCADA-DCS-01": SCADADCSSystem,
@@ -491,7 +545,6 @@ SCHEMA_BY_EQUIPMENT_ID: dict[str, type[BaseModel]] = {
 }
 
 # Backward-compatible aliases used by package exports
-STBRReactor = ReactorSkid  # legacy alias; mini-skid covers batch stirred duties
 CalorimetryTool = ReactionCalorimeter
 EquipmentType = str  # packages now identify via equipment_id + module
 

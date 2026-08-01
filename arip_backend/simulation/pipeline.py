@@ -28,7 +28,7 @@ from arip_backend.equipment_loader import (
     EquipmentRegistry,
     ReactionRegistry,
 )
-from arip_backend.schemas.batch import BatchPackage
+from arip_backend.schemas.batch import LegacyBatchPackage, parse_batch_package
 from arip_backend.schemas.control import ControlPackage
 from arip_backend.simulation.ode_engine import ODEEngine, ODEEngineConfig
 
@@ -40,9 +40,14 @@ DEFAULT_CONTROL_ROOT = _BACKEND_ROOT / "control_packages"
 DEFAULT_OUTPUT_ROOT = _BACKEND_ROOT / "simulation_output"
 
 
-def load_batch_package(path: Path | str) -> BatchPackage:
+def load_batch_package(path: Path | str) -> LegacyBatchPackage:
     with open(path, "r", encoding="utf-8") as fh:
-        return BatchPackage.model_validate(json.load(fh))
+        pkg = parse_batch_package(json.load(fh))
+    if not isinstance(pkg, LegacyBatchPackage):
+        raise TypeError(
+            f"{path} is a recipe BatchPackage; use arip_backend.simulation_engine for batch_run_001.json"
+        )
+    return pkg
 
 
 def load_control_package(path: Path | str) -> ControlPackage:

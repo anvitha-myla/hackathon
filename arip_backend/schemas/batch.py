@@ -1,30 +1,68 @@
-"""Batch package schemas — initial conditions and feed recipes."""
+"""Batch package schemas — recipe setpoints and initial run state."""
 
 from __future__ import annotations
 
-from typing import Optional
+from typing import Optional, Union
 
 from pydantic import BaseModel, ConfigDict, Field, PositiveFloat, model_validator
 
 
-class InitialCharge(BaseModel):
-    """Initial liquid charge composition and volume."""
+class InitialConditions(BaseModel):
+    """Initial liquid charge for a specific batch run."""
 
+    model_config = ConfigDict(extra="forbid")
+
+    initial_liquid_volume_m3: PositiveFloat
+    initial_temperature_c: float
+    initial_pressure_bar: PositiveFloat
+    initial_concentrations_kmol_m3: dict[str, float]
+    catalyst_loading_kg: PositiveFloat
+
+
+class RecipeTargets(BaseModel):
+    """Operating setpoints for the batch recipe."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    target_operating_temp_c: float
+    target_operating_pressure_bar: PositiveFloat
+    agitator_speed_rpm: PositiveFloat
+    coolant_inlet_temp_c: float
+
+
+class BatchPackage(BaseModel):
+    """Batch package: recipe + IC linking reaction and equipment packages."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    batch_id: str
+    reaction_package_id: str
+    equipment_package_id: str
+    initial_conditions: InitialConditions
+    recipe_targets: RecipeTargets
+    notes: Optional[str] = None
+
+    @property
+    def catalyst_loading_kg_m3(self) -> float:
+        return self.initial_conditions.catalyst_loading_kg / self.initial_conditions.initial_liquid_volume_m3
+
+
+# ---------------------------------------------------------------------------
+# Legacy batch format (pipeline demo) kept for backward compatibility
+# ---------------------------------------------------------------------------
+
+
+class InitialCharge(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     volume_m3: PositiveFloat
     temperature_c: float
     pressure_bar: PositiveFloat
-    concentrations_kmol_m3: dict[str, float] = Field(
-        ...,
-        description="Initial liquid concentrations [kmol/m³].",
-    )
+    concentrations_kmol_m3: dict[str, float]
     catalyst_loading_kg_m3: PositiveFloat
 
 
 class FeedPulse(BaseModel):
-    """Semi-batch feed pulse / continuous feed segment."""
-
     model_config = ConfigDict(extra="forbid")
 
     start_time_s: float = Field(..., ge=0)
@@ -41,8 +79,6 @@ class FeedPulse(BaseModel):
 
 
 class GasFeedSpec(BaseModel):
-    """Gas-phase H2 / inert feed pressure target profile."""
-
     model_config = ConfigDict(extra="forbid")
 
     species: str = "H2"
@@ -50,14 +86,14 @@ class GasFeedSpec(BaseModel):
     max_flow_slpm: Optional[PositiveFloat] = None
 
 
-class BatchPackage(BaseModel):
-    """Batch package: IC + feed recipe linking equipment and reaction packages."""
+class LegacyBatchPackage(BaseModel):
+    """Earlier pipeline batch format (batch_nx_h2_001.json)."""
 
     model_config = ConfigDict(extra="forbid")
 
     batch_id: str
     name: str
-    reaction_id: str = Field(..., description="Master reaction package ID.")
+    reaction_id: str
     reactor_equipment_id: str
     tcu_equipment_id: str
     mfc_equipment_id: Optional[str] = None
@@ -65,7 +101,13 @@ class BatchPackage(BaseModel):
     initial_charge: InitialCharge
     liquid_feeds: list[FeedPulse] = Field(default_factory=list)
     gas_feed: GasFeedSpec
-    batch_time_s: PositiveFloat = Field(..., description="Nominal batch horizon [s].")
-    sample_interval_s: PositiveFloat = Field(default=10.0, description="Output sampling interval [s].")
+    batch_time_s: PositiveFloat
+    sample_interval_s: PositiveFloat = 10.0
     control_package_id: str = "CTRL-NX-H2-001"
     notes: Optional[str] = None
+
+
+def parse_batch_package(data: dict) -> Union[BatchPackage, LegacyBatchPackage]:
+    if "reaction_package_id" in data and "initial_conditions" in data:
+        return BatchPackage.model_validate(data)
+    return LegacyBatchPackage.model_validate(data)

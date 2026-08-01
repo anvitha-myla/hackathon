@@ -1,6 +1,15 @@
 """Pydantic schemas for ARIP Digital Twin equipment and reaction packages."""
 
-from .batch import BatchPackage, FeedPulse, GasFeedSpec, InitialCharge
+from .batch import (
+    BatchPackage,
+    FeedPulse,
+    GasFeedSpec,
+    InitialCharge,
+    InitialConditions,
+    LegacyBatchPackage,
+    RecipeTargets,
+    parse_batch_package,
+)
 from .control import ControlPackage, InterlockConfig, PressureLoopConfig, ThermalLoopConfig
 from .equipment import (
     ARCInstrument,
@@ -20,6 +29,7 @@ from .equipment import (
     RotaryConeVacuumDryer,
     SCADADCSSystem,
     SCHEMA_BY_EQUIPMENT_ID,
+    STBRReactor,
     ThermalControlUnit,
     ThinFilmEvaporatorATFE,
     ThinFilmEvaporatorWFE,
@@ -54,7 +64,9 @@ __all__ = [
     "GasFeedSpec",
     "HPOXReactor",
     "InitialCharge",
+    "InitialConditions",
     "InterlockConfig",
+    "LegacyBatchPackage",
     "MassFlowController",
     "MasterReactionPackage",
     "OperatingWindow",
@@ -65,9 +77,11 @@ __all__ = [
     "ReactionKinetics",
     "ReactionStepPackage",
     "ReactorSkid",
+    "RecipeTargets",
     "RotaryConeVacuumDryer",
     "SCADADCSSystem",
     "SCHEMA_BY_EQUIPMENT_ID",
+    "STBRReactor",
     "SafetyLimits",
     "SpeciesProperty",
     "Stoichiometry",
@@ -78,6 +92,7 @@ __all__ = [
     "ThinFilmEvaporatorWFE",
     "VLEApparatus",
     "build_kinetic_memory",
+    "parse_batch_package",
     "parse_equipment_package",
     "parse_reaction_document",
 ]
