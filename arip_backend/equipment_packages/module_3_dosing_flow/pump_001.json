@@ -1,0 +1,20 @@
+{
+  "equipment_id": "PUMP-001",
+  "name": "Reagent Dosing Pump A",
+  "equipment_type": "dosing_pump",
+  "manufacturer": "Prominent",
+  "model_number": "gamma-X",
+  "material_of_construction": "PTFE/PVDF",
+  "max_operating_pressure_barg": 16.0,
+  "thermal_limits": {
+    "t_min_c": 5.0,
+    "t_max_c": 45.0
+  },
+  "min_flow_rate_mL_min": 0.5,
+  "max_flow_rate_mL_min": 120.0,
+  "stroke_volume_uL": 180.0,
+  "flow_accuracy_pct": 1.0,
+  "wetted_materials": ["PTFE", "PVDF", "ceramic"],
+  "pulse_free": false,
+  "description": "Metering pump for semi-batch reagent addition."
+}

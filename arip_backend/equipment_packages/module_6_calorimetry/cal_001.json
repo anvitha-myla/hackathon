@@ -1,0 +1,26 @@
+{
+  "equipment_id": "CAL-001",
+  "name": "Reaction Calorimeter RC1e",
+  "equipment_type": "calorimetry",
+  "manufacturer": "Mettler Toledo",
+  "model_number": "RC1e",
+  "material_of_construction": "glass/Hastelloy",
+  "working_volume_L": 1.0,
+  "max_operating_pressure_barg": 1.5,
+  "thermal_limits": {
+    "t_min_c": -70.0,
+    "t_max_c": 230.0
+  },
+  "heat_detection_limit_W": 0.05,
+  "sensitivity_mW": 10.0,
+  "baseline_stability_mW": 20.0,
+  "sampling_rate_Hz": 1.0,
+  "heat_transfer": {
+    "U_W_m2K": 250.0,
+    "A_m2": 0.04,
+    "side": "jacket"
+  },
+  "supports_isothermal": true,
+  "supports_adiabatic": false,
+  "description": "Isothermal reaction calorimeter for ΔH_rxn measurement."
+}

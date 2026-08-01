@@ -1,0 +1,27 @@
+{
+  "equipment_id": "STBR-001",
+  "name": "Pilot Stirred-Tank Batch Reactor 5 L",
+  "equipment_type": "stbr",
+  "manufacturer": "Büchi",
+  "model_number": "versoclave-5L",
+  "material_of_construction": "SS316L",
+  "working_volume_L": 5.0,
+  "total_volume_L": 6.2,
+  "vessel_inner_diameter_m": 0.15,
+  "fill_height_m": 0.28,
+  "max_operating_pressure_barg": 10.0,
+  "thermal_limits": {
+    "t_min_c": -20.0,
+    "t_max_c": 200.0
+  },
+  "heat_transfer": {
+    "U_W_m2K": 350.0,
+    "A_m2": 0.18,
+    "side": "jacket"
+  },
+  "max_agitation_rpm": 800.0,
+  "impeller_type": "pitched-blade turbine",
+  "power_number": 1.5,
+  "baffled": true,
+  "description": "Jacketed STBR for digital-twin pilot campaigns."
+}
