@@ -1,459 +1,511 @@
-"""Equipment package schemas for the ARIP Digital Twin.
+"""Equipment package schemas for the ARIP Digital Twin (Modules 1–6).
 
-Pydantic v2 models covering Modules 1–6: reactors, thermal control,
-dosing/flow, catalyst/solids handling, purification, and calorimetry.
-Standard process-engineering parameters include working volume, overall
-heat-transfer coefficient U, heat-transfer area A, MAWP, and thermal limits.
+Pydantic v2 models aligned to the equipment_packages JSON contracts:
+working volumes, heat-transfer coefficient U / area A where applicable,
+pressure ratings, and thermal / vacuum operating limits.
 """
 
 from __future__ import annotations
 
-from enum import Enum
-from typing import Annotated, Any, Literal, Optional, Union
+from typing import Any, Optional
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
-class EquipmentType(str, Enum):
-    """Supported equipment package kinds (Modules 1–6)."""
-
-    # Module 1 — reactors
-    STBR = "stbr"
-    PBR = "pbr"
-    CSTR_PFR = "cstr_pfr"
-    REACTOR_SKID = "reactor_skid"
-    HPOX = "hpox"
-    # Module 2 — thermal / control
-    THERMAL_CONTROL = "thermal_control"
-    SCADA_DCS = "scada_dcs"
-    # Module 3 — dosing / flow
-    DOSING_PUMP = "dosing_pump"
-    MFC = "mfc"
-    # Module 4 — catalyst / solids
-    ANF = "anf"
-    PNF = "pnf"
-    # Module 5 — purification
-    ATFE = "atfe"
-    WFE = "wfe"
-    DISTILLATION = "distillation"
-    VLE = "vle"
-    RCVD = "rcvd"
-    # Module 6 — calorimetry
-    CALORIMETRY = "calorimetry"
-    DSC = "dsc"
-    ARC = "arc"
-
-
-class ThermalLimits(BaseModel):
-    """Allowable temperature window for safe equipment operation."""
+class EquipmentMeta(BaseModel):
+    """Common identity fields present on every equipment package."""
 
     model_config = ConfigDict(extra="forbid")
 
-    t_min_c: float = Field(..., description="Minimum allowable operating temperature [°C].")
-    t_max_c: float = Field(..., description="Maximum allowable operating temperature [°C].")
-
-    @model_validator(mode="after")
-    def _check_window(self) -> ThermalLimits:
-        if self.t_max_c <= self.t_min_c:
-            raise ValueError("t_max_c must be greater than t_min_c")
-        return self
-
-
-class HeatTransferSpec(BaseModel):
-    """Jacket / coil / exchanger heat-transfer characterisation."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    U_W_m2K: float = Field(..., gt=0, description="Overall heat-transfer coefficient U [W/(m²·K)].")
-    A_m2: float = Field(..., gt=0, description="Effective heat-transfer area A [m²].")
-    side: Literal["jacket", "coil", "external_exchanger", "internal", "evaporator", "condenser"] = Field(
-        default="jacket",
-        description="Heat-transfer surface location.",
-    )
-
-
-class EquipmentBase(BaseModel):
-    """Common metadata shared by process hardware packages."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    equipment_id: str = Field(..., min_length=1, description="Unique equipment package ID.")
-    name: str = Field(..., min_length=1, description="Human-readable equipment name.")
-    manufacturer: Optional[str] = Field(default=None, description="OEM / vendor.")
-    model_number: Optional[str] = Field(default=None, description="Vendor model designation.")
-    material_of_construction: Optional[str] = Field(
-        default=None,
-        description="Wetted-parts material (e.g. SS316L, Hastelloy C-276).",
-    )
-    max_operating_pressure_barg: float = Field(
-        ...,
-        ge=0,
-        description="Maximum allowable working pressure (MAWP) [barg].",
-    )
-    thermal_limits: ThermalLimits = Field(..., description="Allowable equipment temperature window [°C].")
-    description: Optional[str] = Field(default=None, description="Free-text notes.")
-    tags: list[str] = Field(default_factory=list, description="Search / classification tags.")
-
-
-# ---------------------------------------------------------------------------
-# Module 1 — Reactors
-# ---------------------------------------------------------------------------
-
-
-class STBRReactor(EquipmentBase):
-    """Stirred-tank batch reactor (STBR)."""
-
-    equipment_type: Literal[EquipmentType.STBR] = EquipmentType.STBR
-    working_volume_L: float = Field(..., gt=0, description="Nominal working (liquid) volume [L].")
-    total_volume_L: Optional[float] = Field(default=None, gt=0, description="Total geometric vessel volume [L].")
-    vessel_inner_diameter_m: Optional[float] = Field(default=None, gt=0)
-    fill_height_m: Optional[float] = Field(default=None, gt=0)
-    heat_transfer: HeatTransferSpec
-    max_agitation_rpm: Optional[float] = Field(default=None, gt=0)
-    impeller_type: Optional[str] = None
-    power_number: Optional[float] = Field(default=None, ge=0)
-    baffled: bool = True
-
-    @model_validator(mode="after")
-    def _default_total_volume(self) -> STBRReactor:
-        if self.total_volume_L is None:
-            object.__setattr__(self, "total_volume_L", self.working_volume_L)
-        elif self.total_volume_L < self.working_volume_L:
-            raise ValueError("total_volume_L must be >= working_volume_L")
-        return self
-
-
-class PackedBedReactor(EquipmentBase):
-    """Packed-bed / fixed-bed catalytic reactor (PBR)."""
-
-    equipment_type: Literal[EquipmentType.PBR] = EquipmentType.PBR
-    bed_volume_L: float = Field(..., gt=0, description="Catalyst bed volume [L].")
-    bed_diameter_m: float = Field(..., gt=0, description="Internal bed diameter [m].")
-    bed_length_m: float = Field(..., gt=0, description="Packed-bed length [m].")
-    void_fraction: float = Field(..., gt=0, lt=1, description="Bed void fraction ε [-].")
-    max_catalyst_mass_kg: float = Field(..., gt=0, description="Maximum catalyst loading [kg].")
-    heat_transfer: HeatTransferSpec = Field(..., description="Wall / tube-side U·A.")
-    tube_count: Optional[int] = Field(default=None, ge=1, description="Multi-tubular count if applicable.")
-    flow_orientation: Literal["upflow", "downflow", "horizontal"] = "downflow"
-
-
-class CSTRPFRSystem(EquipmentBase):
-    """Combined CSTR + PFR reactor train."""
-
-    equipment_type: Literal[EquipmentType.CSTR_PFR] = EquipmentType.CSTR_PFR
-    cstr_working_volume_L: float = Field(..., gt=0, description="CSTR working volume [L].")
-    pfr_volume_L: float = Field(..., gt=0, description="PFR geometric volume [L].")
-    pfr_length_m: float = Field(..., gt=0, description="PFR tube length [m].")
-    pfr_inner_diameter_m: float = Field(..., gt=0, description="PFR inner diameter [m].")
-    heat_transfer: HeatTransferSpec
-    max_agitation_rpm: Optional[float] = Field(default=None, gt=0)
-    max_throughput_L_h: float = Field(..., gt=0, description="Design liquid throughput [L/h].")
-
-
-class ReactorSkid(EquipmentBase):
-    """Integrated mini / pilot reactor skid."""
-
-    equipment_type: Literal[EquipmentType.REACTOR_SKID] = EquipmentType.REACTOR_SKID
-    working_volume_L: float = Field(..., gt=0, description="Primary reactor working volume [L].")
-    heat_transfer: HeatTransferSpec
-    has_dosing: bool = True
-    has_gas_feed: bool = True
-    has_condenser: bool = True
-    max_agitation_rpm: Optional[float] = Field(default=None, gt=0)
-    utilities: list[str] = Field(default_factory=list, description="Required utilities (N2, vacuum, etc.).")
-
-
-class HPOXReactor(EquipmentBase):
-    """High-pressure oxidation (HPOX) reactor."""
-
-    equipment_type: Literal[EquipmentType.HPOX] = EquipmentType.HPOX
-    working_volume_L: float = Field(..., gt=0, description="Working volume [L].")
-    heat_transfer: HeatTransferSpec
-    oxidant: str = Field(default="O2", description="Primary oxidant species.")
-    max_oxygen_partial_pressure_barg: float = Field(..., ge=0)
-    max_agitation_rpm: Optional[float] = Field(default=None, gt=0)
-    lining: Optional[str] = Field(default=None, description="Corrosion lining / cladding.")
-
-
-# ---------------------------------------------------------------------------
-# Module 2 — Thermal control & automation
-# ---------------------------------------------------------------------------
-
-
-class ThermalControlUnit(EquipmentBase):
-    """External thermal control unit (TCU) / circulator."""
-
-    equipment_type: Literal[EquipmentType.THERMAL_CONTROL] = EquipmentType.THERMAL_CONTROL
-    heating_capacity_kW: float = Field(..., ge=0)
-    cooling_capacity_kW: float = Field(..., ge=0)
-    heat_transfer_fluid: str = Field(..., min_length=1)
-    max_flow_rate_L_min: float = Field(..., gt=0)
-    setpoint_resolution_c: float = Field(default=0.1, gt=0)
-    single_fluid: bool = Field(default=True, description="True for single-fluid (SF) TCU architecture.")
-    heat_transfer: Optional[HeatTransferSpec] = None
-
-
-class SCADADCSSystem(BaseModel):
-    """SCADA / DCS supervisory control package (soft equipment)."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    equipment_type: Literal[EquipmentType.SCADA_DCS] = EquipmentType.SCADA_DCS
     equipment_id: str = Field(..., min_length=1)
     name: str = Field(..., min_length=1)
-    manufacturer: Optional[str] = None
-    model_number: Optional[str] = None
-    description: Optional[str] = None
-    tags: list[str] = Field(default_factory=list)
-    protocol: str = Field(..., min_length=1, description="Primary industrial protocol (OPC UA, Modbus TCP, …).")
-    max_io_points: int = Field(..., gt=0, description="Licensed / configured I/O point capacity.")
-    historian_enabled: bool = True
-    alarm_classes: list[str] = Field(default_factory=lambda: ["advisory", "warning", "critical"])
-    scan_rate_Hz: float = Field(default=1.0, gt=0, description="Base control scan rate [Hz].")
-    redundant: bool = False
-    # Soft packages still carry envelope metadata for registry uniformity
-    max_operating_pressure_barg: float = Field(default=0.0, ge=0)
-    thermal_limits: ThermalLimits = Field(
-        default_factory=lambda: ThermalLimits(t_min_c=-40.0, t_max_c=60.0),
-        description="Cabinet / electronics ambient limits [°C].",
-    )
+    module: str = Field(..., min_length=1)
 
 
 # ---------------------------------------------------------------------------
-# Module 3 — Dosing & flow
+# Module 1 — Reactor Systems
 # ---------------------------------------------------------------------------
 
 
-class DosingPump(EquipmentBase):
-    """Metering / dosing pump for liquid reagent addition."""
+class PBRDimensions(BaseModel):
+    model_config = ConfigDict(extra="forbid")
 
-    equipment_type: Literal[EquipmentType.DOSING_PUMP] = EquipmentType.DOSING_PUMP
-    min_flow_rate_mL_min: float = Field(..., ge=0)
-    max_flow_rate_mL_min: float = Field(..., gt=0)
-    stroke_volume_uL: Optional[float] = Field(default=None, gt=0)
-    flow_accuracy_pct: float = Field(default=1.0, ge=0)
-    wetted_materials: list[str] = Field(default_factory=list)
-    pulse_free: bool = False
+    tube_length_m: float = Field(..., gt=0)
+    inner_diameter_m: float = Field(..., gt=0)
+    bed_volume_m3: float = Field(..., gt=0)
+
+
+class CatalystBed(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    porosity: float = Field(..., gt=0, lt=1)
+    pellet_diameter_m: float = Field(..., gt=0)
+    max_catalyst_mass_kg: float = Field(..., gt=0)
+
+
+class PBRLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    max_operating_pressure_bar: float = Field(..., ge=0)
+    max_operating_temp_c: float
+    max_gas_flow_slpm: float = Field(..., gt=0)
+
+
+class PackedBedReactor(EquipmentMeta):
+    """EQ-PBR-100 — fixed-bed tubular catalytic reactor."""
+
+    reactor_type: str
+    construction_material: str
+    dimensions: PBRDimensions
+    catalyst_bed: CatalystBed
+    limits: PBRLimits
+
+
+class CSTRPFRDimensions(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    cstr_volume_m3: float = Field(..., gt=0)
+    pfr_volume_m3: float = Field(..., gt=0)
+    pfr_tube_length_m: float = Field(..., gt=0)
+
+
+class CSTRPFRLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    max_operating_pressure_bar: float = Field(..., ge=0)
+    max_operating_temp_c: float
+    max_residence_time_min: float = Field(..., gt=0)
+
+
+class CSTRPFRSystem(EquipmentMeta):
+    """EQ-CSTR-PFR-01 — continuous cascade CSTR + PFR suite."""
+
+    reactor_type: str
+    construction_material: str
+    dimensions: CSTRPFRDimensions
+    limits: CSTRPFRLimits
+
+
+class SkidDimensions(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    total_volume_m3: float = Field(..., gt=0)
+    working_volume_m3: float = Field(..., gt=0)
 
     @model_validator(mode="after")
-    def _check_flow_window(self) -> DosingPump:
-        if self.max_flow_rate_mL_min <= self.min_flow_rate_mL_min:
-            raise ValueError("max_flow_rate_mL_min must be greater than min_flow_rate_mL_min")
+    def _check_volumes(self) -> SkidDimensions:
+        if self.working_volume_m3 > self.total_volume_m3:
+            raise ValueError("working_volume_m3 must be <= total_volume_m3")
         return self
 
 
-class MassFlowController(EquipmentBase):
-    """Gas mass-flow controller (MFC)."""
+class PressureTempLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
 
-    equipment_type: Literal[EquipmentType.MFC] = EquipmentType.MFC
-    gas_species: str = Field(..., min_length=1, description="Calibrated gas (e.g. H2, N2, air).")
-    min_flow_sccm: float = Field(..., ge=0, description="Minimum controllable flow [sccm].")
-    max_flow_sccm: float = Field(..., gt=0, description="Full-scale flow [sccm].")
-    accuracy_pct_FS: float = Field(default=1.0, ge=0, description="Accuracy as % of full scale.")
-    inlet_pressure_max_barg: float = Field(..., ge=0)
-    control_signal: Literal["0-5V", "0-10V", "4-20mA", "EtherCAT", "Modbus"] = "0-5V"
+    max_operating_pressure_bar: float = Field(..., ge=0)
+    max_operating_temp_c: float
+
+
+class ReactorSkid(EquipmentMeta):
+    """EQ-SKID-MINI-01 — multipurpose miniplant skid."""
+
+    reactor_type: str
+    construction_material: str
+    dimensions: SkidDimensions
+    limits: PressureTempLimits
+
+
+class HPOXDimensions(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    total_volume_m3: float = Field(..., gt=0)
+    working_volume_m3: float = Field(..., gt=0)
 
     @model_validator(mode="after")
-    def _check_flow(self) -> MassFlowController:
-        if self.max_flow_sccm <= self.min_flow_sccm:
-            raise ValueError("max_flow_sccm must be greater than min_flow_sccm")
+    def _check_volumes(self) -> HPOXDimensions:
+        if self.working_volume_m3 > self.total_volume_m3:
+            raise ValueError("working_volume_m3 must be <= total_volume_m3")
         return self
 
 
+class HPOXLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    max_operating_pressure_bar: float = Field(..., ge=0)
+    max_operating_temp_c: float
+    max_o2_partial_pressure_bar: float = Field(..., ge=0)
+
+
+class HPOXReactor(EquipmentMeta):
+    """EQ-HPOX-050 — high-pressure catalytic oxidation autoclave."""
+
+    reactor_type: str
+    construction_material: str
+    dimensions: HPOXDimensions
+    limits: HPOXLimits
+
+
 # ---------------------------------------------------------------------------
-# Module 4 — Catalyst / solids handling
+# Module 2 — Thermal Management & Process Control
 # ---------------------------------------------------------------------------
 
 
-class AgitatedNutscheFilter(EquipmentBase):
-    """Agitated Nutsche filter (ANF) for solid–liquid separation."""
+class ThermalPerformance(BaseModel):
+    model_config = ConfigDict(extra="forbid")
 
-    equipment_type: Literal[EquipmentType.ANF] = EquipmentType.ANF
-    working_volume_L: float = Field(..., gt=0)
-    filter_area_m2: float = Field(..., gt=0, description="Filtration area [m²].")
-    cake_volume_L: float = Field(..., gt=0)
-    heat_transfer: Optional[HeatTransferSpec] = None
-    max_agitation_rpm: Optional[float] = Field(default=None, gt=0)
-    vacuum_capable: bool = True
-    min_absolute_pressure_mbar: Optional[float] = Field(default=None, gt=0)
+    heating_capacity_kw: float = Field(..., ge=0)
+    cooling_capacity_kw: float = Field(..., ge=0)
+    temperature_range_c: list[float] = Field(..., min_length=2, max_length=2)
+    max_coolant_flow_rate_m3_h: float = Field(..., gt=0)
+    pump_pressure_bar: float = Field(..., ge=0)
+
+    @model_validator(mode="after")
+    def _check_range(self) -> ThermalPerformance:
+        t_min, t_max = self.temperature_range_c
+        if t_max <= t_min:
+            raise ValueError("temperature_range_c[1] must be > temperature_range_c[0]")
+        return self
 
 
-class PressureNutscheFilter(EquipmentBase):
-    """Pressure Nutsche filter (PNF)."""
+class ThermalControlUnit(EquipmentMeta):
+    """EQ-TCU-SF-01 — single-fluid temperature control unit."""
 
-    equipment_type: Literal[EquipmentType.PNF] = EquipmentType.PNF
-    working_volume_L_min: float = Field(..., gt=0, description="Minimum working volume [L].")
-    working_volume_L_max: float = Field(..., gt=0, description="Maximum working volume [L].")
+    utility_medium: str
+    thermal_performance: ThermalPerformance
+
+
+class IOChannels(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    analog_inputs: int = Field(..., ge=0)
+    analog_outputs: int = Field(..., ge=0)
+    digital_inputs: int = Field(..., ge=0)
+    digital_outputs: int = Field(..., ge=0)
+
+
+class SCADADCSSystem(EquipmentMeta):
+    """EQ-SCADA-DCS-01 — distributed control & SCADA system."""
+
+    architecture: str
+    sampling_interval_ms: int = Field(..., gt=0)
+    io_channels: IOChannels
+    safety_interlock_latency_ms: int = Field(..., gt=0)
+
+
+# ---------------------------------------------------------------------------
+# Module 3 — Dosing & Flow Regulation
+# ---------------------------------------------------------------------------
+
+
+class FlowRange(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    min: float = Field(..., ge=0)
+    max: float = Field(..., gt=0)
+
+    @model_validator(mode="after")
+    def _check_window(self) -> FlowRange:
+        if self.max <= self.min:
+            raise ValueError("flow range max must be greater than min")
+        return self
+
+
+class MassFlowController(EquipmentMeta):
+    """EQ-MFC-GAS-01 — high-pressure gas mass-flow controller."""
+
+    gas_compatibility: list[str] = Field(..., min_length=1)
+    flow_range_slpm: FlowRange
+    accuracy_percentage_full_scale: float = Field(..., ge=0)
+    max_inlet_pressure_bar: float = Field(..., ge=0)
+
+
+class DosingPump(EquipmentMeta):
+    """EQ-PUMP-DOSING-01 — diaphragm high-pressure liquid metering pump."""
+
+    head_material: str
+    flow_range_l_h: FlowRange
+    max_discharge_pressure_bar: float = Field(..., ge=0)
+    dosing_precision_percentage: float = Field(..., ge=0)
+
+
+# ---------------------------------------------------------------------------
+# Module 4 — Catalyst Separation & Solids Handling
+# ---------------------------------------------------------------------------
+
+
+class ANFDimensions(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     filter_area_m2: float = Field(..., gt=0)
-    heat_transfer: Optional[HeatTransferSpec] = None
-    vacuum_capable: bool = True
+    total_volume_l: float = Field(..., gt=0)
+    cake_capacity_l: float = Field(..., gt=0)
+
+
+class ANFAgitation(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    stroke_height_mm: float = Field(..., gt=0)
+    agitator_rpm_range: list[float] = Field(..., min_length=2, max_length=2)
 
     @model_validator(mode="after")
-    def _check_volume(self) -> PressureNutscheFilter:
-        if self.working_volume_L_max < self.working_volume_L_min:
-            raise ValueError("working_volume_L_max must be >= working_volume_L_min")
+    def _check_rpm(self) -> ANFAgitation:
+        lo, hi = self.agitator_rpm_range
+        if hi <= lo:
+            raise ValueError("agitator_rpm_range[1] must be > agitator_rpm_range[0]")
         return self
 
 
-# ---------------------------------------------------------------------------
-# Module 5 — Purification
-# ---------------------------------------------------------------------------
+class ANFLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    max_operating_pressure_bar: float = Field(..., ge=0)
+    vacuum_rating_mbar: float = Field(..., gt=0)
+    max_temp_c: float
 
 
-class ThinFilmEvaporator(EquipmentBase):
-    """Agitated or wiped thin-film evaporator (ATFE / WFE)."""
+class AgitatedNutscheFilter(EquipmentMeta):
+    """EQ-ANF-3L — agitated Nutsche filter dryer."""
 
-    equipment_type: Literal[EquipmentType.ATFE, EquipmentType.WFE]
-    evaporating_area_m2: float = Field(..., gt=0, description="Evaporating surface area A [m²].")
-    heat_transfer: HeatTransferSpec
-    feed_rate_max_kg_h: float = Field(..., gt=0)
-    vacuum_min_mbar: float = Field(..., gt=0, description="Minimum achievable absolute pressure [mbar].")
-    rotor_max_rpm: Optional[float] = Field(default=None, gt=0)
-    condenser_area_m2: Optional[float] = Field(default=None, gt=0)
+    construction_material: str
+    dimensions: ANFDimensions
+    agitation: ANFAgitation
+    limits: ANFLimits
 
 
-class DistillationUnit(EquipmentBase):
-    """Batch / continuous distillation column (e.g. Pilodist)."""
+class PNFDimensions(BaseModel):
+    model_config = ConfigDict(extra="forbid")
 
-    equipment_type: Literal[EquipmentType.DISTILLATION] = EquipmentType.DISTILLATION
-    boiler_volume_L: float = Field(..., gt=0)
-    column_diameter_m: float = Field(..., gt=0)
-    packed_height_m: float = Field(..., gt=0)
-    theoretical_stages: float = Field(..., gt=0)
-    heat_transfer: HeatTransferSpec = Field(..., description="Reboiler U·A.")
-    condenser_duty_kW: float = Field(..., ge=0)
-    vacuum_min_mbar: Optional[float] = Field(default=None, gt=0)
+    volume_range_l: list[float] = Field(..., min_length=2, max_length=2)
+    filter_mesh_micron: float = Field(..., gt=0)
 
-
-class VLEApparatus(EquipmentBase):
-    """Vapor–liquid equilibrium (VLE) measurement apparatus."""
-
-    equipment_type: Literal[EquipmentType.VLE] = EquipmentType.VLE
-    working_volume_L: float = Field(..., gt=0)
-    heat_transfer: Optional[HeatTransferSpec] = None
-    pressure_range_min_mbar: float = Field(..., gt=0)
-    pressure_range_max_barg: float = Field(..., ge=0)
-    composition_analysis: list[str] = Field(
-        default_factory=list,
-        description="On-line / off-line analysis methods (GC, densitometry, …).",
-    )
+    @model_validator(mode="after")
+    def _check_volume(self) -> PNFDimensions:
+        lo, hi = self.volume_range_l
+        if hi < lo:
+            raise ValueError("volume_range_l[1] must be >= volume_range_l[0]")
+        return self
 
 
-class RotaryConeVacuumDryer(EquipmentBase):
-    """Rotary cone vacuum dryer (RCVD)."""
+class PNFLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
 
-    equipment_type: Literal[EquipmentType.RCVD] = EquipmentType.RCVD
-    working_volume_L: float = Field(..., gt=0)
-    heat_transfer: HeatTransferSpec
-    vacuum_min_mbar: float = Field(..., gt=0)
-    max_rotation_rpm: float = Field(..., gt=0)
-    condenser_capable: bool = True
+    max_operating_pressure_bar: float = Field(..., ge=0)
+    inert_gas_purge_pressure_bar: float = Field(..., ge=0)
+
+
+class PressureNutscheFilter(EquipmentMeta):
+    """EQ-PNF-1TO3L — pressurized liquid–solid Nutsche filter."""
+
+    construction_material: str
+    dimensions: PNFDimensions
+    limits: PNFLimits
 
 
 # ---------------------------------------------------------------------------
-# Module 6 — Calorimetry
+# Module 5 — Separation & Purification
 # ---------------------------------------------------------------------------
 
 
-class CalorimetryTool(EquipmentBase):
-    """Reaction calorimeter (e.g. Mettler RC1e)."""
+class ATFEThermalParameters(BaseModel):
+    model_config = ConfigDict(extra="forbid")
 
-    equipment_type: Literal[EquipmentType.CALORIMETRY] = EquipmentType.CALORIMETRY
-    working_volume_L: float = Field(..., gt=0)
-    heat_detection_limit_W: float = Field(..., gt=0)
-    sensitivity_mW: float = Field(..., gt=0)
-    baseline_stability_mW: float = Field(..., ge=0)
-    sampling_rate_Hz: float = Field(default=1.0, gt=0)
-    heat_transfer: Optional[HeatTransferSpec] = None
-    supports_isothermal: bool = True
-    supports_adiabatic: bool = False
-
-
-class DSCInstrument(EquipmentBase):
-    """Differential scanning calorimeter (DSC)."""
-
-    equipment_type: Literal[EquipmentType.DSC] = EquipmentType.DSC
-    temperature_ramp_max_K_min: float = Field(..., gt=0)
-    heat_flow_range_mW: float = Field(..., gt=0)
-    sensitivity_uW: float = Field(..., gt=0)
-    sample_mass_max_mg: float = Field(..., gt=0)
-    atmosphere: list[str] = Field(default_factory=lambda: ["N2", "air"])
-    # DSC cells are small; working volume reported as crucible volume in µL via optional field
-    crucible_volume_uL: Optional[float] = Field(default=None, gt=0)
-
-
-class ARCInstrument(EquipmentBase):
-    """Accelerating rate calorimeter (ARC)."""
-
-    equipment_type: Literal[EquipmentType.ARC] = EquipmentType.ARC
-    bomb_volume_mL: float = Field(..., gt=0, description="Sample bomb / bomb volume [mL].")
-    heat_detection_threshold_C_min: float = Field(
+    max_jacket_temp_c: float
+    overall_heat_transfer_coeff_U: float = Field(
         ...,
         gt=0,
-        description="Self-heat-rate detection threshold [°C/min].",
+        description="Overall heat-transfer coefficient U [W/(m²·K)].",
     )
-    phi_factor_min: float = Field(..., gt=0, description="Minimum thermal inertia (φ) factor [-].")
-    max_operating_temperature_c: float = Field(..., description="Instrument T_max [°C].")
-    supports_adiabatic: bool = True
-    supports_isothermal: bool = False
 
 
-EquipmentModel = Union[
-    STBRReactor,
-    PackedBedReactor,
-    CSTRPFRSystem,
-    ReactorSkid,
-    HPOXReactor,
-    ThermalControlUnit,
-    SCADADCSSystem,
-    DosingPump,
-    MassFlowController,
-    AgitatedNutscheFilter,
-    PressureNutscheFilter,
-    ThinFilmEvaporator,
-    DistillationUnit,
-    VLEApparatus,
-    RotaryConeVacuumDryer,
-    CalorimetryTool,
-    DSCInstrument,
-    ARCInstrument,
-]
+class ATFELimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
 
-EquipmentPackage = Annotated[EquipmentModel, Field(discriminator="equipment_type")]
+    operating_vacuum_mbar: float = Field(..., gt=0)
+    max_feed_rate_kg_h: float = Field(..., gt=0)
 
-_TYPE_MAP: dict[Any, type[BaseModel]] = {
-    EquipmentType.STBR.value: STBRReactor,
-    EquipmentType.PBR.value: PackedBedReactor,
-    EquipmentType.CSTR_PFR.value: CSTRPFRSystem,
-    EquipmentType.REACTOR_SKID.value: ReactorSkid,
-    EquipmentType.HPOX.value: HPOXReactor,
-    EquipmentType.THERMAL_CONTROL.value: ThermalControlUnit,
-    EquipmentType.SCADA_DCS.value: SCADADCSSystem,
-    EquipmentType.DOSING_PUMP.value: DosingPump,
-    EquipmentType.MFC.value: MassFlowController,
-    EquipmentType.ANF.value: AgitatedNutscheFilter,
-    EquipmentType.PNF.value: PressureNutscheFilter,
-    EquipmentType.ATFE.value: ThinFilmEvaporator,
-    EquipmentType.WFE.value: ThinFilmEvaporator,
-    EquipmentType.DISTILLATION.value: DistillationUnit,
-    EquipmentType.VLE.value: VLEApparatus,
-    EquipmentType.RCVD.value: RotaryConeVacuumDryer,
-    EquipmentType.CALORIMETRY.value: CalorimetryTool,
-    EquipmentType.DSC.value: DSCInstrument,
-    EquipmentType.ARC.value: ARCInstrument,
+
+class ThinFilmEvaporatorATFE(EquipmentMeta):
+    """EQ-ATFE-01 — agitated thin-film evaporator."""
+
+    evaporator_surface_area_m2: float = Field(..., gt=0, description="Evaporator area A [m²].")
+    rotor_speed_rpm: float = Field(..., gt=0)
+    thermal_parameters: ATFEThermalParameters
+    limits: ATFELimits
+
+
+class WFELimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    high_vacuum_mbar: float = Field(..., gt=0)
+    max_operating_temp_c: float
+
+
+class ThinFilmEvaporatorWFE(EquipmentMeta):
+    """EQ-WFE-01 — short-path wiped-film evaporator."""
+
+    evaporator_surface_area_m2: float = Field(..., gt=0, description="Evaporator area A [m²].")
+    internal_condenser_area_m2: float = Field(..., gt=0, description="Internal condenser area A [m²].")
+    limits: WFELimits
+
+
+class DistillationLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    boilup_rate_l_h: float = Field(..., gt=0)
+    reflux_ratio_range: list[float] = Field(..., min_length=2, max_length=2)
+    max_pot_temp_c: float
+
+    @model_validator(mode="after")
+    def _check_reflux(self) -> DistillationLimits:
+        lo, hi = self.reflux_ratio_range
+        if hi < lo:
+            raise ValueError("reflux_ratio_range[1] must be >= reflux_ratio_range[0]")
+        return self
+
+
+class DistillationUnit(EquipmentMeta):
+    """EQ-PILODIST-DIST-01 — automated fractional distillation column."""
+
+    column_type: str
+    theoretical_plates: int = Field(..., gt=0)
+    limits: DistillationLimits
+
+
+class VLELimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    boiler_capacity_ml: float = Field(..., gt=0)
+    max_pressure_bar: float = Field(..., ge=0)
+    vacuum_mbar: float = Field(..., gt=0)
+    max_temp_c: float
+
+
+class VLEApparatus(EquipmentMeta):
+    """EQ-PILODIST-VLE-01 — vapour–liquid equilibrium unit."""
+
+    operating_mode: str
+    limits: VLELimits
+
+
+class RCVDLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    vacuum_mbar: float = Field(..., gt=0)
+    jacket_temp_c: float
+
+
+class RotaryConeVacuumDryer(EquipmentMeta):
+    """EQ-RCVD-50L — rotary cone vacuum dryer."""
+
+    total_volume_l: float = Field(..., gt=0)
+    working_volume_l: float = Field(..., gt=0)
+    rotation_speed_rpm: float = Field(..., gt=0)
+    limits: RCVDLimits
+
+    @model_validator(mode="after")
+    def _check_volumes(self) -> RotaryConeVacuumDryer:
+        if self.working_volume_l > self.total_volume_l:
+            raise ValueError("working_volume_l must be <= total_volume_l")
+        return self
+
+
+# ---------------------------------------------------------------------------
+# Module 6 — Process Safety & Calorimetry
+# ---------------------------------------------------------------------------
+
+
+class RC1eResolution(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    heat_flow_detection_limit_w: float = Field(..., gt=0)
+    temperature_accuracy_k: float = Field(..., gt=0)
+
+
+class ReactionCalorimeter(EquipmentMeta):
+    """EQ-METTLER-RC1E — reaction calorimeter."""
+
+    operating_modes: list[str] = Field(..., min_length=1)
+    vessel_volume_ml: float = Field(..., gt=0)
+    measurement_resolution: RC1eResolution
+    calorimetric_outputs: list[str] = Field(..., min_length=1)
+
+
+class DSCLimits(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    max_pressure_bar: float = Field(..., ge=0)
+    atmosphere: list[str] = Field(..., min_length=1)
+
+
+class DSCInstrument(EquipmentMeta):
+    """EQ-DSC-2500 — high-pressure differential scanning calorimeter."""
+
+    temperature_range_c: list[float] = Field(..., min_length=2, max_length=2)
+    heating_rate_k_min: list[float] = Field(..., min_length=2, max_length=2)
+    limits: DSCLimits
+    primary_detection: str
+
+    @model_validator(mode="after")
+    def _check_ranges(self) -> DSCInstrument:
+        t_min, t_max = self.temperature_range_c
+        if t_max <= t_min:
+            raise ValueError("temperature_range_c[1] must be > temperature_range_c[0]")
+        r_min, r_max = self.heating_rate_k_min
+        if r_max <= r_min:
+            raise ValueError("heating_rate_k_min[1] must be > heating_rate_k_min[0]")
+        return self
+
+
+class ARCInstrument(EquipmentMeta):
+    """EQ-ARC-254 — accelerating rate calorimeter."""
+
+    operating_mode: str
+    thermal_sensitivity_c_min: float = Field(..., gt=0)
+    bomb_materials: list[str] = Field(..., min_length=1)
+    calorimetric_outputs: list[str] = Field(..., min_length=1)
+
+
+# ---------------------------------------------------------------------------
+# Registry / parser
+# ---------------------------------------------------------------------------
+
+SCHEMA_BY_EQUIPMENT_ID: dict[str, type[BaseModel]] = {
+    "EQ-PBR-100": PackedBedReactor,
+    "EQ-CSTR-PFR-01": CSTRPFRSystem,
+    "EQ-SKID-MINI-01": ReactorSkid,
+    "EQ-HPOX-050": HPOXReactor,
+    "EQ-TCU-SF-01": ThermalControlUnit,
+    "EQ-SCADA-DCS-01": SCADADCSSystem,
+    "EQ-MFC-GAS-01": MassFlowController,
+    "EQ-PUMP-DOSING-01": DosingPump,
+    "EQ-ANF-3L": AgitatedNutscheFilter,
+    "EQ-PNF-1TO3L": PressureNutscheFilter,
+    "EQ-ATFE-01": ThinFilmEvaporatorATFE,
+    "EQ-WFE-01": ThinFilmEvaporatorWFE,
+    "EQ-PILODIST-DIST-01": DistillationUnit,
+    "EQ-PILODIST-VLE-01": VLEApparatus,
+    "EQ-RCVD-50L": RotaryConeVacuumDryer,
+    "EQ-METTLER-RC1E": ReactionCalorimeter,
+    "EQ-DSC-2500": DSCInstrument,
+    "EQ-ARC-254": ARCInstrument,
 }
 
+# Backward-compatible aliases used by package exports
+STBRReactor = ReactorSkid  # legacy alias; mini-skid covers batch stirred duties
+CalorimetryTool = ReactionCalorimeter
+EquipmentType = str  # packages now identify via equipment_id + module
 
-def parse_equipment_package(data: dict) -> EquipmentModel:
-    """Validate a raw dict into the appropriate equipment schema via type discrimination."""
-    eq_type = data.get("equipment_type")
-    # Normalise enum members to their value
-    if isinstance(eq_type, EquipmentType):
-        eq_type = eq_type.value
-    model_cls = _TYPE_MAP.get(eq_type)
+
+def parse_equipment_package(data: dict[str, Any]) -> BaseModel:
+    """Validate raw JSON against the schema registered for ``equipment_id``."""
+    eq_id = data.get("equipment_id")
+    if not eq_id:
+        raise ValueError("equipment package missing required field 'equipment_id'")
+    model_cls = SCHEMA_BY_EQUIPMENT_ID.get(eq_id)
     if model_cls is None:
-        raise ValueError(
-            f"Unknown or missing equipment_type={eq_type!r}; "
-            f"expected one of {sorted({e.value for e in EquipmentType})}"
+        # Unknown IDs: require at least EquipmentMeta fields
+        return EquipmentMeta.model_validate(
+            {k: data[k] for k in ("equipment_id", "name", "module") if k in data}
+            | {"equipment_id": eq_id, "name": data.get("name", eq_id), "module": data.get("module", "unknown")}
         )
-    return model_cls.model_validate(data)  # type: ignore[return-value]
+    return model_cls.model_validate(data)

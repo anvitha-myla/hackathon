@@ -1,31 +1,22 @@
 {
   "equipment_id": "EQ-PBR-100",
-  "name": "Packed Bed Reactor 100 L bed",
-  "equipment_type": "pbr",
-  "manufacturer": "Parr",
-  "model_number": "PBR-100",
-  "material_of_construction": "SS316L",
-  "bed_volume_L": 100.0,
-  "bed_diameter_m": 0.25,
-  "bed_length_m": 2.0,
-  "void_fraction": 0.4,
-  "max_catalyst_mass_kg": 80.0,
-  "max_operating_pressure_barg": 40.0,
-  "thermal_limits": {
-    "t_min_c": 20.0,
-    "t_max_c": 450.0
+  "name": "High-Pressure Catalytic Packed Bed Reactor",
+  "module": "Module 1 - Reactor Systems",
+  "reactor_type": "Fixed Bed Tubular Reactor",
+  "construction_material": "Hastelloy C-276",
+  "dimensions": {
+    "tube_length_m": 1.2,
+    "inner_diameter_m": 0.05,
+    "bed_volume_m3": 0.00235
   },
-  "heat_transfer": {
-    "U_W_m2K": 120.0,
-    "A_m2": 1.6,
-    "side": "jacket"
+  "catalyst_bed": {
+    "porosity": 0.4,
+    "pellet_diameter_m": 0.003,
+    "max_catalyst_mass_kg": 3.5
   },
-  "tube_count": 1,
-  "flow_orientation": "downflow",
-  "tags": [
-    "module_1",
-    "reactor",
-    "pbr"
-  ],
-  "description": "Pilot packed-bed catalytic reactor with 100 L bed volume."
+  "limits": {
+    "max_operating_pressure_bar": 100.0,
+    "max_operating_temp_c": 450.0,
+    "max_gas_flow_slpm": 50.0
+  }
 }

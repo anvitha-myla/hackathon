@@ -1,31 +1,17 @@
 {
   "equipment_id": "EQ-CSTR-PFR-01",
-  "name": "CSTR\u2013PFR Reactor Train",
-  "equipment_type": "cstr_pfr",
-  "manufacturer": "Syrris",
-  "model_number": "Asia-CSTR-PFR",
-  "material_of_construction": "Hastelloy C-276",
-  "cstr_working_volume_L": 5.0,
-  "pfr_volume_L": 1.2,
-  "pfr_length_m": 10.0,
-  "pfr_inner_diameter_m": 0.012,
-  "max_operating_pressure_barg": 20.0,
-  "thermal_limits": {
-    "t_min_c": -10.0,
-    "t_max_c": 200.0
+  "name": "Continuous Multi-Stage CSTR & PFR Bench Suite",
+  "module": "Module 1 - Reactor Systems",
+  "reactor_type": "Continuous Cascade",
+  "construction_material": "316L Stainless Steel / Glass-Lined",
+  "dimensions": {
+    "cstr_volume_m3": 0.005,
+    "pfr_volume_m3": 0.002,
+    "pfr_tube_length_m": 5.0
   },
-  "heat_transfer": {
-    "U_W_m2K": 400.0,
-    "A_m2": 0.22,
-    "side": "jacket"
-  },
-  "max_agitation_rpm": 1000.0,
-  "max_throughput_L_h": 15.0,
-  "tags": [
-    "module_1",
-    "reactor",
-    "cstr",
-    "pfr"
-  ],
-  "description": "Combined continuous stirred-tank and plug-flow reactor train."
+  "limits": {
+    "max_operating_pressure_bar": 10.0,
+    "max_operating_temp_c": 160.0,
+    "max_residence_time_min": 180.0
+  }
 }

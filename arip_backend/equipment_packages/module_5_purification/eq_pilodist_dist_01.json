@@ -1,31 +1,15 @@
 {
   "equipment_id": "EQ-PILODIST-DIST-01",
-  "name": "Pilodist Batch Distillation Column",
-  "equipment_type": "distillation",
-  "manufacturer": "Pilodist",
-  "model_number": "PETRODIST-300S",
-  "material_of_construction": "borosilicate glass / SS",
-  "boiler_volume_L": 5.0,
-  "column_diameter_m": 0.05,
-  "packed_height_m": 1.2,
-  "theoretical_stages": 20.0,
-  "max_operating_pressure_barg": 0.5,
-  "thermal_limits": {
-    "t_min_c": 20.0,
-    "t_max_c": 250.0
-  },
-  "heat_transfer": {
-    "U_W_m2K": 500.0,
-    "A_m2": 0.06,
-    "side": "jacket"
-  },
-  "condenser_duty_kW": 2.0,
-  "vacuum_min_mbar": 1.0,
-  "tags": [
-    "module_5",
-    "purification",
-    "distillation",
-    "pilodist"
-  ],
-  "description": "Lab/pilot batch distillation unit for solvent recovery and fractionation."
+  "name": "Automated Fractional Distillation Column",
+  "module": "Module 5 - Separation & Purification",
+  "column_type": "Packed Column (Sulzer EX Packing)",
+  "theoretical_plates": 30,
+  "limits": {
+    "boilup_rate_l_h": 5.0,
+    "reflux_ratio_range": [
+      0.1,
+      99.9
+    ],
+    "max_pot_temp_c": 220.0
+  }
 }

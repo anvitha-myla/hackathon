@@ -1,29 +1,23 @@
 {
   "equipment_id": "EQ-DSC-2500",
-  "name": "TA Instruments DSC 2500",
-  "equipment_type": "dsc",
-  "manufacturer": "TA Instruments",
-  "model_number": "DSC-2500",
-  "material_of_construction": "aluminum/platinum pans",
-  "max_operating_pressure_barg": 0.0,
-  "thermal_limits": {
-    "t_min_c": -180.0,
-    "t_max_c": 725.0
+  "name": "High-Pressure Differential Scanning Calorimeter (HP-DSC)",
+  "module": "Module 6 - Process Safety & Calorimetry",
+  "temperature_range_c": [
+    -50.0,
+    600.0
+  ],
+  "heating_rate_k_min": [
+    0.1,
+    50.0
+  ],
+  "limits": {
+    "max_pressure_bar": 100.0,
+    "atmosphere": [
+      "N2",
+      "Air",
+      "O2",
+      "H2"
+    ]
   },
-  "temperature_ramp_max_K_min": 200.0,
-  "heat_flow_range_mW": 500.0,
-  "sensitivity_uW": 0.1,
-  "sample_mass_max_mg": 100.0,
-  "atmosphere": [
-    "N2",
-    "air",
-    "He"
-  ],
-  "crucible_volume_uL": 40.0,
-  "tags": [
-    "module_6",
-    "calorimetry",
-    "dsc"
-  ],
-  "description": "Differential scanning calorimeter for thermal hazard screening."
+  "primary_detection": "Onset temperature of exotherm (T_onset)"
 }

@@ -1,31 +1,23 @@
 {
   "equipment_id": "EQ-ANF-3L",
-  "name": "Agitated Nutsche Filter 3 L",
-  "equipment_type": "anf",
-  "manufacturer": "Rosenmund",
-  "model_number": "ANF-3",
-  "material_of_construction": "SS316L",
-  "working_volume_L": 3.0,
-  "filter_area_m2": 0.05,
-  "cake_volume_L": 1.2,
-  "max_operating_pressure_barg": 6.0,
-  "thermal_limits": {
-    "t_min_c": -10.0,
-    "t_max_c": 150.0
+  "name": "3L Kilo-Lab Agitated Nutsche Filter Dryer",
+  "module": "Module 4 - Catalyst Separation & Solids Handling",
+  "construction_material": "Hastelloy C-22 / PTFE Seals",
+  "dimensions": {
+    "filter_area_m2": 0.031,
+    "total_volume_l": 3.0,
+    "cake_capacity_l": 1.2
   },
-  "heat_transfer": {
-    "U_W_m2K": 200.0,
-    "A_m2": 0.12,
-    "side": "jacket"
+  "agitation": {
+    "stroke_height_mm": 50.0,
+    "agitator_rpm_range": [
+      5.0,
+      60.0
+    ]
   },
-  "max_agitation_rpm": 80.0,
-  "vacuum_capable": true,
-  "min_absolute_pressure_mbar": 10.0,
-  "tags": [
-    "module_4",
-    "filter",
-    "anf",
-    "solids"
-  ],
-  "description": "3 L agitated Nutsche filter-dryer for catalyst recovery."
+  "limits": {
+    "max_operating_pressure_bar": 6.0,
+    "vacuum_rating_mbar": 1.0,
+    "max_temp_c": 150.0
+  }
 }

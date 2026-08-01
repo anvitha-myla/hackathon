@@ -1,8 +1,7 @@
 """Equipment and reaction package loader for the ARIP Digital Twin.
 
-Recursively scans ``equipment_packages/`` and ``reaction_packages/``, validates
-every ``.json`` file against the Pydantic schemas in ``schemas/``, and exposes
-an in-memory registry dictionary.
+Recursively scans ``equipment_packages/`` (and optionally ``reaction_packages/``),
+validates JSON against Pydantic schemas, and exposes an in-memory registry.
 """
 
 from __future__ import annotations
@@ -10,215 +9,229 @@ from __future__ import annotations
 import json
 import logging
 from pathlib import Path
-from typing import Any
+from typing import Any, Optional
 
-from pydantic import ValidationError
+from pydantic import BaseModel, ValidationError
 
-from arip_backend.schemas.equipment import (
-    EquipmentModel,
-    EquipmentType,
-    parse_equipment_package,
-)
+from arip_backend.schemas.equipment import parse_equipment_package
 from arip_backend.schemas.reaction import ReactionPackage
 
 logger = logging.getLogger(__name__)
 
-# Default roots relative to this file (arip_backend/)
 _BACKEND_ROOT = Path(__file__).resolve().parent
 DEFAULT_EQUIPMENT_ROOT = _BACKEND_ROOT / "equipment_packages"
 DEFAULT_REACTION_ROOT = _BACKEND_ROOT / "reaction_packages"
 
-# In-memory registry populated by :func:`load_all_packages`.
-# Structure:
-#   {
-#     "equipment": {equipment_id: validated_model, ...},
-#     "reactions": {reaction_id: validated_model, ...},
-#     "by_type": {equipment_type_value: [equipment_id, ...], ...},
-#     "errors": [{"path": str, "error": str}, ...],
-#     "sources": {id: relative_path_str, ...},
-#   }
+
+class EquipmentRegistry:
+    """In-memory registry of validated equipment package JSON specifications."""
+
+    def __init__(
+        self,
+        packages_dir: str | Path | None = None,
+        *,
+        validate: bool = True,
+        auto_load: bool = True,
+    ) -> None:
+        self.packages_dir = Path(packages_dir) if packages_dir is not None else DEFAULT_EQUIPMENT_ROOT
+        # equipment_id -> {"path": str, "data": dict, "model": BaseModel | None}
+        self.registry: dict[str, dict[str, Any]] = {}
+        self.errors: list[dict[str, str]] = []
+        self.validate = validate
+        if auto_load:
+            self.load_all_packages()
+
+    def load_all_packages(self) -> None:
+        """Recursively scan the directory and load all equipment JSON files."""
+        self.registry.clear()
+        self.errors.clear()
+
+        if not self.packages_dir.exists():
+            print(f"Directory '{self.packages_dir}' not found.")
+            logger.warning("Equipment packages directory not found: %s", self.packages_dir)
+            return
+
+        json_files = sorted(self.packages_dir.glob("**/*.json"))
+        print(f"Found {len(json_files)} equipment JSON files. Loading...")
+        logger.info("Found %d equipment JSON files under %s", len(json_files), self.packages_dir)
+
+        for file_path in json_files:
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if not isinstance(data, dict):
+                    raise ValueError(f"JSON root must be an object, got {type(data).__name__}")
+
+                eq_id = data.get("equipment_id", file_path.stem)
+                model: BaseModel | None = None
+                if self.validate:
+                    model = parse_equipment_package(data)
+
+                if eq_id in self.registry:
+                    raise ValueError(f"Duplicate equipment_id={eq_id!r}")
+
+                self.registry[eq_id] = {
+                    "path": str(file_path),
+                    "data": data,
+                    "model": model,
+                }
+            except (OSError, json.JSONDecodeError, ValidationError, ValueError) as exc:
+                message = f"{type(exc).__name__}: {exc}"
+                self.errors.append({"path": str(file_path), "error": message})
+                print(f"Failed to parse {file_path}: {exc}")
+                logger.error("Failed to parse %s: %s", file_path, message)
+
+        print(f"Successfully loaded {len(self.registry)} equipment packages into registry.\n")
+        logger.info(
+            "Loaded %d equipment packages (%d errors)",
+            len(self.registry),
+            len(self.errors),
+        )
+
+    def get_equipment(self, equipment_id: str) -> Optional[dict[str, Any]]:
+        """Retrieve dynamic equipment configuration by ID."""
+        item = self.registry.get(equipment_id)
+        return item["data"] if item else None
+
+    def get_model(self, equipment_id: str) -> Optional[BaseModel]:
+        """Retrieve the validated Pydantic model for an equipment ID."""
+        item = self.registry.get(equipment_id)
+        return item["model"] if item else None
+
+    def list_by_module(self, module_name: str) -> dict[str, dict[str, Any]]:
+        """Retrieve all equipment matching a specific module substring."""
+        needle = module_name.lower()
+        return {
+            eq_id: item["data"]
+            for eq_id, item in self.registry.items()
+            if needle in item["data"].get("module", "").lower()
+        }
+
+    def summary(self) -> dict[str, Any]:
+        """JSON-serialisable registry summary."""
+        return {
+            "equipment_count": len(self.registry),
+            "equipment_ids": sorted(self.registry),
+            "errors": list(self.errors),
+            "modules": sorted(
+                {item["data"].get("module", "") for item in self.registry.values() if item["data"].get("module")}
+            ),
+        }
+
+
+# Module-level registry populated on import / explicit reload for digital-twin services.
 REGISTRY: dict[str, Any] = {
     "equipment": {},
     "reactions": {},
-    "by_type": {t.value: [] for t in EquipmentType},
     "errors": [],
     "sources": {},
+    "equipment_registry": None,
 }
 
 
-def _iter_json_files(root: Path) -> list[Path]:
-    """Return all ``*.json`` files under *root*, sorted for deterministic load order."""
-    if not root.exists():
-        logger.warning("Package root does not exist: %s", root)
-        return []
-    return sorted(p for p in root.rglob("*.json") if p.is_file())
-
-
-def _load_json(path: Path) -> dict[str, Any]:
-    with path.open("r", encoding="utf-8") as fh:
-        data = json.load(fh)
-    if not isinstance(data, dict):
-        raise ValueError(f"JSON root must be an object, got {type(data).__name__}")
-    return data
-
-
-def _relative_source(path: Path, backend_root: Path = _BACKEND_ROOT) -> str:
-    try:
-        return str(path.resolve().relative_to(backend_root))
-    except ValueError:
-        return str(path)
-
-
-def load_equipment_packages(
-    root: Path | str | None = None,
-    *,
-    registry: dict[str, Any] | None = None,
-) -> dict[str, EquipmentModel]:
-    """Scan *root* for equipment JSON packages and validate them.
-
-    Returns a dict keyed by ``equipment_id``. Validation failures are recorded
-    in ``registry["errors"]`` when a registry is provided (or the module-level
-    :data:`REGISTRY`).
-    """
-    root_path = Path(root) if root is not None else DEFAULT_EQUIPMENT_ROOT
-    reg = registry if registry is not None else REGISTRY
-    loaded: dict[str, EquipmentModel] = {}
-
-    for path in _iter_json_files(root_path):
-        source = _relative_source(path)
-        try:
-            raw = _load_json(path)
-            package = parse_equipment_package(raw)
-            eq_id = package.equipment_id
-            if eq_id in loaded or eq_id in reg["equipment"]:
-                raise ValueError(f"Duplicate equipment_id={eq_id!r} at {source}")
-            loaded[eq_id] = package
-            reg["equipment"][eq_id] = package
-            reg["by_type"][package.equipment_type.value].append(eq_id)
-            reg["sources"][eq_id] = source
-            logger.info("Loaded equipment %s from %s", eq_id, source)
-        except (OSError, json.JSONDecodeError, ValidationError, ValueError) as exc:
-            message = f"{type(exc).__name__}: {exc}"
-            reg["errors"].append({"path": source, "kind": "equipment", "error": message})
-            logger.error("Failed to load equipment package %s: %s", source, message)
-
-    return loaded
-
-
-def load_reaction_packages(
-    root: Path | str | None = None,
-    *,
-    registry: dict[str, Any] | None = None,
-) -> dict[str, ReactionPackage]:
-    """Scan *root* for reaction JSON packages and validate them.
-
-    Returns a dict keyed by ``reaction_id``.
-    """
+def load_reaction_packages(root: Path | str | None = None) -> dict[str, ReactionPackage]:
+    """Scan reaction_packages/ and validate against ReactionPackage schema."""
     root_path = Path(root) if root is not None else DEFAULT_REACTION_ROOT
-    reg = registry if registry is not None else REGISTRY
     loaded: dict[str, ReactionPackage] = {}
+    if not root_path.exists():
+        logger.warning("Reaction packages directory not found: %s", root_path)
+        return loaded
 
-    for path in _iter_json_files(root_path):
-        source = _relative_source(path)
+    for path in sorted(root_path.glob("**/*.json")):
         try:
-            raw = _load_json(path)
+            with open(path, "r", encoding="utf-8") as fh:
+                raw = json.load(fh)
             package = ReactionPackage.model_validate(raw)
-            rxn_id = package.reaction_id
-            if rxn_id in loaded or rxn_id in reg["reactions"]:
-                raise ValueError(f"Duplicate reaction_id={rxn_id!r} at {source}")
-            loaded[rxn_id] = package
-            reg["reactions"][rxn_id] = package
-            reg["sources"][rxn_id] = source
-            logger.info("Loaded reaction %s from %s", rxn_id, source)
+            if package.reaction_id in loaded or package.reaction_id in REGISTRY["reactions"]:
+                raise ValueError(f"Duplicate reaction_id={package.reaction_id!r}")
+            loaded[package.reaction_id] = package
+            REGISTRY["reactions"][package.reaction_id] = package
+            REGISTRY["sources"][package.reaction_id] = str(path)
+            logger.info("Loaded reaction %s from %s", package.reaction_id, path)
         except (OSError, json.JSONDecodeError, ValidationError, ValueError) as exc:
             message = f"{type(exc).__name__}: {exc}"
-            reg["errors"].append({"path": source, "kind": "reaction", "error": message})
-            logger.error("Failed to load reaction package %s: %s", source, message)
-
+            REGISTRY["errors"].append({"path": str(path), "kind": "reaction", "error": message})
+            logger.error("Failed to load reaction package %s: %s", path, message)
     return loaded
-
-
-def clear_registry(registry: dict[str, Any] | None = None) -> None:
-    """Reset the in-memory registry to an empty state."""
-    reg = registry if registry is not None else REGISTRY
-    reg["equipment"] = {}
-    reg["reactions"] = {}
-    reg["by_type"] = {t.value: [] for t in EquipmentType}
-    reg["errors"] = []
-    reg["sources"] = {}
 
 
 def load_all_packages(
     equipment_root: Path | str | None = None,
     reaction_root: Path | str | None = None,
     *,
-    clear: bool = True,
+    validate: bool = True,
 ) -> dict[str, Any]:
-    """Load all equipment and reaction packages into :data:`REGISTRY`.
+    """Load equipment + reaction packages into :data:`REGISTRY`."""
+    REGISTRY["equipment"] = {}
+    REGISTRY["reactions"] = {}
+    REGISTRY["errors"] = []
+    REGISTRY["sources"] = {}
 
-    Parameters
-    ----------
-    equipment_root, reaction_root:
-        Optional overrides for package directories.
-    clear:
-        If True (default), wipe the registry before loading.
+    eq_db = EquipmentRegistry(equipment_root, validate=validate, auto_load=True)
+    REGISTRY["equipment_registry"] = eq_db
+    for eq_id, item in eq_db.registry.items():
+        REGISTRY["equipment"][eq_id] = item["data"]
+        REGISTRY["sources"][eq_id] = item["path"]
+    for err in eq_db.errors:
+        REGISTRY["errors"].append({"path": err["path"], "kind": "equipment", "error": err["error"]})
 
-    Returns
-    -------
-    dict
-        The module-level :data:`REGISTRY` after loading.
-    """
-    if clear:
-        clear_registry()
-
-    load_equipment_packages(equipment_root, registry=REGISTRY)
-    load_reaction_packages(reaction_root, registry=REGISTRY)
-
-    n_eq = len(REGISTRY["equipment"])
-    n_rxn = len(REGISTRY["reactions"])
-    n_err = len(REGISTRY["errors"])
-    logger.info(
-        "Registry ready: %d equipment, %d reactions, %d errors",
-        n_eq,
-        n_rxn,
-        n_err,
-    )
+    load_reaction_packages(reaction_root)
     return REGISTRY
 
 
-def get_equipment(equipment_id: str) -> EquipmentModel:
-    """Fetch a validated equipment package from the registry."""
-    try:
-        return REGISTRY["equipment"][equipment_id]
-    except KeyError as exc:
-        raise KeyError(f"Equipment {equipment_id!r} not found in registry") from exc
+def get_equipment(equipment_id: str) -> dict[str, Any]:
+    """Fetch equipment JSON data from the module-level registry."""
+    if equipment_id not in REGISTRY["equipment"]:
+        raise KeyError(f"Equipment {equipment_id!r} not found in registry")
+    return REGISTRY["equipment"][equipment_id]
 
 
 def get_reaction(reaction_id: str) -> ReactionPackage:
     """Fetch a validated reaction package from the registry."""
-    try:
-        return REGISTRY["reactions"][reaction_id]
-    except KeyError as exc:
-        raise KeyError(f"Reaction {reaction_id!r} not found in registry") from exc
+    if reaction_id not in REGISTRY["reactions"]:
+        raise KeyError(f"Reaction {reaction_id!r} not found in registry")
+    return REGISTRY["reactions"][reaction_id]
 
 
 def registry_summary() -> dict[str, Any]:
-    """Return a JSON-serialisable summary of the current registry."""
+    """Return a JSON-serialisable summary of the current module registry."""
+    eq_db: EquipmentRegistry | None = REGISTRY.get("equipment_registry")
+    modules = eq_db.summary()["modules"] if eq_db else []
     return {
         "equipment_count": len(REGISTRY["equipment"]),
         "reaction_count": len(REGISTRY["reactions"]),
         "equipment_ids": sorted(REGISTRY["equipment"]),
         "reaction_ids": sorted(REGISTRY["reactions"]),
-        "by_type": {k: list(v) for k, v in REGISTRY["by_type"].items()},
+        "modules": modules,
         "errors": list(REGISTRY["errors"]),
         "sources": dict(REGISTRY["sources"]),
     }
 
 
+# --- QUICK TEST / DEMONSTRATION ---
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+
+    # Initialize Registry (default: arip_backend/equipment_packages)
+    eq_db = EquipmentRegistry(DEFAULT_EQUIPMENT_ROOT)
+
+    # Fetch a specific reactor package
+    reactor_data = eq_db.get_equipment("EQ-PBR-100")
+    if reactor_data:
+        print("--- Loaded Specific Equipment ---")
+        print(f"ID: {reactor_data['equipment_id']}")
+        print(f"Name: {reactor_data['name']}")
+        print(f"Max Operating Pressure: {reactor_data['limits']['max_operating_pressure_bar']} bar")
+
+    # Query all Calorimetry Module tools
+    print("\n--- Module 6 (Calorimetry) Inventory ---")
+    calorimetry_suite = eq_db.list_by_module("Module 6")
+    for eq_id, spec in calorimetry_suite.items():
+        print(f" • [{eq_id}] {spec['name']}")
+
+    # Also load reactions into module REGISTRY and emit machine-readable summary
     load_all_packages()
-    summary = registry_summary()
-    print(json.dumps(summary, indent=2))
-    if summary["errors"]:
+    print("\n--- Registry Summary ---")
+    print(json.dumps(registry_summary(), indent=2))
+    if REGISTRY["errors"]:
         raise SystemExit(1)

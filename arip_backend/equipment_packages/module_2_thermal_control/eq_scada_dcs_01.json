@@ -1,30 +1,14 @@
 {
   "equipment_id": "EQ-SCADA-DCS-01",
-  "name": "Plant SCADA / DCS Node",
-  "equipment_type": "scada_dcs",
-  "manufacturer": "Siemens",
-  "model_number": "PCS7-AS",
-  "protocol": "OPC UA",
-  "max_io_points": 2000,
-  "historian_enabled": true,
-  "alarm_classes": [
-    "advisory",
-    "warning",
-    "critical",
-    "emergency"
-  ],
-  "scan_rate_Hz": 2.0,
-  "redundant": true,
-  "max_operating_pressure_barg": 0.0,
-  "thermal_limits": {
-    "t_min_c": 5.0,
-    "t_max_c": 40.0
+  "name": "Distributed Control & SCADA System",
+  "module": "Module 2 - Thermal Management & Process Control",
+  "architecture": "Siemens S7-1500 PLC / WinCC SCADA",
+  "sampling_interval_ms": 100,
+  "io_channels": {
+    "analog_inputs": 32,
+    "analog_outputs": 16,
+    "digital_inputs": 64,
+    "digital_outputs": 32
   },
-  "tags": [
-    "module_2",
-    "scada",
-    "dcs",
-    "automation"
-  ],
-  "description": "Supervisory control and data acquisition / DCS package for digital twin I/O."
+  "safety_interlock_latency_ms": 50
 }
