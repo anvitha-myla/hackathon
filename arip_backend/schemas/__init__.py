@@ -52,16 +52,21 @@ from .reaction import (
     parse_reaction_document,
 )
 from .residual import RefinedPrediction, ResidualCorrection, ScientificFeatures
+from .telemetry import MetricValue, StreamControlMessage, TwinStepRequest, UnifiedTwinFrame
 
 __all__ = [
     "DecisionOutput",
     "FusedStateEstimate",
     "InterlockAction",
+    "MetricValue",
     "OperatorAdvisory",
     "RefinedPrediction",
     "ResidualCorrection",
     "SafetyStatus",
     "ScientificFeatures",
+    "StreamControlMessage",
+    "TwinStepRequest",
+    "UnifiedTwinFrame",
     "ARCInstrument",
     "AgitatedNutscheFilter",
     "BatchPackage",
