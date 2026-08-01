@@ -14,7 +14,7 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from schemas.equipment import (
+from arip_backend.schemas.equipment import (
     CalorimetryTool,
     DosingPump,
     EquipmentType,
@@ -22,7 +22,7 @@ from schemas.equipment import (
     ThermalControlUnit,
     parse_equipment_package,
 )
-from schemas.reaction import ReactionPackage
+from arip_backend.schemas.reaction import ReactionPackage
 
 logger = logging.getLogger(__name__)
 
