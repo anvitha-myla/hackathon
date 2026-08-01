@@ -11,6 +11,7 @@ from .batch import (
     parse_batch_package,
 )
 from .control import ControlPackage, InterlockConfig, PressureLoopConfig, ThermalLoopConfig
+from .decision import DecisionOutput, InterlockAction, SafetyStatus
 from .ekf import FusedStateEstimate
 from .equipment import (
     ARCInstrument,
@@ -52,9 +53,12 @@ from .reaction import (
 from .residual import RefinedPrediction, ResidualCorrection, ScientificFeatures
 
 __all__ = [
+    "DecisionOutput",
     "FusedStateEstimate",
+    "InterlockAction",
     "RefinedPrediction",
     "ResidualCorrection",
+    "SafetyStatus",
     "ScientificFeatures",
     "ARCInstrument",
     "AgitatedNutscheFilter",
