@@ -15,9 +15,10 @@ from pydantic import BaseModel, ValidationError
 
 from arip_backend.schemas.equipment import parse_equipment_package
 from arip_backend.schemas.reaction import (
-    ReactionMasterPackage,
-    ReactionPackage,
+    MasterReactionPackage,
+    ReactionStepPackage,
     ThermodynamicPropertiesPackage,
+    build_kinetic_memory,
     parse_reaction_document,
 )
 
@@ -131,6 +132,7 @@ REGISTRY: dict[str, Any] = {
     "reaction_masters": {},
     "reaction_steps": {},
     "thermodynamics": {},
+    "kinetic_memory": None,
     "errors": [],
     "sources": {},
     "equipment_registry": None,
@@ -184,16 +186,20 @@ class ReactionRegistry:
 
                 model = parse_reaction_document(data, source_name=str(file_path)) if self.validate else None
 
-                if isinstance(model, ReactionMasterPackage) or data.get("package_type") == "reaction_master":
+                if isinstance(model, MasterReactionPackage) or "mechanism_steps" in data:
                     key = data.get("reaction_id", file_path.stem)
                     bucket = self.masters
                     kind = "master"
-                elif isinstance(model, ThermodynamicPropertiesPackage) or data.get("package_type") == "thermodynamic_properties":
+                elif isinstance(model, ThermodynamicPropertiesPackage) or "chemical_species" in data:
                     key = data.get("package_id", file_path.stem)
                     bucket = self.thermodynamics
                     kind = "thermodynamics"
+                elif isinstance(model, ReactionStepPackage) or "step_id" in data:
+                    key = data.get("step_id", file_path.stem)
+                    bucket = self.steps
+                    kind = "step"
                 else:
-                    key = data.get("reaction_id", file_path.stem)
+                    key = file_path.stem
                     bucket = self.steps
                     kind = "step"
 
@@ -216,17 +222,65 @@ class ReactionRegistry:
         )
 
     def get_reaction(self, reaction_id: str) -> Optional[dict[str, Any]]:
-        """Retrieve reaction JSON by ID (master or step)."""
+        """Retrieve reaction JSON by ID (master, step_id, or thermo package id)."""
         item = self.registry.get(reaction_id)
         return item["data"] if item else None
 
-    def list_steps(self, parent_reaction_id: str) -> dict[str, dict[str, Any]]:
-        """Return elementary steps belonging to a master reaction."""
+    def get_master_model(self, reaction_id: str) -> Optional[MasterReactionPackage]:
+        item = self.masters.get(reaction_id)
+        return item["model"] if item else None
+
+    def get_step_models(self, master_reaction_id: str) -> list[ReactionStepPackage]:
+        """Resolve mechanism_steps filenames from the master into validated step models."""
+        master_entry = self.masters.get(master_reaction_id)
+        if not master_entry:
+            return []
+        master: MasterReactionPackage = master_entry["model"]
+        step_models: list[ReactionStepPackage] = []
+        for filename in master.mechanism_steps:
+            match = next(
+                (
+                    item["model"]
+                    for item in self.steps.values()
+                    if Path(item["path"]).name == filename
+                ),
+                None,
+            )
+            if match is None:
+                raise KeyError(f"Mechanism step file {filename!r} not found in registry")
+            step_models.append(match)
+        return step_models
+
+    def get_thermo_model(self) -> Optional[ThermodynamicPropertiesPackage]:
+        if not self.thermodynamics:
+            return None
+        # Prefer thermodynamic_properties.json stem if present
+        if "thermodynamic_properties" in self.thermodynamics:
+            return self.thermodynamics["thermodynamic_properties"]["model"]
+        return next(iter(self.thermodynamics.values()))["model"]
+
+    def list_steps(self, master_reaction_id: str) -> dict[str, dict[str, Any]]:
+        """Return elementary step JSON dicts linked by the master mechanism_steps list."""
+        master_entry = self.masters.get(master_reaction_id)
+        if not master_entry:
+            return {}
+        filenames = set(master_entry["data"].get("mechanism_steps", []))
         return {
-            rid: item["data"]
-            for rid, item in self.steps.items()
-            if item["data"].get("parent_reaction_id") == parent_reaction_id
+            item["data"]["step_id"]: item["data"]
+            for item in self.steps.values()
+            if Path(item["path"]).name in filenames
         }
+
+    def build_kinetic_model(self, master_reaction_id: str = "RXN-NITRO-24-001") -> dict[str, Any]:
+        """Validate packages and return in-memory r1–r3, Q_rxn, and C_H2* dictionary."""
+        master = self.get_master_model(master_reaction_id)
+        if master is None:
+            raise KeyError(f"Master reaction {master_reaction_id!r} not found")
+        steps = self.get_step_models(master_reaction_id)
+        thermo = self.get_thermo_model()
+        if thermo is None:
+            raise KeyError("Thermodynamic properties package not found")
+        return build_kinetic_memory(master, steps, thermo)
 
     def summary(self) -> dict[str, Any]:
         return {
@@ -263,6 +317,15 @@ def load_reaction_packages(root: Path | str | None = None) -> dict[str, Any]:
     for err in rxn_db.errors:
         REGISTRY["errors"].append({"path": err["path"], "kind": "reaction", "error": err["error"]})
 
+    # Build SciPy-ready kinetic memory when the nitroxylene master is present
+    if "RXN-NITRO-24-001" in rxn_db.masters and not rxn_db.errors:
+        try:
+            REGISTRY["kinetic_memory"] = rxn_db.build_kinetic_model("RXN-NITRO-24-001")
+        except Exception as exc:  # noqa: BLE001 — surface in registry errors
+            message = f"{type(exc).__name__}: {exc}"
+            REGISTRY["errors"].append({"path": "kinetic_memory", "kind": "reaction", "error": message})
+            logger.error("Failed to build kinetic memory: %s", message)
+
     return REGISTRY["reactions"]
 
 
@@ -278,6 +341,7 @@ def load_all_packages(
     REGISTRY["reaction_masters"] = {}
     REGISTRY["reaction_steps"] = {}
     REGISTRY["thermodynamics"] = {}
+    REGISTRY["kinetic_memory"] = None
     REGISTRY["errors"] = []
     REGISTRY["sources"] = {}
 
@@ -351,19 +415,37 @@ if __name__ == "__main__":
     for eq_id, spec in calorimetry_suite.items():
         print(f" • [{eq_id}] {spec['name']}")
 
-    # Load reactions
+    # Load reactions and assemble kinetic memory (r1–r3, Q_rxn, C_H2*)
     rxn_db = ReactionRegistry(DEFAULT_REACTION_ROOT)
-    master = rxn_db.get_reaction("RXN-NITROXYLENE-H2-MASTER")
+    master = rxn_db.get_reaction("RXN-NITRO-24-001")
     if master:
         print("\n--- Nitroxylene Hydrogenation Master ---")
         print(f"ID: {master['reaction_id']}")
         print(f"Name: {master['name']}")
-        print(f"Steps: {len(master.get('steps', []))}")
-        print(f"Overall ΔH_rxn: {master['overall_kinetics']['delta_H_rxn_J_mol']} J/mol")
+        print(f"Mechanism steps: {master.get('mechanism_steps')}")
 
     print("\n--- Reaction Steps ---")
-    for rid, spec in rxn_db.list_steps("RXN-NITROXYLENE-H2-MASTER").items():
-        print(f" • [{rid}] {spec['name']} | Ea={spec['kinetics']['Ea_J_mol']} J/mol")
+    for sid, spec in rxn_db.list_steps("RXN-NITRO-24-001").items():
+        print(
+            f" • [{sid}] {spec['description']} | "
+            f"Ea={spec['kinetics']['activation_energy_ea_kj_mol']} kJ/mol | "
+            f"dH={spec['thermodynamics']['reaction_enthalpy_kj_mol']} kJ/mol"
+        )
+
+    kinetic_memory = rxn_db.build_kinetic_model("RXN-NITRO-24-001")
+    print("\n--- In-Memory Kinetic Model ---")
+    print(json.dumps({
+        "rate_equations": {
+            k: {
+                "equation": v["equation"],
+                "r_value": v["r_value"],
+                "delta_H_kj_mol": v["delta_H_kj_mol"],
+            }
+            for k, v in kinetic_memory["rate_equations"].items()
+        },
+        "Q_rxn": kinetic_memory["Q_rxn"],
+        "C_H2_star": kinetic_memory["C_H2_star"],
+    }, indent=2))
 
     # Full registry summary
     load_all_packages()

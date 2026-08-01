@@ -1,100 +1,40 @@
 {
-  "package_type": "thermodynamic_properties",
-  "package_id": "THERMO-NITROXYLENE-H2",
-  "name": "Thermodynamic Properties \u2014 Nitroxylene Hydrogenation Family",
-  "version": "1.0.0",
-  "parent_reaction_id": "RXN-NITROXYLENE-H2-MASTER",
-  "reference_temperature_K": 298.15,
-  "reference_pressure_bar": 1.0,
-  "species": [
-    {
-      "species_id": "NX",
-      "name": "2-nitro-m-xylene",
-      "formula": "C8H9NO2",
+  "chemical_species": {
+    "2,4-nitroxylene": {
       "molecular_weight_g_mol": 151.16,
-      "cas_number": "81-20-9",
-      "phase_reference": "liquid",
-      "delta_Hf_298_kJ_mol": -70.0,
-      "delta_Gf_298_kJ_mol": 90.0,
-      "Cp_J_molK": 220.0,
-      "boiling_point_c": 238.0,
-      "density_kg_m3": 1120.0,
-      "notes": "Illustrative thermo for digital-twin energy balances."
+      "liquid_density_kg_m3": 1135.0,
+      "specific_heat_capacity_j_kgk": 1820.0
     },
-    {
-      "species_id": "NSX",
-      "name": "2-nitroso-m-xylene",
-      "formula": "C8H9NO",
+    "2,4-nitrosoxylene": {
       "molecular_weight_g_mol": 135.16,
-      "phase_reference": "liquid",
-      "delta_Hf_298_kJ_mol": 45.0,
-      "Cp_J_molK": 195.0,
-      "notes": "Reactive intermediate; estimated properties."
+      "liquid_density_kg_m3": 1090.0,
+      "specific_heat_capacity_j_kgk": 1850.0
     },
-    {
-      "species_id": "XHA",
-      "name": "N-(2,4-xylyl)hydroxylamine",
-      "formula": "C8H11NO",
+    "2,4-xylidylhydroxylamine": {
       "molecular_weight_g_mol": 137.18,
-      "phase_reference": "liquid",
-      "delta_Hf_298_kJ_mol": -35.0,
-      "Cp_J_molK": 210.0,
-      "notes": "Accumulating intermediate of thermal-hazard interest."
+      "liquid_density_kg_m3": 1105.0,
+      "specific_heat_capacity_j_kgk": 1900.0
     },
-    {
-      "species_id": "XYL",
-      "name": "2,4-xylidine",
-      "formula": "C8H11N",
+    "2,4-xylidine": {
       "molecular_weight_g_mol": 121.18,
-      "cas_number": "95-68-1",
-      "phase_reference": "liquid",
-      "delta_Hf_298_kJ_mol": -20.0,
-      "delta_Gf_298_kJ_mol": 145.0,
-      "Cp_J_molK": 205.0,
-      "boiling_point_c": 217.0,
-      "density_kg_m3": 974.0
+      "liquid_density_kg_m3": 972.0,
+      "specific_heat_capacity_j_kgk": 2040.0
     },
-    {
-      "species_id": "H2",
-      "name": "hydrogen",
-      "formula": "H2",
+    "H2": {
       "molecular_weight_g_mol": 2.016,
-      "cas_number": "1333-74-0",
-      "phase_reference": "gas",
-      "delta_Hf_298_kJ_mol": 0.0,
-      "delta_Gf_298_kJ_mol": 0.0,
-      "Cp_J_molK": 28.8
+      "henry_law_constant_bar_m3_kmol": 1420.0,
+      "diffusion_coefficient_m2_s": 3.8e-09
     },
-    {
-      "species_id": "H2O",
-      "name": "water",
-      "formula": "H2O",
+    "H2O": {
       "molecular_weight_g_mol": 18.015,
-      "cas_number": "7732-18-5",
-      "phase_reference": "liquid",
-      "delta_Hf_298_kJ_mol": -285.83,
-      "delta_Gf_298_kJ_mol": -237.14,
-      "Cp_J_molK": 75.3,
-      "boiling_point_c": 100.0,
-      "density_kg_m3": 997.0
-    },
-    {
-      "species_id": "MeOH",
-      "name": "methanol",
-      "formula": "CH4O",
-      "molecular_weight_g_mol": 32.04,
-      "cas_number": "67-56-1",
-      "phase_reference": "liquid",
-      "delta_Hf_298_kJ_mol": -238.4,
-      "delta_Gf_298_kJ_mol": -166.6,
-      "Cp_J_molK": 81.1,
-      "boiling_point_c": 64.7,
-      "density_kg_m3": 792.0,
-      "notes": "Process solvent."
+      "liquid_density_kg_m3": 998.0,
+      "specific_heat_capacity_j_kgk": 4184.0
     }
-  ],
-  "references": [
-    "NIST Chemistry WebBook (H2, H2O, MeOH)",
-    "Estimated intermediate properties for digital-twin demo"
-  ]
+  },
+  "mixture_transport_properties": {
+    "bulk_liquid_density_kg_m3": 1050.0,
+    "bulk_heat_capacity_j_kgk": 2100.0,
+    "liquid_viscosity_pas": 0.0012,
+    "kla_base_coefficient_1_s": 0.085
+  }
 }

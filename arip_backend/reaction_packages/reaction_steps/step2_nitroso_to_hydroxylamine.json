@@ -1,51 +1,27 @@
 {
-  "reaction_id": "RXN-NX-STEP2-NITROSO-TO-HYDROXYLAMINE",
-  "name": "Nitrosxylene to Xylylhydroxylamine",
-  "version": "1.0.0",
-  "description": "Second hydrogenation step: Ar\u2013NO + H2 \u2192 Ar\u2013NHOH.",
-  "step_index": 2,
-  "parent_reaction_id": "RXN-NITROXYLENE-H2-MASTER",
-  "stoichiometry": [
-    {
-      "species_id": "NSX",
-      "name": "2-nitroso-m-xylene",
-      "coefficient": -1.0,
-      "role": "intermediate"
-    },
-    {
-      "species_id": "H2",
-      "name": "hydrogen",
-      "coefficient": -1.0,
-      "role": "reactant"
-    },
-    {
-      "species_id": "XHA",
-      "name": "N-(2,4-xylyl)hydroxylamine",
-      "coefficient": 1.0,
-      "role": "intermediate"
-    }
-  ],
-  "kinetics": {
-    "rate_law": "arrhenius_power_law",
-    "k0": 240000.0,
-    "Ea_J_mol": 42000.0,
-    "delta_H_rxn_J_mol": -180000.0,
-    "reaction_orders": {
-      "NSX": 1.0,
+  "step_id": "STEP-02",
+  "description": "Fast Reduction of Nitrosoxylene to Hydroxylamine Intermediate",
+  "stoichiometry": {
+    "reactants": {
+      "2,4-nitrosoxylene": 1.0,
       "H2": 1.0
     },
-    "reference_temperature_K": 353.15,
-    "notes": "Fast relative to step 1 under typical Pd catalysis; nitroso rarely accumulates."
+    "products": {
+      "2,4-xylidylhydroxylamine": 1.0
+    }
   },
-  "operating_window": {
-    "t_min_c": 40.0,
-    "t_max_c": 120.0,
-    "p_min_barg": 2.0,
-    "p_max_barg": 30.0
+  "kinetics": {
+    "rate_law_type": "Fast Intermediate Power Law",
+    "pre_exponential_k0": 4200000.0,
+    "activation_energy_ea_kj_mol": 28.0,
+    "reaction_order": {
+      "2,4-nitrosoxylene": 1.0,
+      "H2_dissolved": 1.0,
+      "catalyst_concentration": 1.0
+    }
   },
-  "solvent": "MeOH",
-  "catalyst": "Pd/C 5%",
-  "references": [
-    "Haber's sequence \u2014 nitroso \u2192 hydroxylamine"
-  ]
+  "thermodynamics": {
+    "reaction_enthalpy_kj_mol": -185.0,
+    "exothermic": true
+  }
 }
