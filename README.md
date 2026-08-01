@@ -30,3 +30,10 @@ Production UI (after `npm run build`) is also served by FastAPI at `http://local
 - Full engineering labels (Reactor Temperature, Headspace Pressure, Jacket Inlet Flow Rate, …)
 - Glitch-free Start/Reset state machine — WS connects idle; Start begins Mode A; Reset returns to idle (no auto-run)
 - Top menu / ribbon · asset tree · interactive PFD (STBR/TCU/MFC/ANF/WFE) · Aspen Input Expert dialogs
+
+### Cursor Composer prompts
+
+Reusable prompts for extending this twin in Cursor Composer:
+
+- Backend: [`docs/composer-prompts/backend.md`](docs/composer-prompts/backend.md)
+- Frontend: [`docs/composer-prompts/frontend.md`](docs/composer-prompts/frontend.md)
