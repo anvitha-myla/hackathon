@@ -69,6 +69,9 @@ class StreamControlMessage(BaseModel):
     hz: float = Field(10.0, gt=0.0, le=50.0, description="Telemetry publish rate")
     include_ai_advisory: bool = False
     agitator_rpm: Optional[float] = None
+    T_jacket_c: Optional[float] = None
+    P_sp_bar: Optional[float] = None
+    T_sp_c: Optional[float] = None
 
 
 class UnifiedTwinFrame(BaseModel):
@@ -108,4 +111,8 @@ class UnifiedTwinFrame(BaseModel):
     pipeline_ms: dict[str, float] = Field(
         default_factory=dict,
         description="Per-stage wall time for diagnostics",
+    )
+    overlays: dict[str, Any] = Field(
+        default_factory=dict,
+        description="Physics (dashed) vs EKF fused (solid) overlay payloads for LabPlot grids",
     )

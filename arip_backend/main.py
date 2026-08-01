@@ -25,7 +25,9 @@ from typing import Any, Optional
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 
 from arip_backend import __version__
 from arip_backend.schemas.telemetry import (
@@ -34,6 +36,8 @@ from arip_backend.schemas.telemetry import (
     UnifiedTwinFrame,
 )
 from arip_backend.twin_runtime import TwinOrchestrator
+
+STATIC_DIR = Path(__file__).resolve().parent / "static"
 
 # Shared process twin (single-batch demo runtime)
 _runtime: Optional[TwinOrchestrator] = None
@@ -72,6 +76,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+if STATIC_DIR.exists():
+    app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
+
+
+@app.get("/")
+async def dashboard_root():
+    index = STATIC_DIR / "dashboard.html"
+    if index.exists():
+        return FileResponse(index)
+    return JSONResponse({"message": "ARIP twin API", "docs": "/docs"})
+
 
 # ---------------------------------------------------------------------------
 # Health / catalog
@@ -86,6 +101,28 @@ async def health() -> dict[str, Any]:
         "batch_id": rt.batch_id,
         "t_s": rt.t_s,
         "stage_index": rt.stage_index,
+        "dashboard": "/",
+    }
+
+
+@app.post("/api/v1/twin/setpoints")
+async def set_setpoints(body: dict[str, Any]) -> dict[str, Any]:
+    """Update operator setpoints from the control panel."""
+    rt = get_runtime()
+    if "agitator_rpm" in body and body["agitator_rpm"] is not None:
+        rt.agitator_rpm = float(body["agitator_rpm"])
+    if "T_jacket_c" in body and body["T_jacket_c"] is not None:
+        rt.T_jacket_c = float(body["T_jacket_c"])
+    if "T_sp_c" in body and body["T_sp_c"] is not None:
+        rt.T_sp_c = float(body["T_sp_c"])
+    if "P_sp_bar" in body and body["P_sp_bar"] is not None:
+        rt.P_sp_bar = float(body["P_sp_bar"])
+    return {
+        "ok": True,
+        "agitator_rpm": rt.agitator_rpm,
+        "T_jacket_c": rt.T_jacket_c,
+        "T_sp_c": rt.T_sp_c,
+        "P_sp_bar": rt.P_sp_bar,
     }
 
 
@@ -115,6 +152,37 @@ async def units_catalog() -> dict[str, Any]:
         },
         "safety_badges": ["RUN", "WARN", "TRIP", "HOLD", "IDLE"],
         "safety_status": ["NOMINAL", "WARNING", "CRITICAL"],
+    }
+
+
+@app.post("/api/v1/twin/advisory")
+async def twin_advisory() -> dict[str, Any]:
+    """Generate an operator advisory from the current twin state (no time advance)."""
+    from arip_backend.ekf_estimator import I_HYDROXYL, I_NITRO, I_P, I_T, I_XYLIDINE
+    from arip_backend.twin_runtime import STAGE_NAMES
+
+    rt = get_runtime()
+    x = rt.ekf.state_vector()
+    last = rt.decision.history[-1] if rt.decision.history else None
+    advisory = await rt.explainer.generate_operator_advisory(
+        stage=STAGE_NAMES.get(rt.stage_index, f"STAGE_{rt.stage_index}"),
+        fused_state={
+            "T_reactor_c": float(x[I_T]),
+            "P_headspace_bar": float(x[I_P]),
+            "C_nitro": float(x[I_NITRO]),
+            "C_xylidine": float(x[I_XYLIDINE]),
+        },
+        ekf_confidence=float(rt.ekf.confidence_score()),
+        active_interlocks=last.active_interlocks if last else [],
+        optimization_advice=last.optimization_recommendations if last else [],
+        safety_status=last.safety_status if last else "NOMINAL",
+    )
+    return {
+        "ai_advisory": advisory.model_dump(),
+        "t_s": rt.t_s,
+        "stage_index": rt.stage_index,
+        "ekf_confidence": rt.ekf.confidence_score(),
+        "C_hydroxyl": float(x[I_HYDROXYL]),
     }
 
 
@@ -184,19 +252,20 @@ async def twin_stream(websocket: WebSocket) -> None:
 
                 if msg.action == "pause":
                     running = False
-                elif msg.action == "start":
-                    running = True
+                elif msg.action in ("start", "configure"):
+                    if msg.action == "start":
+                        running = True
                     hz = float(msg.hz)
                     dt_s = float(msg.dt_s)
                     include_ai = bool(msg.include_ai_advisory)
                     if msg.agitator_rpm is not None:
                         rt.agitator_rpm = float(msg.agitator_rpm)
-                elif msg.action == "configure":
-                    hz = float(msg.hz)
-                    dt_s = float(msg.dt_s)
-                    include_ai = bool(msg.include_ai_advisory)
-                    if msg.agitator_rpm is not None:
-                        rt.agitator_rpm = float(msg.agitator_rpm)
+                    if msg.T_jacket_c is not None:
+                        rt.T_jacket_c = float(msg.T_jacket_c)
+                    if msg.P_sp_bar is not None:
+                        rt.P_sp_bar = float(msg.P_sp_bar)
+                    if msg.T_sp_c is not None:
+                        rt.T_sp_c = float(msg.T_sp_c)
                 elif msg.action == "reset":
                     rt.reset()
                     await websocket.send_json({"type": "reset_ack", "t_s": rt.t_s})
@@ -217,6 +286,8 @@ async def twin_stream(websocket: WebSocket) -> None:
                         include_ai_advisory=include_ai,
                         sensor_noise=True,
                         agitator_rpm=rt.agitator_rpm,
+                        T_jacket_c=rt.T_jacket_c,
+                        P_sp_bar=rt.P_sp_bar,
                     )
                     frame = await rt.step(req)
                     await websocket.send_json({"type": "frame", "payload": frame.model_dump()})

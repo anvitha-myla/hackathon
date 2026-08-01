@@ -63,6 +63,9 @@ class TwinOrchestrator:
     stage_index: int = 1
     agitator_rpm: float = 180.0
     C_nitro_0: float = 2.8
+    T_jacket_c: float = 90.0
+    T_sp_c: float = 85.0
+    P_sp_bar: float = 10.0
     params: ProcessModelParams = field(default_factory=ProcessModelParams)
     ekf: EKFStateEstimator = field(init=False)
     residual: ResidualCorrectionEngine = field(init=False)
@@ -87,14 +90,27 @@ class TwinOrchestrator:
         self.t_s = 0.0
         self.stage_index = 1
         self.agitator_rpm = 180.0
+        self.T_jacket_c = 90.0
+        self.T_sp_c = 85.0
+        self.P_sp_bar = 10.0
 
     def _controls(self, req: TwinStepRequest) -> dict[str, float]:
         T = float(self.x_truth[I_T])
+        if req.T_jacket_c is not None:
+            self.T_jacket_c = float(req.T_jacket_c)
+        elif T < 80.0:
+            self.T_jacket_c = 95.0
+        else:
+            # Track toward setpoint with mild lag for Chart B
+            self.T_jacket_c = 0.85 * self.T_jacket_c + 0.15 * self.T_sp_c
+
+        if req.P_sp_bar is not None:
+            self.P_sp_bar = float(req.P_sp_bar)
+
         h2_default = 1.0 if T >= 80.0 and self.stage_index >= 2 else 0.0
-        # Decision overrides from last step are applied by caller via request if needed
         return {
-            "T_jacket": float(req.T_jacket_c if req.T_jacket_c is not None else (95.0 if T < 80 else 85.0)),
-            "P_sp": float(req.P_sp_bar if req.P_sp_bar is not None else 10.0),
+            "T_jacket": float(self.T_jacket_c),
+            "P_sp": float(self.P_sp_bar),
             "h2_valve": float(req.h2_valve if req.h2_valve is not None else h2_default),
         }
 
@@ -241,8 +257,7 @@ class TwinOrchestrator:
             # Reflect trip in truth valve immediately
             self.x_truth[I_P] = min(float(self.x_truth[I_P]), 15.0)
         if decision.actuator_overrides.cooling_jacket_flow_pct == 100.0:
-            # Drive jacket colder via next-step default
-            pass
+            self.T_jacket_c = min(self.T_jacket_c, 25.0)
 
         # --- 5) AI explainer ---
         ai_payload: Optional[dict[str, Any]] = None
@@ -280,9 +295,16 @@ class TwinOrchestrator:
         metrics = [
             _metric("BATCH.TIME", self.t_s, "s", "Batch Time", "status", 1),
             _metric("RX.T", T_op, "°C", "Reactor Temperature", "thermal", 2),
+            _metric("RX.TJ", float(self.T_jacket_c), "°C", "Jacket Temperature", "thermal", 2),
             _metric("RX.P", float(fused_map["P_headspace"]), "bar", "Headspace Pressure", "pressure", 2),
             _metric("RX.C_NITRO", C_nitro_op, "mol/L", "Nitroxylene Conc.", "composition", 4),
             _metric("RX.C_XYL", float(fused_map["C_xylidine"]), "mol/L", "Xylidine Conc.", "composition", 4),
+            _metric("PHY.C_NITRO", float(physics_state["C_nitro"]), "mol/L", "Physics C_nitro", "composition", 4),
+            _metric("PHY.C_XYL", float(physics_state["C_xylidine"]), "mol/L", "Physics C_xylidine", "composition", 4),
+            _metric("PHY.T", float(physics_state["T_reactor_c"]), "°C", "Physics T_reactor", "thermal", 2),
+            _metric("EKF.T", float(fused_map["T_reactor"]), "°C", "EKF T_reactor", "thermal", 2),
+            _metric("EKF.C_NITRO", float(fused_map["C_nitro"]), "mol/L", "EKF C_nitro", "composition", 4),
+            _metric("EKF.C_XYL", float(fused_map["C_xylidine"]), "mol/L", "EKF C_xylidine", "composition", 4),
             _metric("RX.C_H2", float(fused_map["C_H2"]), "mol/L", "Dissolved H₂", "composition", 5),
             _metric("RX.C_OH", float(fused_map["C_hydroxyl"]), "mol/L", "Hydroxylamine Conc.", "composition", 4),
             _metric("RX.CONV", conversion * 100.0, "%", "Nitro Conversion", "quality", 2),
@@ -308,7 +330,24 @@ class TwinOrchestrator:
         units_map = {m.tag: m.unit for m in metrics}
         trend_point = {m.tag: m.value for m in metrics}
         trend_point["t_s"] = self.t_s
+        trend_point["t_min"] = self.t_s / 60.0
 
+        overlays = {
+            "physics": {
+                "C_nitro": float(physics_state["C_nitro"]),
+                "C_xylidine": float(physics_state["C_xylidine"]),
+                "T_reactor_c": float(physics_state["T_reactor_c"]),
+                "P_headspace_bar": float(physics_state["P_headspace_bar"]),
+            },
+            "ekf_fused": {
+                "C_nitro": float(fused_map["C_nitro"]),
+                "C_xylidine": float(fused_map["C_xylidine"]),
+                "T_reactor_c": float(fused_map["T_reactor"]),
+                "P_headspace_bar": float(fused_map["P_headspace"]),
+            },
+            "T_jacket_c": float(self.T_jacket_c),
+            "H2_MFC_kg_min": float(z[2]),
+        }
         return UnifiedTwinFrame(
             batch_id=self.batch_id,
             t_s=self.t_s,
@@ -336,4 +375,5 @@ class TwinOrchestrator:
             trend_point=trend_point,
             units_map=units_map,
             pipeline_ms=timings,
+            overlays=overlays,
         )

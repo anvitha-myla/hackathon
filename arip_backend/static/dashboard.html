@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STBR-5000L Digital Twin — ARIP SCADA</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1e1e1e;
+      --panel: #252526;
+      --panel-2: #2d2d30;
+      --border: #3e3e42;
+      --text: #d4d4d4;
+      --muted: #9d9d9d;
+      --cyan: #00d4ff;
+      --green: #39ff14;
+      --amber: #ffb020;
+      --red: #ff4d4d;
+      --magenta: #c084fc;
+      --grid: #333338;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-size: 12px;
+      overflow: hidden;
+    }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+    .shell {
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 36px 1fr;
+      gap: 2px;
+      padding: 2px;
+      background: #141414;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 0 10px;
+      gap: 12px;
+    }
+    .topbar h1 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .topbar h1 span { color: var(--cyan); }
+    .status-cluster { display: flex; align-items: center; gap: 8px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      padding: 3px 10px;
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+    }
+    .badge .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      box-shadow: 0 0 6px currentColor;
+    }
+    .badge.nominal { color: var(--green); border-color: #2a5a2a; }
+    .badge.warning { color: var(--amber); border-color: #6a4a10; }
+    .badge.critical { color: var(--red); border-color: #6a2020; background: #3a1515; }
+    .live { color: var(--muted); font-family: "IBM Plex Mono", monospace; font-size: 11px; }
+    .live .on { color: var(--cyan); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 280px 1fr 300px;
+      gap: 2px;
+      min-height: 0;
+    }
+    .col {
+      display: grid;
+      gap: 2px;
+      min-height: 0;
+      min-width: 0;
+    }
+    .col-left { grid-template-rows: auto auto 1fr auto; }
+    .col-mid { grid-template-rows: 1fr 1fr 1fr; }
+    .col-right { grid-template-rows: 1.1fr 0.9fr 1.2fr; }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow: hidden;
+    }
+    .panel-hd {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 8px;
+      background: var(--panel-2);
+      border-bottom: 1px solid var(--border);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .panel-bd { padding: 6px 8px; overflow: auto; flex: 1; min-height: 0; }
+
+    .kv {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2px 8px;
+      font-size: 11px;
+    }
+    .kv .k { color: var(--muted); }
+    .kv .v { font-family: "IBM Plex Mono", monospace; text-align: right; }
+    .unit {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 0 4px;
+      border: 1px solid var(--border);
+      color: var(--cyan);
+      font-size: 9px;
+      vertical-align: 1px;
+    }
+
+    label.ctrl {
+      display: grid;
+      grid-template-columns: 72px 1fr 58px;
+      align-items: center;
+      gap: 6px;
+      margin: 4px 0;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    input[type="range"] { width: 100%; accent-color: var(--cyan); }
+    .ctrl-val {
+      font-family: "IBM Plex Mono", monospace;
+      color: var(--text);
+      text-align: right;
+      font-size: 11px;
+    }
+    .btn-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; margin-top: 6px; }
+    button {
+      background: #333337;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 5px 6px;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { border-color: var(--cyan); color: var(--cyan); }
+    button.primary { background: #0d3a45; border-color: #1a6a7a; color: var(--cyan); }
+    button.danger { background: #3a1515; border-color: #6a2020; color: var(--red); }
+
+    .stages {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      margin-top: 4px;
+    }
+    .stage {
+      text-align: center;
+      padding: 6px 2px;
+      border: 1px solid var(--border);
+      background: #1a1a1c;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .stage.active {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: inset 0 0 0 1px rgba(0,212,255,0.25);
+      background: #0d2a33;
+    }
+    .stage.done { color: var(--green); border-color: #2a5a2a; }
+
+    .ekf-box {
+      margin-top: 8px;
+      border: 1px solid #1a4a3a;
+      background: linear-gradient(180deg, #1a2a22, #151a18);
+      padding: 8px;
+      text-align: center;
+    }
+    .ekf-box .lbl { font-size: 10px; letter-spacing: 0.1em; color: var(--muted); }
+    .ekf-box .val {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--green);
+      line-height: 1.1;
+      margin-top: 2px;
+    }
+    .ekf-bar {
+      margin-top: 6px;
+      height: 6px;
+      background: #111;
+      border: 1px solid var(--border);
+    }
+    .ekf-bar > i {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--amber), var(--green));
+      width: 0%;
+    }
+
+    .chart { width: 100%; height: 100%; min-height: 0; }
+    .legend-note {
+      font-size: 9px;
+      color: var(--muted);
+      font-family: "IBM Plex Mono", monospace;
+    }
+    .legend-note .phy { color: var(--amber); }
+    .legend-note .ekf { color: var(--cyan); }
+
+    .alarm {
+      display: flex;
+      gap: 6px;
+      align-items: flex-start;
+      padding: 5px 6px;
+      margin-bottom: 3px;
+      border-left: 3px solid var(--border);
+      background: #1a1a1c;
+      font-size: 11px;
+    }
+    .alarm.crit { border-left-color: var(--red); }
+    .alarm.warn { border-left-color: var(--amber); }
+    .alarm.empty { color: var(--muted); border-left-color: #2a5a2a; }
+    .tag {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 9px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .opt-item, .ai-box {
+      padding: 6px;
+      background: #1a1a1c;
+      border: 1px solid var(--border);
+      margin-bottom: 4px;
+      line-height: 1.35;
+      font-size: 11px;
+    }
+    .ai-box {
+      border-color: #3a2a55;
+      background: linear-gradient(180deg, #221a2d, #1a1a1c);
+      min-height: 72px;
+      font-family: "IBM Plex Sans", sans-serif;
+    }
+    .ai-meta { color: var(--magenta); font-family: "IBM Plex Mono", monospace; font-size: 9px; margin-bottom: 4px; }
+
+    .dense-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 10px;
+    }
+    .dense-table th, .dense-table td {
+      border-bottom: 1px solid #333;
+      padding: 2px 4px;
+      text-align: left;
+    }
+    .dense-table th { color: var(--muted); font-weight: 500; }
+    .dense-table td.num { text-align: right; color: var(--cyan); }
+    .dense-table td.unit { color: var(--amber); width: 42px; }
+
+    @media (max-width: 1100px) {
+      body { overflow: auto; }
+      .shell { height: auto; min-height: 100vh; }
+      .grid { grid-template-columns: 1fr; }
+      .col-mid { min-height: 720px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <h1><span>[STBR-5000L]</span> Semi-Batch Nitroxylene Hydrogenation Twin</h1>
+      <div class="status-cluster">
+        <span class="live">WS <span id="wsState" class="on">CONNECTING</span> · <span id="hzLbl">10.0</span> Hz · t=<span id="tLbl" class="mono">0.0</span>s</span>
+        <div id="statusBadge" class="badge nominal"><span class="dot" style="background:currentColor"></span>STATUS: NOMINAL</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT -->
+      <div class="col col-left">
+        <section class="panel">
+          <div class="panel-hd">Equipment &amp; Rxn Control Panel <span>PKG LOADERS</span></div>
+          <div class="panel-bd">
+            <div class="kv">
+              <div class="k">Batch</div><div class="v" id="batchId">—</div>
+              <div class="k">Reaction Pkg</div><div class="v">RXN-NITRO-24-001</div>
+              <div class="k">Equipment</div><div class="v">EQ-STBR-5000L</div>
+              <div class="k">Control</div><div class="v">CTRL-NX-H2-001</div>
+            </div>
+            <hr style="border:none;border-top:1px solid var(--border);margin:8px 0" />
+            <label class="ctrl">T<sub>sp</sub>
+              <input id="slTsp" type="range" min="70" max="110" step="0.5" value="85" />
+              <span class="ctrl-val"><span id="valTsp">85.0</span><span class="unit">°C</span></span>
+            </label>
+            <label class="ctrl">T<sub>jkt</sub>
+              <input id="slTj" type="range" min="20" max="120" step="0.5" value="90" />
+              <span class="ctrl-val"><span id="valTj">90.0</span><span class="unit">°C</span></span>
+            </label>
+            <label class="ctrl">P<sub>sp</sub>
+              <input id="slPsp" type="range" min="1" max="16" step="0.1" value="10" />
+              <span class="ctrl-val"><span id="valPsp">10.00</span><span class="unit">bar</span></span>
+            </label>
+            <label class="ctrl">Agitator
+              <input id="slRpm" type="range" min="60" max="300" step="5" value="180" />
+              <span class="ctrl-val"><span id="valRpm">180</span><span class="unit">RPM</span></span>
+            </label>
+            <div class="btn-row">
+              <button class="primary" id="btnStart">START</button>
+              <button id="btnPause">PAUSE</button>
+              <button class="danger" id="btnReset">RESET</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-hd">Stage Monitor</div>
+          <div class="panel-bd">
+            <div class="stages" id="stages">
+              <div class="stage" data-s="1">[1] HEAT</div>
+              <div class="stage" data-s="2">[2] PRESS</div>
+              <div class="stage" data-s="3">[3] H₂ RXN</div>
+              <div class="stage" data-s="4">[4] DIGEST</div>
+            </div>
+            <div class="ekf-box">
+              <div class="lbl">EKF CONFIDENCE</div>
+              <div class="val" id="ekfConf">—.—%</div>
+              <div class="ekf-bar"><i id="ekfBar"></i></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-hd">Dense Telemetry Table</div>
+          <div class="panel-bd" style="padding:0">
+            <table class="dense-table">
+              <thead><tr><th>TAG</th><th>VALUE</th><th>UNIT</th></tr></thead>
+              <tbody id="metricBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- CENTER -->
+      <div class="col col-mid">
+        <section class="panel">
+          <div class="panel-hd">
+            Chart A · C<sub>nitro</sub> vs C<sub>xylidine</sub>
+            <span class="legend-note"><span class="phy">— — physics</span> · <span class="ekf">── EKF fused</span></span>
+          </div>
+          <div class="panel-bd" style="padding:0"><div id="chartA" class="chart"></div></div>
+        </section>
+        <section class="panel">
+          <div class="panel-hd">
+            Chart B · T<sub>reactor</sub> vs T<sub>jacket</sub>
+            <span class="legend-note"><span class="phy">— — physics T</span> · <span class="ekf">── EKF T</span> · amber jacket</span>
+          </div>
+          <div class="panel-bd" style="padding:0"><div id="chartB" class="chart"></div></div>
+        </section>
+        <section class="panel">
+          <div class="panel-hd">
+            Chart C · H₂ Dosing &amp; P<sub>headspace</sub>
+            <span class="legend-note">cyan MFC · green pressure</span>
+          </div>
+          <div class="panel-bd" style="padding:0"><div id="chartC" class="chart"></div></div>
+        </section>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col col-right">
+        <section class="panel">
+          <div class="panel-hd">Process Safety Interlocks · Hard Alarms</div>
+          <div class="panel-bd" id="alarms">
+            <div class="alarm empty">No hard alarms — plant NOMINAL</div>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-hd">Optimization · Soft Rules</div>
+          <div class="panel-bd" id="opts">
+            <div class="opt-item" style="color:var(--muted)">No soft recommendations</div>
+          </div>
+        </section>
+        <section class="panel">
+          <div class="panel-hd">AI Advisory · Ollama Stream <span id="aiSrc">—</span></div>
+          <div class="panel-bd">
+            <div class="ai-meta" id="aiMeta">awaiting advisory…</div>
+            <div class="ai-box" id="aiText">LocalAIExplainer will annotate stage, fused state, EKF confidence, and interlocks (≤3 sentences; no hardware commands).</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const MAX_POINTS = 600;
+    const hist = {
+      t: [],
+      cN_phy: [], cX_phy: [], cN_ekf: [], cX_ekf: [],
+      T_phy: [], T_ekf: [], Tj: [],
+      mfc: [], P: [],
+    };
+
+    const plotLayoutBase = () => ({
+      paper_bgcolor: "#252526",
+      plot_bgcolor: "#1e1e1e",
+      font: { color: "#d4d4d4", family: "IBM Plex Mono, monospace", size: 10 },
+      margin: { l: 48, r: 48, t: 10, b: 28 },
+      xaxis: {
+        title: { text: "t [min]", standoff: 0 },
+        gridcolor: "#333338",
+        zeroline: false,
+        showspikes: true,
+        spikemode: "across",
+        spikesnap: "cursor",
+        spikecolor: "#00d4ff",
+        spikethickness: 1,
+      },
+      yaxis: {
+        gridcolor: "#333338",
+        zeroline: false,
+        showspikes: true,
+        spikemode: "across",
+        spikesnap: "cursor",
+        spikecolor: "#39ff14",
+        spikethickness: 1,
+      },
+      legend: { orientation: "h", y: 1.12, x: 0, font: { size: 9 } },
+      hovermode: "x unified",
+    });
+
+    const cfg = { responsive: true, displayModeBar: false };
+
+    function initCharts() {
+      Plotly.newPlot("chartA", [
+        { x: [], y: [], name: "C_nitro physics", line: { color: "#ffb020", width: 1.5, dash: "dash" }, mode: "lines" },
+        { x: [], y: [], name: "C_nitro EKF", line: { color: "#00d4ff", width: 2 }, mode: "lines" },
+        { x: [], y: [], name: "C_xylidine physics", line: { color: "#c084fc", width: 1.5, dash: "dash" }, mode: "lines", yaxis: "y2" },
+        { x: [], y: [], name: "C_xylidine EKF", line: { color: "#39ff14", width: 2 }, mode: "lines", yaxis: "y2" },
+      ], {
+        ...plotLayoutBase(),
+        yaxis: { ...plotLayoutBase().yaxis, title: "C_nitro [mol/L]", color: "#00d4ff" },
+        yaxis2: { title: "C_xyl [mol/L]", overlaying: "y", side: "right", gridcolor: "#2a2a2e", color: "#39ff14", showspikes: true, spikemode: "across" },
+      }, cfg);
+
+      Plotly.newPlot("chartB", [
+        { x: [], y: [], name: "T_reactor physics", line: { color: "#ffb020", width: 1.5, dash: "dash" }, mode: "lines" },
+        { x: [], y: [], name: "T_reactor EKF", line: { color: "#00d4ff", width: 2 }, mode: "lines" },
+        { x: [], y: [], name: "T_jacket", line: { color: "#ffb020", width: 1.8 }, mode: "lines" },
+      ], {
+        ...plotLayoutBase(),
+        yaxis: { ...plotLayoutBase().yaxis, title: "T [°C]" },
+      }, cfg);
+
+      Plotly.newPlot("chartC", [
+        { x: [], y: [], name: "H₂ MFC", line: { color: "#00d4ff", width: 2 }, mode: "lines" },
+        { x: [], y: [], name: "P_headspace", line: { color: "#39ff14", width: 2 }, mode: "lines", yaxis: "y2" },
+      ], {
+        ...plotLayoutBase(),
+        yaxis: { ...plotLayoutBase().yaxis, title: "H₂ [kg/min]", color: "#00d4ff" },
+        yaxis2: { title: "P [bar]", overlaying: "y", side: "right", gridcolor: "#2a2a2e", color: "#39ff14", range: [0, 16], showspikes: true },
+      }, cfg);
+    }
+
+    function pushHist(frame) {
+      const tmin = frame.t_min;
+      const ov = frame.overlays || {};
+      const phy = ov.physics || {};
+      const ekf = ov.ekf_fused || {};
+      hist.t.push(tmin);
+      hist.cN_phy.push(phy.C_nitro ?? frame.trend_point["PHY.C_NITRO"]);
+      hist.cX_phy.push(phy.C_xylidine ?? frame.trend_point["PHY.C_XYL"]);
+      hist.cN_ekf.push(ekf.C_nitro ?? frame.trend_point["EKF.C_NITRO"]);
+      hist.cX_ekf.push(ekf.C_xylidine ?? frame.trend_point["EKF.C_XYL"]);
+      hist.T_phy.push(phy.T_reactor_c ?? frame.trend_point["PHY.T"]);
+      hist.T_ekf.push(ekf.T_reactor_c ?? frame.trend_point["EKF.T"]);
+      hist.Tj.push(ov.T_jacket_c ?? frame.trend_point["RX.TJ"]);
+      hist.mfc.push(ov.H2_MFC_kg_min ?? frame.trend_point["H2.MFC"]);
+      hist.P.push(ekf.P_headspace_bar ?? frame.trend_point["RX.P"]);
+      if (hist.t.length > MAX_POINTS) {
+        Object.keys(hist).forEach(k => hist[k].shift());
+      }
+    }
+
+    function redraw() {
+      Plotly.update("chartA", {
+        x: [hist.t, hist.t, hist.t, hist.t],
+        y: [hist.cN_phy, hist.cN_ekf, hist.cX_phy, hist.cX_ekf],
+      }, {}, [0,1,2,3]);
+      Plotly.update("chartB", {
+        x: [hist.t, hist.t, hist.t],
+        y: [hist.T_phy, hist.T_ekf, hist.Tj],
+      }, {}, [0,1,2]);
+      Plotly.update("chartC", {
+        x: [hist.t, hist.t],
+        y: [hist.mfc, hist.P],
+      }, {}, [0,1]);
+    }
+
+    function fmt(v, p) {
+      if (v === undefined || v === null || Number.isNaN(v)) return "—";
+      return Number(v).toFixed(p);
+    }
+
+    function setStatus(status) {
+      const el = document.getElementById("statusBadge");
+      el.className = "badge " + (status === "CRITICAL" ? "critical" : status === "WARNING" ? "warning" : "nominal");
+      const icon = status === "CRITICAL" ? "🔴" : status === "WARNING" ? "🟡" : "🟢";
+      const label = status === "CRITICAL" ? "CRITICAL INTERLOCK" : status;
+      el.innerHTML = `<span class="dot" style="background:currentColor"></span>${icon} STATUS: ${label}`;
+    }
+
+    function renderMetrics(frame) {
+      const prefer = ["RX.T","RX.TJ","RX.P","RX.C_NITRO","RX.C_XYL","RX.C_OH","RX.Q_RXN","H2.MFC","AG.RPM","RX.CONV","EKF.CONF"];
+      const map = Object.fromEntries(frame.metrics.map(m => [m.tag, m]));
+      const body = document.getElementById("metricBody");
+      body.innerHTML = prefer.map(tag => {
+        const m = map[tag];
+        if (!m) return "";
+        return `<tr><td>${m.tag}</td><td class="num">${fmt(m.value, m.precision)}</td><td class="unit">${m.unit}</td></tr>`;
+      }).join("");
+    }
+
+    function renderStages(idx) {
+      document.querySelectorAll(".stage").forEach(el => {
+        const s = Number(el.dataset.s);
+        el.classList.toggle("active", s === idx);
+        el.classList.toggle("done", s < idx);
+      });
+    }
+
+    function renderAlarms(frame) {
+      const box = document.getElementById("alarms");
+      const alarms = (frame.decision && frame.decision.alarms) || [];
+      const ils = (frame.decision && frame.decision.active_interlocks) || [];
+      if (!alarms.length && !ils.length) {
+        box.innerHTML = `<div class="alarm empty">🟢 No hard alarms — plant NOMINAL</div>`;
+        return;
+      }
+      box.innerHTML = [
+        ...ils.map(t => `<div class="alarm ${frame.safety_status === "CRITICAL" ? "crit" : "warn"}"><span class="tag">${t}</span><div>Interlock active</div></div>`),
+        ...alarms.map(a => `<div class="alarm ${a.includes("CRITICAL") || a.includes("ALARM_HIGH") ? "crit" : "warn"}">${a}</div>`),
+      ].join("");
+    }
+
+    function renderOpts(frame) {
+      const box = document.getElementById("opts");
+      const recs = (frame.decision && frame.decision.optimization_recommendations) || [];
+      if (!recs.length) {
+        box.innerHTML = `<div class="opt-item" style="color:var(--muted)">No soft recommendations</div>`;
+        return;
+      }
+      box.innerHTML = recs.map(r => `<div class="opt-item">${r}</div>`).join("");
+    }
+
+    let ws = null;
+    let lastAiFetch = 0;
+
+    function wsUrl() {
+      const proto = location.protocol === "https:" ? "wss" : "ws";
+      return `${proto}://${location.host}/ws/v1/twin/stream`;
+    }
+
+    function sendCtrl(obj) {
+      if (ws && ws.readyState === 1) ws.send(JSON.stringify(obj));
+    }
+
+    function connect() {
+      ws = new WebSocket(wsUrl());
+      const st = document.getElementById("wsState");
+      ws.onopen = () => {
+        st.textContent = "LIVE";
+        st.className = "on";
+        sendCtrl({
+          action: "start",
+          hz: 10,
+          dt_s: 0.5,
+          include_ai_advisory: false,
+          agitator_rpm: Number(document.getElementById("slRpm").value),
+          T_jacket_c: Number(document.getElementById("slTj").value),
+          P_sp_bar: Number(document.getElementById("slPsp").value),
+          T_sp_c: Number(document.getElementById("slTsp").value),
+        });
+      };
+      ws.onclose = () => {
+        st.textContent = "RECONNECT…";
+        st.className = "";
+        setTimeout(connect, 1200);
+      };
+      ws.onmessage = (ev) => {
+        const msg = JSON.parse(ev.data);
+        if (msg.type !== "frame") return;
+        onFrame(msg.payload);
+      };
+    }
+
+    async function maybeFetchAI(frame) {
+      const now = performance.now();
+      if (now - lastAiFetch < 5000) return;
+      lastAiFetch = now;
+      try {
+        const r = await fetch("/api/v1/twin/advisory", { method: "POST" });
+        const d = await r.json();
+        if (d.ai_advisory) {
+          document.getElementById("aiSrc").textContent = d.ai_advisory.source || "—";
+          document.getElementById("aiMeta").textContent =
+            `source=${d.ai_advisory.source} · conf=${fmt(d.ekf_confidence,1)}% · t=${fmt(d.t_s,1)}s`;
+          document.getElementById("aiText").textContent = d.ai_advisory.advisory_text || "—";
+        }
+      } catch (e) {
+        document.getElementById("aiMeta").textContent = "advisory fetch failed";
+      }
+    }
+
+    function onFrame(frame) {
+      document.getElementById("batchId").textContent = frame.batch_id;
+      document.getElementById("tLbl").textContent = fmt(frame.t_s, 1);
+      setStatus(frame.safety_status);
+      renderStages(frame.stage_index);
+      const conf = frame.ekf.confidence_score;
+      document.getElementById("ekfConf").textContent = fmt(conf, 1) + "%";
+      document.getElementById("ekfBar").style.width = Math.max(0, Math.min(100, conf)) + "%";
+      renderMetrics(frame);
+      renderAlarms(frame);
+      renderOpts(frame);
+      pushHist(frame);
+      redraw();
+      maybeFetchAI(frame);
+    }
+
+    function bindSliders() {
+      const bind = (id, valId, digits, unitless) => {
+        const el = document.getElementById(id);
+        const out = document.getElementById(valId);
+        const sync = () => {
+          out.textContent = Number(el.value).toFixed(digits);
+          fetch("/api/v1/twin/setpoints", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              T_sp_c: Number(document.getElementById("slTsp").value),
+              T_jacket_c: Number(document.getElementById("slTj").value),
+              P_sp_bar: Number(document.getElementById("slPsp").value),
+              agitator_rpm: Number(document.getElementById("slRpm").value),
+            }),
+          });
+          sendCtrl({
+            action: "configure",
+            hz: 10,
+            dt_s: 0.5,
+            T_sp_c: Number(document.getElementById("slTsp").value),
+            T_jacket_c: Number(document.getElementById("slTj").value),
+            P_sp_bar: Number(document.getElementById("slPsp").value),
+            agitator_rpm: Number(document.getElementById("slRpm").value),
+          });
+        };
+        el.addEventListener("input", () => { out.textContent = Number(el.value).toFixed(digits); });
+        el.addEventListener("change", sync);
+      };
+      bind("slTsp", "valTsp", 1);
+      bind("slTj", "valTj", 1);
+      bind("slPsp", "valPsp", 2);
+      bind("slRpm", "valRpm", 0);
+    }
+
+    document.getElementById("btnStart").onclick = () => sendCtrl({ action: "start", hz: 10, dt_s: 0.5 });
+    document.getElementById("btnPause").onclick = () => sendCtrl({ action: "pause" });
+    document.getElementById("btnReset").onclick = async () => {
+      await fetch("/api/v1/twin/reset", { method: "POST" });
+      Object.keys(hist).forEach(k => hist[k] = []);
+      sendCtrl({ action: "reset" });
+      sendCtrl({ action: "start", hz: 10, dt_s: 0.5 });
+    };
+
+    initCharts();
+    bindSliders();
+    connect();
+    window.addEventListener("resize", () => {
+      ["chartA","chartB","chartC"].forEach(id => Plotly.Plots.resize(id));
+    });
+  </script>
+</body>
+</html>
