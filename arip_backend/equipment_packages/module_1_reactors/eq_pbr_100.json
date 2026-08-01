@@ -1,0 +1,22 @@
+{
+  "equipment_id": "EQ-PBR-100",
+  "name": "High-Pressure Catalytic Packed Bed Reactor",
+  "module": "Module 1 - Reactor Systems",
+  "reactor_type": "Fixed Bed Tubular Reactor",
+  "construction_material": "Hastelloy C-276",
+  "dimensions": {
+    "tube_length_m": 1.2,
+    "inner_diameter_m": 0.05,
+    "bed_volume_m3": 0.00235
+  },
+  "catalyst_bed": {
+    "porosity": 0.4,
+    "pellet_diameter_m": 0.003,
+    "max_catalyst_mass_kg": 3.5
+  },
+  "limits": {
+    "max_operating_pressure_bar": 100.0,
+    "max_operating_temp_c": 450.0,
+    "max_gas_flow_slpm": 50.0
+  }
+}

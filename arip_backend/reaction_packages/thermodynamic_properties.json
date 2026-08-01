@@ -1,0 +1,40 @@
+{
+  "chemical_species": {
+    "2,4-nitroxylene": {
+      "molecular_weight_g_mol": 151.16,
+      "liquid_density_kg_m3": 1135.0,
+      "specific_heat_capacity_j_kgk": 1820.0
+    },
+    "2,4-nitrosoxylene": {
+      "molecular_weight_g_mol": 135.16,
+      "liquid_density_kg_m3": 1090.0,
+      "specific_heat_capacity_j_kgk": 1850.0
+    },
+    "2,4-xylidylhydroxylamine": {
+      "molecular_weight_g_mol": 137.18,
+      "liquid_density_kg_m3": 1105.0,
+      "specific_heat_capacity_j_kgk": 1900.0
+    },
+    "2,4-xylidine": {
+      "molecular_weight_g_mol": 121.18,
+      "liquid_density_kg_m3": 972.0,
+      "specific_heat_capacity_j_kgk": 2040.0
+    },
+    "H2": {
+      "molecular_weight_g_mol": 2.016,
+      "henry_law_constant_bar_m3_kmol": 1420.0,
+      "diffusion_coefficient_m2_s": 3.8e-09
+    },
+    "H2O": {
+      "molecular_weight_g_mol": 18.015,
+      "liquid_density_kg_m3": 998.0,
+      "specific_heat_capacity_j_kgk": 4184.0
+    }
+  },
+  "mixture_transport_properties": {
+    "bulk_liquid_density_kg_m3": 1050.0,
+    "bulk_heat_capacity_j_kgk": 2100.0,
+    "liquid_viscosity_pas": 0.0012,
+    "kla_base_coefficient_1_s": 0.085
+  }
+}

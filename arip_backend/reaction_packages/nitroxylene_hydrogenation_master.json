@@ -1,0 +1,40 @@
+{
+  "reaction_id": "RXN-NITRO-24-001",
+  "name": "Catalytic Semi-Batch Reduction of 2,4-Nitroxylene to 2,4-Xylidine",
+  "chemical_system": {
+    "target_product": "2,4-Xylidine",
+    "cas_number": "95-68-1",
+    "solvent": "Methanol / Isopropanol Slurry",
+    "catalyst": "5% Pd/C (Palladium on Carbon)",
+    "catalyst_loading_kg_m3": 2.5
+  },
+  "overall_stoichiometry": {
+    "reactants": {
+      "2,4-nitroxylene": 1.0,
+      "H2": 3.0
+    },
+    "products": {
+      "2,4-xylidine": 1.0,
+      "H2O": 2.0
+    }
+  },
+  "operating_window": {
+    "target_temperature_c": 85.0,
+    "min_temperature_c": 60.0,
+    "max_temperature_c": 110.0,
+    "target_pressure_bar": 10.0,
+    "min_pressure_bar": 2.0,
+    "max_safe_pressure_bar": 16.0
+  },
+  "safety_critical_limits": {
+    "max_rha_accumulation_mole_fraction": 0.05,
+    "max_adiabatic_temperature_rise_k": 180.0,
+    "max_self_heating_rate_k_min": 2.0,
+    "onset_decomposition_temp_c": 135.0
+  },
+  "mechanism_steps": [
+    "step1_nitro_to_nitroso.json",
+    "step2_nitroso_to_hydroxylamine.json",
+    "step3_hydroxylamine_to_xylidine.json"
+  ]
+}

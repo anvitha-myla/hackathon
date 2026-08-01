@@ -1,0 +1,15 @@
+{
+  "equipment_id": "EQ-ATFE-01",
+  "name": "Agitated Thin Film Evaporator (ATFE)",
+  "module": "Module 5 - Separation & Purification",
+  "evaporator_surface_area_m2": 0.25,
+  "rotor_speed_rpm": 450,
+  "thermal_parameters": {
+    "max_jacket_temp_c": 250.0,
+    "overall_heat_transfer_coeff_U": 850.0
+  },
+  "limits": {
+    "operating_vacuum_mbar": 0.5,
+    "max_feed_rate_kg_h": 25.0
+  }
+}

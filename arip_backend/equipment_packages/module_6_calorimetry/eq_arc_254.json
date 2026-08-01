@@ -1,0 +1,17 @@
+{
+  "equipment_id": "EQ-ARC-254",
+  "name": "Accelerated Rate Calorimeter (ARC)",
+  "module": "Module 6 - Process Safety & Calorimetry",
+  "operating_mode": "Heat-Wait-Search (HWS) Adiabatic Tracking",
+  "thermal_sensitivity_c_min": 0.02,
+  "bomb_materials": [
+    "Hastelloy C",
+    "Titanium",
+    "Glass-lined"
+  ],
+  "calorimetric_outputs": [
+    "time_to_maximum_rate_TMR_ad",
+    "self_heating_rate_dT_dt",
+    "pressure_rise_rate_dP_dt"
+  ]
+}

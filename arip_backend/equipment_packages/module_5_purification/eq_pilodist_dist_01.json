@@ -1,0 +1,15 @@
+{
+  "equipment_id": "EQ-PILODIST-DIST-01",
+  "name": "Automated Fractional Distillation Column",
+  "module": "Module 5 - Separation & Purification",
+  "column_type": "Packed Column (Sulzer EX Packing)",
+  "theoretical_plates": 30,
+  "limits": {
+    "boilup_rate_l_h": 5.0,
+    "reflux_ratio_range": [
+      0.1,
+      99.9
+    ],
+    "max_pot_temp_c": 220.0
+  }
+}

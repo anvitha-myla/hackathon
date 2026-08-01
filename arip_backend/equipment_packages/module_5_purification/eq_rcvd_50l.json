@@ -1,0 +1,12 @@
+{
+  "equipment_id": "EQ-RCVD-50L",
+  "name": "Rotary Cone Vacuum Dryer",
+  "module": "Module 5 - Separation & Purification",
+  "total_volume_l": 50.0,
+  "working_volume_l": 30.0,
+  "rotation_speed_rpm": 12,
+  "limits": {
+    "vacuum_mbar": 0.5,
+    "jacket_temp_c": 120.0
+  }
+}

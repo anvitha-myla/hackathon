@@ -1,0 +1,25 @@
+{
+  "batch_id": "BATCH-2026-0801-01",
+  "reaction_package_id": "RXN-NITRO-24-001",
+  "equipment_package_id": "EQ-STBR-5000L",
+  "initial_conditions": {
+    "initial_liquid_volume_m3": 3.2,
+    "initial_temperature_c": 75.0,
+    "initial_pressure_bar": 1.0,
+    "initial_concentrations_kmol_m3": {
+      "2,4-nitroxylene": 2.8,
+      "2,4-nitrosoxylene": 0.0,
+      "2,4-xylidylhydroxylamine": 0.0,
+      "2,4-xylidine": 0.0,
+      "H2_dissolved": 0.0,
+      "H2O": 0.05
+    },
+    "catalyst_loading_kg": 12.5
+  },
+  "recipe_targets": {
+    "target_operating_temp_c": 85.0,
+    "target_operating_pressure_bar": 10.0,
+    "agitator_speed_rpm": 180.0,
+    "coolant_inlet_temp_c": 20.0
+  }
+}

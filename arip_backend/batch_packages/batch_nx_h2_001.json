@@ -1,0 +1,33 @@
+{
+  "batch_id": "BATCH-NX-H2-001",
+  "name": "2,4-Nitroxylene Semi-Batch Hydrogenation Demo",
+  "reaction_id": "RXN-NITRO-24-001",
+  "reactor_equipment_id": "EQ-SKID-MINI-01",
+  "tcu_equipment_id": "EQ-TCU-SF-01",
+  "mfc_equipment_id": "EQ-MFC-GAS-01",
+  "dosing_pump_equipment_id": "EQ-PUMP-DOSING-01",
+  "initial_charge": {
+    "volume_m3": 0.01,
+    "temperature_c": 85.0,
+    "pressure_bar": 10.0,
+    "concentrations_kmol_m3": {
+      "2,4-nitroxylene": 1.2,
+      "2,4-nitrosoxylene": 0.0,
+      "2,4-xylidylhydroxylamine": 0.0,
+      "2,4-xylidine": 0.0,
+      "H2O": 0.0,
+      "H2_dissolved": 0.007
+    },
+    "catalyst_loading_kg_m3": 2.5
+  },
+  "liquid_feeds": [],
+  "gas_feed": {
+    "species": "H2",
+    "target_pressure_bar": 10.0,
+    "max_flow_slpm": 50.0
+  },
+  "batch_time_s": 7200.0,
+  "sample_interval_s": 30.0,
+  "control_package_id": "CTRL-NX-H2-001",
+  "notes": "Demo batch for digital-twin ODE + event pipeline."
+}

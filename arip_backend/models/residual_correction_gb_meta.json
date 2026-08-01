@@ -1,0 +1,17 @@
+{
+  "model_file": "residual_correction_gb.joblib",
+  "feature_names": [
+    "conversion",
+    "Q_rxn_W",
+    "mass_transfer_ratio",
+    "T_reactor_c",
+    "agitator_rpm"
+  ],
+  "target_names": [
+    "delta_T_exotherm_c",
+    "delta_C_nitro",
+    "delta_yield"
+  ],
+  "kind": "gradient_boosting",
+  "n_samples": 400
+}

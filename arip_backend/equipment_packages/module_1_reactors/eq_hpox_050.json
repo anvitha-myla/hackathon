@@ -1,0 +1,16 @@
+{
+  "equipment_id": "EQ-HPOX-050",
+  "name": "High-Pressure Catalytic Oxidation Reactor",
+  "module": "Module 1 - Reactor Systems",
+  "reactor_type": "Pressurized Gas-Liquid Autoclave",
+  "construction_material": "Titanium Grade 2 / Inconel 600",
+  "dimensions": {
+    "total_volume_m3": 0.01,
+    "working_volume_m3": 0.007
+  },
+  "limits": {
+    "max_operating_pressure_bar": 150.0,
+    "max_operating_temp_c": 300.0,
+    "max_o2_partial_pressure_bar": 40.0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "equipment_id": "EQ-TCU-SF-01",
+  "name": "Single Fluid Temperature Control Unit (TCU)",
+  "module": "Module 2 - Thermal Management & Process Control",
+  "utility_medium": "Therminol VP-1 / Silicone Oil",
+  "thermal_performance": {
+    "heating_capacity_kw": 24.0,
+    "cooling_capacity_kw": 30.0,
+    "temperature_range_c": [
+      -30.0,
+      200.0
+    ],
+    "max_coolant_flow_rate_m3_h": 12.0,
+    "pump_pressure_bar": 3.5
+  }
+}

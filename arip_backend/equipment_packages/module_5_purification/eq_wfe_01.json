@@ -1,0 +1,11 @@
+{
+  "equipment_id": "EQ-WFE-01",
+  "name": "Short-Path Wiped Film Evaporator (WFE)",
+  "module": "Module 5 - Separation & Purification",
+  "evaporator_surface_area_m2": 0.15,
+  "internal_condenser_area_m2": 0.2,
+  "limits": {
+    "high_vacuum_mbar": 0.001,
+    "max_operating_temp_c": 300.0
+  }
+}

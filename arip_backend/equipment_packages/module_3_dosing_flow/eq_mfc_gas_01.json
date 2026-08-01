@@ -1,0 +1,17 @@
+{
+  "equipment_id": "EQ-MFC-GAS-01",
+  "name": "Bronkhorst High-Pressure Gas MFC",
+  "module": "Module 3 - Dosing & Flow Regulation",
+  "gas_compatibility": [
+    "H2",
+    "N2",
+    "O2",
+    "CO2"
+  ],
+  "flow_range_slpm": {
+    "min": 0.1,
+    "max": 100.0
+  },
+  "accuracy_percentage_full_scale": 0.5,
+  "max_inlet_pressure_bar": 100.0
+}

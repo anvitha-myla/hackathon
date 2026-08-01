@@ -1,0 +1,29 @@
+{
+  "equipment_id": "EQ-STBR-5000L",
+  "name": "5000 L Stirred-Tank Batch Reactor (Pilot/Demo)",
+  "module": "Module 1 - Reactor Systems",
+  "reactor_type": "Stirred Tank Batch Reactor (STBR)",
+  "construction_material": "SS316L / Hastelloy C-276 Jacket",
+  "dimensions": {
+    "total_volume_m3": 5.0,
+    "working_volume_m3": 3.5,
+    "inner_diameter_m": 1.6,
+    "straight_side_height_m": 2.2
+  },
+  "thermal_parameters": {
+    "overall_heat_transfer_coeff_U_W_m2K": 350.0,
+    "jacket_heat_transfer_area_m2": 12.5,
+    "jacket_volume_m3": 0.45
+  },
+  "agitation": {
+    "impeller_type": "pitched-blade turbine",
+    "max_agitator_speed_rpm": 250.0,
+    "power_number": 1.5,
+    "baffled": true
+  },
+  "limits": {
+    "max_operating_pressure_bar": 16.0,
+    "max_operating_temp_c": 200.0,
+    "min_operating_temp_c": -20.0
+  }
+}

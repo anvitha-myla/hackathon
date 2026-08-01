@@ -1,0 +1,23 @@
+{
+  "equipment_id": "EQ-DSC-2500",
+  "name": "High-Pressure Differential Scanning Calorimeter (HP-DSC)",
+  "module": "Module 6 - Process Safety & Calorimetry",
+  "temperature_range_c": [
+    -50.0,
+    600.0
+  ],
+  "heating_rate_k_min": [
+    0.1,
+    50.0
+  ],
+  "limits": {
+    "max_pressure_bar": 100.0,
+    "atmosphere": [
+      "N2",
+      "Air",
+      "O2",
+      "H2"
+    ]
+  },
+  "primary_detection": "Onset temperature of exotherm (T_onset)"
+}

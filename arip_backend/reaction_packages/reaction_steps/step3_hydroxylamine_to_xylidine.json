@@ -1,0 +1,28 @@
+{
+  "step_id": "STEP-03",
+  "description": "Rate-Determining / Heat-Sensitive Reduction of Hydroxylamine to 2,4-Xylidine",
+  "stoichiometry": {
+    "reactants": {
+      "2,4-xylidylhydroxylamine": 1.0,
+      "H2": 1.0
+    },
+    "products": {
+      "2,4-xylidine": 1.0,
+      "H2O": 1.0
+    }
+  },
+  "kinetics": {
+    "rate_law_type": "Langmuir-Hinshelwood (Rate Determining Step)",
+    "pre_exponential_k0": 21000.0,
+    "activation_energy_ea_kj_mol": 52.3,
+    "reaction_order": {
+      "2,4-xylidylhydroxylamine": 1.0,
+      "H2_dissolved": 1.0,
+      "catalyst_concentration": 1.0
+    }
+  },
+  "thermodynamics": {
+    "reaction_enthalpy_kj_mol": -190.0,
+    "exothermic": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "equipment_id": "EQ-ANF-3L",
+  "name": "3L Kilo-Lab Agitated Nutsche Filter Dryer",
+  "module": "Module 4 - Catalyst Separation & Solids Handling",
+  "construction_material": "Hastelloy C-22 / PTFE Seals",
+  "dimensions": {
+    "filter_area_m2": 0.031,
+    "total_volume_l": 3.0,
+    "cake_capacity_l": 1.2
+  },
+  "agitation": {
+    "stroke_height_mm": 50.0,
+    "agitator_rpm_range": [
+      5.0,
+      60.0
+    ]
+  },
+  "limits": {
+    "max_operating_pressure_bar": 6.0,
+    "vacuum_rating_mbar": 1.0,
+    "max_temp_c": 150.0
+  }
+}

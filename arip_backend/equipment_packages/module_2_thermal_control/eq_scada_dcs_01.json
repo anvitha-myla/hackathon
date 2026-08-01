@@ -1,0 +1,14 @@
+{
+  "equipment_id": "EQ-SCADA-DCS-01",
+  "name": "Distributed Control & SCADA System",
+  "module": "Module 2 - Thermal Management & Process Control",
+  "architecture": "Siemens S7-1500 PLC / WinCC SCADA",
+  "sampling_interval_ms": 100,
+  "io_channels": {
+    "analog_inputs": 32,
+    "analog_outputs": 16,
+    "digital_inputs": 64,
+    "digital_outputs": 32
+  },
+  "safety_interlock_latency_ms": 50
+}

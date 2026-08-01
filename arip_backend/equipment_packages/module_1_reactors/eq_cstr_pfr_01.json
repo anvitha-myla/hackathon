@@ -1,0 +1,17 @@
+{
+  "equipment_id": "EQ-CSTR-PFR-01",
+  "name": "Continuous Multi-Stage CSTR & PFR Bench Suite",
+  "module": "Module 1 - Reactor Systems",
+  "reactor_type": "Continuous Cascade",
+  "construction_material": "316L Stainless Steel / Glass-Lined",
+  "dimensions": {
+    "cstr_volume_m3": 0.005,
+    "pfr_volume_m3": 0.002,
+    "pfr_tube_length_m": 5.0
+  },
+  "limits": {
+    "max_operating_pressure_bar": 10.0,
+    "max_operating_temp_c": 160.0,
+    "max_residence_time_min": 180.0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "equipment_id": "EQ-METTLER-RC1E",
+  "name": "Mettler Toledo RC1e Reaction Calorimeter",
+  "module": "Module 6 - Process Safety & Calorimetry",
+  "operating_modes": [
+    "Isothermal",
+    "Isoperibolic",
+    "Adiabatic"
+  ],
+  "vessel_volume_ml": 1000,
+  "measurement_resolution": {
+    "heat_flow_detection_limit_w": 0.01,
+    "temperature_accuracy_k": 0.01
+  },
+  "calorimetric_outputs": [
+    "q_rxn_watts",
+    "heat_of_reaction_kj_mol",
+    "overall_heat_transfer_coeff_UA",
+    "adiabatic_temperature_rise_dT_ad"
+  ]
+}

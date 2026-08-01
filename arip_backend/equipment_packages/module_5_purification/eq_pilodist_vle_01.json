@@ -1,0 +1,12 @@
+{
+  "equipment_id": "EQ-PILODIST-VLE-01",
+  "name": "Vapour-Liquid Equilibrium Determination Unit",
+  "module": "Module 5 - Separation & Purification",
+  "operating_mode": "Circulating Vapor and Liquid Phase Equilibrium",
+  "limits": {
+    "boiler_capacity_ml": 100,
+    "max_pressure_bar": 3.0,
+    "vacuum_mbar": 1.0,
+    "max_temp_c": 250.0
+  }
+}

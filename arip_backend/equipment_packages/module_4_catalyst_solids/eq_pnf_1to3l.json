@@ -1,0 +1,17 @@
+{
+  "equipment_id": "EQ-PNF-1TO3L",
+  "name": "Pressurized Liquid-Solid Nutsche Filter",
+  "module": "Module 4 - Catalyst Separation & Solids Handling",
+  "construction_material": "316L Stainless Steel",
+  "dimensions": {
+    "volume_range_l": [
+      1.0,
+      3.0
+    ],
+    "filter_mesh_micron": 5.0
+  },
+  "limits": {
+    "max_operating_pressure_bar": 10.0,
+    "inert_gas_purge_pressure_bar": 8.0
+  }
+}

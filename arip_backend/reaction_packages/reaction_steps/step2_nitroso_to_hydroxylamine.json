@@ -1,0 +1,27 @@
+{
+  "step_id": "STEP-02",
+  "description": "Fast Reduction of Nitrosoxylene to Hydroxylamine Intermediate",
+  "stoichiometry": {
+    "reactants": {
+      "2,4-nitrosoxylene": 1.0,
+      "H2": 1.0
+    },
+    "products": {
+      "2,4-xylidylhydroxylamine": 1.0
+    }
+  },
+  "kinetics": {
+    "rate_law_type": "Fast Intermediate Power Law",
+    "pre_exponential_k0": 4200000.0,
+    "activation_energy_ea_kj_mol": 28.0,
+    "reaction_order": {
+      "2,4-nitrosoxylene": 1.0,
+      "H2_dissolved": 1.0,
+      "catalyst_concentration": 1.0
+    }
+  },
+  "thermodynamics": {
+    "reaction_enthalpy_kj_mol": -185.0,
+    "exothermic": true
+  }
+}

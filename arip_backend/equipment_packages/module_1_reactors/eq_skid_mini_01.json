@@ -1,0 +1,15 @@
+{
+  "equipment_id": "EQ-SKID-MINI-01",
+  "name": "Multipurpose Process Scale-Up Miniplant Skid",
+  "module": "Module 1 - Reactor Systems",
+  "reactor_type": "Multipurpose Skid Assembly",
+  "construction_material": "Hastelloy C-22 / Borosilicate Glass 3.3",
+  "dimensions": {
+    "total_volume_m3": 0.02,
+    "working_volume_m3": 0.015
+  },
+  "limits": {
+    "max_operating_pressure_bar": 6.0,
+    "max_operating_temp_c": 200.0
+  }
+}

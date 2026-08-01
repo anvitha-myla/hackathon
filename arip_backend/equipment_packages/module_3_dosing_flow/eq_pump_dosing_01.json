@@ -1,0 +1,12 @@
+{
+  "equipment_id": "EQ-PUMP-DOSING-01",
+  "name": "Diaphragm High-Pressure Liquid Metering Pump",
+  "module": "Module 3 - Dosing & Flow Regulation",
+  "head_material": "Hastelloy C-276",
+  "flow_range_l_h": {
+    "min": 0.2,
+    "max": 50.0
+  },
+  "max_discharge_pressure_bar": 120.0,
+  "dosing_precision_percentage": 0.25
+}

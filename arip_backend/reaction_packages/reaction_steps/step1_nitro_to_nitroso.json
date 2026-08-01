@@ -1,0 +1,28 @@
+{
+  "step_id": "STEP-01",
+  "description": "Hydrogenation of 2,4-Nitroxylene to 2,4-Nitrosoxylene",
+  "stoichiometry": {
+    "reactants": {
+      "2,4-nitroxylene": 1.0,
+      "H2": 1.0
+    },
+    "products": {
+      "2,4-nitrosoxylene": 1.0,
+      "H2O": 1.0
+    }
+  },
+  "kinetics": {
+    "rate_law_type": "Langmuir-Hinshelwood / Power Law",
+    "pre_exponential_k0": 85000.0,
+    "activation_energy_ea_kj_mol": 48.5,
+    "reaction_order": {
+      "2,4-nitroxylene": 1.0,
+      "H2_dissolved": 1.0,
+      "catalyst_concentration": 1.0
+    }
+  },
+  "thermodynamics": {
+    "reaction_enthalpy_kj_mol": -165.0,
+    "exothermic": true
+  }
+}
