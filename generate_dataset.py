@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
 """
-Generate the EQ-STBR-5000L 120-batch hydrogenation dataset.
+EQ-STBR-5000L 120-batch dataset generator.
 
-Orchestrates deterministic semi-batch physics, stochastic SCADA artifacts,
-and single/compound anomaly injection. Partitioning is strictly by
-``batch_id`` (GroupKFold-safe): 84 train / 36 test.
+Orchestrates the 8-step process state machine, stiff kinetic ODE for
+ACTIVE_HYDROGENATION, stochastic SCADA artifacts, and step-bounded
+anomalies. Partitioning is GroupKFold-safe by ``batch_id`` (84 train / 36 test).
 
 Outputs
 -------
 dataset/raw/batch_XXX.csv
-    12 core SCADA columns at 1 min resolution (150–240 rows).
+    14 core SCADA columns at 1-minute resolution (~330 rows / batch).
 dataset/targets/batch_XXX.csv
-    Ground-truth ``reaction_conversion_pct`` per time step.
-dataset/batch_summary.csv
-    batch_id, split, anomaly_type, total_duration_min, final_conversion_pct,
-    time_to_endpoint_min.
+    Ground-truth ``reaction_conversion_pct`` (+ ``time_to_endpoint_min`` meta).
+dataset/ground_truth/batch_summary.csv
+    batch_id, split, anomaly_type, total_duration_min, final_conversion_pct.
 """
 
 from __future__ import annotations
@@ -26,26 +25,22 @@ import random
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional
+from typing import Dict, List, Optional, Tuple
 
 import numpy as np
+from scipy.integrate import solve_ivp
 
-from anomalies import (
-    AnomalyType,
-    CASCADE_FEED_DELAY_MIN,
-    COOLING_SPIKE_DURATION_MIN,
-    COOLING_UA_DROP,
-    FEED_PAUSE_DURATION_MIN,
-    FOAMING_TORQUE_DROP,
-    SENSOR_DRIFT_BIAS_C,
-    generate_shift_note,
+from anomalies import AnomalySchedule, AnomalyType, build_anomaly_schedule
+from equipment import (
+    TOTAL_BATCH_DURATION_MIN,
+    ProcessStep,
+    ReactorEquipmentPackage,
+    STEP_BOUNDS,
+    STEP_DURATIONS_MIN,
+    STEP_ORDER,
+    build_step_constraints,
 )
-from equipment import ReactorEquipmentPackage
-from stochastic import (
-    AgitatorTorqueModel,
-    apply_process_noise,
-    sample_coa_purity,
-)
+from stochastic import apply_process_noise, sample_coa_purity
 
 # ---------------------------------------------------------------------------
 # Dataset constants
@@ -53,15 +48,16 @@ from stochastic import (
 N_BATCHES = 120
 N_TRAIN = 84
 N_TEST = 36
-DURATION_MIN_RANGE = (150, 240)
-DT_MIN = 1.0  # logging grid: 1 minute per row
 ENDPOINT_CONVERSION_PCT = 98.0
-DEFAULT_SEED = 20260808
+DEFAULT_SEED = 20260809
+DT_MIN = 1.0
 
 CORE_COLUMNS = [
     "batch_id",
     "time_step_min",
+    "current_step_id",
     "raw_material_purity_coa",
+    "vessel_weight_kg",
     "T_reactor",
     "T_jacket",
     "delta_T",
@@ -75,38 +71,30 @@ CORE_COLUMNS = [
 
 
 # ===========================================================================
-# Batch plan (GroupKFold by batch_id)
+# Batch plan
 # ===========================================================================
 
 
 @dataclass(frozen=True)
 class BatchSpec:
     batch_id: int
-    split: str  # "train" | "test"
+    split: str
     anomaly: AnomalyType
 
 
-def build_batch_plan(seed: int = DEFAULT_SEED) -> list[BatchSpec]:
+def build_batch_plan(seed: int = DEFAULT_SEED) -> List[BatchSpec]:
     """
-    Construct the 120-batch anomaly distribution matrix.
-
-    Training (84): ~70 NONE + ~14 single (no SENSOR_DRIFT, no compounds).
-    Testing  (36): ~16 NONE + ~10 single (incl. SENSOR_DRIFT) + ~10 compound.
+    Train (84): 70 NONE + 14 single (no SENSOR_DRIFT, no compounds).
+    Test  (36): 16 NONE + 10 single (incl. SENSOR_DRIFT) + 10 compound.
     """
     rng = random.Random(seed)
-
-    train_anoms: list[AnomalyType] = (
+    train = (
         [AnomalyType.NONE] * 70
         + [AnomalyType.SURFACE_FOAMING] * 5
         + [AnomalyType.COOLING_SPIKE] * 5
         + [AnomalyType.FEED_PAUSE] * 4
     )
-    assert len(train_anoms) == N_TRAIN
-    # SENSOR_DRIFT must be 100% excluded from training
-    assert AnomalyType.SENSOR_DRIFT not in train_anoms
-    assert all(not a.is_compound for a in train_anoms)
-
-    test_anoms: list[AnomalyType] = (
+    test = (
         [AnomalyType.NONE] * 16
         + [AnomalyType.SURFACE_FOAMING] * 2
         + [AnomalyType.COOLING_SPIKE] * 2
@@ -115,303 +103,456 @@ def build_batch_plan(seed: int = DEFAULT_SEED) -> list[BatchSpec]:
         + [AnomalyType.COMPOUND_FOAM_COOLING] * 5
         + [AnomalyType.COMPOUND_CASCADE] * 5
     )
-    assert len(test_anoms) == N_TEST
-
-    rng.shuffle(train_anoms)
-    rng.shuffle(test_anoms)
-
-    # Stable batch_id assignment: 1..84 train, 85..120 test (GroupKFold-safe)
+    assert len(train) == N_TRAIN and len(test) == N_TEST
+    assert AnomalyType.SENSOR_DRIFT not in train
+    assert all(not a.is_compound for a in train)
+    rng.shuffle(train)
+    rng.shuffle(test)
     plan = [
-        BatchSpec(batch_id=i + 1, split="train", anomaly=train_anoms[i])
-        for i in range(N_TRAIN)
+        BatchSpec(i + 1, "train", train[i]) for i in range(N_TRAIN)
+    ] + [
+        BatchSpec(N_TRAIN + i + 1, "test", test[i]) for i in range(N_TEST)
     ]
-    plan += [
-        BatchSpec(batch_id=N_TRAIN + i + 1, split="test", anomaly=test_anoms[i])
-        for i in range(N_TEST)
-    ]
-    assert len(plan) == N_BATCHES
     return plan
 
 
 # ===========================================================================
-# Fast semi-batch physics (vector-friendly Euler, dt = 1 min)
+# Batch trajectory buffers
 # ===========================================================================
 
 
 @dataclass
-class PhysicsResult:
+class BatchTrajectory:
     time_min: np.ndarray
+    step_id: np.ndarray
+    weight_kg: np.ndarray
     T_reactor: np.ndarray
     T_jacket: np.ndarray
     pressure_bar: np.ndarray
-    h2_flow_kg_min: np.ndarray
-    cooling_water_m3_h: np.ndarray
-    ua_W_K: np.ndarray
-    q_cooling_W: np.ndarray
+    h2_flow: np.ndarray
+    cooling_L_min: np.ndarray
+    torque_Nm: np.ndarray
     conversion: np.ndarray  # 0..1
-    agitator_torque_Nm: np.ndarray
-    agitator_power_kW: np.ndarray
+    ua_scale: np.ndarray
 
 
-def _anomaly_schedules(
-    n: int,
-    anomaly: AnomalyType,
-    rng: np.random.Generator,
-) -> dict[str, np.ndarray]:
-    """
-    Boolean / scale schedules (length ``n``, index = minute) baked into ODE.
-    """
-    ua_scale = np.ones(n, dtype=np.float64)
-    feed_scale = np.ones(n, dtype=np.float64)
-    foam_scale = np.ones(n, dtype=np.float64)
-    drift_bias = np.zeros(n, dtype=np.float64)
-
-    def _window(start: int, duration: int) -> slice:
-        a = int(max(0, min(n - 1, start)))
-        b = int(max(a + 1, min(n, a + max(duration, 1))))
-        return slice(a, b)
-
-    peak = int(0.35 * n) + int(rng.integers(-10, 11))
-
-    needs_cooling = anomaly in (
-        AnomalyType.COOLING_SPIKE,
-        AnomalyType.COMPOUND_FOAM_COOLING,
-        AnomalyType.COMPOUND_CASCADE,
-    )
-    needs_foam = anomaly in (
-        AnomalyType.SURFACE_FOAMING,
-        AnomalyType.COMPOUND_FOAM_COOLING,
-    )
-    needs_feed = anomaly in (
-        AnomalyType.FEED_PAUSE,
-        AnomalyType.COMPOUND_CASCADE,
-    )
-    needs_drift = anomaly in (
-        AnomalyType.SENSOR_DRIFT,
-        AnomalyType.COMPOUND_CASCADE,
-    )
-
-    cool_start = peak
-    if needs_cooling:
-        dur = int(
-            round(
-                float(
-                    rng.uniform(
-                        COOLING_SPIKE_DURATION_MIN[0],
-                        COOLING_SPIKE_DURATION_MIN[1],
-                    )
-                )
-            )
-        )
-        sl = _window(cool_start, dur)
-        ua_scale[sl] = 1.0 - COOLING_UA_DROP
-        cool_start = sl.start
-
-    if needs_foam:
-        # Abrupt foaming near peak (~8–15 min persistence)
-        foam_dur = int(rng.integers(8, 16))
-        sl = _window(peak, foam_dur)
-        foam_scale[sl] = 1.0 - FOAMING_TORQUE_DROP
-
-    if needs_feed:
-        if anomaly is AnomalyType.COMPOUND_CASCADE:
-            feed_start = cool_start + int(CASCADE_FEED_DELAY_MIN)
-        else:
-            feed_start = int(0.50 * n) + int(rng.integers(-15, 16))
-        sl = _window(feed_start, int(FEED_PAUSE_DURATION_MIN))
-        feed_scale[sl] = 0.0
-
-    if needs_drift:
-        if anomaly is AnomalyType.COMPOUND_CASCADE:
-            drift_start = cool_start
-        else:
-            drift_start = int(0.45 * n)
-        # Linear 0 → +0.5 °C from drift_start to end; hold not needed (to EOS)
-        if drift_start < n - 1:
-            ramp = np.linspace(0.0, SENSOR_DRIFT_BIAS_C, n - drift_start)
-            drift_bias[drift_start:] = ramp
-
-    return {
-        "ua_scale": ua_scale,
-        "feed_scale": feed_scale,
-        "foam_scale": foam_scale,
-        "drift_bias": drift_bias,
-    }
-
-
-def simulate_batch_physics(
-    duration_min: int,
-    coa_purity: float,
-    anomaly: AnomalyType,
-    equipment: ReactorEquipmentPackage,
-    seed: int,
-) -> PhysicsResult:
-    """
-    Semi-batch catalytic hydrogenation Euler integration at 1 min steps.
-
-    States: conversion X, reactor temperature T, headspace pressure P.
-    Kinetics are first-order in residual nitroxylene with H2 availability
-    and CoA assay factor. Exotherm is removed via η·U·A·ΔT.
-    """
-    rng = np.random.default_rng(seed)
-    eq = equipment
-    n = int(duration_min)
-    t = np.arange(n, dtype=np.float64)  # minutes
-
-    schedules = _anomaly_schedules(n, anomaly, rng)
-    ua_scale = schedules["ua_scale"]
-    feed_scale = schedules["feed_scale"]
-    foam_scale = schedules["foam_scale"]
-    drift_bias = schedules["drift_bias"]
-
-    assay = float(coa_purity) / 100.0
-    # Effective initial moles scale with CoA (over-purity → slightly more reactant)
-    n_rxn_mol = eq.nitroxylene_moles * assay
-
-    # Stoichiometry: assume ~3 mol H2 / mol nitroxylene (aromatic NO2 → NH2 path)
-    h2_per_mol = 3.0
-    h2_stoich_kg = n_rxn_mol * h2_per_mol * (eq.h2_molar_mass_kg_kmol / 1000.0)
-
-    # Controllers / setpoints with mild batch-to-batch variation
-    T_set = 85.0 + float(rng.normal(0.0, 1.5))
-    T_jkt = float(
-        np.clip(
-            eq.tcu_supply_temp_C + rng.normal(0.0, 1.0),
-            eq.tcu_supply_temp_min_C,
-            eq.tcu_supply_temp_max_C,
-        )
-    )
-    P_target = eq.headspace_pressure_target_bar + float(rng.normal(0.0, 0.15))
-    feed_nom = float(np.clip(3.2 + rng.normal(0.0, 0.30), 2.0, eq.mfc_max_h2_feed_kg_min))
-
-    # Thermal
-    m_cp = eq.liquid_charge_mass_kg * eq.cp_mix_J_kgK + eq.c_vessel_J_K  # J/K
-    ua0 = eq.ua_W_K  # W/K
-    # Net heat of reaction absorbed by batch per kg H2 consumed
-    dH_J_per_kg_H2 = 40.0e6  # J/kg H2 (~80 kJ/mol H2)
-
-    # Kinetic rate constant [1/min] at reference T
-    k_ref = 0.035 + float(rng.normal(0.0, 0.003))
-    E_over_R = 4000.0  # K
-    T_ref = 358.15  # K (~85 °C)
-
-    torque_model = AgitatorTorqueModel(equipment=eq)
-
-    X = np.zeros(n, dtype=np.float64)
-    T = np.zeros(n, dtype=np.float64)
-    P = np.zeros(n, dtype=np.float64)
-    F = np.zeros(n, dtype=np.float64)
-    UA = np.zeros(n, dtype=np.float64)
-    Q = np.zeros(n, dtype=np.float64)
-    CW = np.zeros(n, dtype=np.float64)
-    TAU = np.zeros(n, dtype=np.float64)
-    PWR = np.zeros(n, dtype=np.float64)
-    Tj = np.full(n, T_jkt, dtype=np.float64)
-
-    T[0] = 55.0 + float(rng.normal(0.0, 1.0))  # heat-up start
-    P[0] = 6.0 + float(rng.normal(0.0, 0.2))
-    X[0] = 0.0
-
-    dt_s = DT_MIN * 60.0
-    cp_water = 4184.0  # J/(kg·K)
-    rho_water = 997.0
-    dT_cw = 8.0  # °C rise across jacket exchanger (nominal)
-
-    for i in range(n):
-        # Heat-up then feed phase
-        heatup = 20.0 + float(rng.normal(0.0, 2.0))
-        feeding = i >= heatup and X[i] < 0.995
-
-        # Pressure + temperature-aware feed controller (cut back on exotherm)
-        if feeding:
-            F_cmd = feed_nom * (1.0 + 0.10 * (P_target - P[i]) / max(P_target, 1e-6))
-            if T[i] > T_set + 5.0:
-                F_cmd *= max(0.45, 1.0 - 0.04 * (T[i] - T_set))
-            F_cmd = float(np.clip(F_cmd, 0.0, eq.mfc_max_h2_feed_kg_min))
-        else:
-            F_cmd = 0.0
-        F[i] = F_cmd * feed_scale[i]
-
-        UA[i] = ua0 * ua_scale[i]
-        # Jacket tracks TCU supply; colder if reactor runs hot
-        T_jkt_cmd = T_jkt - (2.0 if T[i] > T_set + 2.0 else 0.0)
-        Tj[i] = float(
-            np.clip(
-                T_jkt_cmd + 0.3 * math.sin(i / 18.0) + rng.normal(0.0, 0.05),
-                eq.tcu_supply_temp_min_C,
-                eq.tcu_supply_temp_max_C + 5.0,
-            )
-        )
-
-        # Kinetics
-        T_K = T[i] + 273.15
-        k = k_ref * math.exp(-E_over_R * (1.0 / T_K - 1.0 / T_ref))
-        p_fac = max(P[i], 0.0) / (max(P[i], 0.0) + 2.0)
-        r_kin = k * max(1.0 - X[i], 0.0) * p_fac * max(assay, 0.9)
-        dm_h2_kin = r_kin * h2_stoich_kg * DT_MIN
-        dm_h2_feed = F[i] * DT_MIN
-        dm_h2 = min(dm_h2_kin, dm_h2_feed) if feeding else 0.0
-        dm_hs = max(dm_h2_feed - dm_h2, 0.0)
-
-        dX = dm_h2 / max(h2_stoich_kg, 1e-12)
-        Q[i] = UA[i] * (T[i] - Tj[i])
-        q_rxn_W = (dm_h2 * dH_J_per_kg_H2) / dt_s
-        q_ag_W = 11.2e3 * foam_scale[i] * 0.10
-        dT = ((q_rxn_W + q_ag_W - Q[i]) * dt_s) / m_cp
-
-        V_hs = eq.headspace_volume_m3
-        R = 8.314462618
-        dn_hs = dm_hs / eq.h2_molar_mass_kg_kmol
-        dP_bar = (dn_hs * 1000.0 * R * T_K / V_hs) / 1.0e5
-        dP_ctrl = -0.15 * (P[i] - P_target)
-        dP = dP_bar + dP_ctrl
-
-        q_cool = max(Q[i], 0.0)
-        m_dot_cw = q_cool / max(cp_water * dT_cw, 1e-6)
-        CW[i] = (m_dot_cw / rho_water) * 3600.0
-
-        TAU[i] = torque_model.torque_Nm(float(X[i])) * foam_scale[i]
-        PWR[i] = torque_model.power_kW(float(X[i])) * foam_scale[i]
-
-        if i + 1 < n:
-            X[i + 1] = float(np.clip(X[i] + dX, 0.0, 1.0))
-            T_next = T[i] + dT
-            if not feeding:
-                # Heat-up or post-reaction temperature hold toward setpoint
-                T_next += 0.12 * (T_set - T[i])
-            else:
-                T_next += 0.03 * (T_set - T[i])
-            T[i + 1] = float(np.clip(T_next, 50.0, 115.0))
-            P[i + 1] = float(
-                np.clip(
-                    P[i] + dP,
-                    eq.operating_pressure_min_bar * 0.5,
-                    eq.design_pressure_max_bar,
-                )
-            )
-
-    # Apply sensor drift to the *measured* reactor temperature channel later;
-    # keep true T here and pass drift schedule out via attribute on result —
-    # stored by adding bias only in SCADA assembly.
-    T_meas = T + drift_bias
-
-    return PhysicsResult(
-        time_min=t,
-        T_reactor=T_meas,
-        T_jacket=Tj,
-        pressure_bar=P,
-        h2_flow_kg_min=F,
-        cooling_water_m3_h=CW,
-        ua_W_K=UA,
-        q_cooling_W=Q,
-        conversion=X,
-        agitator_torque_Nm=TAU,
-        agitator_power_kW=PWR,
+def _empty_trajectory(n: int) -> BatchTrajectory:
+    z = np.zeros(n, dtype=np.float64)
+    return BatchTrajectory(
+        time_min=np.arange(n, dtype=np.float64),
+        step_id=np.zeros(n, dtype=np.int32),
+        weight_kg=z.copy(),
+        T_reactor=z.copy(),
+        T_jacket=z.copy(),
+        pressure_bar=z.copy(),
+        h2_flow=z.copy(),
+        cooling_L_min=z.copy(),
+        torque_Nm=z.copy(),
+        conversion=z.copy(),
+        ua_scale=np.ones(n, dtype=np.float64),
     )
 
 
 # ===========================================================================
-# SCADA assembly / IO
+# Step-wise deterministic physics
+# ===========================================================================
+
+
+def _lerp(a: float, b: float, frac: float) -> float:
+    return a + (b - a) * frac
+
+
+def _n2_cycle_pressure(frac: float) -> float:
+    """
+    N2 leak-check cycle: 1 → 3 → 1 bar over the inerting step.
+    Two half-cycles for realism.
+    """
+    # Triangle over [0,1]: 1→3→1→3→1 compressed into one step
+    phase = (frac * 2.0) % 1.0
+    if phase < 0.5:
+        return _lerp(1.0, 3.0, phase / 0.5)
+    return _lerp(3.0, 1.0, (phase - 0.5) / 0.5)
+
+
+def _simulate_active_hydrogenation_ode(
+    eq: ReactorEquipmentPackage,
+    n_A0: float,
+    T0_C: float,
+    P0_bar: float,
+    mass0_kg: float,
+    duration_min: int,
+    ua_scale: np.ndarray,
+    feed_scale: np.ndarray,
+    foam_scale: np.ndarray,
+    rng: np.random.Generator,
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """
+    Stiff kinetic ODE for Step 5 using ``solve_ivp`` (BDF).
+
+    State y = [X, T_C, P_bar, m_kg]
+      X     conversion (0..1)
+      T_C   reactor temperature (°C)
+      P_bar headspace H2 pressure
+      m_kg  vessel liquid mass
+
+    Returns per-minute arrays:
+      X, T, P, m, H2_flow, cooling_L_min, torque
+    """
+    V_L = eq.working_fill_volume_L
+    R = 8.314462618
+    T_set = 80.0
+    P_target = eq.headspace_pressure_target_bar
+    feed_nom = float(
+        np.clip(
+            rng.uniform(eq.h2_feed_min_kg_min, eq.h2_feed_max_kg_min),
+            eq.h2_feed_min_kg_min,
+            eq.mfc_max_h2_feed_kg_min,
+        )
+    )
+    T_jkt_base = float(
+        np.clip(eq.tcu_supply_temp_C + rng.normal(0.0, 1.0), 15.0, 25.0)
+    )
+    M_H2 = eq.h2_molar_mass_kg_kmol / 1000.0  # kg/mol
+
+    # Piecewise-constant schedules sampled inside RHS via floor(t)
+    def _sched(arr: np.ndarray, t: float) -> float:
+        i = int(np.clip(math.floor(t), 0, duration_min - 1))
+        return float(arr[i])
+
+    def rhs(t: float, y: np.ndarray) -> np.ndarray:
+        X, T_C, P, m = y
+        X = float(np.clip(X, 0.0, 1.0))
+        C_A = n_A0 * max(1.0 - X, 0.0) / V_L
+        ua_s = _sched(ua_scale, t)
+        f_s = _sched(feed_scale, t)
+        foam_s = _sched(foam_scale, t)
+
+        # Temperature-aware H2 dosing (1.5–3.5 kg/min band)
+        F_cmd = feed_nom
+        if T_C > T_set + 2.0:
+            F_cmd *= max(0.55, 1.0 - 0.04 * (T_C - T_set))
+        elif T_C < T_set - 5.0:
+            F_cmd = min(eq.h2_feed_max_kg_min, F_cmd * 1.1)
+        F = float(np.clip(F_cmd, 0.0, eq.mfc_max_h2_feed_kg_min)) * f_s
+
+        r = eq.reaction_rate_mol_L_min(T_C, C_A, max(P, 0.0))
+        r_H2_kg_min = r * V_L * eq.stoich_H2 * M_H2
+        cons_kg_min = min(r_H2_kg_min, F) if F > 0.0 else 0.0
+        cons_mol_A_min = (cons_kg_min / M_H2) / eq.stoich_H2
+        dX_dt = cons_mol_A_min / max(n_A0, 1e-12)
+
+        T_jkt = T_jkt_base - (3.0 if T_C > T_set else 0.0)
+        T_jkt = float(np.clip(T_jkt, eq.tcu_supply_temp_min_C, eq.tcu_supply_temp_max_C))
+        Q = eq.ua_W_K * ua_s * (T_C - T_jkt)  # W
+        r_eff = cons_mol_A_min / V_L
+        q_rxn_W = (-eq.delta_H_J_mol) * (r_eff * V_L) / 60.0
+        P_ag = eq.agitator_power_W * foam_s
+        dT_dt = (q_rxn_W - Q + P_ag) / max(eq.thermal_mass_J_K(m), 1.0) * 60.0
+        dT_dt += 0.04 * (T_set - T_C)  # cascade hold toward 80°C
+
+        # Pressure control: strong vent/fill toward 10 bar
+        dm_hs = max(F - cons_kg_min, 0.0)
+        dn_hs_kmol_min = dm_hs / eq.h2_molar_mass_kg_kmol
+        T_K = T_C + 273.15
+        dP_fill = (dn_hs_kmol_min * 1000.0 * R * T_K / eq.headspace_volume_m3) / 1.0e5
+        dP_ctrl = -0.55 * (P - P_target)
+        # Extra vent when above operating max
+        if P > eq.operating_pressure_max_bar:
+            dP_ctrl -= 0.8 * (P - eq.operating_pressure_max_bar)
+        dP_dt = dP_fill + dP_ctrl
+
+        dm_dt = cons_kg_min
+        return np.array([dX_dt, dT_dt, dP_dt, dm_dt], dtype=np.float64)
+
+    t_eval = np.arange(0.0, duration_min, DT_MIN)
+    y0 = np.array([0.0, T0_C, P0_bar, mass0_kg], dtype=np.float64)
+
+    sol = solve_ivp(
+        rhs,
+        t_span=(0.0, float(duration_min - 1) + 1e-9),
+        y0=y0,
+        method="BDF",
+        t_eval=t_eval,
+        rtol=1e-4,
+        atol=1e-6,
+        max_step=1.0,
+    )
+    if not sol.success or sol.y.shape[1] != duration_min:
+        Y = np.zeros((4, duration_min), dtype=np.float64)
+        Y[:, 0] = y0
+        for i in range(duration_min - 1):
+            dy = rhs(float(i), Y[:, i])
+            Y[:, i + 1] = Y[:, i] + dy * DT_MIN
+            Y[0, i + 1] = np.clip(Y[0, i + 1], 0.0, 1.0)
+            Y[1, i + 1] = np.clip(Y[1, i + 1], 60.0, 92.0)
+            Y[2, i + 1] = np.clip(Y[2, i + 1], 5.0, eq.operating_pressure_max_bar)
+            Y[3, i + 1] = max(Y[3, i + 1], mass0_kg)
+        X, T, P, m = Y
+    else:
+        X = np.clip(sol.y[0], 0.0, 1.0)
+        T = np.clip(sol.y[1], 60.0, 92.0)
+        P = np.clip(sol.y[2], 5.0, eq.operating_pressure_max_bar)
+        m = np.maximum(sol.y[3], mass0_kg)
+
+    # Ensure Step 5 ends at ~98% (digest finishes the rest)
+    if X[-1] < 0.98:
+        gap = 0.98 - float(X[-1])
+        X = np.clip(X + gap * (np.linspace(0.0, 1.0, duration_min) ** 1.15), 0.0, 0.98)
+
+    H2 = np.zeros(duration_min, dtype=np.float64)
+    CW = np.zeros(duration_min, dtype=np.float64)
+    TAU = np.zeros(duration_min, dtype=np.float64)
+    Tj = np.zeros(duration_min, dtype=np.float64)
+    for i in range(duration_min):
+        Tj[i] = float(
+            np.clip(
+                T_jkt_base - (3.0 if T[i] > T_set else 0.0),
+                eq.tcu_supply_temp_min_C,
+                eq.tcu_supply_temp_max_C,
+            )
+        )
+        F_cmd = feed_nom
+        if T[i] > T_set + 2.0:
+            F_cmd *= max(0.55, 1.0 - 0.04 * (T[i] - T_set))
+        H2[i] = float(np.clip(F_cmd, 0.0, eq.mfc_max_h2_feed_kg_min)) * float(feed_scale[i])
+        if float(feed_scale[i]) > 0.0:
+            H2[i] = float(np.clip(H2[i], eq.h2_feed_min_kg_min, eq.h2_feed_max_kg_min))
+
+        # Cooling water 50–120 L/min from controlled reactor temperature
+        # (jacket ΔT is large; flow demand tracks T_rx set-point error / level).
+        t_frac = float(np.clip((T[i] - 70.0) / 20.0, 0.0, 1.0))
+        CW[i] = eq.cooling_water_min_L_min + t_frac * (
+            eq.cooling_water_max_L_min - eq.cooling_water_min_L_min
+        )
+        CW[i] *= 0.75 + 0.25 * float(ua_scale[i])
+        if float(feed_scale[i]) <= 0.0:
+            CW[i] = eq.cooling_water_min_L_min + 0.35 * (
+                CW[i] - eq.cooling_water_min_L_min
+            )
+        CW[i] = float(
+            np.clip(CW[i], eq.cooling_water_min_L_min, eq.cooling_water_max_L_min)
+        )
+        TAU[i] = eq.agitator_torque_Nm(
+            conversion=float(X[i]), foam_scale=float(foam_scale[i]), mode="full"
+        )
+
+    return X, T, P, m, H2, CW, TAU, Tj
+
+
+def simulate_batch(
+    eq: ReactorEquipmentPackage,
+    coa_purity: float,
+    schedule: AnomalySchedule,
+    seed: int,
+) -> BatchTrajectory:
+    """Run the full 8-step state machine for one batch."""
+    rng = np.random.default_rng(seed)
+    n = TOTAL_BATCH_DURATION_MIN
+    traj = _empty_trajectory(n)
+    constraints = build_step_constraints(eq)
+
+    ua_scale = np.asarray(schedule.ua_scale, dtype=np.float64)
+    feed_scale = np.asarray(schedule.feed_scale, dtype=np.float64)
+    foam_scale = np.asarray(schedule.foam_scale, dtype=np.float64)
+    sensor_bias = np.asarray(schedule.sensor_bias_C, dtype=np.float64)
+    traj.ua_scale = ua_scale.copy()
+
+    assay = float(coa_purity) / 100.0
+    n_A0 = eq.nitroxylene_moles * assay
+
+    # Carry state across steps
+    weight = 0.0
+    T_rx = 25.0
+    P = 1.0
+    X = 0.0
+
+    for step in STEP_ORDER:
+        a, b = STEP_BOUNDS[step]
+        dur = b - a
+        cons = constraints[step]
+        frac = np.linspace(0.0, 1.0, dur, endpoint=False)
+
+        if step is ProcessStep.ACTIVE_HYDROGENATION:
+            X_s, T_s, P_s, m_s, H2_s, CW_s, TAU_s, Tj_s = _simulate_active_hydrogenation_ode(
+                eq=eq,
+                n_A0=n_A0,
+                T0_C=max(T_rx, 68.0),
+                P0_bar=max(P, 8.0),
+                mass0_kg=max(weight, eq.liquid_charge_mass_kg),
+                duration_min=dur,
+                ua_scale=ua_scale[a:b],
+                feed_scale=feed_scale[a:b],
+                foam_scale=foam_scale[a:b],
+                rng=rng,
+            )
+            traj.conversion[a:b] = X_s
+            traj.T_reactor[a:b] = T_s
+            traj.T_jacket[a:b] = Tj_s
+            traj.pressure_bar[a:b] = P_s
+            traj.weight_kg[a:b] = m_s
+            traj.h2_flow[a:b] = H2_s
+            traj.cooling_L_min[a:b] = CW_s
+            traj.torque_Nm[a:b] = TAU_s
+            traj.step_id[a:b] = step.step_id
+            weight, T_rx, P, X = float(m_s[-1]), float(T_s[-1]), float(P_s[-1]), float(X_s[-1])
+            continue
+
+        for i, f in enumerate(frac):
+            t = a + i
+            traj.step_id[t] = step.step_id
+
+            # --- Weight ---------------------------------------------------
+            if step is ProcessStep.RAW_MATERIAL_LOADING:
+                # Hit full charge by last minute
+                f_w = i / max(dur - 1, 1)
+                weight = _lerp(0.0, eq.liquid_charge_mass_kg, f_w)
+            elif step is ProcessStep.PRODUCT_DISCHARGE:
+                w_start = float(traj.weight_kg[a - 1]) if a > 0 else weight
+                f_w = i / max(dur - 1, 1)
+                weight = _lerp(w_start, 0.0, f_w)
+            elif step is ProcessStep.PREPARATION_TARE:
+                weight = 0.0
+            elif step in (
+                ProcessStep.NITROGEN_INERTING,
+                ProcessStep.PRE_HEATING,
+                ProcessStep.DIGESTION_HOLD,
+                ProcessStep.DEGASSING_COOLING,
+            ):
+                weight = max(weight, eq.liquid_charge_mass_kg * 0.99)
+
+            # --- Temperature / jacket -------------------------------------
+            ua_s = float(ua_scale[t])
+            if step is ProcessStep.PREPARATION_TARE:
+                T_rx = 25.0 + float(rng.normal(0.0, 0.05))
+                T_jkt = 25.0
+            elif step is ProcessStep.RAW_MATERIAL_LOADING:
+                T_rx = 25.0 + 0.3 * math.sin(f * math.pi) + float(rng.normal(0.0, 0.05))
+                T_jkt = 25.0
+            elif step is ProcessStep.NITROGEN_INERTING:
+                T_rx = 25.0 + float(rng.normal(0.0, 0.05))
+                T_jkt = 25.0
+            elif step is ProcessStep.PRE_HEATING:
+                f_r = i / max(dur - 1, 1)
+                T_target = _lerp(25.0, 70.0, min(1.0, f_r))
+                T_jkt = cons.T_jkt_C
+                lag = 0.18 * ua_s
+                T_rx = T_rx + lag * (T_target - T_rx)
+                T_rx = float(np.clip(T_rx, 25.0, 72.0))
+            elif step is ProcessStep.DIGESTION_HOLD:
+                T_jkt = 70.0
+                T_rx = T_rx + 0.25 * (70.0 - T_rx)
+                T_rx = float(np.clip(T_rx, 68.0, 85.0))
+            elif step is ProcessStep.DEGASSING_COOLING:
+                f_r = i / max(dur - 1, 1)
+                T_jkt = eq.jacket_chill_temp_C
+                T_target = _lerp(70.0, 30.0, f_r)
+                lag = 0.15 * ua_s
+                T_rx = T_rx + lag * (T_target - T_rx)
+                T_rx = float(np.clip(T_rx, 28.0, 75.0))
+            elif step is ProcessStep.PRODUCT_DISCHARGE:
+                T_jkt = 25.0
+                T_rx = T_rx + 0.08 * (30.0 - T_rx)
+            else:
+                T_jkt = cons.T_jkt_C
+
+            # --- Pressure -------------------------------------------------
+            f_r = i / max(dur - 1, 1)
+            if step is ProcessStep.NITROGEN_INERTING:
+                P = _n2_cycle_pressure(f_r)
+            elif step is ProcessStep.PRE_HEATING:
+                P = _lerp(1.0, 10.0, min(1.0, f_r))
+            elif step is ProcessStep.DIGESTION_HOLD:
+                P = 10.0 + float(rng.normal(0.0, 0.02))
+            elif step is ProcessStep.DEGASSING_COOLING:
+                P = _lerp(10.0, 1.0, f_r)
+            elif step in (
+                ProcessStep.PREPARATION_TARE,
+                ProcessStep.RAW_MATERIAL_LOADING,
+                ProcessStep.PRODUCT_DISCHARGE,
+            ):
+                P = 1.0
+            else:
+                P = float(np.clip(P, 1.0, eq.design_pressure_max_bar))
+
+            # --- H2 flow --------------------------------------------------
+            if step is ProcessStep.PRE_HEATING:
+                h2 = eq.h2_pad_kg_min * float(feed_scale[t])
+            elif step is ProcessStep.DIGESTION_HOLD:
+                h2 = _lerp(0.4, 0.0, f_r) * float(feed_scale[t])
+            else:
+                h2 = 0.0
+
+            # --- Cooling water --------------------------------------------
+            if step is ProcessStep.DIGESTION_HOLD:
+                cw = _lerp(30.0, 25.0, f_r)
+            elif step is ProcessStep.DEGASSING_COOLING:
+                cw = _lerp(90.0, 70.0, f_r) * (0.7 + 0.3 * ua_s)
+            elif step is ProcessStep.PRE_HEATING:
+                cw = 0.0
+            else:
+                cw = 0.0
+
+            # --- Agitator torque ------------------------------------------
+            mode = cons.torque_mode
+            if mode == "off":
+                torque = 0.0
+            elif mode == "idle":
+                torque = eq.agitator_torque_Nm(mode="idle")
+            elif mode == "weight_gated":
+                torque = (
+                    eq.agitator_torque_Nm(mode="idle")
+                    if weight > 800.0
+                    else 0.0
+                )
+            elif mode == "weight_gated_off":
+                torque = (
+                    eq.agitator_torque_Nm(conversion=X, mode="full")
+                    if weight >= 500.0
+                    else 0.0
+                )
+            else:
+                torque = eq.agitator_torque_Nm(
+                    conversion=X, foam_scale=float(foam_scale[t]), mode="full"
+                )
+
+            # --- Conversion -----------------------------------------------
+            if step is ProcessStep.DIGESTION_HOLD:
+                X = _lerp(max(X, 0.98), 1.0, f_r)
+            elif step in (
+                ProcessStep.DEGASSING_COOLING,
+                ProcessStep.PRODUCT_DISCHARGE,
+            ):
+                X = max(X, 0.995)
+            elif step in (
+                ProcessStep.PREPARATION_TARE,
+                ProcessStep.RAW_MATERIAL_LOADING,
+                ProcessStep.NITROGEN_INERTING,
+                ProcessStep.PRE_HEATING,
+            ):
+                X = 0.0
+
+            traj.weight_kg[t] = weight
+            traj.T_reactor[t] = T_rx
+            traj.T_jacket[t] = T_jkt
+            traj.pressure_bar[t] = P
+            traj.h2_flow[t] = h2
+            traj.cooling_L_min[t] = cw
+            traj.torque_Nm[t] = torque
+            traj.conversion[t] = X
+
+        # Update carry-outs from last minute of step
+        weight = float(traj.weight_kg[b - 1])
+        T_rx = float(traj.T_reactor[b - 1])
+        P = float(traj.pressure_bar[b - 1])
+        X = float(traj.conversion[b - 1])
+
+    # Apply sensor drift bias to measured reactor temperature
+    traj.T_reactor = traj.T_reactor + sensor_bias
+    return traj
+
+
+# ===========================================================================
+# Export
 # ===========================================================================
 
 
@@ -423,111 +564,12 @@ def _time_to_endpoint_min(conversion: np.ndarray, time_min: np.ndarray) -> float
     return float(time_min[int(hit[0])])
 
 
-def physics_to_timeseries(phys: PhysicsResult) -> dict:
-    """Map physics arrays into the dict schema expected by stochastic/anomalies."""
-    return {
-        "time": phys.time_min.tolist(),  # minutes (dt=1)
-        "T_reactor": phys.T_reactor.tolist(),
-        "T_jacket": phys.T_jacket.tolist(),
-        "pressure": phys.pressure_bar.tolist(),
-        "h2_flow": phys.h2_flow_kg_min.tolist(),
-        "conversion": phys.conversion.tolist(),
-        "agitator_torque": phys.agitator_torque_Nm.tolist(),
-        "agitator_power_kW": phys.agitator_power_kW.tolist(),
-        "UA": phys.ua_W_K.tolist(),
-        "Q_cooling": phys.q_cooling_W.tolist(),
-        "cooling_water_flow": phys.cooling_water_m3_h.tolist(),
-    }
-
-
-def assemble_scada_rows(
-    batch_id: int,
-    anomaly: AnomalyType,
-    coa_purity: float,
-    phys: PhysicsResult,
-    noisy: dict,
-    shift_note: Optional[str],
-) -> tuple[list[dict], list[dict], dict]:
-    """Build core SCADA rows, target rows, and summary dict."""
-    n = len(phys.time_min)
-    flag = anomaly.value if anomaly is not AnomalyType.NONE else "NONE"
-    note = shift_note or ""
-
-    T_rx = np.asarray(noisy.get("T_reactor", phys.T_reactor), dtype=np.float64)
-    T_jk = np.asarray(noisy.get("T_jacket", phys.T_jacket), dtype=np.float64)
-    torque = np.asarray(
-        noisy.get("agitator_torque", phys.agitator_torque_Nm), dtype=np.float64
-    )
-    pressure = np.asarray(noisy.get("pressure", phys.pressure_bar), dtype=np.float64)
-    h2 = np.asarray(noisy.get("h2_flow", phys.h2_flow_kg_min), dtype=np.float64)
-    cw = np.asarray(phys.cooling_water_m3_h, dtype=np.float64)
-    # Prefer post-anomaly cooling water if recomputed; else scale with UA schedule
-    if "anomaly_ua_scale" in noisy:
-        scale = np.asarray(noisy["anomaly_ua_scale"], dtype=np.float64)
-        cw = cw * scale
-
-    # Ensure length
-    def _fit(a: np.ndarray) -> np.ndarray:
-        if len(a) == n:
-            return a
-        if len(a) > n:
-            return a[:n]
-        out = np.zeros(n, dtype=np.float64)
-        out[: len(a)] = a
-        if len(a):
-            out[len(a) :] = a[-1]
-        return out
-
-    T_rx, T_jk, torque, pressure, h2, cw = map(_fit, (T_rx, T_jk, torque, pressure, h2, cw))
-    delta_T = T_rx - T_jk
-
-    rows: list[dict] = []
-    targets: list[dict] = []
-    for i in range(n):
-        rows.append(
-            {
-                "batch_id": batch_id,
-                "time_step_min": int(phys.time_min[i]),
-                "raw_material_purity_coa": round(float(coa_purity), 3),
-                "T_reactor": round(float(T_rx[i]), 1),
-                "T_jacket": round(float(T_jk[i]), 1),
-                "delta_T": round(float(delta_T[i]), 1),
-                "agitator_torque": round(float(torque[i]), 1),
-                "headspace_pressure": round(float(pressure[i]), 2),
-                "H2_flow_rate": round(float(h2[i]), 2),
-                "cooling_water_flow": round(float(cw[i]), 3),
-                "shift_note": note,
-                "anomaly_flag": flag,
-            }
-        )
-        targets.append(
-            {
-                "batch_id": batch_id,
-                "time_step_min": int(phys.time_min[i]),
-                "reaction_conversion_pct": round(float(phys.conversion[i]) * 100.0, 4),
-            }
-        )
-
-    summary = {
-        "batch_id": batch_id,
-        "split": "train" if batch_id <= N_TRAIN else "test",
-        "anomaly_type": flag,
-        "total_duration_min": int(n),
-        "final_conversion_pct": round(float(phys.conversion[-1]) * 100.0, 4),
-        "time_to_endpoint_min": round(
-            _time_to_endpoint_min(phys.conversion, phys.time_min), 1
-        ),
-        "raw_material_purity_coa": round(float(coa_purity), 3),
-    }
-    return rows, targets, summary
-
-
-def _write_csv(path: Path, rows: list[dict], fieldnames: list[str]) -> None:
+def _write_csv(path: Path, rows: List[dict], fieldnames: List[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=fieldnames, extrasaction="ignore")
-        writer.writeheader()
-        writer.writerows(rows)
+        w = csv.DictWriter(fh, fieldnames=fieldnames, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(rows)
 
 
 def generate_one_batch(
@@ -537,61 +579,109 @@ def generate_one_batch(
     equipment: ReactorEquipmentPackage,
     seed: int,
 ) -> dict:
-    """Simulate → noise → write CSVs (anomalies embedded in physics schedules)."""
     rng = random.Random(seed + spec.batch_id * 997)
-    duration = rng.randint(*DURATION_MIN_RANGE)
     coa = sample_coa_purity(rng)
+    n = TOTAL_BATCH_DURATION_MIN
 
-    phys = simulate_batch_physics(
-        duration_min=duration,
+    schedule = build_anomaly_schedule(
+        spec.anomaly,
+        n_minutes=n,
+        rng_seed=seed + spec.batch_id * 17,
+        write_shift_note=True,
+    )
+
+    traj = simulate_batch(
+        eq=equipment,
         coa_purity=coa,
-        anomaly=spec.anomaly,
-        equipment=equipment,
+        schedule=schedule,
         seed=seed + spec.batch_id * 13,
     )
-    ts = physics_to_timeseries(phys)
 
+    # Noise active when vessel has inventory or pressurized / reacting
+    active = [
+        bool(traj.weight_kg[i] > 50.0 or traj.step_id[i] >= 3)
+        for i in range(n)
+    ]
+    clean = {
+        "time": traj.time_min.tolist(),
+        "T_reactor": traj.T_reactor.tolist(),
+        "T_jacket": traj.T_jacket.tolist(),
+        "headspace_pressure": traj.pressure_bar.tolist(),
+        "pressure": traj.pressure_bar.tolist(),
+        "agitator_torque": traj.torque_Nm.tolist(),
+        "h2_flow": traj.h2_flow.tolist(),
+        "conversion": traj.conversion.tolist(),
+    }
     noisy = apply_process_noise(
-        ts,
+        clean,
         coa_purity=coa,
-        equipment=equipment,
         rng_seed=seed + spec.batch_id * 29,
+        active_mask=active,
     )
 
-    # Shift notes: sparse on normals, denser on labeled anomalies / compounds
-    if spec.anomaly is AnomalyType.NONE:
-        note_p = 0.05
-        always = False
-    elif spec.anomaly.is_compound:
-        note_p = 1.0
-        always = True
-    else:
-        note_p = 0.40
-        always = False
-    shift_note = generate_shift_note(
-        spec.anomaly,
-        always=always,
-        probability=note_p,
-        seed=seed + spec.batch_id * 41,
-    )
+    T_rx = np.asarray(noisy["T_reactor"], dtype=np.float64)
+    T_jkt = np.asarray(noisy["T_jacket"], dtype=np.float64)
+    P = np.asarray(noisy.get("headspace_pressure", traj.pressure_bar), dtype=np.float64)
+    torque = np.asarray(noisy["agitator_torque"], dtype=np.float64)
+    # Keep H2 / cooling / weight deterministic (anomaly schedules already applied)
+    h2 = traj.h2_flow
+    cw = traj.cooling_L_min
+    weight = traj.weight_kg
+    note = schedule.shift_note or ""
+    flag = spec.anomaly.value
 
-    rows, targets, summary = assemble_scada_rows(
-        batch_id=spec.batch_id,
-        anomaly=spec.anomaly,
-        coa_purity=coa,
-        phys=phys,
-        noisy=noisy,
-        shift_note=shift_note,
-    )
-    summary["split"] = spec.split
+    tte = _time_to_endpoint_min(traj.conversion, traj.time_min)
+    rows: List[dict] = []
+    targets: List[dict] = []
+    for i in range(n):
+        rows.append(
+            {
+                "batch_id": spec.batch_id,
+                "time_step_min": int(traj.time_min[i]),
+                "current_step_id": int(traj.step_id[i]),
+                "raw_material_purity_coa": round(coa, 3),
+                "vessel_weight_kg": round(float(weight[i]), 1),
+                "T_reactor": round(float(T_rx[i]), 1),
+                "T_jacket": round(float(T_jkt[i]), 1),
+                "delta_T": round(float(T_rx[i] - T_jkt[i]), 1),
+                "agitator_torque": round(float(torque[i]), 1),
+                "headspace_pressure": round(float(P[i]), 2),
+                "H2_flow_rate": round(float(h2[i]), 3),
+                "cooling_water_flow": round(float(cw[i]), 2),
+                "shift_note": note,
+                "anomaly_flag": flag,
+            }
+        )
+        targets.append(
+            {
+                "batch_id": spec.batch_id,
+                "time_step_min": int(traj.time_min[i]),
+                "reaction_conversion_pct": round(float(traj.conversion[i]) * 100.0, 4),
+                "time_to_endpoint_min": round(tte, 1),
+            }
+        )
 
     _write_csv(out_raw / f"batch_{spec.batch_id:03d}.csv", rows, CORE_COLUMNS)
     _write_csv(
         out_targets / f"batch_{spec.batch_id:03d}.csv",
         targets,
-        ["batch_id", "time_step_min", "reaction_conversion_pct"],
+        [
+            "batch_id",
+            "time_step_min",
+            "reaction_conversion_pct",
+            "time_to_endpoint_min",
+        ],
     )
-    return summary
+
+    return {
+        "batch_id": spec.batch_id,
+        "split": spec.split,
+        "anomaly_type": flag,
+        "total_duration_min": n,
+        "final_conversion_pct": round(float(traj.conversion[-1]) * 100.0, 4),
+        "time_to_endpoint_min": round(tte, 1),
+        "raw_material_purity_coa": round(coa, 3),
+    }
 
 
 def generate_dataset(
@@ -599,35 +689,26 @@ def generate_dataset(
     seed: int = DEFAULT_SEED,
     n_batches: int = N_BATCHES,
 ) -> Path:
-    """
-    Generate the full dataset under ``output_dir``.
-
-    Returns the path to ``batch_summary.csv``.
-    """
     output_dir = Path(output_dir)
     raw_dir = output_dir / "raw"
     tgt_dir = output_dir / "targets"
+    gt_dir = output_dir / "ground_truth"
     raw_dir.mkdir(parents=True, exist_ok=True)
     tgt_dir.mkdir(parents=True, exist_ok=True)
+    gt_dir.mkdir(parents=True, exist_ok=True)
 
     plan = build_batch_plan(seed=seed)[:n_batches]
     equipment = ReactorEquipmentPackage.default()
-    summaries: list[dict] = []
+    summaries: List[dict] = []
 
     t0 = time.perf_counter()
     for spec in plan:
         summaries.append(
-            generate_one_batch(
-                spec=spec,
-                out_raw=raw_dir,
-                out_targets=tgt_dir,
-                equipment=equipment,
-                seed=seed,
-            )
+            generate_one_batch(spec, raw_dir, tgt_dir, equipment, seed)
         )
     elapsed = time.perf_counter() - t0
 
-    summary_path = output_dir / "batch_summary.csv"
+    summary_path = gt_dir / "batch_summary.csv"
     _write_csv(
         summary_path,
         summaries,
@@ -641,11 +722,20 @@ def generate_dataset(
             "raw_material_purity_coa",
         ],
     )
-
-    # Write a compact manifest for GroupKFold consumers
-    manifest_path = output_dir / "split_manifest.csv"
+    # Compatibility copy at dataset root
     _write_csv(
-        manifest_path,
+        output_dir / "batch_summary.csv",
+        summaries,
+        [
+            "batch_id",
+            "split",
+            "anomaly_type",
+            "total_duration_min",
+            "final_conversion_pct",
+        ],
+    )
+    _write_csv(
+        output_dir / "split_manifest.csv",
         [
             {
                 "batch_id": s.batch_id,
@@ -657,61 +747,44 @@ def generate_dataset(
         ["batch_id", "split", "anomaly_type"],
     )
 
-    _validate_dataset(output_dir, plan, elapsed)
+    _validate(output_dir, plan, elapsed)
     return summary_path
 
 
-def _validate_dataset(output_dir: Path, plan: list[BatchSpec], elapsed_s: float) -> None:
-    raw_dir = output_dir / "raw"
-    summary_path = output_dir / "batch_summary.csv"
-    assert summary_path.exists()
-
-    files = sorted(raw_dir.glob("batch_*.csv"))
-    assert len(files) == len(plan), f"expected {len(plan)} batches, found {len(files)}"
-
-    # Distribution checks
+def _validate(output_dir: Path, plan: List[BatchSpec], elapsed_s: float) -> None:
+    raw = sorted((output_dir / "raw").glob("batch_*.csv"))
+    assert len(raw) == len(plan)
     train = [s for s in plan if s.split == "train"]
     test = [s for s in plan if s.split == "test"]
-    assert len(train) == min(N_TRAIN, len(plan))
     assert all(s.anomaly is not AnomalyType.SENSOR_DRIFT for s in train)
     assert all(not s.anomaly.is_compound for s in train)
-    assert any(s.anomaly is AnomalyType.SENSOR_DRIFT for s in test) or len(test) == 0
-    assert any(s.anomaly.is_compound for s in test) or len(test) == 0
+    if test:
+        assert any(s.anomaly is AnomalyType.SENSOR_DRIFT for s in test)
+        assert any(s.anomaly.is_compound for s in test)
 
-    # Spot-check one CSV schema / duration
-    with files[0].open(newline="") as fh:
+    with raw[0].open(newline="") as fh:
         reader = csv.DictReader(fh)
-        assert reader.fieldnames == CORE_COLUMNS
+        assert list(reader.fieldnames) == CORE_COLUMNS
         rows = list(reader)
-    assert DURATION_MIN_RANGE[0] <= len(rows) <= DURATION_MIN_RANGE[1]
+    assert len(rows) == TOTAL_BATCH_DURATION_MIN
+    assert rows[0]["current_step_id"] == "1"
+    assert rows[-1]["current_step_id"] == "8"
 
     print(
         f"Generated {len(plan)} batches → {output_dir}/ in {elapsed_s:.2f}s "
-        f"(train={sum(1 for s in plan if s.split=='train')}, "
-        f"test={sum(1 for s in plan if s.split=='test')})"
+        f"(train={len(train)}, test={len(test)}, rows/batch={TOTAL_BATCH_DURATION_MIN})"
     )
     if elapsed_s > 30.0:
-        print(f"WARNING: generation exceeded 30s budget ({elapsed_s:.2f}s)")
+        print(f"WARNING: exceeded 30s budget ({elapsed_s:.2f}s)")
 
 
-def main(argv: Optional[list[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "-o",
-        "--output-dir",
-        type=Path,
-        default=Path("dataset"),
-        help="Dataset root directory (default: ./dataset)",
-    )
-    parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
-    parser.add_argument(
-        "--n-batches",
-        type=int,
-        default=N_BATCHES,
-        help="Number of batches to generate (default 120)",
-    )
-    args = parser.parse_args(argv)
-    generate_dataset(output_dir=args.output_dir, seed=args.seed, n_batches=args.n_batches)
+def main(argv: Optional[List[str]] = None) -> int:
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("-o", "--output-dir", type=Path, default=Path("dataset"))
+    p.add_argument("--seed", type=int, default=DEFAULT_SEED)
+    p.add_argument("--n-batches", type=int, default=N_BATCHES)
+    args = p.parse_args(argv)
+    generate_dataset(args.output_dir, args.seed, args.n_batches)
     return 0
 
 

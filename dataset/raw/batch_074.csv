@@ -1,180 +1,331 @@
-batch_id,time_step_min,raw_material_purity_coa,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
-74,0,98.327,54.7,21.1,33.6,594.2,5.95,0.0,15.853,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,1,98.327,57.6,21.2,36.4,597.4,6.51,0.02,17.154,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,2,98.327,59.9,21.1,38.8,598.1,7.09,0.0,18.286,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,3,98.327,62.0,21.2,40.8,599.9,7.52,0.0,19.164,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,4,98.327,63.6,21.2,42.4,599.9,7.9,0.0,20.009,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,5,98.327,65.0,21.4,43.6,599.8,8.16,0.0,20.627,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,6,98.327,66.2,21.3,44.9,597.5,8.53,0.0,21.277,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,7,98.327,67.3,21.3,46.0,594.5,8.7,0.0,21.736,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,8,98.327,68.1,21.4,46.7,592.3,8.9,0.0,22.109,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,9,98.327,68.9,21.1,47.8,589.6,9.05,0.0,22.554,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,10,98.327,69.6,21.1,48.5,588.6,9.17,0.0,22.826,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,11,98.327,70.1,21.4,48.7,593.4,9.31,0.0,23.061,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,12,98.327,70.6,21.3,49.3,592.3,9.39,0.01,23.292,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,13,98.327,70.9,21.4,49.5,591.1,9.51,0.0,23.445,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,14,98.327,71.4,21.3,50.1,594.9,9.56,0.0,23.67,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,15,98.327,71.6,21.3,50.3,593.8,9.67,0.0,23.765,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,16,98.327,71.9,21.4,50.5,593.5,9.71,0.0,23.836,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,17,98.327,72.0,21.4,50.6,590.7,9.79,0.0,23.955,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,18,98.327,72.1,21.4,50.7,589.1,9.78,3.7,24.012,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,19,98.327,81.8,21.4,60.4,587.3,20.07,0.0,28.605,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,20,98.327,80.5,21.3,59.2,586.9,18.57,3.36,28.016,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,21,98.327,93.7,19.2,74.5,587.9,17.34,0.02,35.248,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,22,98.327,90.5,19.2,71.3,592.0,16.2,2.76,33.786,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,23,98.327,100.4,19.1,81.3,597.7,15.26,1.61,38.491,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,24,98.327,104.6,19.3,85.3,603.9,14.44,1.62,40.407,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,25,98.327,108.5,19.3,89.2,604.8,13.8,1.59,42.313,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,26,98.327,112.3,19.3,93.0,610.6,13.18,1.61,44.06,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,27,98.327,114.5,19.0,95.5,608.9,12.66,1.67,45.077,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,28,98.327,114.4,19.1,95.3,609.5,12.22,1.7,45.084,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,29,98.327,114.4,19.1,95.3,609.4,11.85,1.72,45.097,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,30,98.327,114.6,19.2,95.4,610.1,11.49,1.68,45.11,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,31,98.327,114.7,19.2,95.5,609.0,11.22,1.72,45.081,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,32,98.327,114.7,19.1,95.6,606.2,10.98,1.72,45.112,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,33,98.327,114.7,19.0,95.7,606.3,10.83,1.74,45.116,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,34,98.327,114.7,19.0,95.7,610.6,10.73,1.68,45.068,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,35,98.327,114.7,18.9,95.8,613.1,10.59,1.65,45.087,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,36,98.327,114.6,18.9,95.7,613.6,10.5,1.71,45.144,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,37,98.327,114.6,19.1,95.5,613.9,10.42,1.73,45.077,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,38,98.327,114.6,19.1,95.5,618.7,10.34,1.75,45.09,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,39,98.327,114.6,19.0,95.6,619.5,10.31,1.68,45.145,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,40,98.327,114.7,19.0,95.7,618.4,10.27,1.67,45.148,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,41,98.327,114.8,18.8,96.0,621.1,10.27,1.69,45.119,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,42,98.327,114.7,18.9,95.8,619.0,10.19,1.75,45.115,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,43,98.327,114.7,18.9,95.8,619.5,10.21,1.74,45.161,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,44,98.327,114.7,18.8,95.9,622.8,10.18,1.67,45.141,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,45,98.327,114.8,18.6,96.2,626.2,10.16,1.7,45.173,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,46,98.327,114.8,18.6,96.2,627.1,10.14,1.76,45.146,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,47,98.327,114.8,18.5,96.3,627.2,10.12,1.81,45.192,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,48,98.327,114.8,18.5,96.3,630.0,10.07,1.76,45.192,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,49,98.327,114.8,19.0,95.8,631.6,10.03,1.73,45.167,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,50,98.327,114.9,18.6,96.3,633.2,10.0,1.7,45.208,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,51,98.327,114.9,18.7,96.2,630.4,9.98,1.67,45.217,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,52,98.327,114.9,18.7,96.2,631.3,9.95,1.67,45.185,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,53,98.327,115.0,18.9,96.1,632.5,9.97,1.68,45.232,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,54,98.327,115.1,18.6,96.5,640.1,10.04,1.65,45.21,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,55,98.327,115.0,18.5,96.5,639.8,10.05,1.64,45.246,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,56,98.327,114.8,18.5,96.3,644.9,10.04,1.73,45.235,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,57,98.327,114.8,18.4,96.4,642.0,10.04,1.74,45.225,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,58,98.327,114.8,18.4,96.4,641.4,10.05,1.66,45.247,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,59,98.327,114.8,18.5,96.3,637.0,10.05,1.7,45.258,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,60,98.327,114.8,18.3,96.5,636.9,10.09,1.79,45.259,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,61,98.327,114.8,18.4,96.4,641.5,10.1,1.74,45.291,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,62,98.327,114.8,18.4,96.4,641.2,10.08,1.78,45.335,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,63,98.327,114.7,18.4,96.3,642.7,10.11,1.8,45.325,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,64,98.327,114.8,18.2,96.6,641.0,10.1,1.81,45.299,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,65,98.327,114.8,18.0,96.8,646.9,10.12,1.75,45.335,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,66,98.327,114.9,18.3,96.6,650.1,10.05,1.71,45.35,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,67,98.327,114.8,18.4,96.4,651.5,10.04,1.68,45.345,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,68,98.327,114.8,18.4,96.4,651.2,10.06,1.64,45.316,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,69,98.327,114.7,18.3,96.4,650.3,10.09,1.67,45.347,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,70,98.327,114.6,18.4,96.2,650.3,10.07,1.63,45.318,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,71,98.327,114.5,18.4,96.1,653.1,10.11,1.63,45.331,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,72,98.327,114.7,18.3,96.4,653.1,10.14,1.67,45.374,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,73,98.327,114.6,18.3,96.3,657.7,10.15,1.66,45.341,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,74,98.327,114.7,18.5,96.2,659.3,10.21,1.71,45.376,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,75,98.327,114.7,18.5,96.2,658.8,10.2,1.7,45.336,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,76,98.327,114.8,18.7,96.1,666.8,10.2,1.72,45.36,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,77,98.327,114.9,18.6,96.3,670.6,10.14,1.72,45.409,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,78,98.327,114.8,18.6,96.2,670.8,10.19,1.75,45.355,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,79,98.327,114.8,18.6,96.2,666.0,10.14,1.68,45.375,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,80,98.327,114.8,18.7,96.1,664.7,10.55,1.64,45.386,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,81,98.327,114.8,18.6,96.2,667.4,11.97,1.6,45.366,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,82,98.327,114.9,18.7,96.2,671.4,13.75,1.56,45.428,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,83,98.327,114.9,18.8,96.1,668.6,15.8,1.56,45.415,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,84,98.327,114.9,18.9,96.0,670.0,18.01,1.49,45.39,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,85,98.327,114.9,18.9,96.0,666.8,20.29,1.49,45.369,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,86,98.327,114.9,18.9,96.0,664.7,20.24,1.5,45.407,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,87,98.327,114.8,18.9,95.9,662.1,20.21,1.49,45.377,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,88,98.327,114.6,18.9,95.7,660.0,20.21,1.46,45.412,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,89,98.327,114.7,18.8,95.9,659.9,20.21,0.05,45.401,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,90,98.327,111.0,19.0,92.0,662.6,18.66,0.08,43.605,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,91,98.327,107.6,18.6,89.0,661.4,17.35,0.09,42.032,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,92,98.327,104.3,18.6,85.7,662.2,16.25,0.01,40.482,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,93,98.327,101.2,18.5,82.7,660.7,15.28,0.0,39.056,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,94,98.327,98.3,18.4,79.9,660.2,14.46,0.0,37.685,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,95,98.327,95.5,18.5,77.0,658.8,13.78,0.0,36.411,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,96,98.327,92.9,18.5,74.4,662.7,13.25,0.0,35.182,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,97,98.327,90.6,18.6,72.0,663.2,12.8,0.0,34.098,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,98,98.327,88.5,18.5,70.0,663.7,12.36,0.03,33.022,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,99,98.327,86.4,20.8,65.6,663.4,12.06,0.0,31.058,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,100,98.327,84.4,20.9,63.5,665.2,11.67,0.0,30.144,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,101,98.327,82.8,21.1,61.7,665.7,11.45,0.02,29.249,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,102,98.327,81.2,21.1,60.1,667.3,11.29,0.03,28.471,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,103,98.327,79.5,20.9,58.6,666.5,11.08,0.07,27.75,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,104,98.327,78.0,20.6,57.4,667.0,10.94,3.65,27.01,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,105,98.327,77.6,20.8,56.8,671.4,20.07,3.33,26.862,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,106,98.327,77.4,20.9,56.5,671.6,20.09,3.36,26.706,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,107,98.327,77.1,20.9,56.2,674.8,20.03,3.38,26.606,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,108,98.327,77.0,20.9,56.1,671.5,20.07,3.42,26.459,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,109,98.327,76.7,20.8,55.9,670.0,20.08,3.44,26.354,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,110,98.327,76.4,20.9,55.5,669.5,20.09,3.41,26.2,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,111,98.327,76.2,20.8,55.4,668.4,20.05,3.36,26.027,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,112,98.327,76.0,20.9,55.1,668.4,20.04,3.39,25.842,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,113,98.327,75.7,20.8,54.9,672.7,20.0,3.45,25.713,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,114,98.327,75.5,20.9,54.6,674.2,20.04,3.42,25.515,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,115,98.327,75.1,21.0,54.1,674.1,20.05,3.39,25.294,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,116,98.327,74.9,21.1,53.8,680.5,19.98,3.33,25.076,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,117,98.327,74.6,21.0,53.6,677.7,19.94,3.3,24.954,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,118,98.327,74.1,21.3,52.8,677.4,19.96,3.25,24.715,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,119,98.327,73.7,21.4,52.3,675.8,19.95,3.23,24.511,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,120,98.327,73.5,21.2,52.3,673.5,19.92,3.31,24.323,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,121,98.327,73.0,21.3,51.7,669.6,19.97,3.33,24.141,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,122,98.327,72.6,21.2,51.4,670.1,19.92,3.34,23.933,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,123,98.327,72.0,21.3,50.7,670.2,19.87,3.32,23.752,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,124,98.327,71.6,21.3,50.3,668.4,19.88,3.28,23.535,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,125,98.327,71.1,21.3,49.8,669.8,19.89,3.28,23.332,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,126,98.327,70.8,21.3,49.5,669.0,19.85,3.27,23.169,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,127,98.327,70.4,21.3,49.1,670.0,19.81,3.26,23.006,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,128,98.327,70.1,21.2,48.9,671.3,19.81,3.29,22.792,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,129,98.327,69.8,21.4,48.4,667.3,19.86,3.32,22.575,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,130,98.327,69.5,21.1,48.4,666.6,19.88,3.29,22.446,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,131,98.327,69.2,21.1,48.1,665.3,19.83,3.32,22.18,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,132,98.327,68.9,21.0,47.9,667.2,19.86,3.33,22.044,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,133,98.327,68.5,21.2,47.3,667.8,19.92,3.37,21.88,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,134,98.327,68.1,21.3,46.8,674.3,19.92,3.3,21.727,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,135,98.327,67.7,21.2,46.5,673.6,19.98,3.33,21.574,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,136,98.327,67.2,21.3,45.9,670.9,19.94,3.29,21.394,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,137,98.327,66.8,21.4,45.4,671.4,20.0,3.3,21.246,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,138,98.327,66.5,21.3,45.2,676.1,19.98,3.24,21.054,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,139,98.327,66.2,21.4,44.8,674.0,19.98,3.21,20.91,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,140,98.327,66.0,21.2,44.8,673.3,20.01,3.25,20.82,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,141,98.327,65.8,21.1,44.7,672.5,19.99,3.26,20.639,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,142,98.327,65.4,21.1,44.3,671.8,19.98,3.21,20.472,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,143,98.327,65.1,21.0,44.1,677.1,20.05,3.23,20.347,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,144,98.327,64.9,20.9,44.0,672.2,20.08,3.22,20.259,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,145,98.327,64.6,20.9,43.7,672.4,20.05,3.25,20.132,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,146,98.327,64.3,20.8,43.5,672.4,20.08,3.27,20.041,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,147,98.327,64.0,21.1,42.9,671.4,20.04,3.28,19.877,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,148,98.327,63.8,20.8,43.0,670.0,20.05,3.29,19.799,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,149,98.327,63.6,20.6,43.0,666.3,20.06,3.36,19.696,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,150,98.327,63.4,20.7,42.7,668.1,20.1,3.31,19.578,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,151,98.327,63.2,20.8,42.4,669.4,20.14,3.28,19.482,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,152,98.327,62.8,20.8,42.0,668.8,20.1,3.31,19.399,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,153,98.327,62.7,21.0,41.7,668.8,20.05,3.29,19.27,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,154,98.327,62.3,21.0,41.3,667.2,20.06,3.33,19.167,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,155,98.327,62.2,21.0,41.2,664.0,20.12,3.32,19.08,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,156,98.327,61.9,20.8,41.1,663.6,20.07,3.38,19.022,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,157,98.327,61.7,20.9,40.8,666.1,20.11,3.36,18.898,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,158,98.327,61.5,20.8,40.7,667.4,20.13,3.33,18.901,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,159,98.327,61.2,21.0,40.2,667.4,20.13,3.38,18.747,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,160,98.327,60.9,20.7,40.2,667.5,20.13,3.38,18.709,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,161,98.327,60.8,20.9,39.9,664.9,20.08,3.37,18.627,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,162,98.327,60.6,21.1,39.5,663.7,20.06,3.36,18.548,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,163,98.327,60.4,21.1,39.3,662.5,20.06,3.34,18.53,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,164,98.327,60.2,21.0,39.2,661.7,20.04,3.33,18.41,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,165,98.327,60.1,20.8,39.3,662.5,20.04,3.27,18.407,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,166,98.327,59.8,21.0,38.8,664.7,20.11,3.29,18.284,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,167,98.327,59.7,21.0,38.7,664.8,20.06,3.35,18.195,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,168,98.327,59.7,20.9,38.8,665.3,20.03,3.38,18.176,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,169,98.327,59.5,20.8,38.7,662.9,20.01,3.33,18.114,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,170,98.327,59.3,20.5,38.8,662.4,19.98,3.36,18.111,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,171,98.327,59.2,20.7,38.5,665.5,19.99,3.37,18.055,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,172,98.327,59.1,20.7,38.4,663.8,19.96,3.39,17.976,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,173,98.327,59.0,20.6,38.4,664.0,19.93,3.36,17.964,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,174,98.327,58.8,20.9,37.9,658.7,19.92,3.38,17.899,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,175,98.327,58.8,21.0,37.8,663.2,19.88,3.31,17.818,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,176,98.327,58.7,21.0,37.7,664.0,19.9,3.33,17.783,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,177,98.327,58.5,21.0,37.5,662.6,19.89,3.35,17.731,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
-74,178,98.327,58.4,21.0,37.4,663.3,19.88,3.32,17.69,H2 feed paused automatically for 15 min mid-batch to control exotherm.,FEED_PAUSE
+batch_id,time_step_min,current_step_id,raw_material_purity_coa,vessel_weight_kg,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
+74,0,1,99.33,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,NONE
+74,1,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,2,1,99.33,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,NONE
+74,3,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,4,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,5,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,6,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,7,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,8,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,9,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,10,1,99.33,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,NONE
+74,11,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,12,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,13,1,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,14,1,99.33,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,NONE
+74,15,2,99.33,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+74,16,2,99.33,88.6,24.9,25.2,-0.3,0.0,0.99,0.0,0.0,,NONE
+74,17,2,99.33,177.2,25.0,25.2,-0.2,0.0,0.96,0.0,0.0,,NONE
+74,18,2,99.33,265.8,25.0,25.1,-0.1,0.0,0.94,0.0,0.0,,NONE
+74,19,2,99.33,354.5,25.0,25.2,-0.2,0.0,0.91,0.0,0.0,,NONE
+74,20,2,99.33,443.1,25.0,25.2,-0.2,0.0,0.9,0.0,0.0,,NONE
+74,21,2,99.33,531.7,25.0,25.4,-0.4,0.0,0.89,0.0,0.0,,NONE
+74,22,2,99.33,620.3,25.0,25.2,-0.2,0.0,0.92,0.0,0.0,,NONE
+74,23,2,99.33,708.9,25.0,25.2,-0.2,0.0,0.96,0.0,0.0,,NONE
+74,24,2,99.33,797.5,25.1,25.1,0.0,0.0,1.02,0.0,0.0,,NONE
+74,25,2,99.33,886.1,25.1,25.2,-0.1,149.7,1.02,0.0,0.0,,NONE
+74,26,2,99.33,974.8,25.1,25.1,0.0,150.2,1.07,0.0,0.0,,NONE
+74,27,2,99.33,1063.4,25.0,25.0,0.0,152.5,1.05,0.0,0.0,,NONE
+74,28,2,99.33,1152.0,25.1,24.9,0.2,154.0,1.05,0.0,0.0,,NONE
+74,29,2,99.33,1240.6,25.1,24.8,0.3,154.3,1.04,0.0,0.0,,NONE
+74,30,2,99.33,1329.2,25.1,24.7,0.4,153.0,1.04,0.0,0.0,,NONE
+74,31,2,99.33,1417.8,25.1,24.6,0.5,154.3,1.02,0.0,0.0,,NONE
+74,32,2,99.33,1506.4,25.2,24.6,0.6,154.1,0.98,0.0,0.0,,NONE
+74,33,2,99.33,1595.0,25.1,24.6,0.5,155.1,0.97,0.0,0.0,,NONE
+74,34,2,99.33,1683.7,25.0,24.7,0.3,152.0,1.0,0.0,0.0,,NONE
+74,35,2,99.33,1772.3,25.0,24.7,0.3,150.6,1.01,0.0,0.0,,NONE
+74,36,2,99.33,1860.9,25.1,24.7,0.4,153.2,1.01,0.0,0.0,,NONE
+74,37,2,99.33,1949.5,25.0,24.8,0.2,153.9,1.0,0.0,0.0,,NONE
+74,38,2,99.33,2038.1,25.1,24.8,0.3,154.7,1.04,0.0,0.0,,NONE
+74,39,2,99.33,2126.7,25.2,24.9,0.3,151.3,1.04,0.0,0.0,,NONE
+74,40,2,99.33,2215.3,25.1,24.9,0.2,150.8,1.02,0.0,0.0,,NONE
+74,41,2,99.33,2304.0,25.0,25.0,0.0,151.4,1.03,0.0,0.0,,NONE
+74,42,2,99.33,2392.6,24.9,24.9,0.0,154.4,1.0,0.0,0.0,,NONE
+74,43,2,99.33,2481.2,25.1,25.1,0.0,153.7,1.0,0.0,0.0,,NONE
+74,44,2,99.33,2569.8,25.0,25.1,-0.1,150.4,1.02,0.0,0.0,,NONE
+74,45,2,99.33,2658.4,24.9,25.1,-0.2,151.6,1.04,0.0,0.0,,NONE
+74,46,2,99.33,2747.0,24.8,25.1,-0.3,154.3,1.04,0.0,0.0,,NONE
+74,47,2,99.33,2835.6,24.8,25.1,-0.3,156.8,1.04,0.0,0.0,,NONE
+74,48,2,99.33,2924.2,24.8,25.0,-0.2,154.6,1.05,0.0,0.0,,NONE
+74,49,2,99.33,3012.9,25.0,25.0,0.0,153.5,1.06,0.0,0.0,,NONE
+74,50,2,99.33,3101.5,24.9,24.9,0.0,151.9,1.07,0.0,0.0,,NONE
+74,51,2,99.33,3190.1,24.8,24.9,-0.1,150.8,1.03,0.0,0.0,,NONE
+74,52,2,99.33,3278.7,24.9,24.9,0.0,150.5,1.03,0.0,0.0,,NONE
+74,53,2,99.33,3367.3,24.9,24.9,0.0,150.9,1.03,0.0,0.0,,NONE
+74,54,2,99.33,3455.9,24.8,25.1,-0.3,149.4,1.1,0.0,0.0,,NONE
+74,55,2,99.33,3544.5,24.7,25.1,-0.4,148.9,1.09,0.0,0.0,,NONE
+74,56,2,99.33,3633.2,24.6,25.1,-0.5,153.1,1.13,0.0,0.0,,NONE
+74,57,2,99.33,3721.8,24.6,25.1,-0.5,153.3,1.1,0.0,0.0,,NONE
+74,58,2,99.33,3810.4,24.6,25.2,-0.6,149.9,1.08,0.0,0.0,,NONE
+74,59,2,99.33,3899.0,24.6,25.2,-0.6,151.6,1.02,0.0,0.0,,NONE
+74,60,3,99.33,3899.0,24.5,25.3,-0.8,155.6,1.01,0.0,0.0,,NONE
+74,61,3,99.33,3899.0,24.7,25.3,-0.6,153.3,1.32,0.0,0.0,,NONE
+74,62,3,99.33,3899.0,24.6,25.3,-0.7,154.9,1.58,0.0,0.0,,NONE
+74,63,3,99.33,3899.0,24.6,25.3,-0.7,155.7,1.86,0.0,0.0,,NONE
+74,64,3,99.33,3899.0,24.4,25.3,-0.9,156.4,2.11,0.0,0.0,,NONE
+74,65,3,99.33,3899.0,24.5,25.4,-0.9,153.7,2.43,0.0,0.0,,NONE
+74,66,3,99.33,3899.0,24.6,25.2,-0.6,152.0,2.73,0.0,0.0,,NONE
+74,67,3,99.33,3899.0,24.7,25.2,-0.5,150.6,3.01,0.0,0.0,,NONE
+74,68,3,99.33,3899.0,24.6,25.3,-0.7,148.8,2.86,0.0,0.0,,NONE
+74,69,3,99.33,3899.0,24.7,25.3,-0.6,150.2,2.57,0.0,0.0,,NONE
+74,70,3,99.33,3899.0,24.7,25.3,-0.6,148.2,2.28,0.0,0.0,,NONE
+74,71,3,99.33,3899.0,24.6,25.4,-0.8,148.3,2.02,0.0,0.0,,NONE
+74,72,3,99.33,3899.0,24.6,25.5,-0.9,149.7,1.74,0.0,0.0,,NONE
+74,73,3,99.33,3899.0,24.6,25.5,-0.9,149.6,1.5,0.0,0.0,,NONE
+74,74,3,99.33,3899.0,24.8,25.7,-0.9,151.5,1.23,0.0,0.0,,NONE
+74,75,3,99.33,3899.0,24.8,25.6,-0.8,150.8,1.22,0.0,0.0,,NONE
+74,76,3,99.33,3899.0,24.9,25.7,-0.8,152.1,1.56,0.0,0.0,,NONE
+74,77,3,99.33,3899.0,24.9,25.5,-0.6,152.0,1.87,0.0,0.0,,NONE
+74,78,3,99.33,3899.0,24.7,25.6,-0.9,153.4,2.14,0.0,0.0,,NONE
+74,79,3,99.33,3899.0,24.8,25.5,-0.7,150.2,2.36,0.0,0.0,,NONE
+74,80,3,99.33,3899.0,24.9,25.6,-0.7,148.8,2.62,0.0,0.0,,NONE
+74,81,3,99.33,3899.0,24.8,25.7,-0.9,147.9,2.91,0.0,0.0,,NONE
+74,82,3,99.33,3899.0,25.0,25.7,-0.7,147.2,3.08,0.0,0.0,,NONE
+74,83,3,99.33,3899.0,25.0,25.7,-0.7,148.8,2.77,0.0,0.0,,NONE
+74,84,3,99.33,3899.0,24.9,25.7,-0.8,147.5,2.5,0.0,0.0,,NONE
+74,85,3,99.33,3899.0,24.8,25.9,-1.1,148.8,2.19,0.0,0.0,,NONE
+74,86,3,99.33,3899.0,25.1,25.7,-0.6,149.3,1.88,0.0,0.0,,NONE
+74,87,3,99.33,3899.0,24.9,25.7,-0.8,149.0,1.57,0.0,0.0,,NONE
+74,88,3,99.33,3899.0,25.0,25.7,-0.7,147.8,1.26,0.0,0.0,,NONE
+74,89,3,99.33,3899.0,24.9,25.7,-0.8,151.6,0.97,0.0,0.0,,NONE
+74,90,4,99.33,3899.0,25.0,85.6,-60.6,597.1,1.0,0.1,0.0,,NONE
+74,91,4,99.33,3899.0,25.0,85.5,-60.5,597.6,1.19,0.1,0.0,,NONE
+74,92,4,99.33,3899.0,25.3,85.5,-60.2,594.4,1.4,0.1,0.0,,NONE
+74,93,4,99.33,3899.0,25.8,85.4,-59.6,593.4,1.58,0.1,0.0,,NONE
+74,94,4,99.33,3899.0,26.3,85.3,-59.0,593.9,1.78,0.1,0.0,,NONE
+74,95,4,99.33,3899.0,26.9,85.3,-58.4,590.4,1.97,0.1,0.0,,NONE
+74,96,4,99.33,3899.0,27.6,85.3,-57.7,591.1,2.21,0.1,0.0,,NONE
+74,97,4,99.33,3899.0,28.5,85.4,-56.9,592.4,2.42,0.1,0.0,,NONE
+74,98,4,99.33,3899.0,29.2,85.3,-56.1,595.5,2.63,0.1,0.0,,NONE
+74,99,4,99.33,3899.0,30.2,85.4,-55.2,593.5,2.83,0.1,0.0,,NONE
+74,100,4,99.33,3899.0,31.1,85.2,-54.1,592.2,3.05,0.1,0.0,,NONE
+74,101,4,99.33,3899.0,32.1,85.3,-53.2,594.9,3.26,0.1,0.0,,NONE
+74,102,4,99.33,3899.0,33.1,85.4,-52.3,595.3,3.48,0.1,0.0,,NONE
+74,103,4,99.33,3899.0,34.0,85.4,-51.4,596.9,3.68,0.1,0.0,,NONE
+74,104,4,99.33,3899.0,34.8,85.4,-50.6,593.5,3.89,0.1,0.0,,NONE
+74,105,4,99.33,3899.0,35.8,85.3,-49.5,594.7,4.14,0.1,0.0,,NONE
+74,106,4,99.33,3899.0,36.8,85.4,-48.6,595.7,4.34,0.1,0.0,,NONE
+74,107,4,99.33,3899.0,37.8,85.2,-47.4,596.7,4.58,0.1,0.0,,NONE
+74,108,4,99.33,3899.0,38.8,85.3,-46.5,598.4,4.75,0.1,0.0,,NONE
+74,109,4,99.33,3899.0,39.7,85.3,-45.6,599.4,4.94,0.1,0.0,,NONE
+74,110,4,99.33,3899.0,40.8,85.3,-44.5,597.9,5.14,0.1,0.0,,NONE
+74,111,4,99.33,3899.0,41.7,85.2,-43.5,596.1,5.34,0.1,0.0,,NONE
+74,112,4,99.33,3899.0,42.7,85.2,-42.5,597.2,5.54,0.1,0.0,,NONE
+74,113,4,99.33,3899.0,43.8,85.1,-41.3,600.0,5.79,0.1,0.0,,NONE
+74,114,4,99.33,3899.0,44.8,85.2,-40.4,598.6,6.01,0.1,0.0,,NONE
+74,115,4,99.33,3899.0,45.8,85.2,-39.4,597.2,6.21,0.1,0.0,,NONE
+74,116,4,99.33,3899.0,46.9,85.1,-38.2,595.1,6.48,0.1,0.0,,NONE
+74,117,4,99.33,3899.0,47.9,85.0,-37.1,593.9,6.66,0.1,0.0,,NONE
+74,118,4,99.33,3899.0,49.0,85.0,-36.0,591.3,6.86,0.1,0.0,,NONE
+74,119,4,99.33,3899.0,50.0,85.0,-35.0,590.4,7.05,0.1,0.0,,NONE
+74,120,4,99.33,3899.0,51.0,84.9,-33.9,594.3,7.23,0.1,0.0,,NONE
+74,121,4,99.33,3899.0,52.0,85.0,-33.0,595.1,7.4,0.1,0.0,,NONE
+74,122,4,99.33,3899.0,53.0,84.9,-31.9,595.6,7.6,0.1,0.0,,NONE
+74,123,4,99.33,3899.0,54.1,84.8,-30.7,594.7,7.81,0.1,0.0,,NONE
+74,124,4,99.33,3899.0,55.1,84.8,-29.7,593.1,7.99,0.1,0.0,,NONE
+74,125,4,99.33,3899.0,56.1,84.8,-28.7,592.9,8.21,0.1,0.0,,NONE
+74,126,4,99.33,3899.0,57.1,84.7,-27.6,592.7,8.4,0.1,0.0,,NONE
+74,127,4,99.33,3899.0,58.2,84.6,-26.4,592.5,8.61,0.1,0.0,,NONE
+74,128,4,99.33,3899.0,59.1,84.6,-25.5,593.8,8.83,0.1,0.0,,NONE
+74,129,4,99.33,3899.0,60.2,84.7,-24.5,594.9,8.99,0.1,0.0,,NONE
+74,130,4,99.33,3899.0,61.1,84.7,-23.6,593.3,9.19,0.1,0.0,,NONE
+74,131,4,99.33,3899.0,62.1,84.6,-22.5,595.0,9.38,0.1,0.0,,NONE
+74,132,4,99.33,3899.0,63.0,84.7,-21.7,595.3,9.6,0.1,0.0,,NONE
+74,133,4,99.33,3899.0,64.2,84.8,-20.6,597.0,9.81,0.1,0.0,,NONE
+74,134,4,99.33,3899.0,65.3,84.8,-19.5,593.5,10.07,0.1,0.0,,NONE
+74,135,5,99.33,3899.0,67.9,21.7,46.2,595.0,10.07,2.125,50.0,,NONE
+74,136,5,99.33,3899.3,70.0,21.6,48.4,593.5,15.04,2.125,50.28,,NONE
+74,137,5,99.33,3899.8,73.6,21.7,51.9,594.0,15.05,2.125,62.59,,NONE
+74,138,5,99.33,3900.3,77.8,21.7,56.1,591.5,15.09,2.125,77.61,,NONE
+74,139,5,99.33,3901.0,82.7,18.7,64.0,590.3,15.07,1.889,94.71,,NONE
+74,140,5,99.33,3901.7,88.0,18.8,69.2,592.3,15.07,1.5,113.32,,NONE
+74,141,5,99.33,3902.5,91.8,18.7,73.1,593.4,15.06,1.5,120.0,,NONE
+74,142,5,99.33,3903.4,91.7,18.7,73.0,591.7,15.05,1.5,120.0,,NONE
+74,143,5,99.33,3904.4,91.7,18.8,72.9,592.7,14.57,1.5,120.0,,NONE
+74,144,5,99.33,3905.5,91.7,18.9,72.8,592.7,12.78,1.5,120.0,,NONE
+74,145,5,99.33,3906.7,91.7,18.9,72.8,594.8,11.62,1.5,120.0,,NONE
+74,146,5,99.33,3907.9,91.7,18.9,72.8,595.8,10.96,1.5,120.0,,NONE
+74,147,5,99.33,3909.0,91.8,18.9,72.9,597.2,10.57,1.5,120.0,,NONE
+74,148,5,99.33,3910.2,91.7,18.9,72.8,598.2,10.33,1.5,120.0,,NONE
+74,149,5,99.33,3911.4,91.6,18.9,72.7,601.7,10.16,1.5,120.0,,NONE
+74,150,5,99.33,3912.6,91.6,19.0,72.6,600.0,10.11,1.5,120.0,,NONE
+74,151,5,99.33,3913.7,91.6,19.1,72.5,599.0,10.08,1.5,120.0,,NONE
+74,152,5,99.33,3914.9,91.7,19.0,72.7,600.7,10.04,1.5,120.0,,NONE
+74,153,5,99.33,3916.1,91.8,18.9,72.9,600.7,10.03,1.5,120.0,,NONE
+74,154,5,99.33,3917.2,91.7,18.9,72.8,602.9,10.0,1.5,120.0,,NONE
+74,155,5,99.33,3918.4,91.8,19.1,72.7,602.9,9.96,1.5,120.0,,NONE
+74,156,5,99.33,3919.6,91.7,19.0,72.7,606.2,9.95,1.5,120.0,,NONE
+74,157,5,99.33,3920.7,91.7,19.1,72.6,605.5,9.97,1.5,120.0,,NONE
+74,158,5,99.33,3921.9,91.8,19.1,72.7,605.0,9.98,1.5,120.0,,NONE
+74,159,5,99.33,3923.1,91.8,19.1,72.7,607.4,9.98,1.5,120.0,,NONE
+74,160,5,99.33,3924.2,91.7,19.1,72.6,608.0,9.98,1.5,120.0,,NONE
+74,161,5,99.33,3925.4,91.8,19.0,72.8,608.5,9.95,1.5,120.0,,NONE
+74,162,5,99.33,3926.6,91.9,19.0,72.9,608.4,9.94,1.5,120.0,,NONE
+74,163,5,99.33,3927.7,91.9,19.0,72.9,608.2,9.93,1.5,120.0,,NONE
+74,164,5,99.33,3928.9,91.8,18.9,72.9,608.2,9.91,1.5,120.0,,NONE
+74,165,5,99.33,3930.1,91.8,18.9,72.9,606.0,9.92,1.5,120.0,,NONE
+74,166,5,99.33,3931.3,91.8,19.1,72.7,607.3,9.94,1.5,120.0,,NONE
+74,167,5,99.33,3932.4,91.9,19.0,72.9,610.7,9.94,1.5,120.0,,NONE
+74,168,5,99.33,3933.6,91.8,18.9,72.9,612.9,9.94,1.5,120.0,,NONE
+74,169,5,99.33,3934.8,91.8,18.9,72.9,611.3,9.92,1.5,120.0,,NONE
+74,170,5,99.33,3935.9,91.7,18.8,72.9,613.3,9.91,1.5,120.0,,NONE
+74,171,5,99.33,3937.1,91.8,18.8,73.0,614.0,9.94,1.5,120.0,,NONE
+74,172,5,99.33,3938.3,91.8,18.7,73.1,615.5,9.92,1.5,120.0,,NONE
+74,173,5,99.33,3939.4,91.8,18.7,73.1,615.1,9.92,1.5,120.0,,NONE
+74,174,5,99.33,3940.6,91.9,18.6,73.3,616.6,9.87,1.5,120.0,,NONE
+74,175,5,99.33,3941.8,91.9,18.5,73.4,613.8,9.91,1.5,120.0,,NONE
+74,176,5,99.33,3942.9,91.9,18.6,73.3,615.5,9.92,1.5,120.0,,NONE
+74,177,5,99.33,3944.1,92.0,18.5,73.5,616.8,9.9,1.5,120.0,,NONE
+74,178,5,99.33,3945.3,92.0,18.5,73.5,616.0,9.91,1.5,120.0,,NONE
+74,179,5,99.33,3946.4,92.0,18.5,73.5,618.0,9.93,1.5,120.0,,NONE
+74,180,5,99.33,3947.6,92.0,18.6,73.4,616.0,9.94,1.5,120.0,,NONE
+74,181,5,99.33,3948.8,92.1,18.4,73.7,615.4,9.93,1.5,120.0,,NONE
+74,182,5,99.33,3949.9,92.1,18.6,73.5,616.6,9.94,1.5,120.0,,NONE
+74,183,5,99.33,3951.1,92.1,18.7,73.4,614.0,9.93,1.5,120.0,,NONE
+74,184,5,99.33,3952.3,92.1,18.6,73.5,616.4,9.93,1.5,120.0,,NONE
+74,185,5,99.33,3953.5,92.1,18.7,73.4,616.9,9.95,1.5,120.0,,NONE
+74,186,5,99.33,3954.6,92.2,18.7,73.5,619.1,9.93,1.5,120.0,,NONE
+74,187,5,99.33,3955.8,92.1,18.9,73.2,617.9,9.95,1.5,120.0,,NONE
+74,188,5,99.33,3957.0,92.0,18.8,73.2,617.5,9.92,1.5,120.0,,NONE
+74,189,5,99.33,3958.1,92.1,18.8,73.3,618.8,9.96,1.5,120.0,,NONE
+74,190,5,99.33,3959.3,92.2,18.8,73.4,619.3,9.97,1.5,120.0,,NONE
+74,191,5,99.33,3960.5,92.2,18.8,73.4,618.9,9.98,1.5,120.0,,NONE
+74,192,5,99.33,3961.6,92.1,18.8,73.3,620.6,9.96,1.5,120.0,,NONE
+74,193,5,99.33,3962.8,92.2,18.9,73.3,620.5,9.99,1.5,120.0,,NONE
+74,194,5,99.33,3964.0,92.1,18.9,73.2,623.3,10.01,1.5,120.0,,NONE
+74,195,5,99.33,3965.1,92.0,18.8,73.2,625.7,10.07,1.5,120.0,,NONE
+74,196,5,99.33,3966.3,91.9,18.9,73.0,624.0,10.08,1.5,120.0,,NONE
+74,197,5,99.33,3967.5,91.8,18.9,72.9,625.4,10.1,1.5,120.0,,NONE
+74,198,5,99.33,3968.6,92.0,18.9,73.1,627.5,10.08,1.5,120.0,,NONE
+74,199,5,99.33,3969.8,91.9,18.8,73.1,626.8,10.12,1.5,120.0,,NONE
+74,200,5,99.33,3971.0,91.8,18.8,73.0,625.2,10.06,1.5,120.0,,NONE
+74,201,5,99.33,3972.2,91.8,18.7,73.1,626.4,10.06,1.5,120.0,,NONE
+74,202,5,99.33,3973.3,91.8,18.8,73.0,629.2,10.04,1.5,120.0,,NONE
+74,203,5,99.33,3974.5,91.7,18.7,73.0,627.4,10.04,1.5,120.0,,NONE
+74,204,5,99.33,3975.7,91.7,18.7,73.0,626.0,10.03,1.5,120.0,,NONE
+74,205,5,99.33,3976.8,91.8,18.7,73.1,626.0,10.01,1.5,120.0,,NONE
+74,206,5,99.33,3978.0,91.8,18.6,73.2,626.9,10.0,1.5,120.0,,NONE
+74,207,5,99.33,3979.2,91.8,18.4,73.4,630.5,10.03,1.5,120.0,,NONE
+74,208,5,99.33,3980.3,91.9,18.5,73.4,633.5,10.0,1.5,120.0,,NONE
+74,209,5,99.33,3981.5,91.9,18.5,73.4,635.5,10.0,1.5,120.0,,NONE
+74,210,5,99.33,3982.7,92.0,18.7,73.3,634.5,10.03,1.5,120.0,,NONE
+74,211,5,99.33,3983.8,92.2,18.7,73.5,633.1,10.06,1.5,120.0,,NONE
+74,212,5,99.33,3985.0,92.2,18.8,73.4,633.0,10.04,1.5,120.0,,NONE
+74,213,5,99.33,3986.2,92.2,18.7,73.5,638.9,10.06,1.5,120.0,,NONE
+74,214,5,99.33,3987.3,92.2,18.8,73.4,637.5,10.04,1.5,120.0,,NONE
+74,215,5,99.33,3988.5,92.3,18.7,73.6,636.9,10.01,1.5,120.0,,NONE
+74,216,5,99.33,3989.7,92.4,18.9,73.5,638.8,10.02,1.5,120.0,,NONE
+74,217,5,99.33,3990.9,92.3,19.0,73.3,639.5,10.06,1.5,120.0,,NONE
+74,218,5,99.33,3992.0,92.2,19.0,73.2,643.2,10.04,1.5,120.0,,NONE
+74,219,5,99.33,3993.2,92.1,19.0,73.1,642.2,10.06,1.5,120.0,,NONE
+74,220,5,99.33,3994.4,92.0,19.1,72.9,639.3,10.06,1.5,120.0,,NONE
+74,221,5,99.33,3995.5,91.9,19.1,72.8,641.6,10.05,1.5,120.0,,NONE
+74,222,5,99.33,3996.7,92.0,19.1,72.9,641.3,10.04,1.5,120.0,,NONE
+74,223,5,99.33,3997.9,92.0,19.1,72.9,642.1,10.03,1.5,120.0,,NONE
+74,224,5,99.33,3999.0,91.9,19.1,72.8,640.7,10.07,1.5,120.0,,NONE
+74,225,6,99.33,3999.0,85.0,70.5,14.5,640.6,10.0,0.4,30.0,,NONE
+74,226,6,99.33,3999.0,81.3,70.6,10.7,640.9,10.04,0.386,29.83,,NONE
+74,227,6,99.33,3999.0,78.5,70.5,8.0,639.9,10.13,0.372,29.66,,NONE
+74,228,6,99.33,3999.0,76.4,70.5,5.9,639.8,10.09,0.359,29.48,,NONE
+74,229,6,99.33,3999.0,74.7,70.6,4.1,640.3,10.09,0.345,29.31,,NONE
+74,230,6,99.33,3999.0,73.6,70.5,3.1,643.7,10.09,0.331,29.14,,NONE
+74,231,6,99.33,3999.0,72.8,70.5,2.3,642.1,10.04,0.317,28.97,,NONE
+74,232,6,99.33,3999.0,72.1,70.4,1.7,643.2,10.05,0.303,28.79,,NONE
+74,233,6,99.33,3999.0,71.6,70.3,1.3,641.2,10.07,0.29,28.62,,NONE
+74,234,6,99.33,3999.0,71.2,70.4,0.8,640.6,10.05,0.276,28.45,,NONE
+74,235,6,99.33,3999.0,70.8,70.2,0.6,637.6,10.08,0.262,28.28,,NONE
+74,236,6,99.33,3999.0,70.6,70.2,0.4,635.3,10.04,0.248,28.1,,NONE
+74,237,6,99.33,3999.0,70.6,70.1,0.5,634.8,10.07,0.234,27.93,,NONE
+74,238,6,99.33,3999.0,70.6,70.0,0.6,635.6,10.04,0.221,27.76,,NONE
+74,239,6,99.33,3999.0,70.6,70.1,0.5,634.8,9.99,0.207,27.59,,NONE
+74,240,6,99.33,3999.0,70.6,70.0,0.6,637.0,9.98,0.193,27.41,,NONE
+74,241,6,99.33,3999.0,70.5,70.0,0.5,638.1,9.99,0.179,27.24,,NONE
+74,242,6,99.33,3999.0,70.5,69.9,0.6,639.1,10.06,0.166,27.07,,NONE
+74,243,6,99.33,3999.0,70.5,69.8,0.7,637.7,10.03,0.152,26.9,,NONE
+74,244,6,99.33,3999.0,70.5,69.8,0.7,637.1,10.0,0.138,26.72,,NONE
+74,245,6,99.33,3999.0,70.4,69.8,0.6,639.3,10.01,0.124,26.55,,NONE
+74,246,6,99.33,3999.0,70.3,69.8,0.5,638.9,9.98,0.11,26.38,,NONE
+74,247,6,99.33,3999.0,70.3,69.8,0.5,638.4,10.0,0.097,26.21,,NONE
+74,248,6,99.33,3999.0,70.2,69.8,0.4,641.8,9.96,0.083,26.03,,NONE
+74,249,6,99.33,3999.0,70.2,69.8,0.4,640.0,10.03,0.069,25.86,,NONE
+74,250,6,99.33,3999.0,70.2,69.8,0.4,641.0,9.97,0.055,25.69,,NONE
+74,251,6,99.33,3999.0,70.2,69.8,0.4,639.8,9.98,0.041,25.52,,NONE
+74,252,6,99.33,3999.0,70.2,69.8,0.4,641.4,10.0,0.028,25.34,,NONE
+74,253,6,99.33,3999.0,70.2,69.8,0.4,639.3,9.96,0.014,25.17,,NONE
+74,254,6,99.33,3999.0,70.1,69.8,0.3,640.4,10.03,0.0,25.0,,NONE
+74,255,7,99.33,3999.0,70.2,14.8,55.4,640.2,9.96,0.0,90.0,,NONE
+74,256,7,99.33,3999.0,70.0,14.9,55.1,638.2,9.73,0.0,89.55,,NONE
+74,257,7,99.33,3999.0,69.8,14.8,55.0,638.2,9.5,0.0,89.09,,NONE
+74,258,7,99.33,3999.0,69.5,15.0,54.5,638.5,9.29,0.0,88.64,,NONE
+74,259,7,99.33,3999.0,69.1,15.0,54.1,635.6,9.12,0.0,88.18,,NONE
+74,260,7,99.33,3999.0,68.5,15.0,53.5,635.2,8.94,0.0,87.73,,NONE
+74,261,7,99.33,3999.0,67.8,14.9,52.9,633.6,8.75,0.0,87.27,,NONE
+74,262,7,99.33,3999.0,67.2,14.9,52.3,636.2,8.54,0.0,86.82,,NONE
+74,263,7,99.33,3999.0,66.6,14.9,51.7,635.7,8.34,0.0,86.36,,NONE
+74,264,7,99.33,3999.0,65.8,14.9,50.9,636.5,8.14,0.0,85.91,,NONE
+74,265,7,99.33,3999.0,65.1,14.9,50.2,635.2,7.95,0.0,85.45,,NONE
+74,266,7,99.33,3999.0,64.4,14.7,49.7,637.0,7.72,0.0,85.0,,NONE
+74,267,7,99.33,3999.0,63.7,14.7,49.0,637.1,7.52,0.0,84.55,,NONE
+74,268,7,99.33,3999.0,62.8,14.8,48.0,638.8,7.3,0.0,84.09,,NONE
+74,269,7,99.33,3999.0,62.0,14.9,47.1,638.2,7.1,0.0,83.64,,NONE
+74,270,7,99.33,3999.0,61.2,14.8,46.4,639.0,6.91,0.0,83.18,,NONE
+74,271,7,99.33,3999.0,60.3,14.8,45.5,639.9,6.72,0.0,82.73,,NONE
+74,272,7,99.33,3999.0,59.4,15.0,44.4,638.9,6.49,0.0,82.27,,NONE
+74,273,7,99.33,3999.0,58.5,15.1,43.4,639.3,6.35,0.0,81.82,,NONE
+74,274,7,99.33,3999.0,57.7,15.1,42.6,638.8,6.1,0.0,81.36,,NONE
+74,275,7,99.33,3999.0,56.7,15.2,41.5,639.4,5.89,0.0,80.91,,NONE
+74,276,7,99.33,3999.0,55.8,15.2,40.6,639.5,5.69,0.0,80.45,,NONE
+74,277,7,99.33,3999.0,54.9,15.2,39.7,641.8,5.44,0.0,80.0,,NONE
+74,278,7,99.33,3999.0,54.0,15.1,38.9,642.1,5.26,0.0,79.55,,NONE
+74,279,7,99.33,3999.0,53.1,15.1,38.0,644.9,5.08,0.0,79.09,,NONE
+74,280,7,99.33,3999.0,52.3,15.0,37.3,644.2,4.87,0.0,78.64,,NONE
+74,281,7,99.33,3999.0,51.4,15.0,36.4,645.3,4.68,0.0,78.18,,NONE
+74,282,7,99.33,3999.0,50.5,15.0,35.5,642.7,4.53,0.0,77.73,,NONE
+74,283,7,99.33,3999.0,49.6,14.9,34.7,640.6,4.31,0.0,77.27,,NONE
+74,284,7,99.33,3999.0,48.6,14.9,33.7,640.4,4.14,0.0,76.82,,NONE
+74,285,7,99.33,3999.0,47.8,14.9,32.9,641.8,3.9,0.0,76.36,,NONE
+74,286,7,99.33,3999.0,46.9,14.9,32.0,642.3,3.7,0.0,75.91,,NONE
+74,287,7,99.33,3999.0,46.0,14.9,31.1,641.9,3.48,0.0,75.45,,NONE
+74,288,7,99.33,3999.0,45.1,14.9,30.2,642.6,3.23,0.0,75.0,,NONE
+74,289,7,99.33,3999.0,44.1,14.9,29.2,645.0,3.04,0.0,74.55,,NONE
+74,290,7,99.33,3999.0,43.1,14.9,28.2,643.1,2.83,0.0,74.09,,NONE
+74,291,7,99.33,3999.0,42.1,14.9,27.2,642.4,2.63,0.0,73.64,,NONE
+74,292,7,99.33,3999.0,41.3,15.0,26.3,640.2,2.45,0.0,73.18,,NONE
+74,293,7,99.33,3999.0,40.4,15.1,25.3,640.8,2.26,0.0,72.73,,NONE
+74,294,7,99.33,3999.0,39.5,15.1,24.4,639.5,2.06,0.0,72.27,,NONE
+74,295,7,99.33,3999.0,38.6,14.9,23.7,640.0,1.86,0.0,71.82,,NONE
+74,296,7,99.33,3999.0,37.6,15.0,22.6,641.3,1.65,0.0,71.36,,NONE
+74,297,7,99.33,3999.0,36.7,15.0,21.7,638.9,1.4,0.0,70.91,,NONE
+74,298,7,99.33,3999.0,35.8,14.9,20.9,639.9,1.21,0.0,70.45,,NONE
+74,299,7,99.33,3999.0,34.8,14.9,19.9,639.3,0.99,0.0,70.0,,NONE
+74,300,8,99.33,3999.0,34.3,24.8,9.5,639.8,0.98,0.0,0.0,,NONE
+74,301,8,99.33,3861.1,34.0,24.8,9.2,638.4,0.93,0.0,0.0,,NONE
+74,302,8,99.33,3723.2,33.7,24.7,9.0,641.1,0.89,0.0,0.0,,NONE
+74,303,8,99.33,3585.3,33.3,24.7,8.6,640.2,0.92,0.0,0.0,,NONE
+74,304,8,99.33,3447.4,33.0,24.7,8.3,642.4,0.96,0.0,0.0,,NONE
+74,305,8,99.33,3309.5,32.8,24.7,8.1,641.3,0.93,0.0,0.0,,NONE
+74,306,8,99.33,3171.6,32.6,24.7,7.9,640.4,0.96,0.0,0.0,,NONE
+74,307,8,99.33,3033.8,32.4,24.7,7.7,642.1,0.93,0.0,0.0,,NONE
+74,308,8,99.33,2895.9,32.2,24.6,7.6,643.3,0.94,0.0,0.0,,NONE
+74,309,8,99.33,2758.0,31.9,24.7,7.2,641.6,0.97,0.0,0.0,,NONE
+74,310,8,99.33,2620.1,31.7,24.8,6.9,640.2,0.98,0.0,0.0,,NONE
+74,311,8,99.33,2482.2,31.5,24.7,6.8,640.9,0.96,0.0,0.0,,NONE
+74,312,8,99.33,2344.3,31.3,24.7,6.6,641.7,0.95,0.0,0.0,,NONE
+74,313,8,99.33,2206.4,31.2,24.6,6.6,640.2,0.94,0.0,0.0,,NONE
+74,314,8,99.33,2068.5,31.0,24.6,6.4,640.0,0.96,0.0,0.0,,NONE
+74,315,8,99.33,1930.6,31.0,24.5,6.5,638.8,0.92,0.0,0.0,,NONE
+74,316,8,99.33,1792.7,30.8,24.5,6.3,637.3,0.91,0.0,0.0,,NONE
+74,317,8,99.33,1654.8,30.6,24.7,5.9,636.9,0.9,0.0,0.0,,NONE
+74,318,8,99.33,1516.9,30.5,24.9,5.6,639.3,0.92,0.0,0.0,,NONE
+74,319,8,99.33,1379.0,30.4,25.0,5.4,640.5,0.92,0.0,0.0,,NONE
+74,320,8,99.33,1241.1,30.4,24.9,5.5,638.8,0.94,0.0,0.0,,NONE
+74,321,8,99.33,1103.2,30.3,25.1,5.2,639.7,0.94,0.0,0.0,,NONE
+74,322,8,99.33,965.3,30.3,24.9,5.4,638.9,0.94,0.0,0.0,,NONE
+74,323,8,99.33,827.4,30.3,24.8,5.5,636.9,0.92,0.0,0.0,,NONE
+74,324,8,99.33,689.5,30.3,24.8,5.5,636.3,0.91,0.0,0.0,,NONE
+74,325,8,99.33,551.6,30.2,25.0,5.2,639.3,0.89,0.0,0.0,,NONE
+74,326,8,99.33,413.7,30.2,25.0,5.2,0.0,0.93,0.0,0.0,,NONE
+74,327,8,99.33,275.8,30.1,25.0,5.1,0.0,0.94,0.0,0.0,,NONE
+74,328,8,99.33,137.9,30.1,25.0,5.1,0.0,0.99,0.0,0.0,,NONE
+74,329,8,99.33,0.0,30.1,25.0,5.1,0.0,1.04,0.0,0.0,,NONE

@@ -1,162 +1,331 @@
-batch_id,time_step_min,raw_material_purity_coa,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
-96,0,99.12,53.7,18.9,34.8,594.2,6.01,0.0,16.433,,NONE
-96,1,99.12,56.7,18.8,37.9,595.1,6.66,0.08,17.856,,NONE
-96,2,99.12,59.5,18.9,40.6,590.4,7.11,0.05,18.976,,NONE
-96,3,99.12,61.5,18.9,42.6,588.2,7.54,0.06,20.062,,NONE
-96,4,99.12,63.4,19.0,44.4,590.6,7.94,0.03,20.91,,NONE
-96,5,99.12,64.9,19.0,45.9,589.4,8.3,0.06,21.61,,NONE
-96,6,99.12,66.3,18.9,47.4,592.8,8.61,0.05,22.269,,NONE
-96,7,99.12,67.4,18.9,48.5,587.3,8.89,0.06,22.788,,NONE
-96,8,99.12,68.2,19.0,49.2,587.0,9.0,0.08,23.241,,NONE
-96,9,99.12,69.0,19.0,50.0,589.9,9.18,0.08,23.614,,NONE
-96,10,99.12,69.8,19.2,50.6,592.9,9.31,0.05,23.936,,NONE
-96,11,99.12,70.4,19.2,51.2,594.1,9.47,0.05,24.21,,NONE
-96,12,99.12,70.9,19.0,51.9,595.6,9.53,0.0,24.448,,NONE
-96,13,99.12,71.1,18.8,52.3,595.0,9.63,0.0,24.664,,NONE
-96,14,99.12,71.6,19.0,52.6,596.2,9.67,0.0,24.822,,NONE
-96,15,99.12,72.0,18.9,53.1,597.6,9.76,0.0,24.967,,NONE
-96,16,99.12,72.3,19.0,53.3,595.4,9.85,0.01,25.041,,NONE
-96,17,99.12,72.6,18.7,53.9,594.9,9.92,3.33,25.184,,NONE
-96,18,99.12,81.3,18.8,62.5,598.0,20.06,0.01,29.33,,NONE
-96,19,99.12,80.2,18.5,61.7,603.0,18.57,0.02,28.789,,NONE
-96,20,99.12,79.2,18.3,60.9,601.3,17.34,0.0,28.347,,NONE
-96,21,99.12,78.3,18.4,59.9,602.4,16.27,3.14,27.972,,NONE
-96,22,99.12,89.4,16.4,73.0,604.5,18.37,3.11,34.148,,NONE
-96,23,99.12,100.8,16.5,84.3,603.5,17.12,1.44,39.595,,NONE
-96,24,99.12,104.2,16.5,87.7,606.1,16.1,1.43,41.164,,NONE
-96,25,99.12,107.5,16.6,90.9,603.4,15.22,1.48,42.714,,NONE
-96,26,99.12,110.5,16.7,93.8,604.3,14.45,1.48,44.153,,NONE
-96,27,99.12,113.4,16.7,96.7,605.9,13.87,1.52,45.552,,NONE
-96,28,99.12,114.7,16.5,98.2,607.3,13.3,1.48,46.177,,NONE
-96,29,99.12,114.7,16.5,98.2,608.7,12.84,1.58,46.198,,NONE
-96,30,99.12,114.7,16.6,98.1,610.0,12.48,1.52,46.187,,NONE
-96,31,99.12,114.8,16.4,98.4,608.4,12.17,1.52,46.194,,NONE
-96,32,99.12,114.7,16.6,98.1,608.6,11.84,1.53,46.149,,NONE
-96,33,99.12,114.6,16.8,97.8,605.6,11.61,1.46,46.166,,NONE
-96,34,99.12,114.6,16.9,97.7,603.8,11.39,1.44,46.159,,NONE
-96,35,99.12,114.6,16.7,97.9,605.8,11.22,1.4,46.2,,NONE
-96,36,99.12,114.5,16.7,97.8,607.0,11.04,1.4,46.183,,NONE
-96,37,99.12,114.4,16.8,97.6,607.4,10.91,1.39,46.235,,NONE
-96,38,99.12,114.4,16.9,97.5,608.0,10.88,1.46,46.182,,NONE
-96,39,99.12,114.5,16.8,97.7,605.0,10.74,1.47,46.204,,NONE
-96,40,99.12,114.2,16.8,97.4,606.7,10.68,1.44,46.206,,NONE
-96,41,99.12,114.3,16.7,97.6,609.0,10.61,1.37,46.23,,NONE
-96,42,99.12,114.3,16.9,97.4,605.9,10.57,1.38,46.245,,NONE
-96,43,99.12,114.4,17.1,97.3,608.4,10.52,1.42,46.256,,NONE
-96,44,99.12,114.4,17.2,97.2,612.2,10.47,1.39,46.224,,NONE
-96,45,99.12,114.5,17.1,97.4,617.4,10.42,1.4,46.25,,NONE
-96,46,99.12,114.4,17.1,97.3,615.7,10.39,1.45,46.251,,NONE
-96,47,99.12,114.3,17.1,97.2,620.3,10.37,1.42,46.248,,NONE
-96,48,99.12,114.3,17.2,97.1,622.0,10.32,1.36,46.22,,NONE
-96,49,99.12,114.4,17.1,97.3,628.5,10.34,1.36,46.252,,NONE
-96,50,99.12,114.1,16.8,97.3,624.9,10.34,1.37,46.287,,NONE
-96,51,99.12,114.1,16.8,97.3,627.2,10.3,1.44,46.272,,NONE
-96,52,99.12,114.1,16.8,97.3,627.0,10.28,1.5,46.284,,NONE
-96,53,99.12,114.2,16.8,97.4,625.6,10.21,1.47,46.299,,NONE
-96,54,99.12,114.1,16.9,97.2,628.0,10.17,1.49,46.317,,NONE
-96,55,99.12,114.1,17.0,97.1,630.8,10.19,1.54,46.312,,NONE
-96,56,99.12,114.2,17.0,97.2,633.5,10.18,1.55,46.313,,NONE
-96,57,99.12,114.1,17.1,97.0,630.5,10.18,1.59,46.289,,NONE
-96,58,99.12,114.1,17.1,97.0,633.0,10.14,1.61,46.341,,NONE
-96,59,99.12,114.0,17.1,96.9,636.1,10.13,1.64,46.379,,NONE
-96,60,99.12,114.0,17.2,96.8,637.6,10.14,1.63,46.343,,NONE
-96,61,99.12,114.1,17.4,96.7,635.1,10.17,1.67,46.381,,NONE
-96,62,99.12,114.2,17.4,96.8,634.1,10.14,1.71,46.386,,NONE
-96,63,99.12,114.3,17.4,96.9,632.6,10.15,1.62,46.381,,NONE
-96,64,99.12,114.3,17.2,97.1,636.0,10.14,1.57,46.4,,NONE
-96,65,99.12,114.3,17.1,97.2,636.8,10.1,1.6,46.39,,NONE
-96,66,99.12,114.3,17.2,97.1,637.5,10.1,1.54,46.397,,NONE
-96,67,99.12,114.1,17.2,96.9,641.8,10.16,1.5,46.41,,NONE
-96,68,99.12,114.1,17.2,96.9,642.6,10.16,1.5,46.417,,NONE
-96,69,99.12,114.1,17.2,96.9,642.7,10.16,1.46,46.373,,NONE
-96,70,99.12,114.2,17.2,97.0,642.9,10.17,1.45,46.422,,NONE
-96,71,99.12,114.4,17.3,97.1,641.1,10.08,1.41,46.394,,NONE
-96,72,99.12,114.5,17.1,97.4,637.7,10.07,1.39,46.439,,NONE
-96,73,99.12,114.4,16.9,97.5,641.7,10.09,1.45,46.469,,NONE
-96,74,99.12,114.5,16.8,97.7,645.2,10.11,1.41,46.413,,NONE
-96,75,99.12,114.4,16.7,97.7,648.9,10.09,1.4,46.48,,NONE
-96,76,99.12,114.4,16.8,97.6,648.3,10.06,1.42,46.456,,NONE
-96,77,99.12,114.3,16.8,97.5,651.7,10.06,1.42,46.459,,NONE
-96,78,99.12,114.3,16.8,97.5,649.1,10.07,1.42,46.472,,NONE
-96,79,99.12,114.3,16.7,97.6,650.4,9.96,1.46,46.448,,NONE
-96,80,99.12,114.3,16.5,97.8,653.3,9.98,1.46,46.479,,NONE
-96,81,99.12,114.5,16.7,97.8,655.0,9.94,1.46,46.486,,NONE
-96,82,99.12,114.5,16.9,97.6,655.4,9.92,1.49,46.443,,NONE
-96,83,99.12,114.5,16.6,97.9,656.5,9.95,1.45,46.505,,NONE
-96,84,99.12,114.6,16.6,98.0,655.2,9.97,1.55,46.444,,NONE
-96,85,99.12,114.6,16.6,98.0,654.9,9.97,1.48,46.452,,NONE
-96,86,99.12,114.6,16.4,98.2,655.6,9.95,1.52,46.477,,NONE
-96,87,99.12,114.5,16.5,98.0,656.9,10.92,1.46,46.444,,NONE
-96,88,99.12,114.6,16.6,98.0,654.6,12.41,1.48,46.501,,NONE
-96,89,99.12,114.6,16.9,97.7,657.1,14.11,1.4,46.461,,NONE
-96,90,99.12,114.6,16.8,97.8,656.5,15.97,1.39,46.444,,NONE
-96,91,99.12,114.7,16.7,98.0,656.0,17.92,1.33,46.439,,NONE
-96,92,99.12,114.7,16.7,98.0,658.1,19.89,1.29,46.48,,NONE
-96,93,99.12,114.8,16.9,97.9,661.4,19.89,1.32,46.445,,NONE
-96,94,99.12,114.7,17.0,97.7,664.9,19.83,1.31,46.458,,NONE
-96,95,99.12,114.6,17.0,97.6,666.0,19.83,1.38,46.434,,NONE
-96,96,99.12,114.7,16.9,97.8,662.5,19.86,1.31,46.441,,NONE
-96,97,99.12,114.4,17.1,97.3,660.8,19.93,1.31,46.288,,NONE
-96,98,99.12,113.7,17.2,96.5,660.9,19.92,1.26,46.019,,NONE
-96,99,99.12,112.9,17.1,95.8,665.6,19.99,1.29,45.643,,NONE
-96,100,99.12,112.1,17.0,95.1,666.7,19.95,1.23,45.187,,NONE
-96,101,99.12,110.9,16.8,94.1,667.9,20.01,1.32,44.665,,NONE
-96,102,99.12,109.7,16.8,92.9,668.7,20.02,1.4,44.031,,NONE
-96,103,99.12,108.2,16.7,91.5,667.7,20.02,1.37,43.318,,NONE
-96,104,99.12,106.7,16.7,90.0,667.5,20.03,1.35,42.579,,NONE
-96,105,99.12,105.1,16.6,88.5,665.8,20.05,1.32,41.823,,NONE
-96,106,99.12,103.4,16.8,86.6,662.8,20.05,1.31,41.041,,NONE
-96,107,99.12,101.7,16.6,85.1,660.9,20.06,1.33,40.263,,NONE
-96,108,99.12,99.9,16.7,83.2,664.3,19.98,1.37,39.402,,NONE
-96,109,99.12,98.1,16.6,81.5,666.0,19.96,1.58,38.599,,NONE
-96,110,99.12,96.3,16.6,79.7,669.7,20.05,1.78,37.751,,NONE
-96,111,99.12,94.6,16.5,78.1,669.4,20.01,2.0,36.91,,NONE
-96,112,99.12,92.9,16.4,76.5,669.8,19.99,2.22,36.08,,NONE
-96,113,99.12,91.3,16.5,74.8,674.4,19.97,3.0,35.358,,NONE
-96,114,99.12,89.6,16.6,73.0,674.1,19.91,2.98,34.516,,NONE
-96,115,99.12,87.8,18.5,69.3,672.1,19.92,3.0,32.794,,NONE
-96,116,99.12,86.3,18.6,67.7,673.6,19.97,3.0,32.127,,NONE
-96,117,99.12,84.9,18.9,66.0,676.2,19.96,2.97,31.413,,NONE
-96,118,99.12,83.5,18.7,64.8,674.4,20.01,3.02,30.758,,NONE
-96,119,99.12,82.2,18.7,63.5,672.5,20.0,3.02,30.12,,NONE
-96,120,99.12,80.9,18.5,62.4,671.6,19.96,3.04,29.533,,NONE
-96,121,99.12,79.7,18.7,61.0,669.8,19.92,3.05,28.885,,NONE
-96,122,99.12,78.5,18.5,60.0,673.3,19.92,3.01,28.33,,NONE
-96,123,99.12,77.3,18.6,58.7,678.2,19.91,3.01,27.751,,NONE
-96,124,99.12,76.1,18.5,57.6,676.1,19.92,3.02,27.213,,NONE
-96,125,99.12,75.0,18.5,56.5,673.0,19.9,2.94,26.729,,NONE
-96,126,99.12,74.1,18.6,55.5,674.5,19.86,2.97,26.218,,NONE
-96,127,99.12,73.2,18.6,54.6,673.1,19.9,3.0,25.758,,NONE
-96,128,99.12,72.4,18.5,53.9,675.8,19.89,2.98,25.329,,NONE
-96,129,99.12,71.5,18.4,53.1,679.3,19.92,2.97,24.911,,NONE
-96,130,99.12,70.7,18.6,52.1,677.3,19.94,2.96,24.502,,NONE
-96,131,99.12,69.9,18.5,51.4,678.1,19.98,2.92,24.165,,NONE
-96,132,99.12,69.2,18.9,50.3,679.4,20.0,2.98,23.742,,NONE
-96,133,99.12,68.6,18.7,49.9,676.3,19.97,2.93,23.437,,NONE
-96,134,99.12,68.0,18.8,49.2,674.3,19.96,2.92,23.103,,NONE
-96,135,99.12,67.4,18.9,48.5,671.4,19.9,2.96,22.763,,NONE
-96,136,99.12,66.7,18.6,48.1,670.7,19.96,2.96,22.489,,NONE
-96,137,99.12,66.1,19.0,47.1,671.8,20.0,3.02,22.169,,NONE
-96,138,99.12,65.5,18.9,46.6,671.4,19.96,3.05,21.93,,NONE
-96,139,99.12,64.9,18.7,46.2,667.9,20.05,3.0,21.704,,NONE
-96,140,99.12,64.4,18.7,45.7,672.4,20.05,2.95,21.454,,NONE
-96,141,99.12,64.0,18.7,45.3,671.4,20.04,2.96,21.218,,NONE
-96,142,99.12,63.5,18.9,44.6,672.1,20.03,2.94,20.959,,NONE
-96,143,99.12,63.1,19.0,44.1,677.0,20.05,2.94,20.76,,NONE
-96,144,99.12,62.7,19.0,43.7,676.7,20.07,2.96,20.575,,NONE
-96,145,99.12,62.3,19.0,43.3,676.5,20.05,3.01,20.383,,NONE
-96,146,99.12,61.8,19.0,42.8,675.6,20.07,3.01,20.168,,NONE
-96,147,99.12,61.5,18.9,42.6,674.1,20.09,2.9,19.965,,NONE
-96,148,99.12,61.1,18.6,42.5,671.8,20.13,2.94,19.884,,NONE
-96,149,99.12,60.8,18.5,42.3,671.1,20.13,3.01,19.755,,NONE
-96,150,99.12,60.5,18.5,42.0,670.8,20.17,2.97,19.589,,NONE
-96,151,99.12,60.2,18.5,41.7,668.0,20.14,2.96,19.453,,NONE
-96,152,99.12,59.8,18.6,41.2,669.5,20.13,2.99,19.346,,NONE
-96,153,99.12,59.5,18.7,40.8,669.6,20.09,3.02,19.18,,NONE
-96,154,99.12,59.3,18.6,40.7,669.5,20.08,3.02,19.074,,NONE
-96,155,99.12,59.1,18.7,40.4,668.6,20.04,3.0,18.973,,NONE
-96,156,99.12,58.9,18.7,40.2,671.1,20.08,2.98,18.866,,NONE
-96,157,99.12,58.6,18.4,40.2,674.0,20.05,3.0,18.794,,NONE
-96,158,99.12,58.5,18.3,40.2,675.4,20.07,2.95,18.692,,NONE
-96,159,99.12,58.2,18.2,40.0,677.5,20.09,2.97,18.621,,NONE
-96,160,99.12,58.0,18.3,39.7,677.1,20.09,2.96,18.499,,NONE
+batch_id,time_step_min,current_step_id,raw_material_purity_coa,vessel_weight_kg,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
+96,0,1,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,1,1,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,2,1,100.342,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,3,1,100.342,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,4,1,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,5,1,100.342,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,6,1,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,7,1,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,8,1,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,9,1,100.342,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,10,1,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,11,1,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,12,1,100.342,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,13,1,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,14,1,100.342,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,15,2,100.342,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,16,2,100.342,88.6,24.9,25.1,-0.2,0.0,1.01,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,17,2,100.342,177.2,24.8,25.2,-0.4,0.0,1.01,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,18,2,100.342,265.8,24.9,25.1,-0.2,0.0,1.03,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,19,2,100.342,354.5,24.7,25.1,-0.4,0.0,1.08,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,20,2,100.342,443.1,24.7,25.2,-0.5,0.0,1.06,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,21,2,100.342,531.7,24.8,25.2,-0.4,0.0,1.08,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,22,2,100.342,620.3,24.7,25.3,-0.6,0.0,1.08,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,23,2,100.342,708.9,24.8,25.2,-0.4,0.0,1.05,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,24,2,100.342,797.5,24.8,25.2,-0.4,0.0,1.07,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,25,2,100.342,886.1,25.0,25.3,-0.3,151.4,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,26,2,100.342,974.8,24.9,25.2,-0.3,151.3,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,27,2,100.342,1063.4,25.0,25.4,-0.4,152.4,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,28,2,100.342,1152.0,24.9,25.3,-0.4,150.2,1.05,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,29,2,100.342,1240.6,25.0,25.3,-0.3,154.3,1.05,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,30,2,100.342,1329.2,25.0,25.4,-0.4,151.2,1.06,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,31,2,100.342,1417.8,24.9,25.5,-0.6,150.9,1.03,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,32,2,100.342,1506.4,25.0,25.4,-0.4,151.3,1.03,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,33,2,100.342,1595.0,25.1,25.4,-0.3,148.3,0.98,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,34,2,100.342,1683.7,25.1,25.4,-0.3,146.9,0.95,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,35,2,100.342,1772.3,25.1,25.4,-0.3,145.1,0.96,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,36,2,100.342,1860.9,25.2,25.3,-0.1,145.4,0.96,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,37,2,100.342,1949.5,25.1,25.3,-0.2,144.6,0.95,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,38,2,100.342,2038.1,25.3,25.5,-0.2,147.4,0.95,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,39,2,100.342,2126.7,25.1,25.4,-0.3,148.2,0.91,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,40,2,100.342,2215.3,25.2,25.5,-0.3,146.5,0.91,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,41,2,100.342,2304.0,25.2,25.4,-0.2,143.5,0.92,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,42,2,100.342,2392.6,25.2,25.5,-0.3,143.7,0.88,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,43,2,100.342,2481.2,25.3,25.5,-0.2,145.4,0.89,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,44,2,100.342,2569.8,25.4,25.5,-0.1,144.1,0.92,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,45,2,100.342,2658.4,25.4,25.4,0.0,144.9,0.96,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,46,2,100.342,2747.0,25.3,25.4,-0.1,147.1,0.93,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,47,2,100.342,2835.6,25.4,25.4,0.0,145.5,0.97,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,48,2,100.342,2924.2,25.3,25.4,-0.1,142.9,0.98,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,49,2,100.342,3012.9,25.2,25.5,-0.3,142.7,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,50,2,100.342,3101.5,25.1,25.5,-0.4,143.0,0.99,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,51,2,100.342,3190.1,25.1,25.4,-0.3,146.4,1.01,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,52,2,100.342,3278.7,25.0,25.4,-0.4,149.0,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,53,2,100.342,3367.3,25.2,25.3,-0.1,148.0,0.98,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,54,2,100.342,3455.9,25.2,25.2,0.0,148.8,0.99,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,55,2,100.342,3544.5,25.1,25.3,-0.2,151.2,1.01,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,56,2,100.342,3633.2,25.1,25.3,-0.2,151.6,1.03,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,57,2,100.342,3721.8,25.1,25.2,-0.1,153.5,0.99,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,58,2,100.342,3810.4,25.2,25.2,0.0,154.3,1.01,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,59,2,100.342,3899.0,25.3,25.2,0.1,155.8,1.03,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,60,3,100.342,3899.0,25.3,25.2,0.1,155.3,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,61,3,100.342,3899.0,25.4,25.2,0.2,157.0,1.28,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,62,3,100.342,3899.0,25.4,25.2,0.2,159.0,1.54,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,63,3,100.342,3899.0,25.3,25.2,0.1,154.9,1.79,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,64,3,100.342,3899.0,25.3,25.2,0.1,152.5,2.09,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,65,3,100.342,3899.0,25.3,25.1,0.2,154.0,2.36,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,66,3,100.342,3899.0,25.2,25.1,0.1,151.5,2.64,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,67,3,100.342,3899.0,25.4,25.2,0.2,149.5,2.95,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,68,3,100.342,3899.0,25.3,25.2,0.1,149.3,2.81,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,69,3,100.342,3899.0,25.3,25.2,0.1,147.3,2.52,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,70,3,100.342,3899.0,25.3,25.2,0.1,147.1,2.24,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,71,3,100.342,3899.0,25.3,25.0,0.3,145.3,1.94,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,72,3,100.342,3899.0,25.4,25.0,0.4,144.7,1.61,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,73,3,100.342,3899.0,25.1,25.0,0.1,147.1,1.37,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,74,3,100.342,3899.0,25.1,25.1,0.0,145.4,1.12,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,75,3,100.342,3899.0,25.1,25.0,0.1,144.9,1.15,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,76,3,100.342,3899.0,25.2,25.0,0.2,145.9,1.41,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,77,3,100.342,3899.0,25.1,25.0,0.1,146.1,1.71,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,78,3,100.342,3899.0,25.1,25.0,0.1,146.1,1.95,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,79,3,100.342,3899.0,25.1,24.7,0.4,148.0,2.23,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,80,3,100.342,3899.0,25.1,24.8,0.3,148.3,2.53,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,81,3,100.342,3899.0,25.2,24.7,0.5,148.3,2.81,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,82,3,100.342,3899.0,25.2,24.6,0.6,149.5,2.94,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,83,3,100.342,3899.0,25.1,24.7,0.4,148.0,2.67,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,84,3,100.342,3899.0,25.0,24.7,0.3,152.0,2.37,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,85,3,100.342,3899.0,25.2,24.7,0.5,149.0,2.08,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,86,3,100.342,3899.0,24.9,24.6,0.3,151.1,1.8,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,87,3,100.342,3899.0,25.0,24.6,0.4,149.2,1.53,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,88,3,100.342,3899.0,25.1,24.7,0.4,150.6,1.22,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,89,3,100.342,3899.0,25.1,24.7,0.4,148.2,0.96,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,90,4,100.342,3899.0,25.1,84.8,-59.7,593.1,0.95,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,91,4,100.342,3899.0,25.3,84.7,-59.4,591.8,1.14,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,92,4,100.342,3899.0,25.6,84.7,-59.1,591.5,1.36,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,93,4,100.342,3899.0,26.2,84.7,-58.5,592.9,1.59,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,94,4,100.342,3899.0,26.8,84.5,-57.7,592.3,1.82,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,95,4,100.342,3899.0,27.4,84.5,-57.1,595.4,2.03,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,96,4,100.342,3899.0,28.1,84.6,-56.5,592.3,2.2,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,97,4,100.342,3899.0,29.0,84.7,-55.7,592.0,2.38,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,98,4,100.342,3899.0,29.8,84.7,-54.9,589.7,2.58,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,99,4,100.342,3899.0,30.6,84.9,-54.3,591.1,2.83,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,100,4,100.342,3899.0,31.4,84.8,-53.4,588.4,3.04,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,101,4,100.342,3899.0,32.3,84.9,-52.6,592.1,3.26,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,102,4,100.342,3899.0,33.1,85.0,-51.9,595.7,3.47,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,103,4,100.342,3899.0,34.0,85.0,-51.0,594.6,3.66,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,104,4,100.342,3899.0,34.9,85.0,-50.1,593.6,3.86,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,105,4,100.342,3899.0,35.9,85.1,-49.2,592.2,4.05,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,106,4,100.342,3899.0,37.0,85.0,-48.0,591.8,4.22,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,107,4,100.342,3899.0,37.9,85.1,-47.2,592.6,4.4,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,108,4,100.342,3899.0,38.9,84.9,-46.0,592.1,4.63,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,109,4,100.342,3899.0,39.9,84.9,-45.0,592.1,4.85,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,110,4,100.342,3899.0,40.8,85.1,-44.3,591.4,5.1,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,111,4,100.342,3899.0,41.8,85.0,-43.2,592.1,5.3,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,112,4,100.342,3899.0,42.7,84.9,-42.2,592.7,5.51,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,113,4,100.342,3899.0,43.8,84.9,-41.1,593.1,5.76,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,114,4,100.342,3899.0,44.8,84.8,-40.0,592.5,5.96,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,115,4,100.342,3899.0,45.8,84.8,-39.0,593.1,6.15,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,116,4,100.342,3899.0,46.9,84.9,-38.0,592.9,6.37,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,117,4,100.342,3899.0,48.0,84.9,-36.9,591.7,6.6,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,118,4,100.342,3899.0,48.9,85.0,-36.1,593.9,6.79,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,119,4,100.342,3899.0,49.9,85.0,-35.1,594.0,6.97,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,120,4,100.342,3899.0,50.9,84.9,-34.0,594.6,7.17,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,121,4,100.342,3899.0,51.9,84.8,-32.9,595.3,7.36,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,122,4,100.342,3899.0,52.9,84.8,-31.9,593.4,7.59,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,123,4,100.342,3899.0,53.9,84.7,-30.8,593.7,7.85,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,124,4,100.342,3899.0,54.9,84.8,-29.9,594.2,8.04,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,125,4,100.342,3899.0,55.9,84.7,-28.8,590.4,8.21,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,126,4,100.342,3899.0,56.9,84.6,-27.7,592.2,8.43,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,127,4,100.342,3899.0,58.0,84.7,-26.7,593.3,8.62,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,128,4,100.342,3899.0,58.9,84.7,-25.8,592.5,8.85,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,129,4,100.342,3899.0,59.9,84.8,-24.9,592.0,9.09,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,130,4,100.342,3899.0,61.0,84.8,-23.8,591.3,9.28,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,131,4,100.342,3899.0,62.0,84.9,-22.9,589.5,9.49,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,132,4,100.342,3899.0,63.2,84.9,-21.7,592.1,9.71,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,133,4,100.342,3899.0,64.1,84.9,-20.8,589.7,9.89,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,134,4,100.342,3899.0,65.2,84.8,-19.6,589.6,10.07,0.1,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,135,5,100.342,3899.0,67.9,19.5,48.4,591.5,10.04,2.74,50.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,136,5,100.342,3899.3,70.2,19.6,50.6,591.4,15.03,2.74,51.46,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,137,5,100.342,3899.9,74.6,19.7,54.9,594.4,15.04,2.74,66.64,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,138,5,100.342,3900.6,80.0,16.6,63.4,596.1,15.04,2.74,85.67,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,139,5,100.342,3901.4,86.4,16.8,69.6,593.7,15.0,2.022,107.91,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,140,5,100.342,3902.4,91.8,16.8,75.0,592.1,15.04,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,141,5,100.342,3903.4,91.8,16.8,75.0,592.9,15.03,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,142,5,100.342,3904.6,91.8,16.8,75.0,592.6,15.04,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,143,5,100.342,3906.0,91.9,16.8,75.1,592.9,13.75,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,144,5,100.342,3907.5,91.9,16.9,75.0,594.5,12.2,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,145,5,100.342,3909.0,91.9,16.8,75.1,597.5,11.31,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,146,5,100.342,3910.5,91.8,16.9,74.9,597.9,10.79,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,147,5,100.342,3912.0,91.8,16.9,74.9,593.8,10.47,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,148,5,100.342,3913.5,91.7,17.0,74.7,596.0,10.27,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,149,5,100.342,3915.0,91.7,17.0,74.7,599.9,10.17,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,150,5,100.342,3916.5,91.7,17.1,74.6,598.3,10.1,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,151,5,100.342,3918.1,91.7,17.1,74.6,598.9,10.04,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,152,5,100.342,3919.6,91.8,17.1,74.7,600.7,10.03,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,153,5,100.342,3921.1,91.8,17.0,74.8,602.8,10.02,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,154,5,100.342,3922.6,91.7,17.0,74.7,603.7,10.01,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,155,5,100.342,3924.1,91.8,16.9,74.9,603.3,10.0,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,156,5,100.342,3925.6,91.8,17.0,74.8,603.1,10.02,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,157,5,100.342,3927.1,91.7,16.9,74.8,604.4,10.05,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,158,5,100.342,3928.6,91.6,17.0,74.6,602.9,10.06,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,159,5,100.342,3930.1,91.6,17.0,74.6,604.5,10.09,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,160,5,100.342,3931.6,91.6,17.0,74.6,604.5,10.08,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,161,5,100.342,3933.1,91.6,17.0,74.6,606.8,10.08,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,162,5,100.342,3934.6,91.5,16.9,74.6,609.4,10.09,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,163,5,100.342,3936.1,91.4,16.8,74.6,607.6,10.1,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,164,5,100.342,3937.6,91.4,16.7,74.7,611.3,10.03,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,165,5,100.342,3939.1,91.4,16.6,74.8,612.7,10.04,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,166,5,100.342,3940.7,91.5,16.6,74.9,614.8,10.01,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,167,5,100.342,3942.2,91.5,16.7,74.8,614.0,10.03,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,168,5,100.342,3943.7,91.4,16.7,74.7,613.1,10.05,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,169,5,100.342,3945.2,91.4,16.7,74.7,614.4,10.08,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,170,5,100.342,3946.7,91.5,16.6,74.9,617.8,10.11,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,171,5,100.342,3948.2,91.4,16.6,74.8,616.6,10.11,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,172,5,100.342,3949.7,91.3,16.8,74.5,615.8,10.09,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,173,5,100.342,3951.2,91.3,16.7,74.6,613.1,10.05,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,174,5,100.342,3952.7,91.3,16.7,74.6,613.7,10.08,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,175,5,100.342,3954.2,91.3,16.7,74.6,611.7,10.06,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,176,5,100.342,3955.7,91.3,16.7,74.6,612.9,10.02,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,177,5,100.342,3957.2,91.3,16.7,74.6,616.0,10.02,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,178,5,100.342,3958.7,91.4,16.8,74.6,616.6,10.01,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,179,5,100.342,3960.2,91.4,16.8,74.6,618.2,10.03,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,180,5,100.342,3961.7,91.4,16.6,74.8,619.2,10.02,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,181,5,100.342,3963.3,91.3,16.7,74.6,621.4,9.99,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,182,5,100.342,3964.8,91.4,16.7,74.7,619.8,9.99,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,183,5,100.342,3966.3,91.4,16.7,74.7,621.2,10.0,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,184,5,100.342,3967.8,91.5,16.7,74.8,623.3,9.97,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,185,5,100.342,3969.3,91.6,16.8,74.8,627.6,9.94,1.507,111.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,186,5,100.342,3970.8,91.7,16.7,75.0,628.6,9.96,1.507,111.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,187,5,100.342,3972.3,91.7,16.7,75.0,627.8,10.01,1.507,111.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,188,5,100.342,3973.8,91.7,16.7,75.0,627.4,10.0,1.507,111.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,189,5,100.342,3975.3,91.7,16.9,74.8,630.3,10.03,1.507,111.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,190,5,100.342,3976.8,91.7,16.8,74.9,631.8,10.04,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,191,5,100.342,3976.9,91.7,16.8,74.9,631.8,10.01,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,192,5,100.342,3976.9,91.7,16.9,74.8,632.9,10.03,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,193,5,100.342,3976.9,91.6,17.0,74.6,630.1,10.03,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,194,5,100.342,3976.9,91.6,16.9,74.7,630.4,9.98,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,195,5,100.342,3976.9,91.7,16.9,74.8,628.3,9.98,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,196,5,100.342,3976.9,91.6,16.8,74.8,629.2,10.0,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,197,5,100.342,3976.9,91.4,16.8,74.6,631.4,10.02,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,198,5,100.342,3976.9,91.3,16.7,74.6,630.3,10.0,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,199,5,100.342,3976.9,91.4,16.8,74.6,631.0,10.02,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,200,5,100.342,3976.9,91.4,16.8,74.6,630.1,9.98,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,201,5,100.342,3976.9,91.4,16.8,74.6,632.5,10.01,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,202,5,100.342,3976.9,91.5,16.9,74.6,632.6,9.99,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,203,5,100.342,3976.9,91.5,16.9,74.6,631.7,10.0,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,204,5,100.342,3976.9,91.6,16.9,74.7,632.5,9.99,0.0,71.35,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,205,5,100.342,3976.9,91.7,16.9,74.8,629.0,9.99,1.507,111.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,206,5,100.342,3978.3,91.7,16.7,75.0,627.9,10.64,1.507,111.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,207,5,100.342,3979.8,91.7,16.9,74.8,627.4,10.39,1.507,111.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,208,5,100.342,3981.3,91.6,16.9,74.7,630.4,10.21,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,209,5,100.342,3982.8,91.6,16.8,74.8,631.7,10.14,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,210,5,100.342,3984.3,91.6,16.8,74.8,632.9,10.09,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,211,5,100.342,3985.8,91.6,16.9,74.7,632.2,10.08,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,212,5,100.342,3987.3,91.6,16.8,74.8,632.5,10.03,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,213,5,100.342,3988.8,91.6,16.8,74.8,635.4,9.97,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,214,5,100.342,3990.3,91.6,16.8,74.8,635.1,9.96,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,215,5,100.342,3991.8,91.7,16.7,75.0,635.3,9.98,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,216,5,100.342,3993.3,91.7,16.9,74.8,636.1,9.99,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,217,5,100.342,3994.8,91.8,16.8,75.0,635.9,9.99,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,218,5,100.342,3996.4,91.8,16.9,74.9,636.6,10.0,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,219,5,100.342,3997.9,91.8,16.9,74.9,635.7,9.97,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,220,5,100.342,3999.4,91.8,16.8,75.0,637.0,10.0,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,221,5,100.342,4000.9,91.8,16.9,74.9,638.8,10.01,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,222,5,100.342,4002.4,91.8,16.9,74.9,637.6,9.99,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,223,5,100.342,4003.9,91.8,16.9,74.9,639.4,9.95,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,224,5,100.342,4005.4,91.8,17.1,74.7,638.0,9.96,1.507,120.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,225,6,100.342,4005.4,84.8,70.4,14.4,636.8,10.01,0.4,30.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,226,6,100.342,4005.4,81.1,70.4,10.7,635.3,10.0,0.386,29.83,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,227,6,100.342,4005.4,78.2,70.3,7.9,639.6,10.07,0.372,29.66,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,228,6,100.342,4005.4,76.1,70.4,5.7,638.4,10.05,0.359,29.48,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,229,6,100.342,4005.4,74.7,70.4,4.3,640.1,10.07,0.345,29.31,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,230,6,100.342,4005.4,73.5,70.4,3.1,643.1,10.02,0.331,29.14,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,231,6,100.342,4005.4,72.6,70.4,2.2,644.1,10.03,0.317,28.97,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,232,6,100.342,4005.4,71.8,70.4,1.4,641.8,10.0,0.303,28.79,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,233,6,100.342,4005.4,71.4,70.3,1.1,643.2,10.03,0.29,28.62,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,234,6,100.342,4005.4,71.1,70.3,0.8,640.9,10.03,0.276,28.45,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,235,6,100.342,4005.4,70.8,70.2,0.6,640.6,9.98,0.262,28.28,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,236,6,100.342,4005.4,70.5,70.2,0.3,640.7,9.99,0.248,28.1,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,237,6,100.342,4005.4,70.3,70.3,0.0,641.9,9.96,0.234,27.93,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,238,6,100.342,4005.4,70.1,70.3,-0.2,644.3,10.03,0.221,27.76,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,239,6,100.342,4005.4,70.0,70.2,-0.2,646.9,10.05,0.207,27.59,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,240,6,100.342,4005.4,69.9,70.3,-0.4,645.5,10.07,0.193,27.41,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,241,6,100.342,4005.4,69.8,70.2,-0.4,644.8,10.05,0.179,27.24,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,242,6,100.342,4005.4,69.8,70.3,-0.5,642.7,10.04,0.166,27.07,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,243,6,100.342,4005.4,69.8,70.3,-0.5,644.7,10.06,0.152,26.9,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,244,6,100.342,4005.4,69.8,70.2,-0.4,647.0,10.04,0.138,26.72,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,245,6,100.342,4005.4,69.8,70.2,-0.4,647.1,10.06,0.124,26.55,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,246,6,100.342,4005.4,69.7,70.2,-0.5,648.4,10.04,0.11,26.38,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,247,6,100.342,4005.4,69.7,70.2,-0.5,648.1,10.09,0.097,26.21,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,248,6,100.342,4005.4,69.7,70.2,-0.5,647.0,10.09,0.083,26.03,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,249,6,100.342,4005.4,69.8,70.2,-0.4,647.8,10.1,0.069,25.86,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,250,6,100.342,4005.4,69.8,70.1,-0.3,648.6,10.18,0.055,25.69,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,251,6,100.342,4005.4,69.8,70.1,-0.3,645.5,10.08,0.041,25.52,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,252,6,100.342,4005.4,69.7,70.0,-0.3,642.9,10.06,0.028,25.34,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,253,6,100.342,4005.4,69.8,69.9,-0.1,642.8,10.08,0.014,25.17,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,254,6,100.342,4005.4,69.8,70.0,-0.2,641.3,10.07,0.0,25.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,255,7,100.342,4005.4,69.7,14.8,54.9,641.4,10.03,0.0,90.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,256,7,100.342,4005.4,69.4,14.9,54.5,641.6,9.83,0.0,89.55,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,257,7,100.342,4005.4,69.1,14.9,54.2,638.5,9.63,0.0,89.09,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,258,7,100.342,4005.4,68.6,15.0,53.6,640.1,9.42,0.0,88.64,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,259,7,100.342,4005.4,68.3,14.9,53.4,638.6,9.21,0.0,88.18,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,260,7,100.342,4005.4,68.0,15.0,53.0,639.2,9.07,0.0,87.73,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,261,7,100.342,4005.4,67.4,15.0,52.4,642.8,8.87,0.0,87.27,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,262,7,100.342,4005.4,66.8,15.1,51.7,643.0,8.67,0.0,86.82,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,263,7,100.342,4005.4,66.1,15.3,50.8,641.4,8.44,0.0,86.36,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,264,7,100.342,4005.4,65.4,15.3,50.1,641.0,8.24,0.0,85.91,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,265,7,100.342,4005.4,64.7,15.2,49.5,645.0,8.02,0.0,85.45,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,266,7,100.342,4005.4,63.8,15.1,48.7,645.0,7.81,0.0,85.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,267,7,100.342,4005.4,63.0,15.2,47.8,644.3,7.6,0.0,84.55,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,268,7,100.342,4005.4,62.4,15.2,47.2,644.9,7.39,0.0,84.09,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,269,7,100.342,4005.4,61.6,15.2,46.4,644.9,7.21,0.0,83.64,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,270,7,100.342,4005.4,60.7,15.2,45.5,645.2,6.97,0.0,83.18,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,271,7,100.342,4005.4,59.8,15.1,44.7,644.5,6.7,0.0,82.73,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,272,7,100.342,4005.4,59.0,15.1,43.9,643.6,6.46,0.0,82.27,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,273,7,100.342,4005.4,58.2,15.1,43.1,640.8,6.26,0.0,81.82,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,274,7,100.342,4005.4,57.4,15.0,42.4,640.8,6.04,0.0,81.36,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,275,7,100.342,4005.4,56.6,15.0,41.6,638.4,5.82,0.0,80.91,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,276,7,100.342,4005.4,55.8,15.0,40.8,641.3,5.62,0.0,80.45,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,277,7,100.342,4005.4,54.9,14.9,40.0,641.2,5.42,0.0,80.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,278,7,100.342,4005.4,53.9,14.8,39.1,641.6,5.24,0.0,79.55,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,279,7,100.342,4005.4,53.0,14.9,38.1,646.1,5.06,0.0,79.09,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,280,7,100.342,4005.4,52.1,14.7,37.4,641.7,4.85,0.0,78.64,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,281,7,100.342,4005.4,51.1,14.7,36.4,644.4,4.7,0.0,78.18,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,282,7,100.342,4005.4,50.3,14.7,35.6,646.9,4.5,0.0,77.73,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,283,7,100.342,4005.4,49.4,14.6,34.8,645.1,4.25,0.0,77.27,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,284,7,100.342,4005.4,48.6,14.6,34.0,643.4,4.05,0.0,76.82,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,285,7,100.342,4005.4,47.6,14.5,33.1,640.9,3.81,0.0,76.36,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,286,7,100.342,4005.4,46.8,14.6,32.2,643.2,3.61,0.0,75.91,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,287,7,100.342,4005.4,45.9,14.5,31.4,645.1,3.39,0.0,75.45,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,288,7,100.342,4005.4,45.0,14.6,30.4,644.7,3.2,0.0,75.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,289,7,100.342,4005.4,44.1,14.6,29.5,642.6,3.04,0.0,74.55,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,290,7,100.342,4005.4,43.3,14.6,28.7,642.4,2.82,0.0,74.09,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,291,7,100.342,4005.4,42.5,14.7,27.8,644.0,2.58,0.0,73.64,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,292,7,100.342,4005.4,41.6,14.7,26.9,645.9,2.37,0.0,73.18,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,293,7,100.342,4005.4,40.7,14.6,26.1,645.7,2.15,0.0,72.73,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,294,7,100.342,4005.4,39.8,14.5,25.3,642.4,1.98,0.0,72.27,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,295,7,100.342,4005.4,38.9,14.4,24.5,643.7,1.79,0.0,71.82,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,296,7,100.342,4005.4,38.1,14.3,23.8,642.7,1.56,0.0,71.36,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,297,7,100.342,4005.4,37.1,14.3,22.8,643.1,1.38,0.0,70.91,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,298,7,100.342,4005.4,36.3,14.2,22.1,641.4,1.18,0.0,70.45,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,299,7,100.342,4005.4,35.5,14.3,21.2,642.0,0.98,0.0,70.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,300,8,100.342,4005.4,35.1,24.3,10.8,641.2,0.95,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,301,8,100.342,3867.3,34.8,24.3,10.5,641.1,0.92,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,302,8,100.342,3729.2,34.5,24.3,10.2,643.1,0.92,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,303,8,100.342,3591.0,34.3,24.3,10.0,643.0,0.93,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,304,8,100.342,3452.9,34.0,24.3,9.7,643.4,0.94,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,305,8,100.342,3314.8,33.7,24.4,9.3,641.0,0.95,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,306,8,100.342,3176.7,33.5,24.5,9.0,640.3,0.97,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,307,8,100.342,3038.6,33.3,24.6,8.7,640.5,1.02,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,308,8,100.342,2900.5,33.1,24.5,8.6,641.9,1.03,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,309,8,100.342,2762.3,32.8,24.5,8.3,644.2,1.02,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,310,8,100.342,2624.2,32.6,24.4,8.2,643.1,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,311,8,100.342,2486.1,32.5,24.4,8.1,640.1,1.01,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,312,8,100.342,2348.0,32.5,24.6,7.9,637.8,1.02,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,313,8,100.342,2209.9,32.3,24.5,7.8,636.6,1.03,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,314,8,100.342,2071.8,32.1,24.4,7.7,637.5,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,315,8,100.342,1933.6,32.0,24.4,7.6,637.6,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,316,8,100.342,1795.5,31.8,24.4,7.4,641.3,1.0,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,317,8,100.342,1657.4,31.6,24.4,7.2,642.0,1.07,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,318,8,100.342,1519.3,31.6,24.3,7.3,640.3,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,319,8,100.342,1381.2,31.6,24.4,7.2,641.2,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,320,8,100.342,1243.1,31.4,24.4,7.0,639.4,1.03,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,321,8,100.342,1104.9,31.2,24.5,6.7,638.8,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,322,8,100.342,966.8,31.2,24.5,6.7,638.8,0.98,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,323,8,100.342,828.7,31.2,24.6,6.6,641.2,0.96,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,324,8,100.342,690.6,31.1,24.7,6.4,639.7,0.99,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,325,8,100.342,552.5,31.1,24.7,6.4,641.2,0.99,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,326,8,100.342,414.4,31.2,24.7,6.5,0.0,1.02,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,327,8,100.342,276.2,31.2,24.8,6.4,0.0,1.04,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,328,8,100.342,138.1,31.1,24.8,6.3,0.0,1.02,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE
+96,329,8,100.342,0.0,31.0,24.9,6.1,0.0,1.03,0.0,0.0,Cascade: Step 5 cooling spike tripped auto feed pause (+5 min); T_rx drift +0.5°C.,COMPOUND_CASCADE

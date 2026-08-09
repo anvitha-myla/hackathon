@@ -1,225 +1,331 @@
-batch_id,time_step_min,raw_material_purity_coa,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
-85,0,98.111,55.7,21.0,34.7,594.2,6.01,0.0,16.359,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,1,98.111,58.3,21.0,37.3,590.3,6.6,0.01,17.652,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,2,98.111,60.6,21.2,39.4,593.4,7.1,0.01,18.689,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,3,98.111,62.6,21.2,41.4,592.5,7.52,0.08,19.663,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,4,98.111,64.3,21.4,42.9,593.3,7.87,0.1,20.395,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,5,98.111,65.7,21.5,44.2,595.9,8.15,0.05,21.072,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,6,98.111,66.9,21.4,45.5,592.3,8.36,0.04,21.643,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,7,98.111,68.0,21.5,46.5,592.7,8.57,0.04,22.121,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,8,98.111,68.8,21.5,47.3,594.2,8.74,0.04,22.509,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,9,98.111,69.5,21.5,48.0,589.2,8.89,0.07,22.881,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,10,98.111,70.2,21.7,48.5,589.8,9.05,0.08,23.142,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,11,98.111,70.8,21.4,49.4,594.4,9.23,0.1,23.421,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,12,98.111,71.1,21.2,49.9,594.6,9.32,0.16,23.632,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,13,98.111,71.6,21.3,50.3,596.1,9.43,0.13,23.806,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,14,98.111,72.0,21.2,50.8,590.7,9.51,0.11,23.951,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,15,98.111,72.3,21.5,50.8,592.5,9.55,0.08,24.041,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,16,98.111,72.5,21.1,51.4,594.2,9.67,0.13,24.208,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,17,98.111,72.7,20.9,51.8,594.8,9.73,3.42,24.303,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,18,98.111,81.4,20.8,60.6,597.9,19.55,0.11,28.462,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,19,98.111,80.3,20.7,59.6,599.7,18.05,0.11,27.927,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,20,98.111,79.3,20.8,58.5,600.9,16.79,0.1,27.449,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,21,98.111,78.4,20.8,57.6,596.8,15.8,0.12,27.013,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,22,98.111,77.7,20.4,57.3,598.5,14.97,3.23,26.759,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,23,98.111,88.5,18.6,69.9,605.4,17.32,3.16,32.843,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,24,98.111,99.9,18.6,81.3,604.3,16.23,1.48,38.146,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,25,98.111,103.3,18.7,84.6,609.8,15.27,1.43,39.757,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,26,98.111,106.8,18.5,88.3,611.3,14.5,1.4,41.263,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,27,98.111,109.7,18.9,90.8,614.9,13.84,1.43,42.738,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,28,98.111,112.8,18.9,93.9,615.8,13.27,1.38,44.151,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,29,98.111,115.0,18.8,96.2,616.3,12.78,1.32,45.176,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,30,98.111,115.2,18.9,96.3,612.0,12.32,1.34,45.121,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,31,98.111,115.2,19.1,96.1,613.1,11.91,1.39,45.139,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,32,98.111,115.3,18.9,96.4,613.6,11.63,1.39,45.14,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,33,98.111,115.3,18.8,96.5,613.9,11.41,1.42,45.17,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,34,98.111,115.2,18.7,96.5,615.6,11.18,1.47,45.171,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,35,98.111,115.1,18.8,96.3,617.7,11.05,1.46,45.15,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,36,98.111,115.2,18.7,96.5,618.1,10.87,1.54,45.197,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,37,98.111,115.3,18.8,96.5,617.9,10.71,1.63,45.162,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,38,98.111,115.3,18.7,96.6,617.1,10.6,1.6,45.188,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,39,98.111,115.3,18.7,96.6,616.6,10.5,1.52,45.146,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,40,98.111,115.2,18.8,96.4,618.4,10.38,1.56,45.166,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,41,98.111,115.3,18.8,96.5,617.2,10.34,1.53,45.227,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,42,98.111,115.5,18.8,96.7,619.2,10.27,1.56,45.201,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,43,98.111,115.6,18.9,96.7,620.0,10.18,1.52,45.187,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,44,98.111,115.5,19.0,96.5,614.6,10.14,1.57,45.178,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,45,98.111,115.5,18.9,96.6,616.5,10.14,1.55,45.196,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,46,98.111,115.6,18.9,96.7,616.6,10.1,1.55,45.22,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,47,98.111,115.6,19.1,96.5,619.6,10.09,1.56,45.172,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,48,98.111,115.6,19.2,96.4,622.2,10.11,1.5,45.195,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,49,98.111,115.7,19.1,96.6,622.1,10.15,1.44,45.225,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,50,98.111,115.6,19.1,96.5,622.5,10.14,1.51,45.265,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,51,98.111,115.7,19.1,96.6,623.6,10.18,1.49,45.241,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,52,98.111,115.7,19.1,96.6,625.3,10.16,1.49,45.246,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,53,98.111,115.6,19.0,96.6,624.5,10.1,1.52,45.28,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,54,98.111,115.6,19.0,96.6,626.2,10.04,1.47,45.278,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,55,98.111,115.5,18.9,96.6,625.8,10.02,1.47,45.248,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,56,98.111,115.6,18.9,96.7,631.2,10.04,1.42,45.327,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,57,98.111,115.5,19.0,96.5,638.2,10.02,1.42,45.259,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,58,98.111,115.5,19.1,96.4,638.6,9.96,1.47,45.321,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,59,98.111,115.6,19.0,96.6,638.6,9.93,1.45,45.304,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,60,98.111,115.8,19.2,96.6,640.1,9.88,1.46,45.247,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,61,98.111,115.8,19.1,96.7,639.6,9.92,1.49,45.284,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,62,98.111,115.7,18.9,96.8,638.6,9.92,1.42,45.302,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,63,98.111,115.7,18.8,96.9,640.6,9.96,1.4,45.352,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,64,98.111,115.7,18.8,96.9,638.3,9.96,1.38,45.324,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,65,98.111,115.7,18.8,96.9,637.6,9.94,1.48,45.317,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,66,98.111,115.7,18.8,96.9,636.2,9.97,1.5,45.364,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,67,98.111,115.6,18.9,96.7,633.6,9.96,1.48,45.382,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,68,98.111,115.5,18.9,96.6,632.2,9.94,1.47,45.358,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,69,98.111,115.6,18.8,96.8,634.9,9.97,1.46,45.391,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,70,98.111,115.6,18.7,96.9,640.2,9.94,1.48,45.353,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,71,98.111,115.6,18.6,97.0,641.2,9.88,1.47,45.364,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,72,98.111,115.6,18.8,96.8,641.7,9.86,1.37,45.38,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,73,98.111,115.6,18.6,97.0,642.7,9.83,1.37,45.422,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,74,98.111,115.4,18.7,96.7,643.5,9.89,1.41,45.387,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,75,98.111,115.5,18.6,96.9,644.2,9.88,1.4,45.401,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,76,98.111,115.5,18.4,97.1,648.0,9.95,1.43,45.419,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,77,98.111,115.6,18.6,97.0,648.8,9.96,1.39,45.399,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,78,98.111,115.6,18.6,97.0,649.7,9.98,1.42,45.409,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,79,98.111,115.7,18.7,97.0,653.7,9.94,1.4,45.398,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,80,98.111,115.5,18.5,97.0,653.0,9.91,1.46,45.435,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,81,98.111,115.6,18.4,97.2,657.8,9.92,1.42,45.44,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,82,98.111,115.6,18.7,96.9,658.4,9.99,1.38,45.382,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,83,98.111,115.6,18.6,97.0,658.4,9.98,1.38,45.424,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,84,98.111,115.4,18.5,96.9,659.6,9.99,1.43,45.436,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,85,98.111,115.6,18.7,96.9,659.7,9.94,1.42,45.419,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,86,98.111,115.4,18.7,96.7,662.3,9.9,1.38,45.379,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,87,98.111,115.4,18.4,97.0,658.5,9.92,1.44,45.441,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,88,98.111,115.3,18.2,97.1,660.2,9.97,1.48,45.431,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,89,98.111,115.3,18.3,97.0,663.2,10.48,1.46,45.421,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,90,98.111,115.4,18.4,97.0,663.4,11.73,1.46,45.407,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,91,98.111,115.3,18.2,97.1,664.1,13.26,1.49,45.437,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,92,98.111,115.3,18.3,97.0,661.1,14.96,1.51,45.403,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,93,98.111,115.3,18.3,97.0,659.1,16.79,1.5,45.412,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,94,98.111,115.4,18.6,96.8,658.3,18.8,1.45,45.405,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,95,98.111,115.4,18.4,97.0,655.9,19.96,1.43,45.398,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,96,98.111,115.4,18.3,97.1,657.9,19.95,1.46,45.392,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,97,98.111,115.3,18.5,96.8,657.9,19.94,1.43,45.358,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,98,98.111,115.4,18.5,96.9,656.8,19.88,1.4,45.395,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,99,98.111,115.3,18.6,96.7,659.5,19.92,1.43,45.251,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,100,98.111,114.9,18.5,96.4,659.0,19.93,1.41,45.059,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,101,98.111,114.1,18.4,95.7,663.5,19.94,1.42,44.701,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,102,98.111,113.1,18.3,94.8,663.8,19.88,1.41,44.253,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,103,98.111,112.1,18.3,93.8,661.7,19.84,1.4,43.702,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,104,98.111,110.9,18.2,92.7,663.3,19.83,1.39,43.129,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,105,98.111,109.4,18.2,91.2,665.0,19.83,1.34,42.499,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,106,98.111,108.0,18.2,89.8,665.6,19.88,1.32,41.776,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,107,98.111,106.3,18.3,88.0,663.8,19.91,1.34,41.021,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,108,98.111,104.8,18.1,86.7,669.6,19.92,1.34,40.254,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,109,98.111,103.1,18.0,85.1,669.8,19.93,1.34,39.48,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,110,98.111,101.4,18.0,83.4,669.4,19.93,1.31,38.64,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,111,98.111,99.8,18.2,81.6,670.2,19.9,1.45,37.811,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,112,98.111,98.0,18.3,79.7,669.9,19.94,1.67,37.003,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,113,98.111,96.2,18.6,77.6,667.3,19.94,1.88,36.139,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,114,98.111,94.5,18.6,75.9,665.2,19.98,2.01,35.34,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,115,98.111,92.8,18.6,74.2,669.1,19.98,2.17,34.577,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,116,98.111,91.1,18.4,72.7,671.4,19.95,2.82,33.832,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,117,98.111,89.5,18.6,70.9,671.3,19.99,2.85,33.05,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,118,98.111,87.9,20.7,67.2,673.3,20.04,2.82,31.362,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,119,98.111,86.4,20.7,65.7,670.1,20.04,2.83,30.717,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,120,98.111,85.0,21.0,64.0,667.6,20.1,2.83,30.071,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,121,98.111,83.6,21.1,62.5,672.5,20.1,2.87,29.398,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,122,98.111,82.3,20.8,61.5,673.3,20.11,2.9,28.776,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,123,98.111,81.1,20.9,60.2,676.3,20.08,2.93,28.209,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,124,98.111,79.9,20.7,59.2,673.5,20.17,2.86,27.65,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,125,98.111,78.9,20.6,58.3,670.2,20.14,2.88,27.084,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,126,98.111,77.7,20.7,57.0,670.4,20.09,2.88,26.542,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,127,98.111,76.6,20.7,55.9,675.7,20.03,2.89,26.048,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,128,98.111,75.6,20.5,55.1,676.4,20.08,2.9,25.588,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,129,98.111,74.6,20.7,53.9,675.1,20.08,2.92,25.112,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,130,98.111,73.6,20.7,52.9,674.4,20.1,2.83,24.656,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,131,98.111,72.8,20.7,52.1,672.3,20.11,2.9,24.212,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,132,98.111,72.0,20.8,51.2,673.4,20.06,2.94,23.889,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,133,98.111,71.1,20.9,50.2,671.8,20.05,2.93,23.49,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,134,98.111,70.3,21.0,49.3,669.4,20.01,2.96,23.096,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,135,98.111,69.7,21.0,48.7,667.8,19.97,3.0,22.754,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,136,98.111,69.0,21.0,48.0,667.5,19.96,2.98,22.448,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,137,98.111,68.5,21.1,47.4,668.8,20.01,2.96,22.107,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,138,98.111,67.9,21.1,46.8,666.9,20.04,2.93,21.813,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,139,98.111,67.4,21.0,46.4,667.3,20.04,2.94,21.55,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,140,98.111,66.8,20.9,45.9,665.2,20.02,3.0,21.305,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,141,98.111,66.2,20.8,45.4,664.8,19.99,2.91,21.033,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,142,98.111,65.7,20.9,44.8,667.2,19.97,2.94,20.808,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,143,98.111,65.3,21.0,44.3,665.8,19.95,2.91,20.577,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,144,98.111,64.8,21.2,43.6,669.6,19.99,2.94,20.328,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,145,98.111,64.4,21.3,43.1,673.3,19.99,2.89,20.128,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,146,98.111,63.9,21.2,42.7,673.9,19.98,2.9,19.934,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,147,98.111,63.4,21.2,42.2,673.2,19.97,2.88,19.769,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,148,98.111,63.1,21.2,41.9,675.0,19.97,2.89,19.616,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,149,98.111,62.8,21.3,41.5,676.0,19.93,2.91,19.425,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,150,98.111,62.5,21.4,41.1,673.7,19.98,2.9,19.236,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,151,98.111,62.0,21.5,40.5,674.8,19.97,2.91,19.084,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,152,98.111,61.7,21.3,40.4,672.3,19.93,2.85,18.943,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,153,98.111,61.4,21.3,40.1,666.1,19.91,2.91,18.817,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,154,98.111,61.1,21.3,39.8,667.1,19.91,2.89,18.705,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,155,98.111,60.9,21.1,39.8,670.8,19.91,2.86,18.614,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,156,98.111,60.7,21.4,39.3,672.1,19.93,2.86,18.428,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,157,98.111,60.5,21.4,39.1,677.3,19.98,2.85,18.345,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,158,98.111,60.2,21.2,39.0,676.1,19.97,2.89,18.273,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,159,98.111,60.1,21.4,38.7,675.5,20.02,2.95,18.155,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,160,98.111,59.8,21.4,38.4,671.9,19.97,2.95,18.099,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,161,98.111,59.7,21.7,38.0,668.1,19.95,2.9,17.991,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,162,98.111,59.6,21.8,37.8,666.4,19.95,2.86,17.878,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,163,98.111,59.5,21.6,37.9,670.2,19.97,2.87,17.836,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,164,98.111,59.4,21.7,37.7,671.8,19.9,2.85,17.769,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,165,98.111,59.3,21.7,37.6,668.2,19.89,2.89,17.671,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,166,98.111,59.0,21.7,37.3,669.6,19.91,2.9,17.615,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,167,98.111,58.9,21.8,37.1,672.4,19.86,2.92,17.537,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,168,98.111,58.8,21.7,37.1,670.6,19.87,2.96,17.516,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,169,98.111,58.6,21.3,37.3,671.9,19.87,2.94,17.506,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,170,98.111,58.5,21.7,36.8,672.9,19.91,2.98,17.385,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,171,98.111,58.3,21.6,36.7,673.2,19.94,2.98,17.351,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,172,98.111,58.3,21.8,36.5,672.4,19.93,3.02,17.261,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,173,98.111,58.2,21.6,36.6,672.5,19.96,3.03,17.263,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,174,98.111,58.1,21.6,36.5,676.7,19.93,2.94,17.22,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,175,98.111,58.0,21.7,36.3,676.1,19.94,2.92,17.169,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,176,98.111,58.0,21.5,36.5,674.8,19.94,2.95,17.114,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,177,98.111,57.9,21.3,36.6,676.5,19.96,2.91,17.097,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,178,98.111,57.8,21.2,36.6,676.9,19.98,2.92,17.044,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,179,98.111,57.7,21.1,36.6,676.6,19.95,2.92,17.012,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,180,98.111,57.7,21.0,36.7,675.9,19.89,2.94,17.036,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,181,98.111,57.6,20.9,36.7,675.3,19.89,2.96,16.974,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,182,98.111,57.6,21.0,36.6,674.7,19.93,2.98,16.927,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,183,98.111,57.5,21.2,36.3,676.4,19.93,2.99,16.925,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,184,98.111,57.5,21.0,36.5,672.5,19.94,3.01,16.919,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,185,98.111,57.4,21.3,36.1,669.9,19.95,2.97,16.812,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,186,98.111,57.3,21.0,36.3,666.3,19.92,2.97,16.846,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,187,98.111,57.2,21.2,36.0,670.6,19.92,2.96,16.776,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,188,98.111,57.0,21.2,35.8,671.7,19.93,2.92,16.786,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,189,98.111,56.9,21.3,35.6,668.7,19.97,2.9,16.724,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,190,98.111,56.8,21.2,35.6,663.8,19.92,2.86,16.736,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,191,98.111,56.7,21.2,35.5,665.8,19.94,2.91,16.693,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,192,98.111,56.7,21.2,35.5,663.2,19.99,2.86,16.685,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,193,98.111,56.8,21.1,35.7,663.4,19.95,2.86,16.646,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,194,98.111,56.8,21.0,35.8,661.9,19.98,2.87,16.638,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,195,98.111,56.8,20.9,35.9,663.5,20.07,2.85,16.639,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,196,98.111,56.7,20.8,35.9,662.6,20.04,2.84,16.617,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,197,98.111,56.7,20.7,36.0,659.1,20.07,2.8,16.593,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,198,98.111,56.8,20.7,36.1,661.3,20.07,2.84,16.539,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,199,98.111,56.7,20.6,36.1,660.5,20.02,2.85,16.572,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,200,98.111,56.5,20.4,36.1,661.2,20.0,2.82,16.529,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,201,98.111,56.5,20.3,36.2,665.6,20.03,2.85,16.57,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,202,98.111,56.6,20.4,36.2,667.4,19.99,2.79,16.464,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,203,98.111,56.7,20.5,36.2,663.8,20.03,2.8,16.459,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,204,98.111,56.7,20.5,36.2,665.8,20.03,2.83,16.449,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,205,98.111,56.6,20.4,36.2,663.4,20.02,2.85,16.424,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,206,98.111,56.6,20.3,36.3,663.5,20.01,2.82,16.453,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,207,98.111,56.4,20.3,36.1,661.4,19.94,2.85,16.398,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,208,98.111,56.4,20.1,36.3,665.9,19.99,2.87,16.397,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,209,98.111,56.4,20.0,36.4,664.2,20.04,2.85,16.406,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,210,98.111,56.4,19.7,36.7,666.0,20.11,2.87,16.427,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,211,98.111,56.4,19.9,36.5,664.5,20.1,2.83,16.369,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,212,98.111,56.4,20.0,36.4,666.6,20.08,2.76,16.341,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,213,98.111,56.4,20.0,36.4,667.6,20.11,2.78,16.266,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,214,98.111,56.5,19.9,36.6,667.9,20.11,2.79,16.36,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,215,98.111,56.4,19.8,36.6,668.6,20.2,2.81,16.293,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,216,98.111,56.5,20.3,36.2,665.7,20.21,2.83,16.235,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,217,98.111,56.5,20.2,36.3,665.4,20.2,2.84,16.287,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,218,98.111,56.5,20.3,36.2,665.4,20.18,2.81,16.269,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,219,98.111,56.4,20.3,36.1,665.0,20.14,2.87,16.257,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,220,98.111,56.5,20.4,36.1,667.1,20.1,2.9,16.25,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,221,98.111,56.4,20.6,35.8,666.8,20.1,2.9,16.205,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,222,98.111,56.4,20.5,35.9,665.3,20.18,2.88,16.193,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-85,223,98.111,56.5,20.5,36.0,666.3,20.17,2.92,16.202,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
+batch_id,time_step_min,current_step_id,raw_material_purity_coa,vessel_weight_kg,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
+85,0,1,97.564,0.0,24.8,25.0,-0.2,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,1,1,97.564,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,2,1,97.564,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,3,1,97.564,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,4,1,97.564,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,5,1,97.564,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,6,1,97.564,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,7,1,97.564,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,8,1,97.564,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,9,1,97.564,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,10,1,97.564,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,11,1,97.564,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,12,1,97.564,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,13,1,97.564,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,14,1,97.564,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,15,2,97.564,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,16,2,97.564,88.6,25.0,25.0,0.0,0.0,0.99,0.0,0.0,,COOLING_SPIKE
+85,17,2,97.564,177.2,24.9,25.1,-0.2,0.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,18,2,97.564,265.8,24.8,25.0,-0.2,0.0,1.02,0.0,0.0,,COOLING_SPIKE
+85,19,2,97.564,354.5,24.8,24.8,0.0,0.0,1.04,0.0,0.0,,COOLING_SPIKE
+85,20,2,97.564,443.1,24.8,24.8,0.0,0.0,1.05,0.0,0.0,,COOLING_SPIKE
+85,21,2,97.564,531.7,24.9,24.9,0.0,0.0,1.01,0.0,0.0,,COOLING_SPIKE
+85,22,2,97.564,620.3,24.7,25.0,-0.3,0.0,1.03,0.0,0.0,,COOLING_SPIKE
+85,23,2,97.564,708.9,24.8,25.0,-0.2,0.0,1.08,0.0,0.0,,COOLING_SPIKE
+85,24,2,97.564,797.5,24.8,25.0,-0.2,0.0,1.06,0.0,0.0,,COOLING_SPIKE
+85,25,2,97.564,886.1,24.8,25.0,-0.2,151.7,1.11,0.0,0.0,,COOLING_SPIKE
+85,26,2,97.564,974.8,24.6,25.0,-0.4,149.9,1.11,0.0,0.0,,COOLING_SPIKE
+85,27,2,97.564,1063.4,24.9,25.1,-0.2,150.8,1.15,0.0,0.0,,COOLING_SPIKE
+85,28,2,97.564,1152.0,25.0,25.1,-0.1,148.0,1.15,0.0,0.0,,COOLING_SPIKE
+85,29,2,97.564,1240.6,25.0,25.1,-0.1,145.1,1.15,0.0,0.0,,COOLING_SPIKE
+85,30,2,97.564,1329.2,25.1,25.0,0.1,145.8,1.1,0.0,0.0,,COOLING_SPIKE
+85,31,2,97.564,1417.8,25.1,24.9,0.2,148.0,1.1,0.0,0.0,,COOLING_SPIKE
+85,32,2,97.564,1506.4,25.0,24.9,0.1,147.6,1.1,0.0,0.0,,COOLING_SPIKE
+85,33,2,97.564,1595.0,25.0,25.0,0.0,148.5,1.09,0.0,0.0,,COOLING_SPIKE
+85,34,2,97.564,1683.7,25.0,25.0,0.0,150.9,1.1,0.0,0.0,,COOLING_SPIKE
+85,35,2,97.564,1772.3,25.0,25.1,-0.1,150.3,1.12,0.0,0.0,,COOLING_SPIKE
+85,36,2,97.564,1860.9,25.0,25.1,-0.1,153.7,1.11,0.0,0.0,,COOLING_SPIKE
+85,37,2,97.564,1949.5,25.1,25.0,0.1,157.7,1.1,0.0,0.0,,COOLING_SPIKE
+85,38,2,97.564,2038.1,25.0,25.0,0.0,156.4,1.08,0.0,0.0,,COOLING_SPIKE
+85,39,2,97.564,2126.7,24.9,25.0,-0.1,152.6,1.07,0.0,0.0,,COOLING_SPIKE
+85,40,2,97.564,2215.3,25.0,24.9,0.1,154.4,1.08,0.0,0.0,,COOLING_SPIKE
+85,41,2,97.564,2304.0,25.1,25.0,0.1,153.1,1.05,0.0,0.0,,COOLING_SPIKE
+85,42,2,97.564,2392.6,25.0,25.0,0.0,154.3,1.06,0.0,0.0,,COOLING_SPIKE
+85,43,2,97.564,2481.2,25.0,24.9,0.1,152.5,1.06,0.0,0.0,,COOLING_SPIKE
+85,44,2,97.564,2569.8,25.2,24.9,0.3,154.9,0.99,0.0,0.0,,COOLING_SPIKE
+85,45,2,97.564,2658.4,25.0,25.0,0.0,153.8,1.0,0.0,0.0,,COOLING_SPIKE
+85,46,2,97.564,2747.0,25.1,25.0,0.1,153.9,0.99,0.0,0.0,,COOLING_SPIKE
+85,47,2,97.564,2835.6,25.1,25.0,0.1,154.0,1.01,0.0,0.0,,COOLING_SPIKE
+85,48,2,97.564,2924.2,25.2,25.1,0.1,151.4,1.02,0.0,0.0,,COOLING_SPIKE
+85,49,2,97.564,3012.9,25.1,25.2,-0.1,148.6,1.01,0.0,0.0,,COOLING_SPIKE
+85,50,2,97.564,3101.5,25.2,25.3,-0.1,151.7,1.01,0.0,0.0,,COOLING_SPIKE
+85,51,2,97.564,3190.1,25.1,25.4,-0.3,150.6,1.01,0.0,0.0,,COOLING_SPIKE
+85,52,2,97.564,3278.7,25.1,25.4,-0.3,150.6,1.01,0.0,0.0,,COOLING_SPIKE
+85,53,2,97.564,3367.3,25.0,25.3,-0.3,152.0,1.0,0.0,0.0,,COOLING_SPIKE
+85,54,2,97.564,3455.9,25.1,25.2,-0.1,149.8,1.0,0.0,0.0,,COOLING_SPIKE
+85,55,2,97.564,3544.5,24.9,25.1,-0.2,149.9,0.99,0.0,0.0,,COOLING_SPIKE
+85,56,2,97.564,3633.2,24.9,25.2,-0.3,147.6,1.03,0.0,0.0,,COOLING_SPIKE
+85,57,2,97.564,3721.8,25.0,25.2,-0.2,147.8,1.1,0.0,0.0,,COOLING_SPIKE
+85,58,2,97.564,3810.4,25.1,25.0,0.1,150.1,1.09,0.0,0.0,,COOLING_SPIKE
+85,59,2,97.564,3899.0,25.0,25.0,0.0,149.3,1.09,0.0,0.0,,COOLING_SPIKE
+85,60,3,97.564,3899.0,25.0,24.9,0.1,149.9,1.1,0.0,0.0,,COOLING_SPIKE
+85,61,3,97.564,3899.0,24.9,24.9,0.0,150.9,1.36,0.0,0.0,,COOLING_SPIKE
+85,62,3,97.564,3899.0,24.9,25.0,-0.1,148.1,1.62,0.0,0.0,,COOLING_SPIKE
+85,63,3,97.564,3899.0,24.9,25.0,-0.1,146.8,1.9,0.0,0.0,,COOLING_SPIKE
+85,64,3,97.564,3899.0,24.9,25.1,-0.2,146.1,2.15,0.0,0.0,,COOLING_SPIKE
+85,65,3,97.564,3899.0,24.8,25.0,-0.2,150.5,2.41,0.0,0.0,,COOLING_SPIKE
+85,66,3,97.564,3899.0,24.9,25.1,-0.2,151.1,2.66,0.0,0.0,,COOLING_SPIKE
+85,67,3,97.564,3899.0,24.9,25.1,-0.2,150.4,2.89,0.0,0.0,,COOLING_SPIKE
+85,68,3,97.564,3899.0,24.9,25.0,-0.1,150.1,2.73,0.0,0.0,,COOLING_SPIKE
+85,69,3,97.564,3899.0,24.9,25.1,-0.2,149.3,2.47,0.0,0.0,,COOLING_SPIKE
+85,70,3,97.564,3899.0,24.9,25.0,-0.1,150.5,2.23,0.0,0.0,,COOLING_SPIKE
+85,71,3,97.564,3899.0,24.8,24.9,-0.1,150.2,1.96,0.0,0.0,,COOLING_SPIKE
+85,72,3,97.564,3899.0,25.0,24.8,0.2,145.7,1.68,0.0,0.0,,COOLING_SPIKE
+85,73,3,97.564,3899.0,24.9,24.8,0.1,145.9,1.4,0.0,0.0,,COOLING_SPIKE
+85,74,3,97.564,3899.0,24.9,24.9,0.0,147.7,1.12,0.0,0.0,,COOLING_SPIKE
+85,75,3,97.564,3899.0,24.8,24.9,-0.1,147.3,1.12,0.0,0.0,,COOLING_SPIKE
+85,76,3,97.564,3899.0,24.8,25.0,-0.2,148.4,1.43,0.0,0.0,,COOLING_SPIKE
+85,77,3,97.564,3899.0,24.8,25.0,-0.2,146.3,1.7,0.0,0.0,,COOLING_SPIKE
+85,78,3,97.564,3899.0,24.9,25.1,-0.2,147.8,1.98,0.0,0.0,,COOLING_SPIKE
+85,79,3,97.564,3899.0,24.9,25.0,-0.1,147.1,2.29,0.0,0.0,,COOLING_SPIKE
+85,80,3,97.564,3899.0,24.8,24.9,-0.1,149.8,2.55,0.0,0.0,,COOLING_SPIKE
+85,81,3,97.564,3899.0,24.8,25.0,-0.2,147.8,2.86,0.0,0.0,,COOLING_SPIKE
+85,82,3,97.564,3899.0,24.9,25.1,-0.2,146.0,3.0,0.0,0.0,,COOLING_SPIKE
+85,83,3,97.564,3899.0,24.9,25.1,-0.2,145.9,2.72,0.0,0.0,,COOLING_SPIKE
+85,84,3,97.564,3899.0,24.8,25.1,-0.3,148.1,2.45,0.0,0.0,,COOLING_SPIKE
+85,85,3,97.564,3899.0,24.9,25.0,-0.1,147.6,2.16,0.0,0.0,,COOLING_SPIKE
+85,86,3,97.564,3899.0,24.8,24.9,-0.1,146.0,1.91,0.0,0.0,,COOLING_SPIKE
+85,87,3,97.564,3899.0,24.8,25.0,-0.2,148.9,1.58,0.0,0.0,,COOLING_SPIKE
+85,88,3,97.564,3899.0,24.6,25.1,-0.5,150.4,1.32,0.0,0.0,,COOLING_SPIKE
+85,89,3,97.564,3899.0,24.7,25.0,-0.3,149.8,1.06,0.0,0.0,,COOLING_SPIKE
+85,90,4,97.564,3899.0,24.7,85.1,-60.4,594.7,1.06,0.1,0.0,,COOLING_SPIKE
+85,91,4,97.564,3899.0,24.9,85.1,-60.2,597.4,1.26,0.1,0.0,,COOLING_SPIKE
+85,92,4,97.564,3899.0,25.2,85.0,-59.8,599.4,1.43,0.1,0.0,,COOLING_SPIKE
+85,93,4,97.564,3899.0,25.7,84.9,-59.2,600.6,1.6,0.1,0.0,,COOLING_SPIKE
+85,94,4,97.564,3899.0,26.4,84.9,-58.5,599.2,1.79,0.1,0.0,,COOLING_SPIKE
+85,95,4,97.564,3899.0,27.0,84.9,-57.9,599.2,1.96,0.1,0.0,,COOLING_SPIKE
+85,96,4,97.564,3899.0,27.6,84.9,-57.3,600.6,2.17,0.1,0.0,,COOLING_SPIKE
+85,97,4,97.564,3899.0,28.4,84.9,-56.5,599.2,2.37,0.1,0.0,,COOLING_SPIKE
+85,98,4,97.564,3899.0,29.2,84.7,-55.5,598.0,2.56,0.1,0.0,,COOLING_SPIKE
+85,99,4,97.564,3899.0,30.1,84.8,-54.7,599.4,2.78,0.1,0.0,,COOLING_SPIKE
+85,100,4,97.564,3899.0,31.0,84.8,-53.8,598.3,2.97,0.1,0.0,,COOLING_SPIKE
+85,101,4,97.564,3899.0,31.8,84.8,-53.0,598.8,3.22,0.1,0.0,,COOLING_SPIKE
+85,102,4,97.564,3899.0,32.7,84.7,-52.0,598.6,3.42,0.1,0.0,,COOLING_SPIKE
+85,103,4,97.564,3899.0,33.6,84.6,-51.0,598.5,3.6,0.1,0.0,,COOLING_SPIKE
+85,104,4,97.564,3899.0,34.5,84.6,-50.1,598.1,3.82,0.1,0.0,,COOLING_SPIKE
+85,105,4,97.564,3899.0,35.5,84.6,-49.1,595.9,4.04,0.1,0.0,,COOLING_SPIKE
+85,106,4,97.564,3899.0,36.4,84.7,-48.3,594.7,4.24,0.1,0.0,,COOLING_SPIKE
+85,107,4,97.564,3899.0,37.5,84.7,-47.2,595.4,4.43,0.1,0.0,,COOLING_SPIKE
+85,108,4,97.564,3899.0,38.4,84.7,-46.3,595.3,4.69,0.1,0.0,,COOLING_SPIKE
+85,109,4,97.564,3899.0,39.3,84.8,-45.5,595.3,4.89,0.1,0.0,,COOLING_SPIKE
+85,110,4,97.564,3899.0,40.3,84.8,-44.5,593.8,5.1,0.1,0.0,,COOLING_SPIKE
+85,111,4,97.564,3899.0,41.4,84.7,-43.3,593.9,5.31,0.1,0.0,,COOLING_SPIKE
+85,112,4,97.564,3899.0,42.5,84.8,-42.3,594.5,5.51,0.1,0.0,,COOLING_SPIKE
+85,113,4,97.564,3899.0,43.6,84.8,-41.2,594.9,5.69,0.1,0.0,,COOLING_SPIKE
+85,114,4,97.564,3899.0,44.6,84.9,-40.3,591.5,5.87,0.1,0.0,,COOLING_SPIKE
+85,115,4,97.564,3899.0,45.6,84.9,-39.3,590.1,6.11,0.1,0.0,,COOLING_SPIKE
+85,116,4,97.564,3899.0,46.3,84.8,-38.5,589.3,6.34,0.1,0.0,,COOLING_SPIKE
+85,117,4,97.564,3899.0,47.1,84.9,-37.8,590.6,6.54,0.1,0.0,,COOLING_SPIKE
+85,118,4,97.564,3899.0,47.9,85.0,-37.1,588.9,6.77,0.1,0.0,,COOLING_SPIKE
+85,119,4,97.564,3899.0,48.7,85.0,-36.3,589.2,6.94,0.1,0.0,,COOLING_SPIKE
+85,120,4,97.564,3899.0,49.7,85.2,-35.5,589.0,7.12,0.1,0.0,,COOLING_SPIKE
+85,121,4,97.564,3899.0,50.6,85.2,-34.6,591.1,7.37,0.1,0.0,,COOLING_SPIKE
+85,122,4,97.564,3899.0,51.3,85.2,-33.9,592.3,7.59,0.1,0.0,,COOLING_SPIKE
+85,123,4,97.564,3899.0,52.3,85.2,-32.9,593.5,7.82,0.1,0.0,,COOLING_SPIKE
+85,124,4,97.564,3899.0,53.1,85.4,-32.3,590.4,8.0,0.1,0.0,,COOLING_SPIKE
+85,125,4,97.564,3899.0,54.0,85.3,-31.3,591.3,8.17,0.1,0.0,,COOLING_SPIKE
+85,126,4,97.564,3899.0,54.9,85.2,-30.3,591.2,8.38,0.1,0.0,,COOLING_SPIKE
+85,127,4,97.564,3899.0,55.9,85.1,-29.2,592.1,8.64,0.1,0.0,,COOLING_SPIKE
+85,128,4,97.564,3899.0,56.8,85.2,-28.4,592.3,8.85,0.1,0.0,,COOLING_SPIKE
+85,129,4,97.564,3899.0,57.8,85.2,-27.4,593.2,9.05,0.1,0.0,,COOLING_SPIKE
+85,130,4,97.564,3899.0,58.8,85.3,-26.5,589.3,9.24,0.1,0.0,,COOLING_SPIKE
+85,131,4,97.564,3899.0,59.7,85.3,-25.6,592.2,9.43,0.1,0.0,,COOLING_SPIKE
+85,132,4,97.564,3899.0,60.8,85.2,-24.4,594.2,9.64,0.1,0.0,,COOLING_SPIKE
+85,133,4,97.564,3899.0,61.8,85.2,-23.4,593.8,9.83,0.1,0.0,,COOLING_SPIKE
+85,134,4,97.564,3899.0,62.8,85.1,-22.3,595.4,10.01,0.1,0.0,,COOLING_SPIKE
+85,135,5,97.564,3899.0,67.7,19.4,48.3,597.2,9.99,2.888,50.0,,COOLING_SPIKE
+85,136,5,97.564,3899.3,70.2,19.3,50.9,596.7,14.99,2.888,51.4,,COOLING_SPIKE
+85,137,5,97.564,3899.9,74.5,19.4,55.1,595.6,15.0,2.888,66.66,,COOLING_SPIKE
+85,138,5,97.564,3900.6,80.0,16.5,63.5,594.5,14.98,2.888,85.89,,COOLING_SPIKE
+85,139,5,97.564,3901.5,86.4,16.5,69.9,595.4,14.98,2.116,108.39,,COOLING_SPIKE
+85,140,5,97.564,3902.4,91.7,16.5,75.2,598.2,14.96,1.589,120.0,,COOLING_SPIKE
+85,141,5,97.564,3903.4,91.6,16.4,75.2,595.0,14.95,1.589,120.0,,COOLING_SPIKE
+85,142,5,97.564,3904.6,91.7,16.3,75.4,596.7,14.97,1.589,120.0,,COOLING_SPIKE
+85,143,5,97.564,3906.1,91.8,16.3,75.5,596.0,14.02,1.589,120.0,,COOLING_SPIKE
+85,144,5,97.564,3907.7,91.8,16.4,75.4,598.0,12.34,1.589,120.0,,COOLING_SPIKE
+85,145,5,97.564,3909.3,91.9,16.4,75.5,596.2,11.39,1.589,120.0,,COOLING_SPIKE
+85,146,5,97.564,3910.9,91.9,16.4,75.5,597.1,10.82,1.589,120.0,,COOLING_SPIKE
+85,147,5,97.564,3912.5,91.9,16.3,75.6,597.2,10.48,1.589,120.0,,COOLING_SPIKE
+85,148,5,97.564,3914.0,91.9,16.3,75.6,598.1,10.31,1.589,120.0,,COOLING_SPIKE
+85,149,5,97.564,3915.6,91.9,16.2,75.7,599.8,10.21,1.589,120.0,,COOLING_SPIKE
+85,150,5,97.564,3917.2,91.9,16.3,75.6,599.8,10.13,1.589,120.0,,COOLING_SPIKE
+85,151,5,97.564,3918.8,92.0,16.3,75.7,601.0,10.1,1.589,120.0,,COOLING_SPIKE
+85,152,5,97.564,3920.4,91.9,16.2,75.7,598.7,10.06,1.589,120.0,,COOLING_SPIKE
+85,153,5,97.564,3922.0,91.9,16.2,75.7,602.2,9.98,1.589,120.0,,COOLING_SPIKE
+85,154,5,97.564,3923.6,92.0,16.2,75.8,602.0,9.98,1.589,120.0,,COOLING_SPIKE
+85,155,5,97.564,3925.2,91.9,16.2,75.7,601.1,10.02,1.589,120.0,,COOLING_SPIKE
+85,156,5,97.564,3926.7,92.0,16.2,75.8,602.0,10.03,1.589,120.0,,COOLING_SPIKE
+85,157,5,97.564,3928.3,92.0,16.3,75.7,601.8,10.08,1.589,120.0,,COOLING_SPIKE
+85,158,5,97.564,3929.9,91.9,16.3,75.6,604.2,10.07,1.589,120.0,,COOLING_SPIKE
+85,159,5,97.564,3931.5,92.0,16.4,75.6,607.6,10.06,1.589,120.0,,COOLING_SPIKE
+85,160,5,97.564,3933.1,92.1,16.3,75.8,608.2,10.03,1.589,120.0,,COOLING_SPIKE
+85,161,5,97.564,3934.7,92.2,16.2,76.0,606.5,9.99,1.589,120.0,,COOLING_SPIKE
+85,162,5,97.564,3936.3,92.2,16.3,75.9,605.3,9.97,1.589,120.0,,COOLING_SPIKE
+85,163,5,97.564,3937.9,92.2,16.3,75.9,606.3,10.0,1.589,120.0,,COOLING_SPIKE
+85,164,5,97.564,3939.5,92.2,16.1,76.1,606.6,10.02,1.589,120.0,,COOLING_SPIKE
+85,165,5,97.564,3941.0,92.2,16.1,76.1,608.7,9.98,1.589,120.0,,COOLING_SPIKE
+85,166,5,97.564,3942.6,92.2,16.1,76.1,609.8,10.0,1.589,120.0,,COOLING_SPIKE
+85,167,5,97.564,3944.2,92.3,16.0,76.3,611.5,10.02,1.589,120.0,,COOLING_SPIKE
+85,168,5,97.564,3945.8,92.3,16.0,76.3,613.9,10.01,1.589,120.0,,COOLING_SPIKE
+85,169,5,97.564,3947.4,92.2,16.0,76.2,613.8,10.02,1.589,120.0,,COOLING_SPIKE
+85,170,5,97.564,3949.0,92.3,16.1,76.2,616.0,10.03,1.589,120.0,,COOLING_SPIKE
+85,171,5,97.564,3950.6,92.3,16.2,76.1,616.5,10.03,1.589,120.0,,COOLING_SPIKE
+85,172,5,97.564,3952.2,92.4,16.2,76.2,618.8,10.03,1.589,120.0,,COOLING_SPIKE
+85,173,5,97.564,3953.8,92.3,16.2,76.1,619.9,10.03,1.589,120.0,,COOLING_SPIKE
+85,174,5,97.564,3955.3,92.3,16.1,76.2,616.3,10.07,1.589,120.0,,COOLING_SPIKE
+85,175,5,97.564,3956.9,92.4,16.2,76.2,616.3,10.07,1.589,120.0,,COOLING_SPIKE
+85,176,5,97.564,3958.5,92.3,16.2,76.1,618.1,10.05,1.589,120.0,,COOLING_SPIKE
+85,177,5,97.564,3960.1,92.2,16.2,76.0,617.0,10.07,1.589,120.0,,COOLING_SPIKE
+85,178,5,97.564,3961.7,92.1,16.3,75.8,617.9,10.08,1.589,120.0,,COOLING_SPIKE
+85,179,5,97.564,3963.3,92.1,16.2,75.9,618.5,10.08,1.589,120.0,,COOLING_SPIKE
+85,180,5,97.564,3964.9,92.1,16.1,76.0,620.2,10.07,1.589,120.0,,COOLING_SPIKE
+85,181,5,97.564,3966.5,92.1,16.1,76.0,622.0,10.07,1.589,120.0,,COOLING_SPIKE
+85,182,5,97.564,3968.1,92.1,16.2,75.9,623.3,10.06,1.589,120.0,,COOLING_SPIKE
+85,183,5,97.564,3969.6,92.2,16.1,76.1,624.2,10.08,1.589,120.0,,COOLING_SPIKE
+85,184,5,97.564,3971.2,92.2,16.2,76.0,625.9,10.04,1.589,120.0,,COOLING_SPIKE
+85,185,5,97.564,3972.8,92.2,16.2,76.0,624.4,10.01,1.589,120.0,,COOLING_SPIKE
+85,186,5,97.564,3974.4,92.1,16.1,76.0,625.1,9.97,1.589,120.0,,COOLING_SPIKE
+85,187,5,97.564,3976.0,92.2,16.1,76.1,625.2,10.01,1.589,120.0,,COOLING_SPIKE
+85,188,5,97.564,3977.6,92.2,16.1,76.1,624.1,10.02,1.589,120.0,,COOLING_SPIKE
+85,189,5,97.564,3979.2,92.2,16.2,76.0,623.9,9.99,1.589,120.0,,COOLING_SPIKE
+85,190,5,97.564,3980.8,92.2,16.1,76.1,622.6,9.94,1.589,120.0,,COOLING_SPIKE
+85,191,5,97.564,3982.3,92.2,16.2,76.0,625.5,9.96,1.589,120.0,,COOLING_SPIKE
+85,192,5,97.564,3983.9,92.2,16.3,75.9,623.6,9.93,1.589,120.0,,COOLING_SPIKE
+85,193,5,97.564,3985.5,92.2,16.2,76.0,624.3,9.92,1.589,120.0,,COOLING_SPIKE
+85,194,5,97.564,3987.1,92.1,16.3,75.8,625.3,9.91,1.589,120.0,,COOLING_SPIKE
+85,195,5,97.564,3988.7,92.1,16.5,75.6,625.0,9.92,1.589,120.0,,COOLING_SPIKE
+85,196,5,97.564,3990.3,92.1,16.4,75.7,624.9,9.91,1.589,120.0,,COOLING_SPIKE
+85,197,5,97.564,3991.9,92.0,16.5,75.5,623.9,9.87,1.589,120.0,,COOLING_SPIKE
+85,198,5,97.564,3993.5,91.9,16.5,75.4,626.0,9.89,1.589,120.0,,COOLING_SPIKE
+85,199,5,97.564,3995.1,91.9,16.4,75.5,627.3,9.88,1.589,120.0,,COOLING_SPIKE
+85,200,5,97.564,3996.6,91.8,16.4,75.4,626.8,9.88,1.589,120.0,,COOLING_SPIKE
+85,201,5,97.564,3998.2,91.8,16.4,75.4,628.6,9.92,1.589,120.0,,COOLING_SPIKE
+85,202,5,97.564,3999.8,91.8,16.3,75.5,626.5,9.94,1.589,120.0,,COOLING_SPIKE
+85,203,5,97.564,4001.4,91.8,16.4,75.4,627.8,9.91,1.589,120.0,,COOLING_SPIKE
+85,204,5,97.564,4003.0,91.8,16.4,75.4,629.5,9.93,1.589,120.0,,COOLING_SPIKE
+85,205,5,97.564,4004.6,91.8,16.4,75.4,631.1,9.9,1.589,120.0,,COOLING_SPIKE
+85,206,5,97.564,4006.2,91.7,16.4,75.3,630.2,9.9,1.589,120.0,,COOLING_SPIKE
+85,207,5,97.564,4007.8,91.7,16.2,75.5,632.7,9.88,1.589,120.0,,COOLING_SPIKE
+85,208,5,97.564,4009.4,91.6,16.3,75.3,634.0,9.92,1.589,120.0,,COOLING_SPIKE
+85,209,5,97.564,4010.9,91.6,16.4,75.2,633.3,9.91,1.589,120.0,,COOLING_SPIKE
+85,210,5,97.564,4012.5,91.5,16.6,74.9,634.7,9.92,1.589,120.0,,COOLING_SPIKE
+85,211,5,97.564,4014.1,91.5,16.6,74.9,633.7,9.91,1.589,120.0,,COOLING_SPIKE
+85,212,5,97.564,4015.7,91.6,16.6,75.0,631.1,9.93,1.589,120.0,,COOLING_SPIKE
+85,213,5,97.564,4017.3,91.5,16.7,74.8,632.5,9.94,1.589,120.0,,COOLING_SPIKE
+85,214,5,97.564,4018.9,91.5,16.7,74.8,633.4,9.95,1.589,120.0,,COOLING_SPIKE
+85,215,5,97.564,4020.2,91.4,16.9,74.5,634.8,12.81,1.589,120.0,,COOLING_SPIKE
+85,216,5,97.564,4021.2,91.6,16.9,74.7,635.8,14.93,1.589,120.0,,COOLING_SPIKE
+85,217,5,97.564,4021.6,91.6,16.9,74.7,636.6,14.92,1.589,120.0,,COOLING_SPIKE
+85,218,5,97.564,4021.8,91.6,16.9,74.7,635.2,14.92,1.589,120.0,,COOLING_SPIKE
+85,219,5,97.564,4021.9,91.6,16.8,74.8,638.2,14.92,1.589,120.0,,COOLING_SPIKE
+85,220,5,97.564,4021.9,91.7,16.7,75.0,639.8,14.94,1.589,120.0,,COOLING_SPIKE
+85,221,5,97.564,4021.9,91.7,16.7,75.0,639.9,14.94,1.589,120.0,,COOLING_SPIKE
+85,222,5,97.564,4021.9,91.7,16.9,74.8,638.8,14.92,1.589,120.0,,COOLING_SPIKE
+85,223,5,97.564,4022.0,91.7,16.9,74.8,640.4,14.93,1.589,120.0,,COOLING_SPIKE
+85,224,5,97.564,4022.0,91.7,16.9,74.8,641.1,14.95,1.589,120.0,,COOLING_SPIKE
+85,225,6,97.564,4022.0,84.7,70.5,14.2,643.0,9.94,0.4,30.0,,COOLING_SPIKE
+85,226,6,97.564,4022.0,81.0,70.4,10.6,643.0,9.97,0.386,29.83,,COOLING_SPIKE
+85,227,6,97.564,4022.0,78.2,70.4,7.8,644.3,9.93,0.372,29.66,,COOLING_SPIKE
+85,228,6,97.564,4022.0,76.2,70.3,5.9,644.9,9.9,0.359,29.48,,COOLING_SPIKE
+85,229,6,97.564,4022.0,74.5,70.4,4.1,643.2,9.94,0.345,29.31,,COOLING_SPIKE
+85,230,6,97.564,4022.0,73.3,70.5,2.8,641.3,9.92,0.331,29.14,,COOLING_SPIKE
+85,231,6,97.564,4022.0,72.4,70.4,2.0,642.6,9.92,0.317,28.97,,COOLING_SPIKE
+85,232,6,97.564,4022.0,71.7,70.3,1.4,641.8,9.94,0.303,28.79,,COOLING_SPIKE
+85,233,6,97.564,4022.0,71.2,70.4,0.8,640.1,9.93,0.29,28.62,,COOLING_SPIKE
+85,234,6,97.564,4022.0,70.9,70.5,0.4,642.1,9.92,0.276,28.45,,COOLING_SPIKE
+85,235,6,97.564,4022.0,70.5,70.5,0.0,640.8,10.0,0.262,28.28,,COOLING_SPIKE
+85,236,6,97.564,4022.0,70.4,70.6,-0.2,640.5,9.97,0.248,28.1,,COOLING_SPIKE
+85,237,6,97.564,4022.0,70.0,70.6,-0.6,642.9,9.99,0.234,27.93,,COOLING_SPIKE
+85,238,6,97.564,4022.0,69.9,70.6,-0.7,642.3,9.93,0.221,27.76,,COOLING_SPIKE
+85,239,6,97.564,4022.0,69.9,70.5,-0.6,642.6,9.94,0.207,27.59,,COOLING_SPIKE
+85,240,6,97.564,4022.0,69.8,70.4,-0.6,641.3,10.0,0.193,27.41,,COOLING_SPIKE
+85,241,6,97.564,4022.0,69.7,70.4,-0.7,643.6,9.98,0.179,27.24,,COOLING_SPIKE
+85,242,6,97.564,4022.0,69.6,70.4,-0.8,644.9,9.98,0.166,27.07,,COOLING_SPIKE
+85,243,6,97.564,4022.0,69.6,70.4,-0.8,644.5,10.03,0.152,26.9,,COOLING_SPIKE
+85,244,6,97.564,4022.0,69.7,70.5,-0.8,641.2,10.04,0.138,26.72,,COOLING_SPIKE
+85,245,6,97.564,4022.0,69.7,70.5,-0.8,639.5,10.04,0.124,26.55,,COOLING_SPIKE
+85,246,6,97.564,4022.0,69.8,70.6,-0.8,641.4,10.06,0.11,26.38,,COOLING_SPIKE
+85,247,6,97.564,4022.0,70.0,70.5,-0.5,643.1,10.03,0.097,26.21,,COOLING_SPIKE
+85,248,6,97.564,4022.0,69.9,70.5,-0.6,642.6,10.0,0.083,26.03,,COOLING_SPIKE
+85,249,6,97.564,4022.0,69.9,70.5,-0.6,643.1,9.99,0.069,25.86,,COOLING_SPIKE
+85,250,6,97.564,4022.0,69.9,70.3,-0.4,642.6,10.04,0.055,25.69,,COOLING_SPIKE
+85,251,6,97.564,4022.0,70.0,70.3,-0.3,640.9,10.06,0.041,25.52,,COOLING_SPIKE
+85,252,6,97.564,4022.0,70.0,70.3,-0.3,642.4,9.99,0.028,25.34,,COOLING_SPIKE
+85,253,6,97.564,4022.0,70.0,70.3,-0.3,643.3,9.98,0.014,25.17,,COOLING_SPIKE
+85,254,6,97.564,4022.0,70.0,70.2,-0.2,641.5,10.0,0.0,25.0,,COOLING_SPIKE
+85,255,7,97.564,4022.0,70.0,15.2,54.8,643.4,10.02,0.0,90.0,,COOLING_SPIKE
+85,256,7,97.564,4022.0,69.8,15.2,54.6,643.9,9.84,0.0,89.55,,COOLING_SPIKE
+85,257,7,97.564,4022.0,69.6,15.2,54.4,643.4,9.61,0.0,89.09,,COOLING_SPIKE
+85,258,7,97.564,4022.0,69.3,15.1,54.2,645.6,9.39,0.0,88.64,,COOLING_SPIKE
+85,259,7,97.564,4022.0,68.9,15.1,53.8,646.7,9.19,0.0,88.18,,COOLING_SPIKE
+85,260,7,97.564,4022.0,68.5,15.1,53.4,645.0,9.01,0.0,87.73,,COOLING_SPIKE
+85,261,7,97.564,4022.0,67.9,15.1,52.8,643.4,8.82,0.0,87.27,,COOLING_SPIKE
+85,262,7,97.564,4022.0,67.4,15.1,52.3,642.0,8.59,0.0,86.82,,COOLING_SPIKE
+85,263,7,97.564,4022.0,66.7,15.2,51.5,640.5,8.39,0.0,86.36,,COOLING_SPIKE
+85,264,7,97.564,4022.0,66.0,15.1,50.9,637.6,8.15,0.0,85.91,,COOLING_SPIKE
+85,265,7,97.564,4022.0,65.3,15.1,50.2,641.5,7.93,0.0,85.45,,COOLING_SPIKE
+85,266,7,97.564,4022.0,64.6,15.1,49.5,642.3,7.72,0.0,85.0,,COOLING_SPIKE
+85,267,7,97.564,4022.0,63.9,15.1,48.8,642.5,7.53,0.0,84.55,,COOLING_SPIKE
+85,268,7,97.564,4022.0,63.1,15.0,48.1,643.1,7.34,0.0,84.09,,COOLING_SPIKE
+85,269,7,97.564,4022.0,62.3,15.1,47.2,646.2,7.11,0.0,83.64,,COOLING_SPIKE
+85,270,7,97.564,4022.0,61.5,15.2,46.3,645.3,6.92,0.0,83.18,,COOLING_SPIKE
+85,271,7,97.564,4022.0,60.6,15.2,45.4,645.3,6.72,0.0,82.73,,COOLING_SPIKE
+85,272,7,97.564,4022.0,59.7,15.1,44.6,647.7,6.51,0.0,82.27,,COOLING_SPIKE
+85,273,7,97.564,4022.0,58.9,15.2,43.7,647.6,6.28,0.0,81.82,,COOLING_SPIKE
+85,274,7,97.564,4022.0,58.0,15.3,42.7,643.2,6.07,0.0,81.36,,COOLING_SPIKE
+85,275,7,97.564,4022.0,57.1,15.4,41.7,642.0,5.83,0.0,80.91,,COOLING_SPIKE
+85,276,7,97.564,4022.0,56.2,15.4,40.8,639.1,5.66,0.0,80.45,,COOLING_SPIKE
+85,277,7,97.564,4022.0,55.3,15.3,40.0,638.7,5.43,0.0,80.0,,COOLING_SPIKE
+85,278,7,97.564,4022.0,54.4,15.5,38.9,640.9,5.26,0.0,79.55,,COOLING_SPIKE
+85,279,7,97.564,4022.0,53.5,15.5,38.0,642.1,5.06,0.0,79.09,,COOLING_SPIKE
+85,280,7,97.564,4022.0,52.5,15.5,37.0,640.7,4.81,0.0,78.64,,COOLING_SPIKE
+85,281,7,97.564,4022.0,51.5,15.5,36.0,642.0,4.6,0.0,78.18,,COOLING_SPIKE
+85,282,7,97.564,4022.0,50.7,15.5,35.2,642.7,4.41,0.0,77.73,,COOLING_SPIKE
+85,283,7,97.564,4022.0,49.6,15.5,34.1,642.8,4.26,0.0,77.27,,COOLING_SPIKE
+85,284,7,97.564,4022.0,48.7,15.6,33.1,640.8,4.06,0.0,76.82,,COOLING_SPIKE
+85,285,7,97.564,4022.0,47.8,15.5,32.3,638.7,3.86,0.0,76.36,,COOLING_SPIKE
+85,286,7,97.564,4022.0,46.9,15.5,31.4,640.6,3.66,0.0,75.91,,COOLING_SPIKE
+85,287,7,97.564,4022.0,46.1,15.4,30.7,640.7,3.48,0.0,75.45,,COOLING_SPIKE
+85,288,7,97.564,4022.0,45.1,15.3,29.8,641.5,3.33,0.0,75.0,,COOLING_SPIKE
+85,289,7,97.564,4022.0,44.1,15.2,28.9,642.2,3.11,0.0,74.55,,COOLING_SPIKE
+85,290,7,97.564,4022.0,43.3,15.3,28.0,641.8,2.92,0.0,74.09,,COOLING_SPIKE
+85,291,7,97.564,4022.0,42.5,15.3,27.2,639.7,2.71,0.0,73.64,,COOLING_SPIKE
+85,292,7,97.564,4022.0,41.5,15.2,26.3,637.1,2.47,0.0,73.18,,COOLING_SPIKE
+85,293,7,97.564,4022.0,40.7,15.3,25.4,637.3,2.26,0.0,72.73,,COOLING_SPIKE
+85,294,7,97.564,4022.0,39.8,15.2,24.6,636.6,2.02,0.0,72.27,,COOLING_SPIKE
+85,295,7,97.564,4022.0,38.9,15.2,23.7,636.6,1.83,0.0,71.82,,COOLING_SPIKE
+85,296,7,97.564,4022.0,38.0,15.3,22.7,635.8,1.63,0.0,71.36,,COOLING_SPIKE
+85,297,7,97.564,4022.0,36.9,15.2,21.7,637.6,1.44,0.0,70.91,,COOLING_SPIKE
+85,298,7,97.564,4022.0,36.0,15.2,20.8,641.0,1.21,0.0,70.45,,COOLING_SPIKE
+85,299,7,97.564,4022.0,35.1,15.2,19.9,639.1,0.99,0.0,70.0,,COOLING_SPIKE
+85,300,8,97.564,4022.0,34.7,24.9,9.8,641.3,0.98,0.0,0.0,,COOLING_SPIKE
+85,301,8,97.564,3883.3,34.4,24.9,9.5,641.1,1.0,0.0,0.0,,COOLING_SPIKE
+85,302,8,97.564,3744.6,33.9,24.9,9.0,643.1,0.98,0.0,0.0,,COOLING_SPIKE
+85,303,8,97.564,3605.9,33.7,24.9,8.8,641.9,0.96,0.0,0.0,,COOLING_SPIKE
+85,304,8,97.564,3467.2,33.5,24.9,8.6,640.4,0.97,0.0,0.0,,COOLING_SPIKE
+85,305,8,97.564,3328.5,33.2,24.9,8.3,641.0,0.97,0.0,0.0,,COOLING_SPIKE
+85,306,8,97.564,3189.8,32.8,24.8,8.0,641.5,0.97,0.0,0.0,,COOLING_SPIKE
+85,307,8,97.564,3051.1,32.5,24.9,7.6,642.8,0.96,0.0,0.0,,COOLING_SPIKE
+85,308,8,97.564,2912.4,32.3,24.8,7.5,642.9,1.0,0.0,0.0,,COOLING_SPIKE
+85,309,8,97.564,2773.8,32.1,24.9,7.2,643.2,0.98,0.0,0.0,,COOLING_SPIKE
+85,310,8,97.564,2635.1,31.9,24.9,7.0,642.4,0.97,0.0,0.0,,COOLING_SPIKE
+85,311,8,97.564,2496.4,31.7,24.9,6.8,643.7,0.98,0.0,0.0,,COOLING_SPIKE
+85,312,8,97.564,2357.7,31.6,24.9,6.7,640.8,0.97,0.0,0.0,,COOLING_SPIKE
+85,313,8,97.564,2219.0,31.4,24.9,6.5,640.8,0.99,0.0,0.0,,COOLING_SPIKE
+85,314,8,97.564,2080.3,31.3,25.1,6.2,643.1,1.01,0.0,0.0,,COOLING_SPIKE
+85,315,8,97.564,1941.6,31.2,25.0,6.2,644.8,0.99,0.0,0.0,,COOLING_SPIKE
+85,316,8,97.564,1802.9,31.1,24.9,6.2,644.3,1.01,0.0,0.0,,COOLING_SPIKE
+85,317,8,97.564,1664.3,30.9,24.8,6.1,644.0,1.01,0.0,0.0,,COOLING_SPIKE
+85,318,8,97.564,1525.6,30.8,24.9,5.9,642.9,1.02,0.0,0.0,,COOLING_SPIKE
+85,319,8,97.564,1386.9,30.8,25.0,5.8,641.8,1.03,0.0,0.0,,COOLING_SPIKE
+85,320,8,97.564,1248.2,30.8,25.0,5.8,639.8,1.0,0.0,0.0,,COOLING_SPIKE
+85,321,8,97.564,1109.5,30.7,25.0,5.7,640.0,0.98,0.0,0.0,,COOLING_SPIKE
+85,322,8,97.564,970.8,30.6,25.0,5.6,640.4,0.98,0.0,0.0,,COOLING_SPIKE
+85,323,8,97.564,832.1,30.6,25.0,5.6,638.8,0.99,0.0,0.0,,COOLING_SPIKE
+85,324,8,97.564,693.4,30.4,24.8,5.6,639.3,0.96,0.0,0.0,,COOLING_SPIKE
+85,325,8,97.564,554.8,30.3,24.7,5.6,637.9,0.99,0.0,0.0,,COOLING_SPIKE
+85,326,8,97.564,416.1,30.3,24.7,5.6,0.0,1.01,0.0,0.0,,COOLING_SPIKE
+85,327,8,97.564,277.4,30.3,24.8,5.5,0.0,1.01,0.0,0.0,,COOLING_SPIKE
+85,328,8,97.564,138.7,30.2,24.8,5.4,0.0,1.01,0.0,0.0,,COOLING_SPIKE
+85,329,8,97.564,0.0,30.1,24.8,5.3,0.0,1.05,0.0,0.0,,COOLING_SPIKE

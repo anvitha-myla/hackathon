@@ -1,233 +1,331 @@
-batch_id,time_step_min,raw_material_purity_coa,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
-92,0,97.78,56.2,20.3,35.9,594.2,5.75,0.0,16.914,,NONE
-92,1,97.78,58.8,20.3,38.5,593.6,6.36,0.01,18.106,,NONE
-92,2,97.78,61.0,20.3,40.7,591.5,6.87,0.01,19.164,,NONE
-92,3,97.78,62.9,20.5,42.4,590.7,7.27,0.0,20.004,,NONE
-92,4,97.78,64.4,20.4,44.0,591.3,7.69,0.0,20.815,,NONE
-92,5,97.78,65.9,20.6,45.3,592.8,8.06,0.0,21.423,,NONE
-92,6,97.78,67.1,20.4,46.7,592.4,8.4,0.0,22.0,,NONE
-92,7,97.78,68.0,20.6,47.4,587.5,8.57,0.0,22.476,,NONE
-92,8,97.78,69.0,20.7,48.3,587.7,8.77,0.0,22.835,,NONE
-92,9,97.78,69.8,21.0,48.8,591.4,8.92,0.0,23.159,,NONE
-92,10,97.78,70.4,21.1,49.3,591.1,9.05,0.0,23.418,,NONE
-92,11,97.78,71.0,21.0,50.0,592.5,9.23,0.0,23.693,,NONE
-92,12,97.78,71.5,21.2,50.3,593.9,9.35,0.0,23.892,,NONE
-92,13,97.78,71.9,21.2,50.7,596.5,9.51,0.0,24.081,,NONE
-92,14,97.78,72.0,21.2,50.8,594.8,9.57,0.0,24.197,,NONE
-92,15,97.78,72.2,21.2,51.0,594.8,9.54,0.0,24.354,,NONE
-92,16,97.78,72.5,21.4,51.1,594.4,9.64,2.96,24.433,,NONE
-92,17,97.78,80.7,21.2,59.5,598.2,18.32,0.0,28.332,,NONE
-92,18,97.78,79.7,21.2,58.5,600.4,17.06,0.0,27.888,,NONE
-92,19,97.78,78.9,21.1,57.8,598.8,16.02,2.79,27.409,,NONE
-92,20,97.78,89.7,19.1,70.6,601.9,15.98,2.81,33.433,,NONE
-92,21,97.78,100.0,19.1,80.9,603.3,15.09,1.38,38.347,,NONE
-92,22,97.78,103.2,19.2,84.0,605.6,14.35,1.37,39.831,,NONE
-92,23,97.78,105.9,19.2,86.7,607.5,13.71,1.32,41.119,,NONE
-92,24,97.78,108.5,19.2,89.3,608.4,13.17,1.3,42.38,,NONE
-92,25,97.78,111.1,19.3,91.8,610.0,12.7,1.29,43.606,,NONE
-92,26,97.78,113.5,19.4,94.1,610.1,12.34,1.34,44.705,,NONE
-92,27,97.78,115.1,19.3,95.8,612.8,12.05,1.34,45.462,,NONE
-92,28,97.78,115.1,19.2,95.9,611.5,11.77,1.37,45.479,,NONE
-92,29,97.78,115.1,19.2,95.9,611.6,11.42,1.35,45.481,,NONE
-92,30,97.78,115.1,19.1,96.0,610.1,11.31,1.38,45.493,,NONE
-92,31,97.78,115.2,19.0,96.2,611.4,11.1,1.39,45.471,,NONE
-92,32,97.78,115.2,19.0,96.2,611.5,10.97,1.35,45.426,,NONE
-92,33,97.78,115.3,18.8,96.5,614.6,10.88,1.38,45.456,,NONE
-92,34,97.78,115.5,18.5,97.0,614.2,10.74,1.35,45.468,,NONE
-92,35,97.78,115.5,18.3,97.2,615.5,10.69,1.4,45.476,,NONE
-92,36,97.78,115.5,18.4,97.1,616.2,10.58,1.33,45.468,,NONE
-92,37,97.78,115.6,18.3,97.3,617.3,10.56,1.3,45.457,,NONE
-92,38,97.78,115.4,18.1,97.3,619.1,10.55,1.32,45.491,,NONE
-92,39,97.78,115.4,18.0,97.4,620.7,10.48,1.24,45.49,,NONE
-92,40,97.78,115.5,18.1,97.4,620.3,10.41,1.25,45.511,,NONE
-92,41,97.78,115.4,18.1,97.3,619.7,10.37,1.29,45.491,,NONE
-92,42,97.78,115.4,18.1,97.3,618.7,10.35,1.31,45.495,,NONE
-92,43,97.78,115.4,18.0,97.4,622.0,10.37,1.31,45.523,,NONE
-92,44,97.78,115.4,18.0,97.4,624.0,10.36,1.31,45.512,,NONE
-92,45,97.78,115.4,18.1,97.3,622.9,10.36,1.27,45.539,,NONE
-92,46,97.78,115.5,18.1,97.4,619.8,10.31,1.26,45.524,,NONE
-92,47,97.78,115.5,18.1,97.4,621.2,10.31,1.21,45.499,,NONE
-92,48,97.78,115.5,18.1,97.4,623.7,10.28,1.18,45.557,,NONE
-92,49,97.78,115.6,18.1,97.5,628.8,10.28,1.18,45.551,,NONE
-92,50,97.78,115.6,18.1,97.5,627.6,10.3,1.18,45.517,,NONE
-92,51,97.78,115.6,18.0,97.6,631.4,10.29,1.26,45.544,,NONE
-92,52,97.78,115.4,17.8,97.6,632.1,10.26,1.25,45.6,,NONE
-92,53,97.78,115.4,17.9,97.5,633.8,10.25,1.33,45.603,,NONE
-92,54,97.78,115.4,18.1,97.3,632.7,10.21,1.3,45.6,,NONE
-92,55,97.78,115.2,18.1,97.1,632.8,10.21,1.25,45.581,,NONE
-92,56,97.78,115.1,18.1,97.0,630.1,10.23,1.25,45.607,,NONE
-92,57,97.78,115.1,18.3,96.8,632.6,10.26,1.27,45.651,,NONE
-92,58,97.78,115.0,18.3,96.7,636.3,10.23,1.24,45.604,,NONE
-92,59,97.78,115.1,18.6,96.5,632.8,10.26,1.24,45.625,,NONE
-92,60,97.78,115.2,18.9,96.3,633.8,10.32,1.25,45.56,,NONE
-92,61,97.78,115.2,18.6,96.6,628.8,10.29,1.25,45.649,,NONE
-92,62,97.78,115.1,18.5,96.6,629.9,10.3,1.29,45.65,,NONE
-92,63,97.78,115.0,18.5,96.5,634.1,10.24,1.33,45.634,,NONE
-92,64,97.78,114.9,18.4,96.5,633.9,10.28,1.33,45.663,,NONE
-92,65,97.78,114.9,18.2,96.7,638.8,10.3,1.29,45.656,,NONE
-92,66,97.78,114.9,18.3,96.6,640.4,10.3,1.32,45.68,,NONE
-92,67,97.78,114.9,18.2,96.7,640.2,10.3,1.36,45.683,,NONE
-92,68,97.78,115.0,18.4,96.6,639.4,10.32,1.35,45.693,,NONE
-92,69,97.78,114.9,18.5,96.4,638.7,10.34,1.34,45.701,,NONE
-92,70,97.78,114.9,18.4,96.5,638.4,10.32,1.27,45.739,,NONE
-92,71,97.78,114.9,18.3,96.6,639.1,10.31,1.36,45.703,,NONE
-92,72,97.78,114.8,18.3,96.5,641.4,10.22,1.27,45.742,,NONE
-92,73,97.78,114.9,18.4,96.5,643.5,10.21,1.25,45.756,,NONE
-92,74,97.78,114.9,18.5,96.4,645.9,10.21,1.23,45.726,,NONE
-92,75,97.78,114.8,18.5,96.3,649.8,10.23,1.22,45.743,,NONE
-92,76,97.78,114.7,18.4,96.3,647.3,10.24,1.26,45.7,,NONE
-92,77,97.78,114.8,18.2,96.6,648.5,10.22,1.3,45.722,,NONE
-92,78,97.78,114.6,18.1,96.5,651.2,10.21,1.36,45.779,,NONE
-92,79,97.78,114.5,18.2,96.3,649.8,10.18,1.36,45.755,,NONE
-92,80,97.78,114.5,18.4,96.1,648.3,10.18,1.38,45.703,,NONE
-92,81,97.78,114.4,18.2,96.2,649.0,10.19,1.41,45.782,,NONE
-92,82,97.78,114.3,18.1,96.2,648.4,10.15,1.46,45.77,,NONE
-92,83,97.78,114.4,18.1,96.3,649.3,10.14,1.45,45.732,,NONE
-92,84,97.78,114.4,18.2,96.2,650.0,10.16,1.43,45.745,,NONE
-92,85,97.78,114.3,18.3,96.0,652.8,10.21,1.47,45.72,,NONE
-92,86,97.78,114.3,18.2,96.1,653.3,10.18,1.43,45.711,,NONE
-92,87,97.78,114.3,18.2,96.1,655.4,10.25,1.43,45.752,,NONE
-92,88,97.78,114.2,18.1,96.1,656.5,10.3,1.4,45.748,,NONE
-92,89,97.78,114.2,18.2,96.0,655.7,10.25,1.42,45.737,,NONE
-92,90,97.78,114.3,18.3,96.0,658.4,10.22,1.39,45.763,,NONE
-92,91,97.78,114.3,18.4,95.9,661.7,10.21,1.37,45.759,,NONE
-92,92,97.78,114.2,18.5,95.7,659.1,10.71,1.38,45.726,,NONE
-92,93,97.78,114.3,18.3,96.0,660.4,11.76,1.38,45.764,,NONE
-92,94,97.78,114.3,18.3,96.0,658.1,13.19,1.36,45.772,,NONE
-92,95,97.78,114.2,18.6,95.6,659.1,14.78,1.38,45.67,,NONE
-92,96,97.78,114.4,18.3,96.1,663.9,16.54,1.36,45.742,,NONE
-92,97,97.78,114.5,18.4,96.1,664.4,18.33,1.28,45.715,,NONE
-92,98,97.78,114.6,18.5,96.1,665.3,19.87,1.25,45.712,,NONE
-92,99,97.78,114.6,18.4,96.2,663.0,19.85,1.21,45.719,,NONE
-92,100,97.78,114.7,18.4,96.3,662.8,19.87,1.19,45.72,,NONE
-92,101,97.78,114.4,18.7,95.7,666.1,19.87,1.14,45.56,,NONE
-92,102,97.78,113.8,18.6,95.2,668.6,19.85,1.19,45.411,,NONE
-92,103,97.78,113.2,18.6,94.6,666.8,19.93,1.21,45.049,,NONE
-92,104,97.78,112.4,18.5,93.9,666.2,19.91,1.23,44.663,,NONE
-92,105,97.78,111.3,18.8,92.5,667.1,19.93,1.25,44.126,,NONE
-92,106,97.78,110.1,18.9,91.2,664.1,19.97,1.21,43.519,,NONE
-92,107,97.78,108.5,18.8,89.7,662.8,19.96,1.22,42.9,,NONE
-92,108,97.78,107.0,18.7,88.3,662.7,20.0,1.24,42.178,,NONE
-92,109,97.78,105.5,18.9,86.6,668.0,20.01,1.25,41.443,,NONE
-92,110,97.78,103.8,18.8,85.0,665.0,20.0,1.24,40.683,,NONE
-92,111,97.78,102.1,18.9,83.2,668.3,20.01,1.29,39.865,,NONE
-92,112,97.78,100.4,18.9,81.5,670.7,20.02,1.24,39.096,,NONE
-92,113,97.78,98.9,19.3,79.6,671.3,19.98,1.28,38.243,,NONE
-92,114,97.78,97.3,19.1,78.2,668.8,19.99,1.49,37.465,,NONE
-92,115,97.78,95.6,19.2,76.4,666.3,20.04,1.69,36.625,,NONE
-92,116,97.78,93.9,19.0,74.9,673.7,20.03,1.94,35.84,,NONE
-92,117,97.78,92.2,19.1,73.1,674.3,19.95,2.1,35.054,,NONE
-92,118,97.78,90.5,19.0,71.5,676.3,19.95,2.75,34.256,,NONE
-92,119,97.78,88.9,19.0,69.9,675.0,19.94,2.77,33.518,,NONE
-92,120,97.78,87.4,20.8,66.6,671.5,19.93,2.72,31.842,,NONE
-92,121,97.78,86.1,21.0,65.1,673.3,19.93,2.71,31.15,,NONE
-92,122,97.78,84.8,21.2,63.6,671.3,19.87,2.71,30.498,,NONE
-92,123,97.78,83.4,21.1,62.3,667.8,19.86,2.73,29.849,,NONE
-92,124,97.78,82.1,21.2,60.9,668.6,19.89,2.75,29.258,,NONE
-92,125,97.78,80.9,21.3,59.6,667.3,19.87,2.72,28.58,,NONE
-92,126,97.78,79.8,21.2,58.6,666.9,19.9,2.74,28.104,,NONE
-92,127,97.78,78.6,21.3,57.3,662.2,19.91,2.73,27.548,,NONE
-92,128,97.78,77.5,21.3,56.2,663.8,19.91,2.72,26.982,,NONE
-92,129,97.78,76.5,21.6,54.9,661.8,19.93,2.71,26.431,,NONE
-92,130,97.78,75.4,21.3,54.1,664.3,19.89,2.65,25.963,,NONE
-92,131,97.78,74.6,21.2,53.4,669.2,19.94,2.63,25.518,,NONE
-92,132,97.78,73.6,21.3,52.3,670.5,19.99,2.67,25.067,,NONE
-92,133,97.78,72.9,21.1,51.8,669.1,20.0,2.64,24.642,,NONE
-92,134,97.78,72.0,21.0,51.0,666.9,20.03,2.61,24.255,,NONE
-92,135,97.78,71.2,21.0,50.2,665.7,19.95,2.62,23.837,,NONE
-92,136,97.78,70.6,21.0,49.6,663.7,20.0,2.6,23.486,,NONE
-92,137,97.78,69.7,21.1,48.6,664.9,19.95,2.64,23.134,,NONE
-92,138,97.78,68.9,21.1,47.8,668.6,19.98,2.65,22.818,,NONE
-92,139,97.78,68.4,21.1,47.3,668.9,19.96,2.64,22.443,,NONE
-92,140,97.78,67.7,20.9,46.8,669.8,19.94,2.59,22.182,,NONE
-92,141,97.78,66.9,21.0,45.9,671.7,19.95,2.57,21.872,,NONE
-92,142,97.78,66.3,20.9,45.4,667.7,19.96,2.58,21.623,,NONE
-92,143,97.78,65.7,21.0,44.7,669.1,19.98,2.6,21.356,,NONE
-92,144,97.78,65.2,21.0,44.2,674.8,19.95,2.69,21.092,,NONE
-92,145,97.78,64.8,21.0,43.8,672.1,19.92,2.71,20.85,,NONE
-92,146,97.78,64.2,20.8,43.4,672.7,19.94,2.72,20.644,,NONE
-92,147,97.78,63.7,20.9,42.8,673.9,19.95,2.68,20.454,,NONE
-92,148,97.78,63.4,20.7,42.7,673.1,19.9,2.69,20.292,,NONE
-92,149,97.78,63.0,20.8,42.2,673.6,19.88,2.67,20.072,,NONE
-92,150,97.78,62.6,21.0,41.6,674.0,19.93,2.63,19.876,,NONE
-92,151,97.78,62.2,21.0,41.2,672.3,19.89,2.65,19.73,,NONE
-92,152,97.78,61.7,21.1,40.6,673.5,19.94,2.61,19.522,,NONE
-92,153,97.78,61.5,21.1,40.4,675.0,19.94,2.67,19.403,,NONE
-92,154,97.78,61.1,21.0,40.1,676.3,19.97,2.66,19.238,,NONE
-92,155,97.78,60.9,21.0,39.9,675.6,20.04,2.7,19.094,,NONE
-92,156,97.78,60.6,20.7,39.9,673.4,20.05,2.65,18.993,,NONE
-92,157,97.78,60.4,20.6,39.8,671.1,20.05,2.57,18.858,,NONE
-92,158,97.78,60.3,20.7,39.6,670.9,20.03,2.55,18.729,,NONE
-92,159,97.78,60.0,20.7,39.3,670.2,20.0,2.5,18.61,,NONE
-92,160,97.78,59.8,20.5,39.3,672.3,20.04,2.56,18.537,,NONE
-92,161,97.78,59.4,20.7,38.7,666.4,20.04,2.61,18.398,,NONE
-92,162,97.78,59.1,20.7,38.4,668.8,20.06,2.65,18.347,,NONE
-92,163,97.78,58.9,20.7,38.2,667.1,20.06,2.71,18.218,,NONE
-92,164,97.78,58.6,20.4,38.2,671.7,20.1,2.74,18.175,,NONE
-92,165,97.78,58.3,20.5,37.8,670.4,20.07,2.71,18.072,,NONE
-92,166,97.78,58.2,20.4,37.8,670.6,20.1,2.72,17.998,,NONE
-92,167,97.78,58.0,20.2,37.8,673.2,20.07,2.77,17.943,,NONE
-92,168,97.78,57.8,20.4,37.4,672.1,19.98,2.75,17.836,,NONE
-92,169,97.78,57.6,20.3,37.3,672.1,19.99,2.75,17.799,,NONE
-92,170,97.78,57.4,20.4,37.0,674.8,19.99,2.73,17.713,,NONE
-92,171,97.78,57.2,20.2,37.0,675.7,19.94,2.71,17.697,,NONE
-92,172,97.78,57.0,20.4,36.6,673.5,19.94,2.74,17.64,,NONE
-92,173,97.78,56.8,20.4,36.4,672.3,19.93,2.74,17.575,,NONE
-92,174,97.78,56.6,20.4,36.2,666.8,19.9,2.72,17.516,,NONE
-92,175,97.78,56.6,20.4,36.2,665.1,19.88,2.77,17.483,,NONE
-92,176,97.78,56.6,20.7,35.9,663.9,19.97,2.81,17.379,,NONE
-92,177,97.78,56.6,20.6,36.0,662.7,19.99,2.78,17.38,,NONE
-92,178,97.78,56.5,20.8,35.7,662.1,20.01,2.76,17.326,,NONE
-92,179,97.78,56.5,20.5,36.0,663.3,19.96,2.72,17.294,,NONE
-92,180,97.78,56.4,20.3,36.1,664.7,19.94,2.72,17.289,,NONE
-92,181,97.78,56.5,20.4,36.1,665.5,19.9,2.76,17.259,,NONE
-92,182,97.78,56.3,20.4,35.9,669.0,19.95,2.72,17.236,,NONE
-92,183,97.78,56.1,20.3,35.8,670.9,19.95,2.68,17.167,,NONE
-92,184,97.78,56.0,20.5,35.5,670.2,19.94,2.63,17.088,,NONE
-92,185,97.78,56.0,20.3,35.7,667.6,20.01,2.67,17.098,,NONE
-92,186,97.78,55.9,20.4,35.5,667.3,20.05,2.71,17.081,,NONE
-92,187,97.78,55.9,20.3,35.6,669.9,20.08,2.72,17.064,,NONE
-92,188,97.78,55.9,20.2,35.7,669.9,20.07,2.66,17.015,,NONE
-92,189,97.78,55.9,20.0,35.9,668.2,20.01,2.72,17.003,,NONE
-92,190,97.78,55.7,20.0,35.7,669.2,20.04,2.73,16.984,,NONE
-92,191,97.78,55.7,20.1,35.6,667.7,19.99,2.77,16.932,,NONE
-92,192,97.78,55.5,20.0,35.5,666.9,19.98,2.75,16.931,,NONE
-92,193,97.78,55.6,20.1,35.5,669.4,20.0,2.79,16.897,,NONE
-92,194,97.78,55.5,20.2,35.3,666.9,20.01,2.73,16.876,,NONE
-92,195,97.78,55.3,20.3,35.0,664.5,19.95,2.7,16.872,,NONE
-92,196,97.78,55.3,20.2,35.1,666.7,19.92,2.62,16.837,,NONE
-92,197,97.78,55.2,20.2,35.0,666.5,19.9,2.62,16.8,,NONE
-92,198,97.78,55.1,20.1,35.0,663.9,19.91,2.59,16.788,,NONE
-92,199,97.78,55.0,20.1,34.9,667.6,19.95,2.58,16.778,,NONE
-92,200,97.78,55.0,20.2,34.8,668.5,19.95,2.62,16.735,,NONE
-92,201,97.78,55.1,20.2,34.9,670.2,19.97,2.55,16.741,,NONE
-92,202,97.78,55.1,20.2,34.9,670.4,19.93,2.57,16.713,,NONE
-92,203,97.78,55.0,20.0,35.0,670.6,19.95,2.63,16.711,,NONE
-92,204,97.78,55.0,20.0,35.0,668.2,19.97,2.65,16.668,,NONE
-92,205,97.78,54.9,19.7,35.2,669.5,20.02,2.63,16.655,,NONE
-92,206,97.78,54.8,19.9,34.9,668.0,20.07,2.62,16.649,,NONE
-92,207,97.78,54.8,19.8,35.0,667.5,20.11,2.66,16.623,,NONE
-92,208,97.78,55.0,20.0,35.0,671.8,20.11,2.69,16.611,,NONE
-92,209,97.78,55.1,19.8,35.3,672.2,20.04,2.67,16.652,,NONE
-92,210,97.78,55.1,20.3,34.8,671.6,20.02,2.73,16.54,,NONE
-92,211,97.78,55.1,20.3,34.8,670.6,19.94,2.69,16.585,,NONE
-92,212,97.78,55.1,20.2,34.9,670.5,19.96,2.71,16.598,,NONE
-92,213,97.78,55.0,20.3,34.7,668.7,19.99,2.68,16.538,,NONE
-92,214,97.78,55.1,20.3,34.8,668.8,19.96,2.68,16.536,,NONE
-92,215,97.78,55.1,20.3,34.8,665.3,20.0,2.73,16.465,,NONE
-92,216,97.78,55.2,20.5,34.7,665.2,20.02,2.75,16.498,,NONE
-92,217,97.78,55.3,20.7,34.6,664.1,19.95,2.75,16.418,,NONE
-92,218,97.78,55.3,20.5,34.8,665.2,19.97,2.74,16.455,,NONE
-92,219,97.78,55.2,20.6,34.6,666.4,19.94,2.68,16.452,,NONE
-92,220,97.78,55.2,20.8,34.4,668.0,19.93,2.63,16.414,,NONE
-92,221,97.78,55.2,20.7,34.5,669.6,19.93,2.68,16.381,,NONE
-92,222,97.78,55.1,20.7,34.4,669.6,19.93,2.72,16.402,,NONE
-92,223,97.78,55.0,20.9,34.1,670.6,19.93,2.75,16.357,,NONE
-92,224,97.78,55.1,21.0,34.1,669.9,19.94,2.75,16.396,,NONE
-92,225,97.78,55.2,21.1,34.1,667.9,19.98,2.8,16.368,,NONE
-92,226,97.78,55.2,21.2,34.0,666.1,19.99,2.83,16.318,,NONE
-92,227,97.78,55.0,21.1,33.9,662.6,20.04,2.8,16.33,,NONE
-92,228,97.78,55.0,20.9,34.1,661.3,20.01,2.7,16.294,,NONE
-92,229,97.78,55.0,20.8,34.2,660.1,20.0,2.68,16.343,,NONE
-92,230,97.78,54.9,20.9,34.0,662.3,19.96,2.63,16.293,,NONE
-92,231,97.78,54.9,20.7,34.2,661.9,19.96,2.65,16.31,,NONE
+batch_id,time_step_min,current_step_id,raw_material_purity_coa,vessel_weight_kg,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
+92,0,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,1,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,2,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,3,1,100.273,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,4,1,100.273,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,5,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,6,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,7,1,100.273,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,8,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,9,1,100.273,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,10,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,11,1,100.273,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,12,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,13,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,14,1,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,15,2,100.273,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,16,2,100.273,88.6,25.4,24.4,1.0,0.0,0.99,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,17,2,100.273,177.2,25.3,24.5,0.8,0.0,1.02,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,18,2,100.273,265.8,25.4,24.5,0.9,0.0,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,19,2,100.273,354.5,25.3,24.5,0.8,0.0,1.03,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,20,2,100.273,443.1,25.3,24.6,0.7,0.0,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,21,2,100.273,531.7,25.4,24.6,0.8,0.0,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,22,2,100.273,620.3,25.4,24.6,0.8,0.0,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,23,2,100.273,708.9,25.5,24.6,0.9,0.0,1.07,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,24,2,100.273,797.5,25.5,24.6,0.9,0.0,1.08,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,25,2,100.273,886.1,25.6,24.6,1.0,148.9,1.09,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,26,2,100.273,974.8,25.6,24.7,0.9,150.9,1.08,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,27,2,100.273,1063.4,25.6,24.8,0.8,150.8,1.1,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,28,2,100.273,1152.0,25.6,24.8,0.8,151.9,1.08,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,29,2,100.273,1240.6,25.6,24.6,1.0,151.0,1.08,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,30,2,100.273,1329.2,25.6,24.8,0.8,152.1,1.05,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,31,2,100.273,1417.8,25.4,24.7,0.7,152.6,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,32,2,100.273,1506.4,25.5,24.8,0.7,150.7,1.05,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,33,2,100.273,1595.0,25.4,24.8,0.6,151.7,1.07,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,34,2,100.273,1683.7,25.2,24.8,0.4,150.4,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,35,2,100.273,1772.3,25.1,24.9,0.2,152.5,1.07,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,36,2,100.273,1860.9,25.2,24.8,0.4,149.3,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,37,2,100.273,1949.5,25.2,24.9,0.3,147.7,1.07,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,38,2,100.273,2038.1,25.0,25.0,0.0,148.4,1.08,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,39,2,100.273,2126.7,25.1,25.0,0.1,144.9,1.09,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,40,2,100.273,2215.3,25.1,24.9,0.2,145.6,1.07,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,41,2,100.273,2304.0,25.1,24.9,0.2,147.0,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,42,2,100.273,2392.6,25.0,24.9,0.1,148.0,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,43,2,100.273,2481.2,25.0,25.0,0.0,147.8,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,44,2,100.273,2569.8,25.0,25.1,-0.1,147.7,1.08,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,45,2,100.273,2658.4,25.0,25.1,-0.1,145.9,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,46,2,100.273,2747.0,25.1,25.1,0.0,145.8,1.02,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,47,2,100.273,2835.6,25.1,25.1,0.0,143.5,1.02,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,48,2,100.273,2924.2,25.0,25.1,-0.1,142.0,1.03,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,49,2,100.273,3012.9,24.8,25.1,-0.3,141.8,1.08,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,50,2,100.273,3101.5,24.9,25.2,-0.3,141.8,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,51,2,100.273,3190.1,24.9,25.2,-0.3,145.4,1.09,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,52,2,100.273,3278.7,24.8,25.1,-0.3,145.1,1.09,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,53,2,100.273,3367.3,24.8,25.1,-0.3,148.6,1.1,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,54,2,100.273,3455.9,24.9,25.0,-0.1,147.5,1.08,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,55,2,100.273,3544.5,25.0,25.0,0.0,145.3,1.07,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,56,2,100.273,3633.2,25.0,25.1,-0.1,145.4,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,57,2,100.273,3721.8,25.1,25.2,-0.1,145.9,1.05,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,58,2,100.273,3810.4,25.0,25.1,-0.1,144.6,1.08,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,59,2,100.273,3899.0,25.1,25.2,-0.1,144.7,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,60,3,100.273,3899.0,25.1,25.3,-0.2,145.0,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,61,3,100.273,3899.0,25.1,25.3,-0.2,145.2,1.25,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,62,3,100.273,3899.0,25.1,25.3,-0.2,146.8,1.53,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,63,3,100.273,3899.0,25.1,25.2,-0.1,148.6,1.83,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,64,3,100.273,3899.0,25.1,25.3,-0.2,148.6,2.1,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,65,3,100.273,3899.0,25.0,25.3,-0.3,146.9,2.41,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,66,3,100.273,3899.0,25.0,25.3,-0.3,147.9,2.7,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,67,3,100.273,3899.0,25.0,25.3,-0.3,149.7,2.96,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,68,3,100.273,3899.0,25.1,25.4,-0.3,149.2,2.81,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,69,3,100.273,3899.0,25.3,25.4,-0.1,148.9,2.51,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,70,3,100.273,3899.0,25.2,25.4,-0.2,145.8,2.23,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,71,3,100.273,3899.0,25.0,25.4,-0.4,149.8,1.95,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,72,3,100.273,3899.0,25.2,25.2,0.0,146.2,1.68,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,73,3,100.273,3899.0,25.2,25.2,0.0,145.0,1.42,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,74,3,100.273,3899.0,25.2,25.1,0.1,144.1,1.16,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,75,3,100.273,3899.0,25.3,25.2,0.1,143.7,1.19,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,76,3,100.273,3899.0,25.1,25.2,-0.1,145.4,1.44,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,77,3,100.273,3899.0,25.0,25.2,-0.2,147.4,1.72,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,78,3,100.273,3899.0,25.1,25.1,0.0,150.1,2.01,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,79,3,100.273,3899.0,25.1,25.1,0.0,150.3,2.27,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,80,3,100.273,3899.0,25.1,25.1,0.0,151.0,2.52,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,81,3,100.273,3899.0,25.2,25.1,0.1,152.5,2.79,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,82,3,100.273,3899.0,25.1,25.0,0.1,154.9,2.91,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,83,3,100.273,3899.0,25.0,25.0,0.0,154.5,2.64,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,84,3,100.273,3899.0,25.1,25.0,0.1,153.5,2.36,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,85,3,100.273,3899.0,25.1,25.1,0.0,155.1,2.1,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,86,3,100.273,3899.0,25.0,25.1,-0.1,153.3,1.82,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,87,3,100.273,3899.0,25.1,25.2,-0.1,153.2,1.56,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,88,3,100.273,3899.0,25.1,25.3,-0.2,151.4,1.28,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,89,3,100.273,3899.0,25.1,25.2,-0.1,152.9,0.99,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,90,4,100.273,3899.0,25.2,85.2,-60.0,595.7,1.01,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,91,4,100.273,3899.0,25.4,85.1,-59.7,594.6,1.24,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,92,4,100.273,3899.0,25.7,85.0,-59.3,595.8,1.41,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,93,4,100.273,3899.0,26.1,84.9,-58.8,596.7,1.62,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,94,4,100.273,3899.0,26.7,84.9,-58.2,596.5,1.8,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,95,4,100.273,3899.0,27.4,84.8,-57.4,598.4,2.0,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,96,4,100.273,3899.0,28.1,84.8,-56.7,598.8,2.25,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,97,4,100.273,3899.0,28.8,84.7,-55.9,596.5,2.45,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,98,4,100.273,3899.0,29.7,84.7,-55.0,596.0,2.66,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,99,4,100.273,3899.0,30.5,84.7,-54.2,594.0,2.84,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,100,4,100.273,3899.0,31.4,84.7,-53.3,593.3,3.03,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,101,4,100.273,3899.0,32.4,84.7,-52.3,590.7,3.27,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,102,4,100.273,3899.0,33.3,84.6,-51.3,593.2,3.49,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,103,4,100.273,3899.0,34.2,84.8,-50.6,593.8,3.68,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,104,4,100.273,3899.0,35.2,84.8,-49.6,594.9,3.87,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,105,4,100.273,3899.0,36.2,84.8,-48.6,595.6,4.08,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,106,4,100.273,3899.0,37.2,84.9,-47.7,593.8,4.25,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,107,4,100.273,3899.0,38.2,84.9,-46.7,594.2,4.44,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,108,4,100.273,3899.0,39.1,85.0,-45.9,595.2,4.64,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,109,4,100.273,3899.0,40.2,85.0,-44.8,595.2,4.89,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,110,4,100.273,3899.0,41.2,85.0,-43.8,594.9,5.06,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,111,4,100.273,3899.0,42.2,85.0,-42.8,597.1,5.3,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,112,4,100.273,3899.0,43.3,85.0,-41.7,595.1,5.53,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,113,4,100.273,3899.0,44.4,84.9,-40.5,593.0,5.74,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,114,4,100.273,3899.0,45.4,85.0,-39.6,594.0,5.92,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,115,4,100.273,3899.0,46.4,85.1,-38.7,594.2,6.09,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,116,4,100.273,3899.0,47.3,85.1,-37.8,597.5,6.37,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,117,4,100.273,3899.0,48.4,84.9,-36.5,596.8,6.58,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,118,4,100.273,3899.0,49.3,84.9,-35.6,596.0,6.81,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,119,4,100.273,3899.0,50.4,84.8,-34.4,596.6,7.0,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,120,4,100.273,3899.0,51.3,84.8,-33.5,594.7,7.17,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,121,4,100.273,3899.0,52.4,84.8,-32.4,594.0,7.4,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,122,4,100.273,3899.0,53.5,84.7,-31.2,594.2,7.58,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,123,4,100.273,3899.0,54.5,84.6,-30.1,595.1,7.75,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,124,4,100.273,3899.0,55.6,84.7,-29.1,595.9,7.96,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,125,4,100.273,3899.0,56.6,84.6,-28.0,594.7,8.15,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,126,4,100.273,3899.0,57.6,84.7,-27.1,595.3,8.35,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,127,4,100.273,3899.0,58.7,84.7,-26.0,594.9,8.5,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,128,4,100.273,3899.0,59.7,84.7,-25.0,594.6,8.72,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,129,4,100.273,3899.0,60.8,84.8,-24.0,593.9,8.9,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,130,4,100.273,3899.0,61.7,84.7,-23.0,591.5,9.13,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,131,4,100.273,3899.0,62.7,84.8,-22.1,590.7,9.38,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,132,4,100.273,3899.0,63.7,84.9,-21.2,592.3,9.6,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,133,4,100.273,3899.0,64.7,84.9,-20.2,590.5,9.79,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,134,4,100.273,3899.0,65.6,85.0,-19.4,589.4,9.97,0.1,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,135,5,100.273,3899.0,68.3,18.3,50.0,589.8,9.96,1.819,50.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,136,5,100.273,3899.3,70.1,18.4,51.7,589.3,14.93,1.819,50.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,137,5,100.273,3899.7,73.2,18.3,54.9,591.3,14.94,1.819,60.05,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,138,5,100.273,3900.2,76.9,18.4,58.5,591.7,14.98,1.819,72.96,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,139,5,100.273,3900.8,81.0,15.4,65.6,592.0,14.98,1.819,87.38,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,140,5,100.273,3901.5,85.5,15.3,70.2,590.1,14.99,1.5,103.35,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,141,5,100.273,3902.2,90.2,15.3,74.9,589.4,15.01,1.5,119.89,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,142,5,100.273,3902.9,92.2,15.4,76.8,590.2,14.97,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,143,5,100.273,3903.7,92.2,15.4,76.8,591.7,14.46,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,144,5,100.273,3904.7,92.2,15.3,76.9,596.4,13.01,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,145,5,100.273,3905.7,92.2,15.3,76.9,597.7,11.73,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,146,5,100.273,3906.7,92.1,15.3,76.8,598.6,11.02,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,147,5,100.273,3907.7,92.2,15.3,76.9,597.6,10.61,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,148,5,100.273,3908.7,92.2,15.2,77.0,598.4,10.36,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,149,5,100.273,3909.7,92.2,15.2,77.0,598.2,10.23,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,150,5,100.273,3910.7,92.3,15.3,77.0,596.9,10.16,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,151,5,100.273,3911.7,92.3,15.2,77.1,598.1,10.09,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,152,5,100.273,3912.7,92.3,15.3,77.0,596.8,10.08,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,153,5,100.273,3913.7,92.3,15.3,77.0,599.9,10.08,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,154,5,100.273,3914.7,92.3,15.4,76.9,599.9,10.09,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,155,5,100.273,3915.7,92.3,15.5,76.8,602.3,10.07,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,156,5,100.273,3916.7,92.2,15.6,76.6,600.1,10.05,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,157,5,100.273,3917.7,92.1,15.6,76.5,597.2,10.03,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,158,5,100.273,3918.7,92.1,15.5,76.6,597.0,10.02,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,159,5,100.273,3919.7,92.1,15.5,76.6,595.5,10.01,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,160,5,100.273,3920.7,92.1,15.6,76.5,598.4,10.03,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,161,5,100.273,3921.7,92.2,15.6,76.6,601.3,9.97,1.5,111.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,162,5,100.273,3922.7,92.2,15.6,76.6,603.3,9.99,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,163,5,100.273,3923.7,92.2,15.6,76.6,606.9,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,164,5,100.273,3924.7,92.1,15.7,76.4,608.4,10.02,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,165,5,100.273,3925.7,92.1,15.7,76.4,607.7,10.01,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,166,5,100.273,3926.7,92.1,15.7,76.4,608.8,10.01,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,167,5,100.273,3927.7,92.0,15.7,76.3,611.5,10.04,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,168,5,100.273,3928.7,92.0,15.5,76.5,611.6,10.02,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,169,5,100.273,3929.7,92.0,15.5,76.5,612.0,10.03,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,170,5,100.273,3930.7,92.1,15.5,76.6,611.7,10.05,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,171,5,100.273,3931.7,92.0,15.4,76.6,611.6,10.06,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,172,5,100.273,3932.7,92.1,15.4,76.7,613.4,10.04,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,173,5,100.273,3933.7,92.1,15.4,76.7,613.8,10.03,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,174,5,100.273,3934.7,92.1,15.3,76.8,613.6,9.97,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,175,5,100.273,3935.7,92.1,15.2,76.9,616.6,9.95,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,176,5,100.273,3936.7,92.2,15.4,76.8,618.5,9.94,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,177,5,100.273,3937.7,92.2,15.5,76.7,617.6,9.92,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,178,5,100.273,3938.7,92.3,15.5,76.8,617.4,9.91,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,179,5,100.273,3939.7,92.2,15.4,76.8,616.1,9.92,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,180,5,100.273,3940.7,92.1,15.3,76.8,616.7,9.93,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,181,5,100.273,3941.7,92.2,15.3,76.9,619.0,9.94,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,182,5,100.273,3942.7,92.2,15.4,76.8,617.7,9.97,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,183,5,100.273,3943.7,92.2,15.4,76.8,616.4,9.99,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,184,5,100.273,3944.7,92.2,15.3,76.9,614.8,9.99,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,185,5,100.273,3945.7,92.1,15.5,76.6,616.7,9.96,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,186,5,100.273,3946.7,92.2,15.6,76.6,619.1,9.96,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,187,5,100.273,3947.7,92.2,15.7,76.5,619.9,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,188,5,100.273,3948.7,92.1,15.7,76.4,617.8,9.99,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,189,5,100.273,3949.7,92.0,15.5,76.5,621.3,9.97,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,190,5,100.273,3950.7,92.0,15.6,76.4,622.5,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,191,5,100.273,3951.7,92.0,15.5,76.5,624.7,9.96,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,192,5,100.273,3952.7,92.0,15.5,76.5,624.4,9.95,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,193,5,100.273,3953.7,92.0,15.5,76.5,551.9,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,194,5,100.273,3954.7,92.1,15.5,76.6,549.7,9.95,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,195,5,100.273,3955.7,92.2,15.4,76.8,548.9,9.93,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,196,5,100.273,3956.7,92.1,15.3,76.8,546.0,9.95,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,197,5,100.273,3957.7,92.1,15.3,76.8,546.7,9.95,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,198,5,100.273,3958.7,92.1,15.3,76.8,545.8,9.92,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,199,5,100.273,3959.7,92.1,15.4,76.7,545.8,9.96,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,200,5,100.273,3960.7,92.1,15.4,76.7,547.7,9.97,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,201,5,100.273,3961.7,92.1,15.4,76.7,544.9,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,202,5,100.273,3962.7,92.1,15.3,76.8,546.6,9.99,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,203,5,100.273,3963.7,92.0,15.4,76.6,549.9,9.99,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,204,5,100.273,3964.7,92.0,15.4,76.6,626.7,9.97,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,205,5,100.273,3965.7,91.9,15.5,76.4,625.9,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,206,5,100.273,3966.7,91.9,15.6,76.3,626.0,9.96,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,207,5,100.273,3967.7,91.9,15.8,76.1,628.1,9.96,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,208,5,100.273,3968.7,92.0,15.8,76.2,630.0,10.0,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,209,5,100.273,3969.7,92.0,15.6,76.4,630.2,10.01,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,210,5,100.273,3970.7,92.1,15.6,76.5,633.2,10.0,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,211,5,100.273,3971.7,92.1,15.4,76.7,632.3,9.99,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,212,5,100.273,3972.7,92.1,15.4,76.7,634.1,9.99,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,213,5,100.273,3973.7,92.1,15.5,76.6,632.9,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,214,5,100.273,3974.7,92.1,15.4,76.7,633.5,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,215,5,100.273,3975.7,92.1,15.5,76.6,636.2,9.94,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,216,5,100.273,3976.7,92.2,15.5,76.7,637.5,9.94,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,217,5,100.273,3977.7,92.2,15.4,76.8,638.5,9.92,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,218,5,100.273,3978.7,92.2,15.4,76.8,638.5,9.93,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,219,5,100.273,3979.7,92.2,15.4,76.8,636.6,9.94,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,220,5,100.273,3980.7,92.3,15.3,77.0,634.9,9.96,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,221,5,100.273,3981.7,92.2,15.3,76.9,637.7,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,222,5,100.273,3982.7,92.2,15.3,76.9,640.1,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,223,5,100.273,3983.7,92.3,15.3,77.0,641.7,9.99,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,224,5,100.273,3984.7,92.4,15.3,77.1,642.6,9.98,1.5,120.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,225,6,100.273,3984.7,85.4,69.9,15.5,644.7,9.96,0.4,30.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,226,6,100.273,3984.7,81.7,70.0,11.7,645.7,9.95,0.386,29.83,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,227,6,100.273,3984.7,78.8,70.0,8.8,644.2,9.91,0.372,29.66,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,228,6,100.273,3984.7,76.6,70.0,6.6,640.3,9.88,0.359,29.48,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,229,6,100.273,3984.7,75.0,70.0,5.0,639.1,9.86,0.345,29.31,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,230,6,100.273,3984.7,73.8,69.9,3.9,637.4,9.88,0.331,29.14,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,231,6,100.273,3984.7,72.9,69.9,3.0,638.1,9.88,0.317,28.97,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,232,6,100.273,3984.7,72.4,69.8,2.6,638.7,9.85,0.303,28.79,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,233,6,100.273,3984.7,71.9,69.7,2.2,638.2,9.88,0.29,28.62,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,234,6,100.273,3984.7,71.5,69.9,1.6,638.5,9.88,0.276,28.45,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,235,6,100.273,3984.7,71.1,70.0,1.1,639.2,9.89,0.262,28.28,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,236,6,100.273,3984.7,70.9,70.1,0.8,639.5,9.91,0.248,28.1,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,237,6,100.273,3984.7,70.7,70.2,0.5,644.5,9.93,0.234,27.93,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,238,6,100.273,3984.7,70.5,70.2,0.3,642.9,9.96,0.221,27.76,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,239,6,100.273,3984.7,70.3,70.3,0.0,647.3,9.95,0.207,27.59,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,240,6,100.273,3984.7,70.2,70.2,0.0,645.1,9.94,0.193,27.41,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,241,6,100.273,3984.7,70.2,70.2,0.0,646.9,9.99,0.179,27.24,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,242,6,100.273,3984.7,70.2,70.1,0.1,646.8,10.07,0.166,27.07,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,243,6,100.273,3984.7,70.3,70.2,0.1,647.5,10.09,0.152,26.9,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,244,6,100.273,3984.7,70.3,70.2,0.1,646.2,10.05,0.138,26.72,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,245,6,100.273,3984.7,70.3,70.3,0.0,645.6,10.02,0.124,26.55,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,246,6,100.273,3984.7,70.3,70.2,0.1,644.3,9.97,0.11,26.38,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,247,6,100.273,3984.7,70.1,70.2,-0.1,643.3,10.03,0.097,26.21,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,248,6,100.273,3984.7,70.1,70.3,-0.2,643.9,10.01,0.083,26.03,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,249,6,100.273,3984.7,70.0,70.2,-0.2,643.8,10.01,0.069,25.86,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,250,6,100.273,3984.7,70.0,70.1,-0.1,640.9,9.98,0.055,25.69,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,251,6,100.273,3984.7,70.0,70.1,-0.1,638.9,10.06,0.041,25.52,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,252,6,100.273,3984.7,70.0,70.1,-0.1,637.1,10.08,0.028,25.34,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,253,6,100.273,3984.7,69.9,70.1,-0.2,638.1,10.04,0.014,25.17,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,254,6,100.273,3984.7,69.9,70.2,-0.3,637.6,10.05,0.0,25.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,255,7,100.273,3984.7,69.8,15.2,54.6,638.9,10.05,0.0,90.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,256,7,100.273,3984.7,69.7,15.2,54.5,637.4,9.86,0.0,89.55,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,257,7,100.273,3984.7,69.6,15.2,54.4,639.9,9.67,0.0,89.09,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,258,7,100.273,3984.7,69.2,15.3,53.9,637.5,9.48,0.0,88.64,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,259,7,100.273,3984.7,68.7,15.3,53.4,640.4,9.29,0.0,88.18,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,260,7,100.273,3984.7,68.1,15.4,52.7,643.2,9.06,0.0,87.73,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,261,7,100.273,3984.7,67.5,15.4,52.1,643.8,8.85,0.0,87.27,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,262,7,100.273,3984.7,66.8,15.4,51.4,645.7,8.62,0.0,86.82,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,263,7,100.273,3984.7,66.1,15.4,50.7,642.5,8.37,0.0,86.36,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,264,7,100.273,3984.7,65.5,15.4,50.1,642.6,8.15,0.0,85.91,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,265,7,100.273,3984.7,64.7,15.3,49.4,642.6,7.92,0.0,85.45,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,266,7,100.273,3984.7,64.0,15.3,48.7,639.5,7.73,0.0,85.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,267,7,100.273,3984.7,63.3,15.4,47.9,641.1,7.51,0.0,84.55,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,268,7,100.273,3984.7,62.5,15.2,47.3,641.5,7.31,0.0,84.09,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,269,7,100.273,3984.7,61.7,15.3,46.4,641.1,7.13,0.0,83.64,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,270,7,100.273,3984.7,60.8,15.3,45.5,641.2,6.91,0.0,83.18,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,271,7,100.273,3984.7,59.9,15.3,44.6,641.6,6.73,0.0,82.73,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,272,7,100.273,3984.7,59.0,15.3,43.7,639.6,6.51,0.0,82.27,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,273,7,100.273,3984.7,58.2,15.4,42.8,642.0,6.29,0.0,81.82,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,274,7,100.273,3984.7,57.3,15.3,42.0,642.4,6.09,0.0,81.36,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,275,7,100.273,3984.7,56.4,15.2,41.2,638.5,5.86,0.0,80.91,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,276,7,100.273,3984.7,55.5,15.2,40.3,640.0,5.64,0.0,80.45,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,277,7,100.273,3984.7,54.5,15.2,39.3,640.3,5.44,0.0,80.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,278,7,100.273,3984.7,53.7,15.2,38.5,639.9,5.23,0.0,79.55,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,279,7,100.273,3984.7,52.7,15.2,37.5,639.7,5.0,0.0,79.09,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,280,7,100.273,3984.7,51.8,15.1,36.7,642.2,4.85,0.0,78.64,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,281,7,100.273,3984.7,51.0,15.2,35.8,641.4,4.67,0.0,78.18,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,282,7,100.273,3984.7,50.0,15.0,35.0,642.2,4.44,0.0,77.73,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,283,7,100.273,3984.7,49.0,15.0,34.0,643.4,4.2,0.0,77.27,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,284,7,100.273,3984.7,48.2,15.0,33.2,641.9,4.0,0.0,76.82,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,285,7,100.273,3984.7,47.1,14.9,32.2,640.7,3.79,0.0,76.36,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,286,7,100.273,3984.7,46.4,15.0,31.4,639.8,3.59,0.0,75.91,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,287,7,100.273,3984.7,45.4,15.1,30.3,641.6,3.4,0.0,75.45,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,288,7,100.273,3984.7,44.5,15.1,29.4,641.1,3.13,0.0,75.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,289,7,100.273,3984.7,43.6,15.1,28.5,639.0,2.93,0.0,74.55,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,290,7,100.273,3984.7,42.8,15.3,27.5,637.3,2.75,0.0,74.09,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,291,7,100.273,3984.7,41.9,15.2,26.7,638.6,2.55,0.0,73.64,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,292,7,100.273,3984.7,41.0,15.2,25.8,637.5,2.35,0.0,73.18,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,293,7,100.273,3984.7,40.1,15.1,25.0,638.6,2.14,0.0,72.73,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,294,7,100.273,3984.7,39.2,15.1,24.1,640.2,1.94,0.0,72.27,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,295,7,100.273,3984.7,38.3,15.1,23.2,639.8,1.75,0.0,71.82,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,296,7,100.273,3984.7,37.5,15.1,22.4,637.1,1.54,0.0,71.36,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,297,7,100.273,3984.7,36.6,15.0,21.6,637.1,1.35,0.0,70.91,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,298,7,100.273,3984.7,35.7,15.1,20.6,637.1,1.18,0.0,70.45,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,299,7,100.273,3984.7,34.8,15.0,19.8,639.6,0.98,0.0,70.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,300,8,100.273,3984.7,34.4,24.9,9.5,639.4,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,301,8,100.273,3847.3,34.1,24.8,9.3,637.0,1.05,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,302,8,100.273,3709.9,33.7,24.8,8.9,636.5,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,303,8,100.273,3572.5,33.4,24.7,8.7,635.8,1.05,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,304,8,100.273,3435.1,33.1,24.7,8.4,635.2,1.01,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,305,8,100.273,3297.7,32.8,24.6,8.2,634.6,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,306,8,100.273,3160.3,32.6,24.7,7.9,637.4,0.99,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,307,8,100.273,3022.9,32.4,24.7,7.7,640.2,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,308,8,100.273,2885.5,32.2,24.8,7.4,641.8,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,309,8,100.273,2748.1,31.9,25.0,6.9,638.3,0.99,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,310,8,100.273,2610.7,31.7,24.9,6.8,639.2,0.96,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,311,8,100.273,2473.3,31.5,24.9,6.6,637.3,0.97,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,312,8,100.273,2335.9,31.4,24.9,6.5,638.8,0.97,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,313,8,100.273,2198.5,31.2,25.0,6.2,639.7,0.97,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,314,8,100.273,2061.1,31.1,24.9,6.2,641.5,0.98,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,315,8,100.273,1923.7,31.0,24.9,6.1,641.4,0.96,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,316,8,100.273,1786.3,30.7,25.0,5.7,640.7,0.97,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,317,8,100.273,1648.9,30.6,24.9,5.7,641.6,0.98,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,318,8,100.273,1511.5,30.5,24.9,5.6,642.2,0.99,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,319,8,100.273,1374.0,30.5,24.8,5.7,640.5,1.01,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,320,8,100.273,1236.6,30.4,24.9,5.5,640.3,1.0,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,321,8,100.273,1099.2,30.4,24.9,5.5,639.6,1.04,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,322,8,100.273,961.8,30.3,24.8,5.5,641.6,1.05,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,323,8,100.273,824.4,30.3,24.9,5.4,641.8,1.06,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,324,8,100.273,687.0,30.4,25.0,5.4,642.0,1.1,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,325,8,100.273,549.6,30.4,24.9,5.5,644.2,1.1,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,326,8,100.273,412.2,30.4,25.1,5.3,0.0,1.09,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,327,8,100.273,274.8,30.3,25.1,5.2,0.0,1.03,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,328,8,100.273,137.4,30.3,25.1,5.2,0.0,1.02,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING
+92,329,8,100.273,0.0,30.4,25.0,5.4,0.0,1.05,0.0,0.0,Step 5 compound event — foam + cooling spike during peak rate.,COMPOUND_FOAM_COOLING

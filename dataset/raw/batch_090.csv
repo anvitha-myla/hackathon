@@ -1,216 +1,331 @@
-batch_id,time_step_min,raw_material_purity_coa,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
-90,0,98.039,54.4,19.2,35.2,594.2,5.52,0.0,16.593,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,1,98.039,57.3,19.5,37.8,596.8,6.22,0.0,17.805,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,2,98.039,59.6,19.4,40.2,594.4,6.81,0.0,18.949,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,3,98.039,61.5,19.5,42.0,598.0,7.26,0.0,19.847,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,4,98.039,63.3,19.6,43.7,595.8,7.64,0.0,20.694,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,5,98.039,64.7,19.7,45.0,595.3,8.0,0.02,21.355,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,6,98.039,66.0,19.8,46.2,597.7,8.33,0.0,21.914,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,7,98.039,67.0,19.8,47.2,599.2,8.6,0.0,22.412,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,8,98.039,67.9,19.7,48.2,597.2,8.84,0.0,22.801,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,9,98.039,68.7,19.7,49.0,598.9,9.05,0.0,23.167,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,10,98.039,69.4,19.7,49.7,598.5,9.23,0.0,23.461,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,11,98.039,70.0,19.7,50.3,596.7,9.37,0.0,23.716,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,12,98.039,70.4,19.8,50.6,594.9,9.47,0.0,23.887,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,13,98.039,70.7,19.8,50.9,594.3,9.61,0.0,24.1,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,14,98.039,71.0,19.9,51.1,589.4,9.69,0.05,24.259,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,15,98.039,71.3,20.1,51.2,587.0,9.76,0.04,24.358,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,16,98.039,71.6,20.0,51.6,587.9,9.8,0.0,24.511,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,17,98.039,71.9,19.9,52.0,591.4,9.84,0.0,24.584,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,18,98.039,72.0,19.9,52.1,594.8,9.86,0.0,24.642,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,19,98.039,72.0,19.7,52.3,600.0,9.88,0.02,24.735,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,20,98.039,72.2,19.7,52.5,597.9,9.91,3.01,24.765,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,21,98.039,80.7,19.6,61.1,601.0,18.21,2.75,28.76,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,22,98.039,91.3,17.4,73.9,597.9,17.03,2.16,34.781,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,23,98.039,98.7,17.4,81.3,600.2,15.97,1.37,38.207,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,24,98.039,101.9,17.2,84.7,597.3,15.09,1.28,39.869,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,25,98.039,104.7,17.2,87.5,599.4,14.35,1.31,41.102,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,26,98.039,107.3,17.0,90.3,601.2,13.67,1.34,42.374,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,27,98.039,109.9,17.0,92.9,601.4,13.1,1.36,43.536,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,28,98.039,112.3,16.9,95.4,601.6,12.65,1.3,44.679,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,29,98.039,114.6,17.1,97.5,598.2,12.26,1.24,45.76,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,30,98.039,115.0,17.2,97.8,595.7,11.9,1.26,45.938,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,31,98.039,115.0,17.1,97.9,602.9,11.53,1.31,45.966,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,32,98.039,115.1,17.2,97.9,604.2,11.33,1.32,45.982,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,33,98.039,115.1,17.1,98.0,601.4,11.12,1.29,45.969,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,34,98.039,115.0,17.0,98.0,599.7,10.92,1.29,45.985,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,35,98.039,114.9,17.1,97.8,597.9,10.84,1.21,46.005,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,36,98.039,114.9,16.8,98.1,598.4,10.71,1.32,46.025,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,37,98.039,114.9,16.9,98.0,599.9,10.61,1.3,45.985,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,38,98.039,114.8,16.8,98.0,597.6,10.5,1.21,46.018,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,39,98.039,114.8,16.9,97.9,601.6,10.46,1.18,45.99,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,40,98.039,114.8,17.0,97.8,600.1,10.42,1.19,46.0,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,41,98.039,114.8,17.0,97.8,604.1,10.36,1.22,46.012,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,42,98.039,114.9,17.1,97.8,608.2,10.3,1.32,46.039,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,43,98.039,114.9,17.1,97.8,616.6,10.29,1.34,46.038,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,44,98.039,115.0,17.4,97.6,618.0,10.27,1.3,46.006,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,45,98.039,115.1,17.7,97.4,617.8,10.28,1.32,45.98,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,46,98.039,115.1,17.7,97.4,619.7,10.27,1.38,46.028,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,47,98.039,114.9,17.7,97.2,619.6,10.2,1.42,46.065,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,48,98.039,114.9,17.8,97.1,623.6,10.2,1.47,46.023,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,49,98.039,115.0,17.7,97.3,624.7,10.12,1.38,46.1,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,50,98.039,115.1,17.8,97.3,624.1,10.12,1.36,46.05,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,51,98.039,115.1,17.7,97.4,627.0,10.16,1.3,46.092,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,52,98.039,115.1,17.8,97.3,627.1,10.13,1.33,46.096,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,53,98.039,115.0,17.7,97.3,623.2,10.08,1.28,46.09,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,54,98.039,115.1,17.7,97.4,625.1,10.06,1.21,46.101,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,55,98.039,115.1,17.6,97.5,629.3,10.03,1.22,46.118,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,56,98.039,115.2,17.5,97.7,628.8,10.05,1.29,46.128,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,57,98.039,115.3,17.5,97.8,631.9,10.02,1.29,46.086,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,58,98.039,115.3,17.6,97.7,631.9,10.02,1.26,46.151,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,59,98.039,115.3,17.6,97.7,632.2,10.0,1.24,46.134,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,60,98.039,115.3,17.5,97.8,630.5,10.0,1.27,46.14,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,61,98.039,115.3,17.4,97.9,634.3,10.01,1.34,46.136,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,62,98.039,115.3,17.4,97.9,629.7,10.01,1.31,46.161,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,63,98.039,115.3,17.4,97.9,633.2,10.02,1.38,46.161,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,64,98.039,115.3,17.5,97.8,632.8,10.06,1.37,46.142,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,65,98.039,115.2,17.2,98.0,635.2,10.02,1.34,46.164,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,66,98.039,115.2,17.3,97.9,630.6,10.01,1.35,46.153,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,67,98.039,115.1,17.4,97.7,630.6,9.97,1.28,46.19,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,68,98.039,115.1,17.4,97.7,632.5,9.97,1.3,46.202,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,69,98.039,115.1,17.2,97.9,632.2,9.99,1.35,46.221,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,70,98.039,115.0,17.1,97.9,635.9,9.95,1.37,46.234,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,71,98.039,115.0,17.0,98.0,636.7,9.95,1.38,46.207,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,72,98.039,115.0,17.0,98.0,637.9,9.92,1.35,46.214,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,73,98.039,115.0,16.9,98.1,639.2,9.92,1.31,46.226,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,74,98.039,115.0,16.8,98.2,638.5,10.01,1.27,46.268,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,75,98.039,115.1,16.7,98.4,637.3,10.03,1.31,46.235,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,76,98.039,115.1,16.7,98.4,641.4,10.04,1.31,46.278,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,77,98.039,115.2,16.8,98.4,600.6,9.96,1.31,32.38,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,78,98.039,115.1,16.9,98.2,605.2,9.92,1.32,32.368,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,79,98.039,115.0,16.9,98.1,605.2,9.93,1.26,32.37,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,80,98.039,115.0,16.7,98.3,603.2,9.98,1.23,32.386,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,81,98.039,114.9,16.9,98.0,603.1,10.0,1.23,32.381,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,82,98.039,114.8,16.8,98.0,602.7,10.0,1.17,32.383,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,83,98.039,115.0,16.7,98.3,605.3,10.01,1.22,32.368,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,84,98.039,114.9,16.4,98.5,610.5,9.92,1.23,32.392,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,85,98.039,114.9,16.4,98.5,613.3,9.87,1.31,32.395,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,86,98.039,114.8,16.4,98.4,612.5,9.9,1.34,32.398,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,87,98.039,114.9,16.4,98.5,616.4,9.93,1.3,32.392,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,88,98.039,114.9,16.5,98.4,659.8,9.93,1.34,32.377,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,89,98.039,114.9,16.4,98.5,659.0,9.93,1.35,32.422,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,90,98.039,115.0,16.5,98.5,657.5,9.94,1.33,32.393,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,91,98.039,114.9,16.7,98.2,653.2,9.99,1.4,32.377,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,92,98.039,114.9,16.5,98.4,649.2,9.97,1.42,32.391,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,93,98.039,114.8,16.7,98.1,654.2,9.96,1.4,32.403,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,94,98.039,114.9,16.7,98.2,654.9,9.92,1.33,32.359,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,95,98.039,114.9,16.6,98.3,652.5,10.54,1.33,32.36,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,96,98.039,115.0,16.5,98.5,654.8,11.72,1.38,32.372,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,97,98.039,115.0,16.7,98.3,655.3,13.16,1.31,32.366,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,98,98.039,115.1,16.5,98.6,656.3,14.82,1.34,32.345,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,99,98.039,115.1,16.6,98.5,658.1,16.65,1.35,46.234,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,100,98.039,115.1,16.6,98.5,658.0,18.56,1.35,46.208,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,101,98.039,115.1,16.6,98.5,657.6,20.01,1.34,46.196,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,102,98.039,115.0,16.6,98.4,656.4,19.94,1.3,46.203,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,103,98.039,114.9,16.6,98.3,656.5,19.91,1.3,46.158,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,104,98.039,114.6,16.7,97.9,658.1,19.91,1.26,45.986,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,105,98.039,113.9,16.8,97.1,659.7,19.9,1.24,45.711,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,106,98.039,113.1,16.7,96.4,663.0,19.88,1.24,45.359,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,107,98.039,112.0,16.6,95.4,665.2,19.84,1.19,44.88,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,108,98.039,110.8,16.8,94.0,664.1,19.87,1.2,44.301,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,109,98.039,109.3,16.6,92.7,664.0,19.88,1.18,43.682,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,110,98.039,107.9,16.8,91.1,667.2,19.86,1.15,43.001,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,111,98.039,106.4,16.8,89.6,670.5,19.88,1.16,42.234,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,112,98.039,104.7,16.7,88.0,668.3,19.92,1.16,41.465,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,113,98.039,103.0,16.6,86.4,668.1,19.97,1.18,40.666,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,114,98.039,101.3,16.8,84.5,667.8,19.97,1.15,39.792,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,115,98.039,99.5,16.7,82.8,667.5,19.95,1.16,38.989,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,116,98.039,97.6,16.9,80.7,671.0,19.97,1.34,38.145,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,117,98.039,95.8,16.7,79.1,674.0,20.02,1.56,37.3,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,118,98.039,94.1,16.7,77.4,674.1,20.03,1.77,36.495,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,119,98.039,92.6,16.7,75.9,668.5,20.02,1.97,35.696,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,120,98.039,90.9,16.8,74.1,670.1,20.05,2.14,34.932,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,121,98.039,89.2,16.9,72.3,670.1,20.03,2.75,34.113,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,122,98.039,87.6,16.9,70.7,671.6,20.0,2.79,33.322,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,123,98.039,86.1,18.9,67.2,669.0,20.0,2.82,31.697,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,124,98.039,84.6,18.9,65.7,668.2,19.99,2.8,31.029,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,125,98.039,83.3,19.2,64.1,668.3,20.0,2.78,30.328,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,126,98.039,82.0,19.2,62.8,668.9,19.97,2.79,29.628,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,127,98.039,80.6,19.2,61.4,665.9,19.99,2.74,29.061,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,128,98.039,79.3,19.1,60.2,668.0,19.97,2.75,28.477,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,129,98.039,78.1,19.2,58.9,669.5,19.9,2.77,27.867,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,130,98.039,77.1,19.0,58.1,669.0,19.89,2.67,27.385,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,131,98.039,75.9,19.3,56.6,673.3,19.92,2.65,26.793,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,132,98.039,74.9,19.3,55.6,673.7,19.88,2.61,26.315,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,133,98.039,73.8,19.4,54.4,673.7,19.88,2.68,25.819,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,134,98.039,72.9,19.2,53.7,671.9,19.9,2.65,25.358,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,135,98.039,71.9,19.0,52.9,667.8,19.91,2.67,24.981,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,136,98.039,71.2,19.3,51.9,668.3,19.87,2.64,24.468,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,137,98.039,70.4,19.4,51.0,668.6,19.85,2.65,24.104,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,138,98.039,69.6,19.3,50.3,667.5,19.88,2.65,23.733,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,139,98.039,68.8,19.3,49.5,669.8,19.89,2.69,23.373,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,140,98.039,68.2,19.5,48.7,667.9,19.88,2.66,22.982,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,141,98.039,67.6,19.4,48.2,670.5,19.9,2.66,22.688,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,142,98.039,67.0,19.6,47.4,673.7,19.89,2.64,22.386,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,143,98.039,66.3,19.4,46.9,672.0,19.9,2.61,22.14,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,144,98.039,65.8,19.6,46.2,667.5,19.9,2.61,21.803,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,145,98.039,65.3,19.5,45.8,669.4,19.83,2.59,21.548,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,146,98.039,64.8,19.5,45.3,673.1,19.89,2.63,21.322,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,147,98.039,64.4,19.5,44.9,671.2,19.87,2.65,21.074,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,148,98.039,63.8,19.6,44.2,667.9,19.85,2.66,20.823,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,149,98.039,63.3,19.6,43.7,671.5,19.85,2.62,20.621,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,150,98.039,62.9,19.7,43.2,672.1,19.86,2.58,20.393,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,151,98.039,62.3,19.7,42.6,669.3,19.83,2.62,20.18,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,152,98.039,62.0,19.6,42.4,671.3,19.85,2.63,20.058,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,153,98.039,61.5,19.7,41.8,672.8,19.85,2.6,19.834,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,154,98.039,61.1,19.6,41.5,672.7,19.85,2.65,19.667,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,155,98.039,60.9,19.6,41.3,673.8,19.85,2.6,19.51,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,156,98.039,60.7,19.8,40.9,670.5,19.85,2.55,19.365,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,157,98.039,60.2,19.9,40.3,674.4,19.8,2.57,19.197,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,158,98.039,60.0,19.8,40.2,671.2,19.85,2.54,19.103,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,159,98.039,59.7,19.9,39.8,674.8,19.87,2.59,18.977,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,160,98.039,59.5,20.0,39.5,675.8,19.87,2.64,18.864,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,161,98.039,59.2,20.0,39.2,675.8,19.92,2.63,18.77,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,162,98.039,59.1,20.1,39.0,675.5,19.91,2.7,18.617,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,163,98.039,58.8,20.1,38.7,674.1,19.88,2.72,18.487,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,164,98.039,58.6,20.0,38.6,673.4,19.88,2.73,18.419,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,165,98.039,58.5,19.9,38.6,675.1,19.89,2.68,18.368,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,166,98.039,58.3,20.0,38.3,671.5,19.95,2.65,18.251,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,167,98.039,58.0,19.8,38.2,673.6,19.94,2.66,18.176,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,168,98.039,57.9,19.9,38.0,671.4,19.94,2.69,18.062,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,169,98.039,57.6,19.7,37.9,670.0,19.94,2.72,18.034,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,170,98.039,57.6,19.7,37.9,674.5,19.94,2.71,17.961,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,171,98.039,57.3,20.0,37.3,672.1,19.96,2.65,17.879,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,172,98.039,57.1,20.1,37.0,671.1,19.98,2.66,17.813,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,173,98.039,57.0,20.2,36.8,667.4,19.91,2.6,17.794,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,174,98.039,56.7,20.1,36.6,664.8,19.98,2.63,17.696,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,175,98.039,56.7,20.1,36.6,665.5,19.98,2.61,17.636,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,176,98.039,56.6,19.9,36.7,667.0,19.92,2.65,17.597,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,177,98.039,56.5,20.0,36.5,666.8,19.93,2.66,17.498,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,178,98.039,56.5,20.0,36.5,665.3,19.95,2.71,17.464,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,179,98.039,56.4,19.9,36.5,665.7,19.96,2.71,17.492,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,180,98.039,56.3,19.7,36.6,664.7,19.97,2.7,17.431,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,181,98.039,56.2,19.7,36.5,664.2,19.94,2.69,17.366,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,182,98.039,56.2,19.6,36.6,667.2,19.98,2.68,17.315,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,183,98.039,56.1,19.7,36.4,669.4,20.0,2.69,17.272,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,184,98.039,56.0,19.6,36.4,671.6,19.97,2.71,17.272,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,185,98.039,55.9,19.5,36.4,671.5,19.97,2.64,17.231,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,186,98.039,55.9,19.7,36.2,670.5,19.99,2.7,17.146,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,187,98.039,55.7,19.5,36.2,668.9,20.04,2.64,17.164,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,188,98.039,55.7,19.5,36.2,667.5,19.99,2.64,17.114,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,189,98.039,55.6,19.6,36.0,667.1,19.98,2.63,17.061,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,190,98.039,55.7,19.6,36.1,668.2,20.01,2.68,17.086,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,191,98.039,55.5,19.7,35.8,669.7,19.96,2.67,17.061,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,192,98.039,55.4,19.6,35.8,670.9,20.0,2.68,17.036,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,193,98.039,55.2,19.5,35.7,674.5,19.98,2.71,17.021,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,194,98.039,55.1,19.5,35.6,671.2,19.94,2.68,17.0,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,195,98.039,55.0,19.4,35.6,672.0,19.93,2.75,16.968,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,196,98.039,55.0,19.4,35.6,673.0,19.89,2.68,16.94,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,197,98.039,55.0,19.5,35.5,674.1,19.89,2.68,16.905,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,198,98.039,54.8,19.7,35.1,675.4,19.87,2.67,16.858,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,199,98.039,54.7,19.5,35.2,673.7,19.87,2.78,16.873,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,200,98.039,54.8,19.4,35.4,672.2,19.85,2.78,16.857,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,201,98.039,54.8,19.4,35.4,671.4,19.79,2.79,16.857,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,202,98.039,54.7,19.8,34.9,673.0,19.75,2.77,16.761,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,203,98.039,54.6,19.6,35.0,672.4,19.77,2.74,16.746,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,204,98.039,54.7,19.6,35.1,675.5,19.83,2.73,16.759,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,205,98.039,54.5,19.7,34.8,675.4,19.87,2.71,16.752,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,206,98.039,54.4,19.7,34.7,672.1,19.9,2.67,16.758,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,207,98.039,54.4,19.9,34.5,677.6,19.93,2.7,16.742,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,208,98.039,54.5,19.9,34.6,674.9,19.88,2.66,16.686,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,209,98.039,54.4,19.8,34.6,677.1,19.87,2.69,16.657,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,210,98.039,54.3,19.8,34.5,677.9,19.86,2.68,16.657,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,211,98.039,54.2,19.9,34.3,679.4,19.88,2.63,16.643,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,212,98.039,54.2,20.1,34.1,678.6,19.93,2.69,16.625,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,213,98.039,54.0,20.2,33.8,679.9,19.89,2.73,16.615,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
-90,214,98.039,53.8,20.3,33.5,680.8,19.86,2.73,16.57,"Peak exotherm: surface foaming concurrent with cooling duty loss. Torque −12%, UA soft.",COMPOUND_FOAM_COOLING
+batch_id,time_step_min,current_step_id,raw_material_purity_coa,vessel_weight_kg,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
+90,0,1,97.596,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,1,1,97.596,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,2,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,3,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,4,1,97.596,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,5,1,97.596,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,6,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,7,1,97.596,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,8,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,9,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,10,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,11,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,12,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,13,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,14,1,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,15,2,97.596,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,16,2,97.596,88.6,25.4,25.3,0.1,0.0,0.94,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,17,2,97.596,177.2,25.4,25.3,0.1,0.0,0.97,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,18,2,97.596,265.8,25.4,25.2,0.2,0.0,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,19,2,97.596,354.5,25.3,25.2,0.1,0.0,1.06,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,20,2,97.596,443.1,25.2,25.2,0.0,0.0,1.04,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,21,2,97.596,531.7,25.1,25.3,-0.2,0.0,1.06,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,22,2,97.596,620.3,25.1,25.4,-0.3,0.0,1.01,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,23,2,97.596,708.9,25.2,25.3,-0.1,0.0,1.02,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,24,2,97.596,797.5,24.9,25.3,-0.4,0.0,0.98,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,25,2,97.596,886.1,25.1,25.3,-0.2,150.0,0.99,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,26,2,97.596,974.8,25.0,25.2,-0.2,151.1,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,27,2,97.596,1063.4,24.9,25.1,-0.2,151.9,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,28,2,97.596,1152.0,25.0,25.1,-0.1,149.1,0.99,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,29,2,97.596,1240.6,25.0,25.1,-0.1,146.1,0.94,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,30,2,97.596,1329.2,25.1,25.1,0.0,147.0,0.91,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,31,2,97.596,1417.8,25.0,24.9,0.1,149.2,0.97,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,32,2,97.596,1506.4,25.0,24.9,0.1,149.3,0.97,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,33,2,97.596,1595.0,25.1,24.9,0.2,148.0,0.94,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,34,2,97.596,1683.7,25.2,24.8,0.4,148.1,0.91,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,35,2,97.596,1772.3,25.2,25.0,0.2,144.3,0.88,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,36,2,97.596,1860.9,25.0,25.0,0.0,148.7,0.87,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,37,2,97.596,1949.5,25.0,25.0,0.0,148.1,0.87,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,38,2,97.596,2038.1,25.0,24.9,0.1,144.0,0.84,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,39,2,97.596,2126.7,25.0,25.0,0.0,142.4,0.87,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,40,2,97.596,2215.3,25.0,25.0,0.0,142.8,0.84,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,41,2,97.596,2304.0,25.1,25.0,0.1,144.0,0.87,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,42,2,97.596,2392.6,25.1,25.0,0.1,148.4,0.9,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,43,2,97.596,2481.2,25.0,25.1,-0.1,149.5,0.98,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,44,2,97.596,2569.8,25.3,25.1,0.2,147.5,0.99,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,45,2,97.596,2658.4,25.3,25.2,0.1,148.4,0.98,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,46,2,97.596,2747.0,25.3,25.2,0.1,150.8,0.99,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,47,2,97.596,2835.6,25.4,25.1,0.3,152.6,0.99,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,48,2,97.596,2924.2,25.4,25.2,0.2,155.1,1.02,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,49,2,97.596,3012.9,25.4,25.0,0.4,151.3,1.03,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,50,2,97.596,3101.5,25.4,25.1,0.3,150.4,1.01,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,51,2,97.596,3190.1,25.4,25.2,0.2,147.2,1.04,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,52,2,97.596,3278.7,25.3,25.1,0.2,148.9,1.03,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,53,2,97.596,3367.3,25.4,25.0,0.4,146.7,0.99,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,54,2,97.596,3455.9,25.2,25.0,0.2,143.5,1.0,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,55,2,97.596,3544.5,25.2,24.9,0.3,143.9,1.03,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,56,2,97.596,3633.2,25.3,25.0,0.3,147.3,1.02,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,57,2,97.596,3721.8,25.1,24.9,0.2,147.1,1.04,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,58,2,97.596,3810.4,25.2,24.9,0.3,145.8,1.04,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,59,2,97.596,3899.0,25.2,24.9,0.3,144.9,1.03,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,60,3,97.596,3899.0,25.2,24.9,0.3,146.3,1.01,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,61,3,97.596,3899.0,25.1,24.9,0.2,149.6,1.32,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,62,3,97.596,3899.0,25.1,24.9,0.2,148.1,1.54,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,63,3,97.596,3899.0,25.1,24.9,0.2,151.1,1.84,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,64,3,97.596,3899.0,25.1,25.0,0.1,150.4,2.1,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,65,3,97.596,3899.0,25.0,24.9,0.1,149.4,2.39,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,66,3,97.596,3899.0,25.1,24.9,0.2,149.7,2.61,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,67,3,97.596,3899.0,25.1,24.8,0.3,146.7,2.88,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,68,3,97.596,3899.0,25.2,24.8,0.4,147.7,2.75,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,69,3,97.596,3899.0,25.1,24.9,0.2,150.0,2.46,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,70,3,97.596,3899.0,25.1,24.8,0.3,151.1,2.21,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,71,3,97.596,3899.0,25.0,24.8,0.2,151.4,1.93,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,72,3,97.596,3899.0,25.0,24.7,0.3,150.4,1.66,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,73,3,97.596,3899.0,25.0,24.7,0.3,148.2,1.39,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,74,3,97.596,3899.0,24.9,24.9,0.0,146.4,1.1,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,75,3,97.596,3899.0,24.8,24.9,-0.1,148.2,1.08,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,76,3,97.596,3899.0,24.9,25.0,-0.1,147.9,1.38,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,77,3,97.596,3899.0,24.9,24.8,0.1,148.2,1.63,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,78,3,97.596,3899.0,25.0,24.7,0.3,148.8,1.94,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,79,3,97.596,3899.0,24.9,24.7,0.2,146.0,2.21,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,80,3,97.596,3899.0,24.8,24.8,0.0,144.8,2.46,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,81,3,97.596,3899.0,24.9,24.9,0.0,144.5,2.72,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,82,3,97.596,3899.0,24.9,24.9,0.0,141.6,2.85,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,83,3,97.596,3899.0,24.8,24.9,-0.1,143.8,2.59,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,84,3,97.596,3899.0,24.7,24.7,0.0,144.9,2.36,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,85,3,97.596,3899.0,24.8,24.6,0.2,148.3,2.1,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,86,3,97.596,3899.0,24.8,24.6,0.2,149.7,1.81,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,87,3,97.596,3899.0,24.8,24.7,0.1,147.8,1.57,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,88,3,97.596,3899.0,24.8,24.7,0.1,149.6,1.33,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,89,3,97.596,3899.0,24.8,24.7,0.1,150.1,1.04,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,90,4,97.596,3899.0,24.8,84.7,-59.9,593.6,1.02,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,91,4,97.596,3899.0,25.0,84.8,-59.8,596.4,1.17,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,92,4,97.596,3899.0,25.3,84.8,-59.5,597.2,1.33,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,93,4,97.596,3899.0,25.9,84.7,-58.8,596.5,1.57,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,94,4,97.596,3899.0,26.4,84.6,-58.2,593.7,1.77,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,95,4,97.596,3899.0,27.0,84.7,-57.7,593.8,1.94,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,96,4,97.596,3899.0,27.6,84.7,-57.1,596.9,2.16,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,97,4,97.596,3899.0,28.5,84.6,-56.1,594.4,2.36,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,98,4,97.596,3899.0,29.1,84.6,-55.5,597.0,2.57,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,99,4,97.596,3899.0,30.1,84.7,-54.6,598.1,2.78,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,100,4,97.596,3899.0,30.9,84.8,-53.9,599.1,2.98,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,101,4,97.596,3899.0,31.8,84.9,-53.1,599.5,3.17,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,102,4,97.596,3899.0,32.8,84.8,-52.0,598.0,3.36,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,103,4,97.596,3899.0,33.7,84.7,-51.0,598.1,3.56,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,104,4,97.596,3899.0,34.7,84.7,-50.0,596.4,3.77,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,105,4,97.596,3899.0,35.7,84.7,-49.0,595.3,3.99,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,106,4,97.596,3899.0,36.7,84.6,-47.9,595.4,4.22,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,107,4,97.596,3899.0,37.6,84.5,-46.9,593.5,4.45,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,108,4,97.596,3899.0,38.7,84.6,-45.9,593.7,4.64,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,109,4,97.596,3899.0,39.6,84.6,-45.0,592.9,4.84,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,110,4,97.596,3899.0,40.7,84.6,-43.9,591.5,5.07,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,111,4,97.596,3899.0,41.7,84.6,-42.9,592.1,5.31,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,112,4,97.596,3899.0,42.6,84.7,-42.1,591.9,5.5,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,113,4,97.596,3899.0,43.6,84.8,-41.2,592.3,5.7,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,114,4,97.596,3899.0,44.6,84.8,-40.2,591.0,5.9,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,115,4,97.596,3899.0,45.6,84.8,-39.2,591.5,6.1,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,116,4,97.596,3899.0,46.7,84.8,-38.1,593.7,6.34,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,117,4,97.596,3899.0,47.6,84.9,-37.3,594.8,6.57,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,118,4,97.596,3899.0,48.6,85.0,-36.4,596.1,6.78,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,119,4,97.596,3899.0,49.6,85.0,-35.4,596.5,6.93,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,120,4,97.596,3899.0,50.7,85.0,-34.3,596.1,7.15,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,121,4,97.596,3899.0,51.8,85.0,-33.2,595.9,7.36,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,122,4,97.596,3899.0,52.8,84.9,-32.1,597.7,7.58,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,123,4,97.596,3899.0,53.8,84.9,-31.1,599.1,7.75,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,124,4,97.596,3899.0,54.9,84.9,-30.0,598.0,7.95,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,125,4,97.596,3899.0,56.0,84.9,-28.9,597.3,8.15,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,126,4,97.596,3899.0,56.9,84.9,-28.0,597.6,8.36,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,127,4,97.596,3899.0,58.0,84.9,-26.9,595.5,8.54,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,128,4,97.596,3899.0,59.0,84.9,-25.9,595.8,8.76,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,129,4,97.596,3899.0,60.0,84.7,-24.7,596.9,8.98,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,130,4,97.596,3899.0,61.0,84.7,-23.7,592.6,9.18,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,131,4,97.596,3899.0,62.1,84.7,-22.6,591.5,9.43,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,132,4,97.596,3899.0,63.2,84.7,-21.5,589.9,9.64,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,133,4,97.596,3899.0,64.2,84.7,-20.5,592.9,9.84,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,134,4,97.596,3899.0,65.1,84.7,-19.6,591.8,10.03,0.1,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,135,5,97.596,3899.0,67.7,18.8,48.9,592.8,9.99,3.406,50.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,136,5,97.596,3899.4,70.3,18.7,51.6,591.4,14.99,3.406,51.97,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,137,5,97.596,3900.0,75.2,18.6,56.6,592.2,14.99,3.406,68.62,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,138,5,97.596,3900.8,81.4,15.7,65.7,592.6,14.98,3.406,90.58,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,139,5,97.596,3901.7,88.9,15.7,73.2,594.4,15.0,2.162,116.95,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,140,5,97.596,3902.8,91.8,15.7,76.1,593.6,14.98,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,141,5,97.596,3904.0,91.8,15.7,76.1,594.2,15.01,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,142,5,97.596,3905.6,91.9,15.7,76.2,594.1,15.04,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,143,5,97.596,3907.4,91.9,15.7,76.2,593.3,13.46,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,144,5,97.596,3909.3,92.0,15.7,76.3,594.0,11.96,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,145,5,97.596,3911.2,91.9,15.5,76.4,593.8,11.14,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,146,5,97.596,3913.1,92.0,15.7,76.3,596.3,10.7,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,147,5,97.596,3914.9,92.0,15.6,76.4,598.1,10.4,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,148,5,97.596,3916.8,92.0,15.6,76.4,599.3,10.2,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,149,5,97.596,3918.7,92.0,15.6,76.4,598.4,10.14,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,150,5,97.596,3920.6,92.0,15.6,76.4,597.1,10.1,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,151,5,97.596,3922.4,92.0,15.5,76.5,599.5,10.04,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,152,5,97.596,3924.3,92.0,15.5,76.5,600.7,10.04,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,153,5,97.596,3926.2,92.0,15.5,76.5,600.3,10.05,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,154,5,97.596,3928.1,92.0,15.6,76.4,603.0,10.04,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,155,5,97.596,3929.9,92.0,15.5,76.5,601.8,10.05,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,156,5,97.596,3931.8,92.1,15.5,76.6,600.2,10.01,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,157,5,97.596,3933.7,92.2,15.4,76.8,601.7,10.05,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,158,5,97.596,3935.6,92.2,15.5,76.7,600.9,10.02,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,159,5,97.596,3937.4,92.2,15.6,76.6,604.1,10.06,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,160,5,97.596,3939.3,92.3,15.6,76.7,607.1,10.07,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,161,5,97.596,3941.2,92.3,15.7,76.6,534.0,10.07,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,162,5,97.596,3943.0,92.3,15.7,76.6,537.6,10.07,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,163,5,97.596,3944.9,92.3,15.6,76.7,539.2,10.05,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,164,5,97.596,3946.8,92.3,15.6,76.7,540.3,10.05,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,165,5,97.596,3948.7,92.3,15.6,76.7,538.5,10.06,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,166,5,97.596,3950.5,92.3,15.8,76.5,538.0,10.03,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,167,5,97.596,3952.4,92.2,15.7,76.5,539.0,10.05,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,168,5,97.596,3954.3,92.3,15.7,76.6,540.7,10.03,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,169,5,97.596,3956.2,92.2,15.7,76.5,616.6,10.01,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,170,5,97.596,3958.0,92.2,15.8,76.4,617.1,10.06,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,171,5,97.596,3959.9,92.4,15.8,76.6,615.1,10.03,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,172,5,97.596,3961.8,92.5,15.9,76.6,616.3,10.02,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,173,5,97.596,3963.7,92.5,15.7,76.8,614.5,9.98,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,174,5,97.596,3965.5,92.5,15.9,76.6,616.4,9.95,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,175,5,97.596,3967.4,92.5,15.9,76.6,616.2,9.96,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,176,5,97.596,3969.3,92.4,15.7,76.7,618.7,9.97,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,177,5,97.596,3971.1,92.4,15.7,76.7,620.2,9.97,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,178,5,97.596,3973.0,92.4,15.8,76.6,622.9,9.95,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,179,5,97.596,3974.9,92.5,15.8,76.7,623.4,9.95,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,180,5,97.596,3976.8,92.4,15.8,76.6,624.0,9.94,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,181,5,97.596,3978.6,92.3,15.8,76.5,624.0,9.93,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,182,5,97.596,3980.5,92.3,15.9,76.4,624.4,9.96,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,183,5,97.596,3982.4,92.3,15.9,76.4,625.4,9.98,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,184,5,97.596,3984.3,92.3,15.9,76.4,627.1,10.0,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,185,5,97.596,3986.1,92.3,15.9,76.4,624.5,10.0,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,186,5,97.596,3988.0,92.3,15.9,76.4,628.1,9.99,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,187,5,97.596,3989.9,92.3,16.0,76.3,626.0,9.98,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,188,5,97.596,3991.8,92.3,15.9,76.4,626.6,9.96,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,189,5,97.596,3993.6,92.3,15.9,76.4,627.1,9.96,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,190,5,97.596,3995.5,92.4,16.0,76.4,630.2,9.97,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,191,5,97.596,3997.4,92.4,15.9,76.5,630.3,9.98,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,192,5,97.596,3999.2,92.4,16.0,76.4,631.2,10.0,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,193,5,97.596,4001.1,92.4,15.9,76.5,633.7,10.04,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,194,5,97.596,4003.0,92.3,15.8,76.5,633.0,10.0,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,195,5,97.596,4004.9,92.3,15.8,76.5,637.0,10.01,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,196,5,97.596,4006.7,92.3,15.7,76.6,634.8,10.02,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,197,5,97.596,4008.6,92.3,15.7,76.6,635.4,10.04,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,198,5,97.596,4010.5,92.4,15.7,76.7,635.8,10.05,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,199,5,97.596,4012.4,92.3,15.6,76.7,641.4,10.04,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,200,5,97.596,4014.2,92.3,15.6,76.7,642.1,10.02,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,201,5,97.596,4016.1,92.3,15.4,76.9,643.6,10.01,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,202,5,97.596,4018.0,92.4,15.4,77.0,643.7,10.03,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,203,5,97.596,4019.9,92.3,15.4,76.9,643.0,10.02,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,204,5,97.596,4021.4,92.4,15.5,76.9,642.9,15.01,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,205,5,97.596,4021.9,92.4,15.6,76.8,642.2,15.06,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,206,5,97.596,4022.0,92.5,15.7,76.8,640.2,15.03,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,207,5,97.596,4022.0,92.5,15.7,76.8,641.3,15.08,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,208,5,97.596,4022.0,92.5,15.6,76.9,639.6,15.06,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,209,5,97.596,4022.0,92.5,15.6,76.9,641.0,15.08,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,210,5,97.596,4022.0,92.5,15.6,76.9,640.7,15.09,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,211,5,97.596,4022.0,92.5,15.6,76.9,638.6,15.11,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,212,5,97.596,4022.0,92.6,15.7,76.9,641.1,15.1,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,213,5,97.596,4022.0,92.6,15.6,77.0,642.7,15.12,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,214,5,97.596,4022.0,92.7,15.6,77.1,642.8,15.13,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,215,5,97.596,4022.0,92.7,15.7,77.0,643.9,15.09,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,216,5,97.596,4022.0,92.6,15.6,77.0,646.0,15.11,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,217,5,97.596,4022.0,92.6,15.8,76.8,647.1,15.08,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,218,5,97.596,4022.0,92.6,15.8,76.8,645.0,15.05,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,219,5,97.596,4022.0,92.6,15.8,76.8,641.8,15.03,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,220,5,97.596,4022.0,92.6,15.9,76.7,641.3,15.0,1.873,111.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,221,5,97.596,4022.0,92.5,15.8,76.7,640.9,15.01,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,222,5,97.596,4022.0,92.6,15.9,76.7,640.4,15.04,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,223,5,97.596,4022.0,92.6,15.8,76.8,641.7,15.03,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,224,5,97.596,4022.0,92.6,15.8,76.8,643.8,15.0,1.873,120.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,225,6,97.596,4022.0,85.6,69.9,15.7,644.1,9.97,0.4,30.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,226,6,97.596,4022.0,81.8,70.0,11.8,647.4,10.0,0.386,29.83,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,227,6,97.596,4022.0,78.9,69.9,9.0,645.9,9.94,0.372,29.66,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,228,6,97.596,4022.0,76.8,69.9,6.9,644.8,9.94,0.359,29.48,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,229,6,97.596,4022.0,75.2,69.9,5.3,643.9,9.98,0.345,29.31,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,230,6,97.596,4022.0,74.1,69.8,4.3,641.1,9.96,0.331,29.14,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,231,6,97.596,4022.0,73.1,69.8,3.3,640.5,9.9,0.317,28.97,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,232,6,97.596,4022.0,72.4,69.7,2.7,641.1,9.94,0.303,28.79,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,233,6,97.596,4022.0,71.9,69.7,2.2,641.5,9.89,0.29,28.62,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,234,6,97.596,4022.0,71.5,69.6,1.9,641.8,9.87,0.276,28.45,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,235,6,97.596,4022.0,71.2,69.8,1.4,642.2,9.87,0.262,28.28,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,236,6,97.596,4022.0,70.9,69.5,1.4,639.5,9.89,0.248,28.1,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,237,6,97.596,4022.0,70.8,69.6,1.2,638.2,9.94,0.234,27.93,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,238,6,97.596,4022.0,70.7,69.6,1.1,637.5,9.98,0.221,27.76,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,239,6,97.596,4022.0,70.6,69.5,1.1,637.3,9.99,0.207,27.59,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,240,6,97.596,4022.0,70.5,69.6,0.9,637.2,9.99,0.193,27.41,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,241,6,97.596,4022.0,70.5,69.6,0.9,638.5,10.0,0.179,27.24,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,242,6,97.596,4022.0,70.5,69.7,0.8,641.5,9.98,0.166,27.07,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,243,6,97.596,4022.0,70.5,69.7,0.8,642.8,10.01,0.152,26.9,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,244,6,97.596,4022.0,70.5,69.8,0.7,644.8,10.01,0.138,26.72,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,245,6,97.596,4022.0,70.5,69.8,0.7,645.4,10.06,0.124,26.55,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,246,6,97.596,4022.0,70.6,69.7,0.9,646.1,10.02,0.11,26.38,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,247,6,97.596,4022.0,70.5,69.8,0.7,646.7,10.04,0.097,26.21,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,248,6,97.596,4022.0,70.5,69.9,0.6,643.6,10.07,0.083,26.03,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,249,6,97.596,4022.0,70.4,69.8,0.6,640.8,10.09,0.069,25.86,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,250,6,97.596,4022.0,70.4,69.7,0.7,643.0,10.05,0.055,25.69,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,251,6,97.596,4022.0,70.4,69.7,0.7,643.2,10.07,0.041,25.52,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,252,6,97.596,4022.0,70.4,69.7,0.7,646.4,10.03,0.028,25.34,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,253,6,97.596,4022.0,70.4,69.8,0.6,648.5,10.02,0.014,25.17,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,254,6,97.596,4022.0,70.4,69.8,0.6,649.0,10.05,0.0,25.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,255,7,97.596,4022.0,70.4,14.8,55.6,648.1,10.04,0.0,90.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,256,7,97.596,4022.0,70.3,14.8,55.5,646.3,9.79,0.0,89.55,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,257,7,97.596,4022.0,70.0,14.7,55.3,646.3,9.62,0.0,89.09,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,258,7,97.596,4022.0,69.7,14.8,54.9,644.1,9.41,0.0,88.64,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,259,7,97.596,4022.0,69.4,14.7,54.7,643.9,9.19,0.0,88.18,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,260,7,97.596,4022.0,68.8,14.7,54.1,640.7,8.99,0.0,87.73,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,261,7,97.596,4022.0,68.2,14.7,53.5,638.8,8.85,0.0,87.27,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,262,7,97.596,4022.0,67.5,14.7,52.8,637.0,8.63,0.0,86.82,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,263,7,97.596,4022.0,66.8,14.7,52.1,637.2,8.39,0.0,86.36,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,264,7,97.596,4022.0,66.1,14.7,51.4,638.2,8.15,0.0,85.91,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,265,7,97.596,4022.0,65.3,14.7,50.6,638.3,7.97,0.0,85.45,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,266,7,97.596,4022.0,64.6,14.7,49.9,639.5,7.79,0.0,85.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,267,7,97.596,4022.0,63.8,14.7,49.1,638.7,7.62,0.0,84.55,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,268,7,97.596,4022.0,62.9,14.7,48.2,637.4,7.38,0.0,84.09,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,269,7,97.596,4022.0,62.1,14.6,47.5,637.5,7.14,0.0,83.64,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,270,7,97.596,4022.0,61.3,14.6,46.7,635.9,6.94,0.0,83.18,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,271,7,97.596,4022.0,60.5,14.6,45.9,636.2,6.77,0.0,82.73,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,272,7,97.596,4022.0,59.6,14.7,44.9,635.8,6.57,0.0,82.27,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,273,7,97.596,4022.0,58.8,14.9,43.9,634.9,6.37,0.0,81.82,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,274,7,97.596,4022.0,57.9,14.8,43.1,635.1,6.16,0.0,81.36,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,275,7,97.596,4022.0,56.9,14.8,42.1,636.3,5.97,0.0,80.91,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,276,7,97.596,4022.0,56.1,14.8,41.3,636.1,5.74,0.0,80.45,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,277,7,97.596,4022.0,55.1,14.8,40.3,636.6,5.52,0.0,80.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,278,7,97.596,4022.0,54.2,14.8,39.4,637.5,5.29,0.0,79.55,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,279,7,97.596,4022.0,53.2,14.8,38.4,640.6,5.09,0.0,79.09,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,280,7,97.596,4022.0,52.3,14.8,37.5,642.7,4.88,0.0,78.64,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,281,7,97.596,4022.0,51.4,14.8,36.6,639.9,4.67,0.0,78.18,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,282,7,97.596,4022.0,50.5,14.9,35.6,643.1,4.43,0.0,77.73,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,283,7,97.596,4022.0,49.6,14.9,34.7,645.4,4.23,0.0,77.27,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,284,7,97.596,4022.0,48.7,14.9,33.8,642.4,4.07,0.0,76.82,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,285,7,97.596,4022.0,47.9,15.0,32.9,642.6,3.86,0.0,76.36,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,286,7,97.596,4022.0,47.0,14.8,32.2,642.5,3.67,0.0,75.91,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,287,7,97.596,4022.0,46.2,14.8,31.4,644.5,3.47,0.0,75.45,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,288,7,97.596,4022.0,45.3,14.8,30.5,646.8,3.27,0.0,75.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,289,7,97.596,4022.0,44.4,14.8,29.6,646.5,3.05,0.0,74.55,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,290,7,97.596,4022.0,43.6,14.8,28.8,647.0,2.81,0.0,74.09,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,291,7,97.596,4022.0,42.6,15.0,27.6,646.9,2.62,0.0,73.64,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,292,7,97.596,4022.0,41.7,15.0,26.7,645.8,2.44,0.0,73.18,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,293,7,97.596,4022.0,40.7,15.1,25.6,645.8,2.24,0.0,72.73,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,294,7,97.596,4022.0,39.8,15.1,24.7,647.1,2.05,0.0,72.27,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,295,7,97.596,4022.0,38.9,15.1,23.8,647.1,1.83,0.0,71.82,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,296,7,97.596,4022.0,37.9,15.1,22.8,647.0,1.63,0.0,71.36,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,297,7,97.596,4022.0,37.0,15.2,21.8,648.2,1.4,0.0,70.91,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,298,7,97.596,4022.0,36.3,15.2,21.1,646.1,1.18,0.0,70.45,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,299,7,97.596,4022.0,35.3,15.3,20.0,648.5,0.93,0.0,70.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,300,8,97.596,4022.0,34.8,25.2,9.6,647.8,0.91,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,301,8,97.596,3883.3,34.4,25.1,9.3,645.0,0.91,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,302,8,97.596,3744.6,33.9,25.2,8.7,647.9,0.91,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,303,8,97.596,3605.9,33.6,25.2,8.4,647.6,0.9,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,304,8,97.596,3467.2,33.3,25.1,8.2,645.5,0.88,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,305,8,97.596,3328.6,33.0,25.2,7.8,643.8,0.9,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,306,8,97.596,3189.9,32.8,25.1,7.7,643.3,0.95,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,307,8,97.596,3051.2,32.6,25.1,7.5,640.5,0.91,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,308,8,97.596,2912.5,32.5,25.1,7.4,642.1,0.97,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,309,8,97.596,2773.8,32.3,25.0,7.3,644.4,0.96,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,310,8,97.596,2635.1,32.1,25.0,7.1,644.3,0.95,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,311,8,97.596,2496.4,32.0,25.1,6.9,643.3,0.92,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,312,8,97.596,2357.7,31.8,25.1,6.7,644.1,0.99,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,313,8,97.596,2219.0,31.5,25.2,6.3,644.0,0.99,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,314,8,97.596,2080.3,31.4,25.2,6.2,645.5,0.97,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,315,8,97.596,1941.7,31.4,25.1,6.3,644.9,0.98,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,316,8,97.596,1803.0,31.3,25.1,6.2,643.5,1.01,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,317,8,97.596,1664.3,31.1,25.3,5.8,643.1,0.98,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,318,8,97.596,1525.6,30.9,25.3,5.6,646.0,0.97,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,319,8,97.596,1386.9,30.9,25.2,5.7,646.1,0.96,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,320,8,97.596,1248.2,30.8,25.2,5.6,646.7,0.94,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,321,8,97.596,1109.5,30.7,25.3,5.4,645.4,0.94,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,322,8,97.596,970.8,30.6,25.2,5.4,644.8,0.92,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,323,8,97.596,832.1,30.5,25.2,5.3,640.2,0.93,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,324,8,97.596,693.4,30.5,25.2,5.3,637.4,0.92,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,325,8,97.596,554.8,30.5,25.2,5.3,640.0,0.93,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,326,8,97.596,416.1,30.5,25.2,5.3,0.0,0.93,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,327,8,97.596,277.4,30.4,25.2,5.2,0.0,0.94,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,328,8,97.596,138.7,30.3,25.3,5.0,0.0,0.89,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING
+90,329,8,97.596,0.0,30.4,25.3,5.1,0.0,0.89,0.0,0.0,Step 5: Agitator load drop and jacket upset overlapped at peak exotherm.,COMPOUND_FOAM_COOLING

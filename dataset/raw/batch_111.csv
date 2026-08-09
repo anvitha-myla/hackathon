@@ -1,186 +1,331 @@
-batch_id,time_step_min,raw_material_purity_coa,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
-111,0,97.176,55.3,19.3,36.0,594.2,6.15,0.0,16.983,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,1,97.176,57.8,19.1,38.7,593.5,6.77,0.01,18.183,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,2,97.176,59.8,19.1,40.7,593.1,7.27,0.0,19.175,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,3,97.176,61.5,19.1,42.4,595.4,7.7,0.0,19.986,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,4,97.176,63.1,19.2,43.9,592.5,8.04,0.0,20.756,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,5,97.176,64.4,19.3,45.1,593.0,8.32,0.0,21.337,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,6,97.176,65.4,19.3,46.1,589.7,8.65,0.0,21.798,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,7,97.176,66.4,19.2,47.2,591.5,8.88,0.0,22.283,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,8,97.176,67.2,19.1,48.1,590.1,9.13,0.0,22.676,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,9,97.176,67.9,19.0,48.9,588.0,9.33,0.03,22.981,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,10,97.176,68.4,18.8,49.6,588.4,9.4,0.07,23.26,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,11,97.176,68.9,18.8,50.1,589.9,9.52,0.06,23.455,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,12,97.176,69.4,18.9,50.5,590.2,9.63,0.0,23.65,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,13,97.176,69.7,19.1,50.6,593.7,9.68,0.04,23.813,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,14,97.176,69.8,19.1,50.7,594.4,9.75,0.07,23.991,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,15,97.176,70.1,19.2,50.9,593.6,9.83,0.1,24.057,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,16,97.176,70.3,19.3,51.0,594.0,9.85,0.14,24.174,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,17,97.176,70.4,19.2,51.2,591.1,9.88,0.06,24.298,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,18,97.176,70.6,19.1,51.5,595.6,9.96,0.01,24.334,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,19,97.176,70.8,19.1,51.7,594.4,10.03,0.03,24.388,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,20,97.176,70.9,18.9,52.0,592.1,10.09,2.95,24.479,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,21,97.176,79.0,18.9,60.1,597.9,18.1,2.7,28.303,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,22,97.176,89.6,16.8,72.8,603.0,16.97,2.15,34.199,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,23,97.176,96.9,16.9,80.0,604.5,15.95,0.0,37.651,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,24,97.176,93.3,16.9,76.4,605.8,15.11,1.8,35.843,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,25,97.176,98.8,16.8,82.0,610.7,14.38,1.21,38.452,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,26,97.176,101.6,16.9,84.7,610.6,13.78,1.27,39.764,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,27,97.176,104.4,16.9,87.5,609.0,13.29,1.32,41.096,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,28,97.176,107.0,17.2,89.8,608.3,12.87,1.32,42.288,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,29,97.176,109.5,17.4,92.1,605.2,12.5,1.38,43.442,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,30,97.176,111.8,17.3,94.5,605.6,12.14,1.43,44.553,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,31,97.176,113.7,17.2,96.5,605.8,11.88,1.42,45.574,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,32,97.176,114.6,17.3,97.3,607.8,11.7,1.41,46.018,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,33,97.176,114.5,17.4,97.1,607.9,11.52,1.33,45.967,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,34,97.176,114.6,17.3,97.3,610.4,11.32,1.32,45.982,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,35,97.176,114.5,17.1,97.4,615.5,11.18,1.25,46.061,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,36,97.176,114.7,17.3,97.4,615.7,11.03,1.28,46.024,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,37,97.176,114.7,17.2,97.5,614.9,10.94,1.28,46.023,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,38,97.176,114.8,17.2,97.6,618.8,10.89,1.36,46.049,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,39,97.176,114.6,17.2,97.4,621.5,10.77,1.35,46.059,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,40,97.176,114.7,17.3,97.4,623.3,10.74,1.42,46.014,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,41,97.176,114.7,17.2,97.5,623.8,10.68,1.4,46.034,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,42,97.176,114.8,17.0,97.8,622.2,10.65,1.44,46.068,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,43,97.176,114.7,17.0,97.7,620.9,10.63,1.42,46.076,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,44,97.176,114.8,17.0,97.8,621.9,10.54,1.35,46.066,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,45,97.176,114.8,16.9,97.9,626.0,10.43,1.31,46.104,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,46,97.176,114.9,16.8,98.1,623.6,10.41,1.25,46.039,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,47,97.176,114.9,16.8,98.1,624.6,10.38,1.3,46.064,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,48,97.176,115.0,16.7,98.3,625.7,10.43,1.33,46.087,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,49,97.176,115.0,16.6,98.4,624.5,10.41,1.3,46.145,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,50,97.176,115.1,16.9,98.2,623.1,10.4,1.29,46.097,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,51,97.176,115.0,16.9,98.1,620.3,10.39,1.27,46.116,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,52,97.176,115.1,16.9,98.2,621.4,10.4,1.33,46.14,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,53,97.176,115.0,16.9,98.1,619.6,10.36,1.31,46.148,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,54,97.176,115.0,16.9,98.1,620.9,10.34,1.32,46.174,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,55,97.176,115.0,16.9,98.1,622.8,10.34,1.25,46.107,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,56,97.176,115.0,16.9,98.1,627.6,10.31,1.22,46.133,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,57,97.176,115.0,17.0,98.0,627.0,10.29,1.31,46.153,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,58,97.176,115.1,17.0,98.1,625.1,10.3,1.31,46.169,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,59,97.176,115.2,17.0,98.2,627.0,10.22,1.33,46.13,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,60,97.176,115.3,16.9,98.4,631.7,10.23,1.39,46.172,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,61,97.176,115.3,16.8,98.5,634.7,10.24,1.44,46.202,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,62,97.176,115.4,16.8,98.6,637.0,10.26,1.44,46.192,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,63,97.176,115.4,16.7,98.7,636.6,10.3,1.47,46.226,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,64,97.176,115.2,16.8,98.4,636.1,10.28,1.47,46.227,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,65,97.176,115.2,16.8,98.4,635.6,10.3,1.48,46.232,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,66,97.176,115.3,17.0,98.3,637.6,10.28,1.41,46.194,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,67,97.176,115.3,16.9,98.4,634.8,10.24,1.34,46.272,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,68,97.176,115.4,17.0,98.4,634.9,10.22,1.38,46.267,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,69,97.176,115.3,16.7,98.6,637.7,10.19,1.41,46.283,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,70,97.176,115.3,16.9,98.4,638.7,10.24,1.43,46.24,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,71,97.176,115.2,16.8,98.4,637.2,10.23,1.45,46.267,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,72,97.176,115.3,16.8,98.5,638.4,10.21,1.43,46.247,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,73,97.176,115.3,16.9,98.4,638.8,10.23,1.37,46.272,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,74,97.176,115.4,16.9,98.5,640.6,10.22,1.37,46.248,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,75,97.176,115.3,16.8,98.5,639.3,10.22,1.33,46.255,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,76,97.176,115.3,16.9,98.4,640.4,10.21,1.27,46.275,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,77,97.176,115.4,16.7,98.7,644.4,10.15,1.23,46.299,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,78,97.176,115.4,16.7,98.7,644.1,10.08,1.21,46.31,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,79,97.176,115.4,16.7,98.7,644.2,10.03,1.23,46.3,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,80,97.176,115.4,16.7,98.7,647.4,10.02,1.22,46.32,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,81,97.176,115.5,17.0,98.5,650.6,10.04,1.24,46.268,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,82,97.176,115.5,17.0,98.5,651.8,10.05,1.25,46.319,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,83,97.176,115.5,17.0,98.5,649.1,10.07,1.29,46.326,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,84,97.176,115.4,17.0,98.4,649.9,10.11,1.31,46.28,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,85,97.176,115.6,17.0,98.6,652.1,10.11,1.34,46.334,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,86,97.176,115.6,17.2,98.4,651.1,10.13,1.34,46.325,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,87,97.176,115.5,17.1,98.4,654.2,10.13,1.42,46.301,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,88,97.176,115.5,17.2,98.3,659.9,10.16,1.4,46.305,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,89,97.176,115.6,17.1,98.5,660.8,10.09,1.39,46.309,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,90,97.176,115.6,17.1,98.5,658.9,10.09,1.37,46.307,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,91,97.176,115.6,17.1,98.5,657.8,10.11,1.34,46.316,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,92,97.176,115.6,17.3,98.3,659.9,10.12,1.34,46.268,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,93,97.176,115.5,17.2,98.3,661.0,10.18,1.3,46.312,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,94,97.176,115.5,17.4,98.1,659.5,10.18,1.29,46.265,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,95,97.176,115.4,17.4,98.0,658.9,10.19,1.31,46.248,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,96,97.176,115.4,17.4,98.0,659.1,10.21,1.29,46.252,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,97,97.176,115.3,17.3,98.0,658.7,10.72,1.33,46.276,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,98,97.176,115.4,17.5,97.9,662.4,11.89,1.34,46.236,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,99,97.176,115.2,17.5,97.7,661.4,13.31,1.33,46.267,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,100,97.176,115.4,17.6,97.8,661.0,14.92,1.38,46.271,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,101,97.176,115.4,17.6,97.8,663.0,16.67,1.34,46.247,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,102,97.176,115.4,17.6,97.8,665.9,18.54,1.35,46.209,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,103,97.176,115.4,17.6,97.8,671.2,19.96,1.38,46.225,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,104,97.176,115.3,17.5,97.8,672.1,19.97,1.27,46.239,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,105,97.176,114.9,17.5,97.4,674.8,20.03,1.26,46.112,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,106,97.176,114.4,17.4,97.0,669.2,20.01,1.27,45.894,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,107,97.176,113.6,17.4,96.2,670.9,20.01,1.3,45.56,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,108,97.176,112.8,17.5,95.3,672.9,20.0,1.26,45.112,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,109,97.176,111.8,17.5,94.3,674.8,20.0,1.15,44.598,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,110,97.176,110.6,17.8,92.8,673.2,20.02,1.16,43.967,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,111,97.176,109.2,17.9,91.3,673.3,20.1,1.12,43.303,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,112,97.176,107.7,17.8,89.9,668.1,20.16,1.12,42.596,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,113,97.176,106.1,17.8,88.3,670.6,20.09,1.1,41.78,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,114,97.176,104.5,17.8,86.7,669.0,20.13,1.12,40.989,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,115,97.176,102.7,17.7,85.0,670.4,20.15,1.15,40.181,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,116,97.176,101.0,17.6,83.4,669.3,20.07,1.15,39.347,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,117,97.176,99.4,17.7,81.7,668.5,20.07,1.16,38.524,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,118,97.176,97.6,17.7,79.9,663.9,20.06,1.27,37.684,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,119,97.176,95.9,17.8,78.1,664.1,20.07,1.48,36.793,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,120,97.176,94.1,17.8,76.3,664.2,20.02,1.72,35.967,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,121,97.176,92.5,17.8,74.7,665.5,20.04,1.99,35.163,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,122,97.176,90.8,17.9,72.9,668.4,20.04,2.09,34.339,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,123,97.176,89.1,17.9,71.2,665.5,20.0,2.62,33.553,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,124,97.176,87.5,17.9,69.6,668.8,19.97,2.66,32.818,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,125,97.176,86.0,19.8,66.2,668.0,19.97,2.7,31.124,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,126,97.176,84.6,19.9,64.7,665.6,19.99,2.67,30.433,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,127,97.176,83.2,19.8,63.4,662.2,19.99,2.66,29.774,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,128,97.176,81.8,19.5,62.3,663.6,19.98,2.65,29.176,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,129,97.176,80.6,19.5,61.1,663.9,20.0,2.61,28.567,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,130,97.176,79.5,19.5,60.0,667.4,20.05,2.65,27.921,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,131,97.176,78.4,19.4,59.0,669.8,20.01,2.66,27.403,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,132,97.176,77.2,19.4,57.8,667.8,20.01,2.63,26.846,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,133,97.176,76.2,19.2,57.0,667.0,19.98,2.61,26.387,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,134,97.176,75.2,19.3,55.9,670.1,19.99,2.66,25.84,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,135,97.176,74.2,19.0,55.2,672.4,19.98,2.68,25.392,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,136,97.176,73.1,19.0,54.1,672.2,19.9,2.65,24.92,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,137,97.176,72.3,18.8,53.5,672.2,19.9,2.64,24.512,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,138,97.176,71.4,18.8,52.6,671.2,19.97,2.65,24.086,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,139,97.176,70.6,18.9,51.7,673.7,20.0,2.68,23.657,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,140,97.176,69.8,18.9,50.9,674.5,20.02,2.75,23.321,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,141,97.176,69.1,18.9,50.2,671.6,20.01,2.73,22.949,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,142,97.176,68.4,19.0,49.4,672.3,19.98,2.71,22.582,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,143,97.176,67.8,18.8,49.0,669.5,20.03,2.77,22.321,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,144,97.176,67.1,18.9,48.2,674.7,20.01,2.81,21.997,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,145,97.176,66.3,19.0,47.3,679.0,19.98,2.82,21.735,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,146,97.176,65.6,19.1,46.5,677.3,19.96,2.79,21.412,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,147,97.176,65.0,19.0,46.0,679.6,19.94,2.76,21.175,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,148,97.176,64.4,19.1,45.3,678.3,19.94,2.76,20.936,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,149,97.176,63.8,19.1,44.7,680.1,19.93,2.76,20.708,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,150,97.176,63.3,19.3,44.0,680.5,19.88,2.78,20.46,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,151,97.176,62.8,19.5,43.3,678.4,19.91,2.82,20.299,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,152,97.176,62.4,19.5,42.9,680.9,19.91,2.79,20.006,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,153,97.176,61.9,19.4,42.5,684.1,19.91,2.81,19.931,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,154,97.176,61.6,19.5,42.1,685.4,19.94,2.82,19.696,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,155,97.176,61.2,19.5,41.7,686.3,19.98,2.78,19.5,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,156,97.176,60.8,19.5,41.3,682.9,20.0,2.77,19.336,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,157,97.176,60.6,19.4,41.2,679.6,20.04,2.76,19.192,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,158,97.176,60.3,19.5,40.8,677.0,19.97,2.77,19.064,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,159,97.176,60.0,19.6,40.4,677.7,19.95,2.8,18.924,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,160,97.176,59.8,19.5,40.3,679.9,19.95,2.81,18.751,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,161,97.176,59.5,19.0,40.5,678.8,20.0,2.8,18.687,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,162,97.176,59.3,18.9,40.4,678.5,19.94,2.84,18.54,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,163,97.176,59.0,18.7,40.3,679.2,19.99,2.82,18.456,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,164,97.176,58.8,18.9,39.9,677.7,20.0,2.81,18.31,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,165,97.176,58.6,18.9,39.7,674.9,20.08,2.77,18.256,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,166,97.176,58.4,19.2,39.2,674.2,20.08,2.72,18.145,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,167,97.176,58.2,19.3,38.9,676.4,20.07,2.69,18.04,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,168,97.176,58.0,19.2,38.8,678.3,20.06,2.67,17.999,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,169,97.176,57.6,19.2,38.4,676.9,20.02,2.68,17.907,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,170,97.176,57.5,19.4,38.1,672.7,20.08,2.68,17.768,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,171,97.176,57.4,19.2,38.2,673.3,20.06,2.67,17.744,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,172,97.176,57.2,19.2,38.0,677.0,20.06,2.65,17.654,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,173,97.176,57.1,19.0,38.1,677.1,20.06,2.67,17.582,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,174,97.176,56.9,18.8,38.1,676.8,20.06,2.66,17.564,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,175,97.176,56.8,18.9,37.9,677.3,20.04,2.75,17.5,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,176,97.176,56.6,19.1,37.5,677.5,20.08,2.75,17.387,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,177,97.176,56.7,19.2,37.5,677.5,20.06,2.72,17.361,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,178,97.176,56.7,19.3,37.4,681.1,20.08,2.67,17.37,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,179,97.176,56.6,19.3,37.3,682.7,20.05,2.65,17.246,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,180,97.176,56.5,19.2,37.3,680.9,20.02,2.64,17.271,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,181,97.176,56.5,19.4,37.1,678.2,20.02,2.66,17.176,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,182,97.176,56.4,19.3,37.1,676.9,20.05,2.65,17.181,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,183,97.176,56.0,19.2,36.8,673.0,20.07,2.64,17.141,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
-111,184,97.176,56.0,19.3,36.7,669.7,20.0,2.7,17.079,TI-reactor reading trending +0.5°C high vs jacket/redundant probe — suspect drift.,SENSOR_DRIFT
+batch_id,time_step_min,current_step_id,raw_material_purity_coa,vessel_weight_kg,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
+111,0,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,1,1,97.414,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,2,1,97.414,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,3,1,97.414,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,4,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,5,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,6,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,7,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,8,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,9,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,10,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,11,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,12,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,13,1,97.414,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,14,1,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,15,2,97.414,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,16,2,97.414,88.6,24.8,24.9,-0.1,0.0,0.98,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,17,2,97.414,177.2,24.9,24.9,0.0,0.0,0.95,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,18,2,97.414,265.8,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,19,2,97.414,354.5,25.0,25.1,-0.1,0.0,0.99,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,20,2,97.414,443.1,24.8,25.2,-0.4,0.0,0.97,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,21,2,97.414,531.7,24.8,25.2,-0.4,0.0,1.01,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,22,2,97.414,620.3,24.8,25.3,-0.5,0.0,1.05,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,23,2,97.414,708.9,24.8,25.3,-0.5,0.0,1.05,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,24,2,97.414,797.5,24.9,25.3,-0.4,0.0,1.07,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,25,2,97.414,886.1,24.9,25.3,-0.4,147.0,1.11,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,26,2,97.414,974.8,24.9,25.3,-0.4,149.0,1.11,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,27,2,97.414,1063.4,25.0,25.4,-0.4,151.0,1.09,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,28,2,97.414,1152.0,25.1,25.5,-0.4,150.8,1.07,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,29,2,97.414,1240.6,25.2,25.5,-0.3,153.1,1.04,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,30,2,97.414,1329.2,25.2,25.4,-0.2,155.3,1.03,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,31,2,97.414,1417.8,25.2,25.5,-0.3,154.6,1.02,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,32,2,97.414,1506.4,25.2,25.6,-0.4,153.9,1.03,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,33,2,97.414,1595.0,25.1,25.6,-0.5,149.9,1.03,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,34,2,97.414,1683.7,25.1,25.6,-0.5,149.6,1.04,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,35,2,97.414,1772.3,25.2,25.6,-0.4,146.4,1.09,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,36,2,97.414,1860.9,25.3,25.5,-0.2,147.7,1.08,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,37,2,97.414,1949.5,25.1,25.6,-0.5,147.7,1.07,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,38,2,97.414,2038.1,25.2,25.7,-0.5,151.0,1.1,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,39,2,97.414,2126.7,25.3,25.6,-0.3,150.9,1.12,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,40,2,97.414,2215.3,25.2,25.6,-0.4,153.7,1.13,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,41,2,97.414,2304.0,25.1,25.6,-0.5,153.0,1.13,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,42,2,97.414,2392.6,25.1,25.7,-0.6,154.5,1.11,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,43,2,97.414,2481.2,25.1,25.7,-0.6,153.8,1.09,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,44,2,97.414,2569.8,25.1,25.6,-0.5,150.7,1.09,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,45,2,97.414,2658.4,25.1,25.4,-0.3,149.0,1.13,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,46,2,97.414,2747.0,24.9,25.4,-0.5,146.5,1.09,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,47,2,97.414,2835.6,25.0,25.4,-0.4,148.4,1.1,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,48,2,97.414,2924.2,24.9,25.6,-0.7,149.7,1.1,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,49,2,97.414,3012.9,24.9,25.5,-0.6,148.4,1.08,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,50,2,97.414,3101.5,25.0,25.5,-0.5,148.0,1.05,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,51,2,97.414,3190.1,25.0,25.6,-0.6,146.9,1.02,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,52,2,97.414,3278.7,25.1,25.6,-0.5,149.7,1.01,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,53,2,97.414,3367.3,25.0,25.5,-0.5,149.0,0.98,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,54,2,97.414,3455.9,25.0,25.5,-0.5,149.4,0.99,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,55,2,97.414,3544.5,24.9,25.5,-0.6,146.3,0.99,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,56,2,97.414,3633.2,24.9,25.5,-0.6,144.8,1.03,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,57,2,97.414,3721.8,25.0,25.4,-0.4,149.1,1.02,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,58,2,97.414,3810.4,25.0,25.4,-0.4,149.2,0.99,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,59,2,97.414,3899.0,24.8,25.3,-0.5,150.3,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,60,3,97.414,3899.0,24.9,25.3,-0.4,153.0,1.03,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,61,3,97.414,3899.0,24.9,25.3,-0.4,154.9,1.33,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,62,3,97.414,3899.0,24.8,25.4,-0.6,155.1,1.63,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,63,3,97.414,3899.0,24.9,25.4,-0.5,156.3,1.89,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,64,3,97.414,3899.0,24.8,25.4,-0.6,156.2,2.15,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,65,3,97.414,3899.0,24.9,25.4,-0.5,156.5,2.42,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,66,3,97.414,3899.0,25.0,25.4,-0.4,153.6,2.7,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,67,3,97.414,3899.0,25.1,25.3,-0.2,150.6,2.94,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,68,3,97.414,3899.0,25.0,25.3,-0.3,152.4,2.8,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,69,3,97.414,3899.0,24.9,25.2,-0.3,153.7,2.54,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,70,3,97.414,3899.0,24.9,25.3,-0.4,154.3,2.27,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,71,3,97.414,3899.0,25.0,25.3,-0.3,155.3,1.96,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,72,3,97.414,3899.0,24.9,25.2,-0.3,154.5,1.69,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,73,3,97.414,3899.0,24.9,25.3,-0.4,151.8,1.41,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,74,3,97.414,3899.0,25.0,25.3,-0.3,151.9,1.14,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,75,3,97.414,3899.0,25.0,25.3,-0.3,150.3,1.12,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,76,3,97.414,3899.0,25.1,25.2,-0.1,147.6,1.4,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,77,3,97.414,3899.0,25.0,25.1,-0.1,145.8,1.7,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,78,3,97.414,3899.0,25.0,24.9,0.1,145.3,1.97,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,79,3,97.414,3899.0,25.0,24.8,0.2,146.1,2.24,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,80,3,97.414,3899.0,25.0,24.7,0.3,145.6,2.54,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,81,3,97.414,3899.0,25.1,24.8,0.3,146.7,2.84,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,82,3,97.414,3899.0,25.2,24.8,0.4,147.0,2.98,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,83,3,97.414,3899.0,25.2,24.8,0.4,148.9,2.67,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,84,3,97.414,3899.0,25.1,24.9,0.2,149.5,2.39,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,85,3,97.414,3899.0,25.2,24.9,0.3,151.1,2.13,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,86,3,97.414,3899.0,25.3,25.0,0.3,151.0,1.84,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,87,3,97.414,3899.0,25.1,24.9,0.2,154.3,1.59,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,88,3,97.414,3899.0,25.2,25.0,0.2,153.6,1.36,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,89,3,97.414,3899.0,25.2,24.8,0.4,153.2,1.09,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,90,4,97.414,3899.0,25.2,84.8,-59.6,596.3,1.06,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,91,4,97.414,3899.0,25.4,84.9,-59.5,595.0,1.25,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,92,4,97.414,3899.0,25.8,84.9,-59.1,595.3,1.47,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,93,4,97.414,3899.0,26.2,85.0,-58.8,592.9,1.67,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,94,4,97.414,3899.0,26.9,85.0,-58.1,592.4,1.86,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,95,4,97.414,3899.0,27.5,85.1,-57.6,593.5,2.05,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,96,4,97.414,3899.0,28.2,85.1,-56.9,592.4,2.24,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,97,4,97.414,3899.0,29.0,85.1,-56.1,594.8,2.43,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,98,4,97.414,3899.0,29.8,85.1,-55.3,595.7,2.67,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,99,4,97.414,3899.0,30.7,85.1,-54.4,596.2,2.85,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,100,4,97.414,3899.0,31.7,85.0,-53.3,599.4,3.05,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,101,4,97.414,3899.0,32.6,84.9,-52.3,598.8,3.26,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,102,4,97.414,3899.0,33.5,84.9,-51.4,600.6,3.49,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,103,4,97.414,3899.0,34.4,84.9,-50.5,602.6,3.74,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,104,4,97.414,3899.0,35.3,84.9,-49.6,597.6,3.96,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,105,4,97.414,3899.0,36.3,85.1,-48.8,597.1,4.19,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,106,4,97.414,3899.0,37.2,85.0,-47.8,597.5,4.33,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,107,4,97.414,3899.0,38.2,85.0,-46.8,598.6,4.55,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,108,4,97.414,3899.0,39.3,85.0,-45.7,597.3,4.77,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,109,4,97.414,3899.0,40.3,85.0,-44.7,592.0,4.99,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,110,4,97.414,3899.0,41.4,85.1,-43.7,592.4,5.18,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,111,4,97.414,3899.0,42.4,85.2,-42.8,590.3,5.38,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,112,4,97.414,3899.0,43.4,85.4,-42.0,590.0,5.53,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,113,4,97.414,3899.0,44.4,85.2,-40.8,589.7,5.76,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,114,4,97.414,3899.0,45.4,85.3,-39.9,590.2,5.94,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,115,4,97.414,3899.0,46.4,85.4,-39.0,591.6,6.16,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,116,4,97.414,3899.0,47.3,85.2,-37.9,591.9,6.35,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,117,4,97.414,3899.0,48.4,85.2,-36.8,592.3,6.54,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,118,4,97.414,3899.0,49.5,85.2,-35.7,590.8,6.7,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,119,4,97.414,3899.0,50.5,85.2,-34.7,592.0,6.9,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,120,4,97.414,3899.0,51.5,85.1,-33.6,594.4,7.1,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,121,4,97.414,3899.0,52.5,85.1,-32.6,598.3,7.32,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,122,4,97.414,3899.0,53.5,85.1,-31.6,595.0,7.55,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,123,4,97.414,3899.0,54.6,85.1,-30.5,592.3,7.72,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,124,4,97.414,3899.0,55.6,85.0,-29.4,594.5,7.96,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,125,4,97.414,3899.0,56.5,85.0,-28.5,596.2,8.15,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,126,4,97.414,3899.0,57.6,85.0,-27.4,594.8,8.33,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,127,4,97.414,3899.0,58.6,85.0,-26.4,594.5,8.5,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,128,4,97.414,3899.0,59.5,85.0,-25.5,593.9,8.71,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,129,4,97.414,3899.0,60.5,85.0,-24.5,592.0,8.92,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,130,4,97.414,3899.0,61.5,85.1,-23.6,593.5,9.16,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,131,4,97.414,3899.0,62.5,85.1,-22.6,594.4,9.38,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,132,4,97.414,3899.0,63.5,85.1,-21.6,593.1,9.57,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,133,4,97.414,3899.0,64.5,85.0,-20.5,592.1,9.77,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,134,4,97.414,3899.0,65.4,85.0,-19.6,594.3,10.0,0.1,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,135,5,97.414,3899.0,68.0,21.0,47.0,595.5,10.02,2.946,50.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,136,5,97.414,3899.3,70.4,20.8,49.6,594.4,15.02,2.946,51.68,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,137,5,97.414,3899.9,74.9,20.8,54.1,593.9,15.02,2.946,67.39,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,138,5,97.414,3900.6,80.5,18.0,62.5,594.7,15.02,2.946,87.23,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,139,5,97.414,3901.5,87.1,18.0,69.1,596.0,15.04,2.09,110.43,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,140,5,97.414,3902.4,91.9,18.1,73.8,599.6,15.05,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,141,5,97.414,3903.5,91.9,18.0,73.9,599.0,15.02,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,142,5,97.414,3904.7,91.9,18.0,73.9,598.8,15.03,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,143,5,97.414,3906.3,91.9,18.1,73.8,601.9,13.85,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,144,5,97.414,3907.9,91.9,18.0,73.9,604.3,12.28,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,145,5,97.414,3909.5,91.9,18.0,73.9,605.7,11.38,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,146,5,97.414,3911.2,92.0,17.9,74.1,604.9,10.83,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,147,5,97.414,3912.8,91.9,17.9,74.0,604.5,10.54,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,148,5,97.414,3914.4,92.0,17.9,74.1,605.1,10.35,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,149,5,97.414,3916.0,92.0,17.9,74.1,605.7,10.27,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,150,5,97.414,3917.6,92.1,17.7,74.4,607.2,10.21,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,151,5,97.414,3919.3,92.3,17.8,74.5,609.7,10.16,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,152,5,97.414,3920.9,92.2,17.8,74.4,609.1,10.16,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,153,5,97.414,3922.5,92.3,17.8,74.5,610.4,10.19,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,154,5,97.414,3924.1,92.2,17.8,74.4,611.5,10.2,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,155,5,97.414,3925.7,92.3,17.9,74.4,610.2,10.21,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,156,5,97.414,3927.4,92.2,18.0,74.2,610.2,10.17,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,157,5,97.414,3929.0,92.2,18.1,74.1,610.4,10.14,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,158,5,97.414,3930.6,92.3,17.9,74.4,611.5,10.11,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,159,5,97.414,3932.2,92.3,17.9,74.4,613.5,10.12,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,160,5,97.414,3933.8,92.3,17.9,74.4,614.7,10.14,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,161,5,97.414,3935.5,92.1,18.0,74.1,614.9,10.13,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,162,5,97.414,3937.1,92.0,17.9,74.1,617.4,10.13,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,163,5,97.414,3938.7,91.9,18.0,73.9,616.8,10.13,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,164,5,97.414,3940.3,92.0,18.0,74.0,617.0,10.12,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,165,5,97.414,3941.9,92.1,18.2,73.9,615.5,10.09,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,166,5,97.414,3943.6,92.2,18.2,74.0,613.9,10.08,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,167,5,97.414,3945.2,92.2,18.2,74.0,613.3,10.1,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,168,5,97.414,3946.8,92.3,18.1,74.2,613.2,10.12,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,169,5,97.414,3948.4,92.2,18.1,74.1,614.4,10.11,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,170,5,97.414,3950.0,92.3,18.2,74.1,614.6,10.06,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,171,5,97.414,3951.7,92.2,18.2,74.0,615.0,10.07,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,172,5,97.414,3953.3,92.2,18.2,74.0,614.7,10.1,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,173,5,97.414,3954.9,92.1,18.2,73.9,616.1,10.1,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,174,5,97.414,3956.5,92.1,18.2,73.9,616.4,10.1,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,175,5,97.414,3958.1,92.1,18.1,74.0,621.0,10.1,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,176,5,97.414,3959.8,92.2,18.2,74.0,621.8,10.11,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,177,5,97.414,3961.4,92.3,18.2,74.1,620.7,10.11,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,178,5,97.414,3963.0,92.4,18.2,74.2,619.0,10.14,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,179,5,97.414,3964.6,92.3,18.2,74.1,618.9,10.16,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,180,5,97.414,3966.2,92.4,18.1,74.3,619.4,10.15,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,181,5,97.414,3967.9,92.4,18.1,74.3,621.0,10.12,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,182,5,97.414,3969.5,92.4,18.2,74.2,620.8,10.11,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,183,5,97.414,3971.1,92.4,18.2,74.2,620.8,10.06,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,184,5,97.414,3972.7,92.4,18.0,74.4,624.6,10.03,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,185,5,97.414,3974.3,92.4,18.1,74.3,623.2,10.04,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,186,5,97.414,3976.0,92.5,18.1,74.4,618.5,10.07,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,187,5,97.414,3977.6,92.5,18.1,74.4,617.5,10.04,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,188,5,97.414,3979.2,92.4,18.1,74.3,617.6,10.05,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,189,5,97.414,3980.8,92.4,18.0,74.4,619.9,10.02,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,190,5,97.414,3982.4,92.5,17.9,74.6,620.6,10.03,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,191,5,97.414,3984.1,92.4,17.8,74.6,622.5,9.97,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,192,5,97.414,3985.7,92.5,17.8,74.7,626.9,9.94,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,193,5,97.414,3987.3,92.5,17.9,74.6,628.4,9.98,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,194,5,97.414,3988.9,92.4,17.9,74.5,627.3,10.0,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,195,5,97.414,3990.5,92.5,18.0,74.5,627.0,10.01,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,196,5,97.414,3992.2,92.6,18.1,74.5,626.7,9.99,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,197,5,97.414,3993.8,92.4,18.0,74.4,626.3,9.99,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,198,5,97.414,3995.4,92.3,18.0,74.3,628.7,9.99,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,199,5,97.414,3997.0,92.4,18.0,74.4,628.1,9.97,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,200,5,97.414,3998.6,92.4,17.8,74.6,629.7,9.97,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,201,5,97.414,4000.3,92.5,18.0,74.5,633.0,9.96,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,202,5,97.414,4001.9,92.4,17.9,74.5,633.5,9.98,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,203,5,97.414,4003.5,92.5,17.9,74.6,636.3,9.96,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,204,5,97.414,4005.1,92.5,17.9,74.6,637.2,10.0,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,205,5,97.414,4006.7,92.4,17.9,74.5,636.0,9.95,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,206,5,97.414,4008.4,92.4,17.9,74.5,639.8,9.95,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,207,5,97.414,4010.0,92.4,17.8,74.6,639.6,9.95,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,208,5,97.414,4011.6,92.3,17.7,74.6,639.1,10.0,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,209,5,97.414,4013.2,92.3,17.8,74.5,643.5,10.0,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,210,5,97.414,4014.8,92.4,17.9,74.5,645.9,10.0,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,211,5,97.414,4016.5,92.5,17.9,74.6,646.9,10.01,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,212,5,97.414,4018.1,92.6,17.9,74.7,644.4,10.0,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,213,5,97.414,4019.6,92.5,17.9,74.6,644.6,10.86,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,214,5,97.414,4020.8,92.5,17.9,74.6,642.4,15.03,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,215,5,97.414,4021.4,92.4,17.9,74.5,644.2,15.06,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,216,5,97.414,4021.6,92.4,17.8,74.6,644.1,15.02,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,217,5,97.414,4021.7,92.4,17.9,74.5,645.2,15.02,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,218,5,97.414,4021.7,92.5,17.9,74.6,645.9,15.01,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,219,5,97.414,4021.8,92.4,18.0,74.4,644.8,14.99,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,220,5,97.414,4021.8,92.3,18.0,74.3,646.3,14.99,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,221,5,97.414,4021.8,92.4,18.0,74.4,644.1,14.97,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,222,5,97.414,4021.8,92.4,18.0,74.4,640.4,14.98,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,223,5,97.414,4021.8,92.4,17.9,74.5,643.4,14.99,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,224,5,97.414,4021.8,92.3,18.0,74.3,641.9,14.97,1.62,120.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,225,6,97.414,4021.8,85.4,70.0,15.4,638.8,9.99,0.4,30.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,226,6,97.414,4021.8,81.6,70.0,11.6,639.4,9.98,0.386,29.83,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,227,6,97.414,4021.8,78.8,69.8,9.0,637.8,9.98,0.372,29.66,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,228,6,97.414,4021.8,76.6,69.8,6.8,639.9,9.99,0.359,29.48,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,229,6,97.414,4021.8,75.1,69.8,5.3,642.8,10.01,0.345,29.31,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,230,6,97.414,4021.8,73.8,69.9,3.9,641.3,10.04,0.331,29.14,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,231,6,97.414,4021.8,73.0,69.9,3.1,644.9,9.99,0.317,28.97,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,232,6,97.414,4021.8,72.3,69.9,2.4,643.9,10.02,0.303,28.79,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,233,6,97.414,4021.8,71.8,69.9,1.9,643.2,10.06,0.29,28.62,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,234,6,97.414,4021.8,71.4,69.9,1.5,643.3,10.08,0.276,28.45,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,235,6,97.414,4021.8,71.0,69.9,1.1,643.7,10.05,0.262,28.28,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,236,6,97.414,4021.8,70.8,69.8,1.0,643.0,10.04,0.248,28.1,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,237,6,97.414,4021.8,70.7,69.8,0.9,640.9,9.97,0.234,27.93,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,238,6,97.414,4021.8,70.4,69.8,0.6,642.4,10.02,0.221,27.76,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,239,6,97.414,4021.8,70.3,69.8,0.5,641.6,9.99,0.207,27.59,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,240,6,97.414,4021.8,70.3,69.6,0.7,639.2,10.01,0.193,27.41,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,241,6,97.414,4021.8,70.2,69.6,0.6,640.8,10.01,0.179,27.24,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,242,6,97.414,4021.8,70.3,69.6,0.7,640.9,10.05,0.166,27.07,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,243,6,97.414,4021.8,70.2,69.5,0.7,642.2,10.07,0.152,26.9,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,244,6,97.414,4021.8,70.3,69.5,0.8,641.8,10.13,0.138,26.72,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,245,6,97.414,4021.8,70.3,69.5,0.8,640.7,10.12,0.124,26.55,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,246,6,97.414,4021.8,70.3,69.6,0.7,637.8,10.13,0.11,26.38,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,247,6,97.414,4021.8,70.3,69.6,0.7,636.2,10.11,0.097,26.21,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,248,6,97.414,4021.8,70.3,69.6,0.7,635.9,10.17,0.083,26.03,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,249,6,97.414,4021.8,70.1,69.6,0.5,636.4,10.11,0.069,25.86,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,250,6,97.414,4021.8,70.1,69.6,0.5,634.3,10.07,0.055,25.69,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,251,6,97.414,4021.8,70.1,69.5,0.6,635.6,10.05,0.041,25.52,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,252,6,97.414,4021.8,70.1,69.6,0.5,639.7,10.12,0.028,25.34,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,253,6,97.414,4021.8,70.1,69.6,0.5,641.4,10.13,0.014,25.17,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,254,6,97.414,4021.8,70.1,69.7,0.4,642.0,10.07,0.0,25.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,255,7,97.414,4021.8,70.0,14.8,55.2,640.9,10.04,0.0,90.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,256,7,97.414,4021.8,69.9,14.8,55.1,641.7,9.8,0.0,89.55,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,257,7,97.414,4021.8,69.7,14.7,55.0,640.9,9.61,0.0,89.09,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,258,7,97.414,4021.8,69.4,14.7,54.7,638.1,9.43,0.0,88.64,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,259,7,97.414,4021.8,69.0,14.7,54.3,640.7,9.22,0.0,88.18,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,260,7,97.414,4021.8,68.6,14.7,53.9,643.3,8.99,0.0,87.73,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,261,7,97.414,4021.8,68.0,14.6,53.4,643.6,8.8,0.0,87.27,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,262,7,97.414,4021.8,67.4,14.6,52.8,643.3,8.57,0.0,86.82,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,263,7,97.414,4021.8,66.8,14.6,52.2,640.9,8.39,0.0,86.36,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,264,7,97.414,4021.8,66.0,14.6,51.4,644.5,8.17,0.0,85.91,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,265,7,97.414,4021.8,65.2,14.8,50.4,642.2,7.93,0.0,85.45,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,266,7,97.414,4021.8,64.4,14.8,49.6,642.1,7.7,0.0,85.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,267,7,97.414,4021.8,63.7,14.8,48.9,640.7,7.51,0.0,84.55,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,268,7,97.414,4021.8,62.9,14.9,48.0,640.9,7.31,0.0,84.09,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,269,7,97.414,4021.8,62.0,14.9,47.1,639.6,7.09,0.0,83.64,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,270,7,97.414,4021.8,61.2,14.9,46.3,640.9,6.9,0.0,83.18,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,271,7,97.414,4021.8,60.4,14.8,45.6,640.7,6.72,0.0,82.73,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,272,7,97.414,4021.8,59.5,14.7,44.8,641.1,6.53,0.0,82.27,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,273,7,97.414,4021.8,58.6,14.6,44.0,643.8,6.31,0.0,81.82,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,274,7,97.414,4021.8,57.7,14.6,43.1,642.2,6.11,0.0,81.36,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,275,7,97.414,4021.8,56.8,14.5,42.3,642.6,5.92,0.0,80.91,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,276,7,97.414,4021.8,55.9,14.7,41.2,642.8,5.7,0.0,80.45,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,277,7,97.414,4021.8,55.0,14.6,40.4,640.8,5.52,0.0,80.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,278,7,97.414,4021.8,54.1,14.6,39.5,641.6,5.3,0.0,79.55,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,279,7,97.414,4021.8,53.1,14.7,38.4,640.7,5.07,0.0,79.09,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,280,7,97.414,4021.8,52.3,14.7,37.6,641.5,4.86,0.0,78.64,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,281,7,97.414,4021.8,51.3,14.7,36.6,644.1,4.63,0.0,78.18,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,282,7,97.414,4021.8,50.4,14.6,35.8,642.2,4.38,0.0,77.73,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,283,7,97.414,4021.8,49.4,14.7,34.7,642.0,4.19,0.0,77.27,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,284,7,97.414,4021.8,48.5,14.9,33.6,644.8,4.0,0.0,76.82,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,285,7,97.414,4021.8,47.6,14.9,32.7,643.9,3.84,0.0,76.36,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,286,7,97.414,4021.8,46.8,15.0,31.8,642.1,3.65,0.0,75.91,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,287,7,97.414,4021.8,45.9,15.0,30.9,643.8,3.45,0.0,75.45,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,288,7,97.414,4021.8,45.1,15.0,30.1,643.7,3.24,0.0,75.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,289,7,97.414,4021.8,44.2,15.1,29.1,640.6,3.06,0.0,74.55,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,290,7,97.414,4021.8,43.3,15.2,28.1,638.9,2.86,0.0,74.09,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,291,7,97.414,4021.8,42.4,15.2,27.2,638.8,2.65,0.0,73.64,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,292,7,97.414,4021.8,41.6,15.0,26.6,639.5,2.44,0.0,73.18,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,293,7,97.414,4021.8,40.7,15.1,25.6,638.0,2.24,0.0,72.73,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,294,7,97.414,4021.8,39.8,15.0,24.8,641.7,2.01,0.0,72.27,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,295,7,97.414,4021.8,38.9,15.0,23.9,641.4,1.82,0.0,71.82,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,296,7,97.414,4021.8,37.9,14.9,23.0,641.8,1.6,0.0,71.36,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,297,7,97.414,4021.8,36.9,14.9,22.0,640.4,1.4,0.0,70.91,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,298,7,97.414,4021.8,36.1,14.9,21.2,639.9,1.21,0.0,70.45,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,299,7,97.414,4021.8,35.1,14.9,20.2,639.8,0.98,0.0,70.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,300,8,97.414,4021.8,34.7,24.9,9.8,645.8,0.97,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,301,8,97.414,3883.1,34.2,24.9,9.3,646.9,0.96,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,302,8,97.414,3744.4,33.9,24.9,9.0,646.4,0.97,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,303,8,97.414,3605.7,33.6,24.8,8.8,644.7,1.01,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,304,8,97.414,3467.0,33.3,24.9,8.4,643.8,1.05,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,305,8,97.414,3328.4,33.0,24.9,8.1,643.0,1.03,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,306,8,97.414,3189.7,32.7,24.9,7.8,643.1,1.02,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,307,8,97.414,3051.0,32.5,24.8,7.7,640.0,0.98,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,308,8,97.414,2912.3,32.4,24.7,7.7,640.5,0.95,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,309,8,97.414,2773.6,32.3,24.7,7.6,640.8,0.96,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,310,8,97.414,2635.0,32.1,24.6,7.5,642.5,0.92,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,311,8,97.414,2496.3,32.0,24.7,7.3,640.8,0.9,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,312,8,97.414,2357.6,31.8,24.5,7.3,640.3,0.91,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,313,8,97.414,2218.9,31.7,24.6,7.1,641.2,0.92,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,314,8,97.414,2080.2,31.6,24.8,6.8,640.1,0.89,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,315,8,97.414,1941.5,31.5,24.7,6.8,641.0,0.95,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,316,8,97.414,1802.9,31.4,24.8,6.6,640.5,0.95,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,317,8,97.414,1664.2,31.5,24.7,6.8,640.4,0.93,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,318,8,97.414,1525.5,31.3,24.8,6.5,640.0,0.92,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,319,8,97.414,1386.8,31.2,24.9,6.3,638.8,0.95,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,320,8,97.414,1248.1,31.0,24.9,6.1,639.3,0.95,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,321,8,97.414,1109.5,30.9,24.8,6.1,637.9,0.99,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,322,8,97.414,970.8,30.9,24.9,6.0,636.5,0.97,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,323,8,97.414,832.1,30.9,25.0,5.9,636.5,1.0,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,324,8,97.414,693.4,31.0,25.1,5.9,637.3,1.01,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,325,8,97.414,554.7,31.0,25.1,5.9,639.1,1.05,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,326,8,97.414,416.0,30.9,25.1,5.8,0.0,1.07,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,327,8,97.414,277.4,30.8,25.2,5.6,0.0,1.07,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,328,8,97.414,138.7,30.7,25.1,5.6,0.0,1.04,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT
+111,329,8,97.414,0.0,30.8,25.0,5.8,0.0,1.09,0.0,0.0,Calibration flag: reactor RTD biased high (~0.5°C linear offset).,SENSOR_DRIFT

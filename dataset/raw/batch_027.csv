@@ -1,186 +1,331 @@
-batch_id,time_step_min,raw_material_purity_coa,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
-27,0,100.354,56.2,20.6,35.6,594.2,6.5,0.0,16.822,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,1,100.354,58.6,20.7,37.9,595.0,7.03,0.01,17.961,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,2,100.354,60.7,20.6,40.1,592.6,7.49,0.02,18.924,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,3,100.354,62.5,20.6,41.9,594.1,7.94,0.07,19.722,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,4,100.354,64.0,20.7,43.3,594.6,8.28,0.07,20.402,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,5,100.354,65.1,20.5,44.6,595.2,8.55,0.04,21.031,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,6,100.354,66.2,20.6,45.6,593.8,8.75,0.0,21.561,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,7,100.354,67.1,20.6,46.5,590.9,8.98,0.0,21.951,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,8,100.354,68.0,20.5,47.5,596.5,9.18,0.0,22.323,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,9,100.354,68.5,20.6,47.9,595.4,9.29,0.0,22.582,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,10,100.354,69.1,20.6,48.5,598.8,9.36,0.0,22.911,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,11,100.354,69.5,20.6,48.9,601.2,9.44,0.0,23.071,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,12,100.354,69.9,20.3,49.6,603.7,9.56,0.0,23.325,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,13,100.354,70.2,20.3,49.9,604.9,9.63,0.01,23.393,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,14,100.354,70.5,20.3,50.2,598.5,9.74,0.07,23.57,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,15,100.354,71.0,20.6,50.4,597.6,9.84,0.06,23.722,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,16,100.354,71.2,20.8,50.4,594.3,9.9,0.05,23.805,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,17,100.354,71.4,20.8,50.6,596.1,9.91,0.0,23.868,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,18,100.354,71.5,20.8,50.7,596.7,10.0,0.0,23.928,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,19,100.354,71.6,20.7,50.9,598.7,10.05,0.01,24.043,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,20,100.354,71.7,20.8,50.9,598.5,10.08,0.01,24.04,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,21,100.354,71.8,20.9,50.9,596.4,10.09,3.52,24.079,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,22,100.354,81.1,20.9,60.2,596.4,20.3,3.14,28.536,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,23,100.354,93.4,19.0,74.4,598.2,18.73,2.08,35.277,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,24,100.354,100.2,19.2,81.0,595.7,17.5,1.46,38.442,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,25,100.354,103.7,19.1,84.6,600.4,16.36,1.48,40.194,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,26,100.354,107.2,19.0,88.2,603.5,15.42,1.47,41.829,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,27,100.354,110.5,19.0,91.5,604.2,14.59,1.43,43.425,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,28,100.354,113.7,18.8,94.9,600.7,13.91,1.47,44.919,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,29,100.354,114.6,18.8,95.8,602.4,13.37,1.51,45.418,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,30,100.354,114.8,18.8,96.0,603.5,12.86,1.56,45.406,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,31,100.354,114.7,18.8,95.9,604.7,12.42,1.59,45.378,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,32,100.354,114.7,18.8,95.9,605.8,12.11,1.61,45.333,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,33,100.354,114.5,18.8,95.7,601.7,11.83,1.65,45.36,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,34,100.354,114.4,18.7,95.7,606.0,11.51,1.63,45.362,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,35,100.354,114.5,18.7,95.8,604.4,11.27,1.62,45.361,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,36,100.354,114.6,18.7,95.9,609.9,11.13,1.68,45.379,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,37,100.354,114.8,18.6,96.2,611.8,10.94,1.61,45.398,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,38,100.354,114.8,18.4,96.4,614.1,10.83,1.58,45.358,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,39,100.354,114.8,18.3,96.5,619.0,10.72,1.54,45.375,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,40,100.354,114.9,18.3,96.6,620.3,10.62,1.54,45.416,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,41,100.354,114.8,18.2,96.6,615.9,10.55,1.54,45.405,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,42,100.354,114.6,18.5,96.1,618.8,10.46,1.54,45.396,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,43,100.354,114.6,18.4,96.2,618.3,10.34,1.49,45.455,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,44,100.354,114.5,18.5,96.0,618.2,10.32,1.52,45.395,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,45,100.354,114.5,18.5,96.0,619.0,10.25,1.54,45.4,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,46,100.354,114.5,18.6,95.9,614.1,10.27,1.6,45.421,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,47,100.354,114.5,18.5,96.0,616.8,10.17,1.48,45.43,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,48,100.354,114.4,18.6,95.8,614.8,10.13,1.53,45.426,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,49,100.354,114.3,18.6,95.7,617.0,10.07,1.46,45.471,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,50,100.354,114.2,18.7,95.5,617.7,10.05,1.5,45.458,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,51,100.354,114.2,18.7,95.5,618.4,10.02,1.55,45.442,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,52,100.354,114.2,18.6,95.6,622.4,9.97,1.58,45.474,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,53,100.354,114.2,18.5,95.7,621.9,9.95,1.54,45.486,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,54,100.354,114.3,18.3,96.0,623.8,9.95,1.59,45.519,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,55,100.354,114.3,18.4,95.9,629.1,9.99,1.52,45.487,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,56,100.354,114.4,18.3,96.1,632.4,9.94,1.52,45.505,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,57,100.354,114.3,18.1,96.2,599.5,9.91,1.51,45.543,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,58,100.354,114.2,18.3,95.9,595.7,9.95,1.54,45.511,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,59,100.354,114.2,18.4,95.8,596.5,9.94,1.6,45.514,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,60,100.354,114.3,18.4,95.9,599.9,9.97,1.57,45.55,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,61,100.354,114.3,18.2,96.1,596.6,9.92,1.57,45.523,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,62,100.354,114.4,18.2,96.2,596.2,9.92,1.59,45.545,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,63,100.354,114.3,18.2,96.1,599.6,9.93,1.61,45.515,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,64,100.354,114.2,18.2,96.0,596.3,9.92,1.6,45.542,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,65,100.354,114.3,18.1,96.2,602.1,9.88,1.63,45.528,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,66,100.354,114.2,18.0,96.2,640.4,9.91,1.6,45.556,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,67,100.354,114.2,17.8,96.4,640.7,9.88,1.59,45.579,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,68,100.354,114.2,17.9,96.3,643.4,9.87,1.63,45.579,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,69,100.354,114.2,17.8,96.4,645.6,9.84,1.66,45.658,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,70,100.354,114.3,17.9,96.4,648.2,9.83,1.67,45.648,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,71,100.354,114.2,17.8,96.4,647.9,9.83,1.71,45.651,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,72,100.354,114.3,17.7,96.6,649.5,9.88,1.71,45.633,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,73,100.354,114.3,17.8,96.5,651.9,9.93,1.7,45.673,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,74,100.354,114.2,17.9,96.3,653.4,9.99,1.69,45.598,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,75,100.354,114.2,17.9,96.3,655.9,9.99,1.69,45.655,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,76,100.354,114.1,17.9,96.2,653.1,9.94,1.73,45.637,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,77,100.354,114.1,18.1,96.0,652.8,9.88,1.7,45.611,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,78,100.354,114.1,18.2,95.9,650.7,9.86,1.7,45.616,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,79,100.354,114.2,18.1,96.1,650.7,9.85,1.68,45.606,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,80,100.354,114.2,18.0,96.2,648.4,9.83,1.67,45.652,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,81,100.354,114.1,18.2,95.9,649.1,9.82,1.7,45.599,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,82,100.354,114.2,18.2,96.0,651.3,9.82,1.71,45.633,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,83,100.354,114.1,18.3,95.8,650.6,9.82,1.67,45.618,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,84,100.354,114.3,18.3,96.0,655.8,9.76,1.64,45.636,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,85,100.354,114.2,18.1,96.1,655.3,9.76,1.59,45.656,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,86,100.354,114.3,18.1,96.2,656.0,9.76,1.64,45.645,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,87,100.354,114.3,18.1,96.2,661.2,10.36,1.61,45.677,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,88,100.354,114.3,18.2,96.1,660.6,11.72,1.53,45.622,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,89,100.354,114.3,18.1,96.2,661.4,13.43,1.51,45.65,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,90,100.354,114.3,18.4,95.9,658.7,15.35,1.48,45.639,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,91,100.354,114.3,18.4,95.9,657.2,17.37,1.45,45.653,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,92,100.354,114.2,18.5,95.7,656.4,19.52,1.41,45.648,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,93,100.354,114.3,18.5,95.8,657.8,19.83,1.49,45.628,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,94,100.354,114.3,18.2,96.1,653.7,19.81,1.44,45.671,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,95,100.354,114.2,18.4,95.8,657.9,19.82,1.43,45.625,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,96,100.354,114.1,18.3,95.8,656.4,19.86,1.43,45.606,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,97,100.354,113.9,18.3,95.6,660.9,19.87,1.47,45.475,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,98,100.354,113.3,18.0,95.3,661.5,19.94,1.46,45.302,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,99,100.354,112.5,18.3,94.2,664.2,19.99,1.45,44.856,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,100,100.354,111.7,18.4,93.3,665.6,20.01,1.46,44.445,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,101,100.354,110.5,18.4,92.1,664.0,19.98,1.43,43.886,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,102,100.354,109.1,18.4,90.7,666.7,19.98,1.46,43.254,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,103,100.354,107.7,18.3,89.4,665.7,19.99,1.42,42.525,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,104,100.354,106.1,18.2,87.9,665.2,20.03,1.42,41.786,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,105,100.354,104.5,18.3,86.2,665.8,20.02,1.42,41.0,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,106,100.354,102.9,18.3,84.6,666.9,20.02,1.44,40.162,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,107,100.354,101.2,18.4,82.8,670.0,20.05,1.47,39.34,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,108,100.354,99.4,18.2,81.2,666.6,20.03,1.51,38.529,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,109,100.354,97.5,18.5,79.0,666.2,20.06,1.54,37.601,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,110,100.354,95.8,18.5,77.3,664.9,20.07,1.7,36.787,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,111,100.354,94.1,18.5,75.6,662.9,20.1,1.92,35.958,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,112,100.354,92.4,18.6,73.8,663.8,20.04,2.18,35.076,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,113,100.354,90.7,18.6,72.1,663.2,20.07,2.37,34.308,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,114,100.354,89.1,18.6,70.5,659.9,20.03,3.25,33.489,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,115,100.354,87.5,18.8,68.7,664.1,20.01,3.2,32.659,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,116,100.354,85.9,20.7,65.2,662.5,20.03,3.22,31.037,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,117,100.354,84.4,20.7,63.7,665.8,20.14,3.19,30.341,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,118,100.354,83.0,20.7,62.3,660.1,20.16,3.15,29.659,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,119,100.354,81.7,20.7,61.0,660.6,20.12,3.17,28.978,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,120,100.354,80.4,20.5,59.9,660.5,20.13,3.13,28.381,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,121,100.354,79.2,20.3,58.9,659.3,20.09,3.17,27.798,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,122,100.354,78.1,20.4,57.7,661.1,20.1,3.19,27.225,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,123,100.354,77.0,20.5,56.5,662.4,20.05,3.18,26.64,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,124,100.354,76.0,20.6,55.4,664.4,20.03,3.14,26.09,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,125,100.354,75.0,20.7,54.3,664.8,20.08,3.15,25.639,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,126,100.354,73.9,20.8,53.1,660.0,20.12,3.11,25.156,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,127,100.354,73.1,20.9,52.2,663.1,20.07,3.1,24.637,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,128,100.354,72.1,21.0,51.1,664.4,20.03,3.18,24.211,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,129,100.354,71.3,20.9,50.4,663.5,20.08,3.18,23.831,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,130,100.354,70.3,21.1,49.2,662.7,20.08,3.18,23.397,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,131,100.354,69.3,21.1,48.2,664.8,20.1,3.14,23.052,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,132,100.354,68.6,21.2,47.4,664.6,20.13,3.17,22.642,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,133,100.354,67.7,21.2,46.5,666.8,20.1,3.1,22.333,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,134,100.354,67.0,21.2,45.8,667.5,20.13,3.07,21.987,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,135,100.354,66.4,21.3,45.1,664.7,20.07,3.08,21.669,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,136,100.354,65.8,21.2,44.6,665.6,20.02,3.1,21.386,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,137,100.354,65.2,21.2,44.0,666.7,20.02,3.12,21.111,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,138,100.354,64.6,21.1,43.5,669.5,20.02,3.12,20.845,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,139,100.354,64.0,21.3,42.7,667.0,20.02,3.09,20.536,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,140,100.354,63.6,21.3,42.3,666.8,20.06,3.09,20.352,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,141,100.354,62.9,21.1,41.8,664.8,20.06,3.07,20.147,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,142,100.354,62.4,21.0,41.4,665.2,20.03,3.01,19.877,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,143,100.354,62.0,20.9,41.1,667.2,20.05,3.06,19.679,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,144,100.354,61.7,21.0,40.7,664.0,20.04,3.14,19.454,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,145,100.354,61.3,21.0,40.3,668.6,20.0,3.09,19.294,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,146,100.354,60.9,20.7,40.2,669.5,20.01,3.15,19.171,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,147,100.354,60.6,21.0,39.6,675.6,19.99,3.18,18.971,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,148,100.354,60.3,20.8,39.5,676.1,20.01,3.2,18.837,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,149,100.354,60.0,21.1,38.9,673.9,20.01,3.24,18.643,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,150,100.354,59.9,21.3,38.6,673.7,20.01,3.27,18.497,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,151,100.354,59.6,21.4,38.2,675.8,20.0,3.18,18.427,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,152,100.354,59.3,21.3,38.0,677.9,19.96,3.17,18.269,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,153,100.354,59.0,21.2,37.8,674.6,19.96,3.17,18.172,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,154,100.354,58.8,21.3,37.5,675.3,19.95,3.12,18.066,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,155,100.354,58.5,21.2,37.3,674.9,19.91,3.15,17.938,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,156,100.354,58.1,21.0,37.1,673.1,19.9,3.15,17.878,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,157,100.354,58.0,21.2,36.8,672.5,19.93,3.16,17.731,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,158,100.354,57.9,20.9,37.0,669.1,19.94,3.17,17.668,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,159,100.354,57.6,20.8,36.8,669.9,19.93,3.17,17.556,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,160,100.354,57.3,20.6,36.7,666.4,19.94,3.19,17.498,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,161,100.354,57.2,20.4,36.8,666.6,19.95,3.21,17.452,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,162,100.354,57.1,20.4,36.7,667.7,19.99,3.16,17.366,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,163,100.354,56.9,20.5,36.4,666.3,19.94,3.25,17.337,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,164,100.354,56.6,20.8,35.8,666.0,19.89,3.31,17.233,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,165,100.354,56.6,20.5,36.1,667.1,19.87,3.28,17.186,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,166,100.354,56.5,20.3,36.2,672.4,19.84,3.22,17.137,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,167,100.354,56.3,20.4,35.9,672.8,19.86,3.18,16.992,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,168,100.354,56.2,20.2,36.0,670.2,19.83,3.17,17.047,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,169,100.354,56.1,20.2,35.9,669.1,19.86,3.18,16.888,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,170,100.354,56.0,20.1,35.9,668.5,19.92,3.14,16.932,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,171,100.354,55.9,20.1,35.8,667.1,19.94,3.17,16.873,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,172,100.354,55.7,20.3,35.4,667.1,19.9,3.14,16.82,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,173,100.354,55.8,20.4,35.4,665.8,19.92,3.18,16.78,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,174,100.354,55.7,20.5,35.2,663.8,19.91,3.18,16.686,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,175,100.354,55.6,20.3,35.3,665.1,19.94,3.2,16.67,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,176,100.354,55.6,20.0,35.6,663.4,19.99,3.2,16.698,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,177,100.354,55.5,20.1,35.4,666.2,20.02,3.2,16.639,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,178,100.354,55.3,20.2,35.1,664.1,20.03,3.2,16.596,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,179,100.354,55.3,20.1,35.2,667.8,20.03,3.2,16.611,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,180,100.354,55.2,20.1,35.1,668.6,20.08,3.24,16.562,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,181,100.354,55.3,20.1,35.2,670.2,20.08,3.19,16.568,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,182,100.354,55.2,20.4,34.8,668.5,20.1,3.12,16.483,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,183,100.354,55.2,20.2,35.0,663.7,20.05,3.11,16.501,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
-27,184,100.354,55.2,20.4,34.8,663.1,19.96,3.06,16.419,Operators report froth on sight glass. Power draw stepped down abruptly.,SURFACE_FOAMING
+batch_id,time_step_min,current_step_id,raw_material_purity_coa,vessel_weight_kg,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
+27,0,1,100.472,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,1,1,100.472,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,2,1,100.472,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,3,1,100.472,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,4,1,100.472,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,5,1,100.472,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,6,1,100.472,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,7,1,100.472,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,8,1,100.472,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,9,1,100.472,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,10,1,100.472,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,11,1,100.472,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,12,1,100.472,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,13,1,100.472,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,14,1,100.472,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,15,2,100.472,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,SURFACE_FOAMING
+27,16,2,100.472,88.6,25.0,25.7,-0.7,0.0,1.02,0.0,0.0,,SURFACE_FOAMING
+27,17,2,100.472,177.2,25.0,25.6,-0.6,0.0,1.03,0.0,0.0,,SURFACE_FOAMING
+27,18,2,100.472,265.8,25.0,25.7,-0.7,0.0,1.04,0.0,0.0,,SURFACE_FOAMING
+27,19,2,100.472,354.5,25.0,25.8,-0.8,0.0,1.06,0.0,0.0,,SURFACE_FOAMING
+27,20,2,100.472,443.1,25.1,25.8,-0.7,0.0,1.06,0.0,0.0,,SURFACE_FOAMING
+27,21,2,100.472,531.7,25.1,25.8,-0.7,0.0,1.04,0.0,0.0,,SURFACE_FOAMING
+27,22,2,100.472,620.3,25.1,25.8,-0.7,0.0,1.02,0.0,0.0,,SURFACE_FOAMING
+27,23,2,100.472,708.9,25.2,25.7,-0.5,0.0,1.02,0.0,0.0,,SURFACE_FOAMING
+27,24,2,100.472,797.5,25.3,25.9,-0.6,0.0,0.98,0.0,0.0,,SURFACE_FOAMING
+27,25,2,100.472,886.1,25.3,25.8,-0.5,149.6,1.02,0.0,0.0,,SURFACE_FOAMING
+27,26,2,100.472,974.8,25.3,25.8,-0.5,148.3,1.04,0.0,0.0,,SURFACE_FOAMING
+27,27,2,100.472,1063.4,25.3,25.7,-0.4,146.0,1.04,0.0,0.0,,SURFACE_FOAMING
+27,28,2,100.472,1152.0,25.2,25.7,-0.5,147.3,0.99,0.0,0.0,,SURFACE_FOAMING
+27,29,2,100.472,1240.6,25.4,25.7,-0.3,148.6,1.0,0.0,0.0,,SURFACE_FOAMING
+27,30,2,100.472,1329.2,25.2,25.7,-0.5,150.7,1.0,0.0,0.0,,SURFACE_FOAMING
+27,31,2,100.472,1417.8,25.1,25.6,-0.5,151.9,1.0,0.0,0.0,,SURFACE_FOAMING
+27,32,2,100.472,1506.4,25.2,25.7,-0.5,152.3,1.0,0.0,0.0,,SURFACE_FOAMING
+27,33,2,100.472,1595.0,25.2,25.8,-0.6,153.7,0.95,0.0,0.0,,SURFACE_FOAMING
+27,34,2,100.472,1683.7,25.2,25.6,-0.4,153.2,0.98,0.0,0.0,,SURFACE_FOAMING
+27,35,2,100.472,1772.3,25.2,25.6,-0.4,152.7,0.95,0.0,0.0,,SURFACE_FOAMING
+27,36,2,100.472,1860.9,25.2,25.7,-0.5,154.8,1.0,0.0,0.0,,SURFACE_FOAMING
+27,37,2,100.472,1949.5,25.3,25.6,-0.3,151.7,1.01,0.0,0.0,,SURFACE_FOAMING
+27,38,2,100.472,2038.1,25.0,25.6,-0.6,150.2,1.02,0.0,0.0,,SURFACE_FOAMING
+27,39,2,100.472,2126.7,24.9,25.6,-0.7,148.3,1.06,0.0,0.0,,SURFACE_FOAMING
+27,40,2,100.472,2215.3,25.0,25.6,-0.6,148.4,1.07,0.0,0.0,,SURFACE_FOAMING
+27,41,2,100.472,2304.0,25.0,25.7,-0.7,148.2,1.01,0.0,0.0,,SURFACE_FOAMING
+27,42,2,100.472,2392.6,25.1,25.6,-0.5,148.2,1.03,0.0,0.0,,SURFACE_FOAMING
+27,43,2,100.472,2481.2,25.1,25.5,-0.4,146.2,1.02,0.0,0.0,,SURFACE_FOAMING
+27,44,2,100.472,2569.8,25.1,25.5,-0.4,147.5,1.01,0.0,0.0,,SURFACE_FOAMING
+27,45,2,100.472,2658.4,25.1,25.5,-0.4,148.2,1.01,0.0,0.0,,SURFACE_FOAMING
+27,46,2,100.472,2747.0,25.3,25.6,-0.3,150.8,0.95,0.0,0.0,,SURFACE_FOAMING
+27,47,2,100.472,2835.6,25.0,25.4,-0.4,145.9,0.96,0.0,0.0,,SURFACE_FOAMING
+27,48,2,100.472,2924.2,25.1,25.4,-0.3,147.9,0.93,0.0,0.0,,SURFACE_FOAMING
+27,49,2,100.472,3012.9,25.1,25.3,-0.2,145.1,0.94,0.0,0.0,,SURFACE_FOAMING
+27,50,2,100.472,3101.5,25.3,25.3,0.0,146.8,0.93,0.0,0.0,,SURFACE_FOAMING
+27,51,2,100.472,3190.1,25.3,25.3,0.0,149.2,0.93,0.0,0.0,,SURFACE_FOAMING
+27,52,2,100.472,3278.7,25.1,25.2,-0.1,150.6,0.96,0.0,0.0,,SURFACE_FOAMING
+27,53,2,100.472,3367.3,25.1,25.1,0.0,148.9,0.94,0.0,0.0,,SURFACE_FOAMING
+27,54,2,100.472,3455.9,25.1,25.1,0.0,150.9,0.95,0.0,0.0,,SURFACE_FOAMING
+27,55,2,100.472,3544.5,25.0,25.3,-0.3,147.6,1.0,0.0,0.0,,SURFACE_FOAMING
+27,56,2,100.472,3633.2,25.0,25.1,-0.1,147.6,1.02,0.0,0.0,,SURFACE_FOAMING
+27,57,2,100.472,3721.8,24.9,25.1,-0.2,147.2,1.06,0.0,0.0,,SURFACE_FOAMING
+27,58,2,100.472,3810.4,24.9,25.2,-0.3,148.5,1.02,0.0,0.0,,SURFACE_FOAMING
+27,59,2,100.472,3899.0,25.0,25.2,-0.2,151.3,1.02,0.0,0.0,,SURFACE_FOAMING
+27,60,3,100.472,3899.0,24.9,25.2,-0.3,149.6,1.05,0.0,0.0,,SURFACE_FOAMING
+27,61,3,100.472,3899.0,24.8,25.1,-0.3,149.9,1.28,0.0,0.0,,SURFACE_FOAMING
+27,62,3,100.472,3899.0,24.8,25.1,-0.3,150.9,1.54,0.0,0.0,,SURFACE_FOAMING
+27,63,3,100.472,3899.0,24.8,25.1,-0.3,151.9,1.85,0.0,0.0,,SURFACE_FOAMING
+27,64,3,100.472,3899.0,24.8,25.1,-0.3,151.2,2.08,0.0,0.0,,SURFACE_FOAMING
+27,65,3,100.472,3899.0,24.7,25.0,-0.3,152.6,2.4,0.0,0.0,,SURFACE_FOAMING
+27,66,3,100.472,3899.0,24.7,25.1,-0.4,151.2,2.67,0.0,0.0,,SURFACE_FOAMING
+27,67,3,100.472,3899.0,24.7,25.0,-0.3,150.9,2.94,0.0,0.0,,SURFACE_FOAMING
+27,68,3,100.472,3899.0,24.7,25.0,-0.3,152.9,2.82,0.0,0.0,,SURFACE_FOAMING
+27,69,3,100.472,3899.0,24.7,24.9,-0.2,154.3,2.56,0.0,0.0,,SURFACE_FOAMING
+27,70,3,100.472,3899.0,24.8,24.9,-0.1,154.7,2.3,0.0,0.0,,SURFACE_FOAMING
+27,71,3,100.472,3899.0,24.8,24.9,-0.1,156.7,2.02,0.0,0.0,,SURFACE_FOAMING
+27,72,3,100.472,3899.0,24.7,25.0,-0.3,156.2,1.75,0.0,0.0,,SURFACE_FOAMING
+27,73,3,100.472,3899.0,24.7,25.1,-0.4,155.9,1.49,0.0,0.0,,SURFACE_FOAMING
+27,74,3,100.472,3899.0,24.8,25.2,-0.4,154.9,1.22,0.0,0.0,,SURFACE_FOAMING
+27,75,3,100.472,3899.0,24.8,25.2,-0.4,155.1,1.24,0.0,0.0,,SURFACE_FOAMING
+27,76,3,100.472,3899.0,24.7,25.1,-0.4,157.0,1.48,0.0,0.0,,SURFACE_FOAMING
+27,77,3,100.472,3899.0,24.9,25.0,-0.1,155.7,1.74,0.0,0.0,,SURFACE_FOAMING
+27,78,3,100.472,3899.0,24.9,25.0,-0.1,156.1,1.99,0.0,0.0,,SURFACE_FOAMING
+27,79,3,100.472,3899.0,24.8,24.9,-0.1,154.9,2.25,0.0,0.0,,SURFACE_FOAMING
+27,80,3,100.472,3899.0,24.8,24.9,-0.1,154.6,2.49,0.0,0.0,,SURFACE_FOAMING
+27,81,3,100.472,3899.0,24.9,24.8,0.1,156.0,2.76,0.0,0.0,,SURFACE_FOAMING
+27,82,3,100.472,3899.0,25.0,24.8,0.2,156.6,2.91,0.0,0.0,,SURFACE_FOAMING
+27,83,3,100.472,3899.0,25.0,24.8,0.2,154.8,2.61,0.0,0.0,,SURFACE_FOAMING
+27,84,3,100.472,3899.0,24.9,24.7,0.2,153.4,2.38,0.0,0.0,,SURFACE_FOAMING
+27,85,3,100.472,3899.0,24.9,24.7,0.2,151.4,2.09,0.0,0.0,,SURFACE_FOAMING
+27,86,3,100.472,3899.0,24.9,24.7,0.2,153.8,1.81,0.0,0.0,,SURFACE_FOAMING
+27,87,3,100.472,3899.0,24.9,24.7,0.2,152.3,1.58,0.0,0.0,,SURFACE_FOAMING
+27,88,3,100.472,3899.0,24.9,24.7,0.2,150.1,1.29,0.0,0.0,,SURFACE_FOAMING
+27,89,3,100.472,3899.0,24.9,24.7,0.2,150.3,1.01,0.0,0.0,,SURFACE_FOAMING
+27,90,4,100.472,3899.0,25.0,84.7,-59.7,594.5,0.98,0.1,0.0,,SURFACE_FOAMING
+27,91,4,100.472,3899.0,25.2,84.6,-59.4,594.8,1.16,0.1,0.0,,SURFACE_FOAMING
+27,92,4,100.472,3899.0,25.6,84.5,-58.9,594.7,1.34,0.1,0.0,,SURFACE_FOAMING
+27,93,4,100.472,3899.0,26.1,84.6,-58.5,598.2,1.55,0.1,0.0,,SURFACE_FOAMING
+27,94,4,100.472,3899.0,26.5,84.5,-58.0,596.1,1.71,0.1,0.0,,SURFACE_FOAMING
+27,95,4,100.472,3899.0,27.2,84.5,-57.3,595.9,1.94,0.1,0.0,,SURFACE_FOAMING
+27,96,4,100.472,3899.0,27.9,84.6,-56.7,595.7,2.13,0.1,0.0,,SURFACE_FOAMING
+27,97,4,100.472,3899.0,28.6,84.6,-56.0,597.2,2.37,0.1,0.0,,SURFACE_FOAMING
+27,98,4,100.472,3899.0,29.3,84.8,-55.5,596.7,2.58,0.1,0.0,,SURFACE_FOAMING
+27,99,4,100.472,3899.0,30.2,84.9,-54.7,596.2,2.8,0.1,0.0,,SURFACE_FOAMING
+27,100,4,100.472,3899.0,31.2,84.9,-53.7,596.2,3.02,0.1,0.0,,SURFACE_FOAMING
+27,101,4,100.472,3899.0,32.1,84.9,-52.8,595.2,3.2,0.1,0.0,,SURFACE_FOAMING
+27,102,4,100.472,3899.0,33.0,84.9,-51.9,596.6,3.43,0.1,0.0,,SURFACE_FOAMING
+27,103,4,100.472,3899.0,33.9,84.9,-51.0,594.9,3.63,0.1,0.0,,SURFACE_FOAMING
+27,104,4,100.472,3899.0,34.8,85.0,-50.2,594.6,3.82,0.1,0.0,,SURFACE_FOAMING
+27,105,4,100.472,3899.0,35.9,85.0,-49.1,594.7,4.03,0.1,0.0,,SURFACE_FOAMING
+27,106,4,100.472,3899.0,36.8,85.0,-48.2,595.4,4.25,0.1,0.0,,SURFACE_FOAMING
+27,107,4,100.472,3899.0,37.8,85.1,-47.3,596.6,4.48,0.1,0.0,,SURFACE_FOAMING
+27,108,4,100.472,3899.0,38.8,85.0,-46.2,598.4,4.65,0.1,0.0,,SURFACE_FOAMING
+27,109,4,100.472,3899.0,39.8,85.1,-45.3,597.3,4.85,0.1,0.0,,SURFACE_FOAMING
+27,110,4,100.472,3899.0,40.9,85.1,-44.2,594.3,5.04,0.1,0.0,,SURFACE_FOAMING
+27,111,4,100.472,3899.0,41.9,85.2,-43.3,594.4,5.22,0.1,0.0,,SURFACE_FOAMING
+27,112,4,100.472,3899.0,42.9,85.1,-42.2,596.4,5.43,0.1,0.0,,SURFACE_FOAMING
+27,113,4,100.472,3899.0,43.9,85.1,-41.2,595.3,5.63,0.1,0.0,,SURFACE_FOAMING
+27,114,4,100.472,3899.0,44.9,85.1,-40.2,599.4,5.8,0.1,0.0,,SURFACE_FOAMING
+27,115,4,100.472,3899.0,46.0,85.0,-39.0,597.1,6.04,0.1,0.0,,SURFACE_FOAMING
+27,116,4,100.472,3899.0,47.0,85.1,-38.1,598.0,6.23,0.1,0.0,,SURFACE_FOAMING
+27,117,4,100.472,3899.0,48.0,85.3,-37.3,596.1,6.47,0.1,0.0,,SURFACE_FOAMING
+27,118,4,100.472,3899.0,49.0,85.4,-36.4,594.3,6.61,0.1,0.0,,SURFACE_FOAMING
+27,119,4,100.472,3899.0,50.0,85.3,-35.3,595.1,6.82,0.1,0.0,,SURFACE_FOAMING
+27,120,4,100.472,3899.0,50.9,85.3,-34.4,593.6,7.02,0.1,0.0,,SURFACE_FOAMING
+27,121,4,100.472,3899.0,51.9,85.2,-33.3,595.5,7.21,0.1,0.0,,SURFACE_FOAMING
+27,122,4,100.472,3899.0,52.9,85.3,-32.4,596.3,7.43,0.1,0.0,,SURFACE_FOAMING
+27,123,4,100.472,3899.0,54.0,85.1,-31.1,596.1,7.65,0.1,0.0,,SURFACE_FOAMING
+27,124,4,100.472,3899.0,55.0,85.1,-30.1,594.5,7.87,0.1,0.0,,SURFACE_FOAMING
+27,125,4,100.472,3899.0,56.1,85.2,-29.1,594.5,8.08,0.1,0.0,,SURFACE_FOAMING
+27,126,4,100.472,3899.0,57.2,85.3,-28.1,592.6,8.23,0.1,0.0,,SURFACE_FOAMING
+27,127,4,100.472,3899.0,58.2,85.2,-27.0,592.4,8.47,0.1,0.0,,SURFACE_FOAMING
+27,128,4,100.472,3899.0,59.3,85.1,-25.8,595.9,8.69,0.1,0.0,,SURFACE_FOAMING
+27,129,4,100.472,3899.0,60.3,85.2,-24.9,595.9,8.88,0.1,0.0,,SURFACE_FOAMING
+27,130,4,100.472,3899.0,61.4,85.2,-23.8,596.1,9.08,0.1,0.0,,SURFACE_FOAMING
+27,131,4,100.472,3899.0,62.4,85.3,-22.9,594.0,9.3,0.1,0.0,,SURFACE_FOAMING
+27,132,4,100.472,3899.0,63.4,85.4,-22.0,595.3,9.51,0.1,0.0,,SURFACE_FOAMING
+27,133,4,100.472,3899.0,64.5,85.3,-20.8,592.1,9.73,0.1,0.0,,SURFACE_FOAMING
+27,134,4,100.472,3899.0,65.5,85.4,-19.9,590.9,9.95,0.1,0.0,,SURFACE_FOAMING
+27,135,5,100.472,3899.0,68.2,21.8,46.4,591.4,9.92,1.963,50.0,,SURFACE_FOAMING
+27,136,5,100.472,3899.3,70.2,21.7,48.5,592.5,14.93,1.963,50.03,,SURFACE_FOAMING
+27,137,5,100.472,3899.7,73.5,21.7,51.8,593.9,14.94,1.963,61.77,,SURFACE_FOAMING
+27,138,5,100.472,3900.3,77.6,21.7,55.9,594.0,14.97,1.963,76.0,,SURFACE_FOAMING
+27,139,5,100.472,3900.9,82.2,18.7,63.5,593.2,14.95,1.804,92.07,,SURFACE_FOAMING
+27,140,5,100.472,3901.6,87.3,18.8,68.5,593.4,14.94,1.5,109.71,,SURFACE_FOAMING
+27,141,5,100.472,3902.4,92.2,18.8,73.4,592.8,14.92,1.5,120.0,,SURFACE_FOAMING
+27,142,5,100.472,3903.2,92.1,18.8,73.3,590.6,14.93,1.5,120.0,,SURFACE_FOAMING
+27,143,5,100.472,3904.1,92.0,18.8,73.2,593.2,14.21,1.5,120.0,,SURFACE_FOAMING
+27,144,5,100.472,3905.2,92.0,18.8,73.2,597.5,12.56,1.5,120.0,,SURFACE_FOAMING
+27,145,5,100.472,3906.3,92.1,18.7,73.4,595.8,11.49,1.5,120.0,,SURFACE_FOAMING
+27,146,5,100.472,3907.3,92.0,18.7,73.3,598.8,10.85,1.5,120.0,,SURFACE_FOAMING
+27,147,5,100.472,3908.4,92.1,18.6,73.5,601.0,10.54,1.5,120.0,,SURFACE_FOAMING
+27,148,5,100.472,3909.5,92.0,18.7,73.3,602.3,10.34,1.5,120.0,,SURFACE_FOAMING
+27,149,5,100.472,3910.6,92.1,18.7,73.4,604.4,10.2,1.5,120.0,,SURFACE_FOAMING
+27,150,5,100.472,3911.7,92.2,18.7,73.5,606.6,10.12,1.5,120.0,,SURFACE_FOAMING
+27,151,5,100.472,3912.7,92.3,18.7,73.6,602.9,10.11,1.5,120.0,,SURFACE_FOAMING
+27,152,5,100.472,3913.8,92.3,18.6,73.7,603.2,10.11,1.5,120.0,,SURFACE_FOAMING
+27,153,5,100.472,3914.9,92.2,18.5,73.7,603.6,10.06,1.5,120.0,,SURFACE_FOAMING
+27,154,5,100.472,3916.0,92.3,18.5,73.8,601.9,10.06,1.5,120.0,,SURFACE_FOAMING
+27,155,5,100.472,3917.0,92.2,18.4,73.8,603.9,10.06,1.5,120.0,,SURFACE_FOAMING
+27,156,5,100.472,3918.1,92.2,18.4,73.8,604.8,10.04,1.5,120.0,,SURFACE_FOAMING
+27,157,5,100.472,3919.2,92.2,18.5,73.7,605.5,10.03,1.5,120.0,,SURFACE_FOAMING
+27,158,5,100.472,3920.3,92.1,18.5,73.6,606.3,10.0,1.5,120.0,,SURFACE_FOAMING
+27,159,5,100.472,3921.4,92.0,18.5,73.5,607.1,10.0,1.5,120.0,,SURFACE_FOAMING
+27,160,5,100.472,3922.4,92.0,18.5,73.5,608.5,9.96,1.5,120.0,,SURFACE_FOAMING
+27,161,5,100.472,3923.5,91.9,18.5,73.4,609.8,9.96,1.5,120.0,,SURFACE_FOAMING
+27,162,5,100.472,3924.6,91.9,18.6,73.3,608.1,9.97,1.5,120.0,,SURFACE_FOAMING
+27,163,5,100.472,3925.7,92.0,18.5,73.5,612.8,9.96,1.5,120.0,,SURFACE_FOAMING
+27,164,5,100.472,3926.8,92.1,18.3,73.8,616.1,9.95,1.5,120.0,,SURFACE_FOAMING
+27,165,5,100.472,3927.8,92.0,18.3,73.7,615.2,9.96,1.5,120.0,,SURFACE_FOAMING
+27,166,5,100.472,3928.9,91.9,18.2,73.7,613.2,10.01,1.5,120.0,,SURFACE_FOAMING
+27,167,5,100.472,3930.0,91.9,18.3,73.6,612.0,10.02,1.5,120.0,,SURFACE_FOAMING
+27,168,5,100.472,3931.1,91.9,18.2,73.7,612.2,9.99,1.5,120.0,,SURFACE_FOAMING
+27,169,5,100.472,3932.2,91.7,18.2,73.5,613.1,9.98,1.5,120.0,,SURFACE_FOAMING
+27,170,5,100.472,3933.2,91.8,18.4,73.4,611.8,9.98,1.5,120.0,,SURFACE_FOAMING
+27,171,5,100.472,3934.3,91.8,18.4,73.4,613.2,9.96,1.5,120.0,,SURFACE_FOAMING
+27,172,5,100.472,3935.4,91.9,18.3,73.6,612.8,9.96,1.5,120.0,,SURFACE_FOAMING
+27,173,5,100.472,3936.5,92.0,18.4,73.6,615.1,9.95,1.5,120.0,,SURFACE_FOAMING
+27,174,5,100.472,3937.6,91.9,18.3,73.6,615.4,9.92,1.5,120.0,,SURFACE_FOAMING
+27,175,5,100.472,3938.6,91.9,18.4,73.5,616.9,9.93,1.5,120.0,,SURFACE_FOAMING
+27,176,5,100.472,3939.7,91.8,18.5,73.3,617.3,9.92,1.5,120.0,,SURFACE_FOAMING
+27,177,5,100.472,3940.8,91.8,18.6,73.2,617.5,9.94,1.5,120.0,,SURFACE_FOAMING
+27,178,5,100.472,3941.9,91.9,18.6,73.3,618.1,9.92,1.5,120.0,,SURFACE_FOAMING
+27,179,5,100.472,3943.0,91.9,18.6,73.3,618.9,9.96,1.5,120.0,,SURFACE_FOAMING
+27,180,5,100.472,3944.0,91.9,18.7,73.2,620.7,9.96,1.5,120.0,,SURFACE_FOAMING
+27,181,5,100.472,3945.1,91.9,18.7,73.2,619.2,9.98,1.5,120.0,,SURFACE_FOAMING
+27,182,5,100.472,3946.2,92.0,18.8,73.2,616.5,9.96,1.5,120.0,,SURFACE_FOAMING
+27,183,5,100.472,3947.3,91.9,18.7,73.2,616.7,9.92,1.5,120.0,,SURFACE_FOAMING
+27,184,5,100.472,3948.4,92.0,18.5,73.5,615.4,9.91,1.5,120.0,,SURFACE_FOAMING
+27,185,5,100.472,3949.4,92.0,18.5,73.5,614.7,9.9,1.5,120.0,,SURFACE_FOAMING
+27,186,5,100.472,3950.5,91.9,18.6,73.3,616.4,9.91,1.5,120.0,,SURFACE_FOAMING
+27,187,5,100.472,3951.6,91.9,18.6,73.3,615.1,9.95,1.5,120.0,,SURFACE_FOAMING
+27,188,5,100.472,3952.7,91.9,18.7,73.2,615.2,9.98,1.5,120.0,,SURFACE_FOAMING
+27,189,5,100.472,3953.8,91.9,18.7,73.2,618.2,9.97,1.5,120.0,,SURFACE_FOAMING
+27,190,5,100.472,3954.8,91.9,18.7,73.2,622.0,10.01,1.5,120.0,,SURFACE_FOAMING
+27,191,5,100.472,3955.9,91.9,18.7,73.2,621.9,10.0,1.5,120.0,,SURFACE_FOAMING
+27,192,5,100.472,3957.0,92.0,18.8,73.2,623.6,9.99,1.5,120.0,,SURFACE_FOAMING
+27,193,5,100.472,3958.1,92.0,18.7,73.3,623.3,9.98,1.5,120.0,,SURFACE_FOAMING
+27,194,5,100.472,3959.2,92.0,18.7,73.3,623.5,9.99,1.5,120.0,,SURFACE_FOAMING
+27,195,5,100.472,3960.2,91.9,18.7,73.2,625.1,9.97,1.5,120.0,,SURFACE_FOAMING
+27,196,5,100.472,3961.3,91.9,18.7,73.2,624.8,9.99,1.5,120.0,,SURFACE_FOAMING
+27,197,5,100.472,3962.4,91.9,18.7,73.2,627.3,9.98,1.5,120.0,,SURFACE_FOAMING
+27,198,5,100.472,3963.5,91.9,18.6,73.3,626.1,10.0,1.5,120.0,,SURFACE_FOAMING
+27,199,5,100.472,3964.6,92.0,18.6,73.4,625.4,9.99,1.5,120.0,,SURFACE_FOAMING
+27,200,5,100.472,3965.6,92.0,18.5,73.5,552.1,10.0,1.5,120.0,,SURFACE_FOAMING
+27,201,5,100.472,3966.7,92.0,18.7,73.3,551.3,10.01,1.5,120.0,,SURFACE_FOAMING
+27,202,5,100.472,3967.8,92.0,18.7,73.3,553.8,10.0,1.5,120.0,,SURFACE_FOAMING
+27,203,5,100.472,3968.9,92.1,18.7,73.4,552.5,10.0,1.5,120.0,,SURFACE_FOAMING
+27,204,5,100.472,3970.0,92.1,18.7,73.4,553.4,9.99,1.5,120.0,,SURFACE_FOAMING
+27,205,5,100.472,3971.0,92.1,18.8,73.3,551.7,10.01,1.5,120.0,,SURFACE_FOAMING
+27,206,5,100.472,3972.1,92.1,18.7,73.4,556.1,10.0,1.5,120.0,,SURFACE_FOAMING
+27,207,5,100.472,3973.2,92.1,18.6,73.5,555.7,10.02,1.5,120.0,,SURFACE_FOAMING
+27,208,5,100.472,3974.3,92.1,18.5,73.6,557.5,10.04,1.5,120.0,,SURFACE_FOAMING
+27,209,5,100.472,3975.4,92.1,18.6,73.5,556.2,10.02,1.5,120.0,,SURFACE_FOAMING
+27,210,5,100.472,3976.4,92.1,18.5,73.6,555.8,10.02,1.5,120.0,,SURFACE_FOAMING
+27,211,5,100.472,3977.5,92.1,18.5,73.6,556.7,10.01,1.5,120.0,,SURFACE_FOAMING
+27,212,5,100.472,3978.6,92.1,18.6,73.5,556.8,10.01,1.5,120.0,,SURFACE_FOAMING
+27,213,5,100.472,3979.7,92.1,18.6,73.5,556.6,10.05,1.5,120.0,,SURFACE_FOAMING
+27,214,5,100.472,3980.7,92.2,18.7,73.5,557.8,10.08,1.5,120.0,,SURFACE_FOAMING
+27,215,5,100.472,3981.8,92.2,18.6,73.6,558.7,10.07,1.5,120.0,,SURFACE_FOAMING
+27,216,5,100.472,3982.9,92.3,18.6,73.7,635.3,10.01,1.5,120.0,,SURFACE_FOAMING
+27,217,5,100.472,3984.0,92.2,18.7,73.5,636.4,9.96,1.5,120.0,,SURFACE_FOAMING
+27,218,5,100.472,3985.1,92.2,18.6,73.6,639.9,10.02,1.5,120.0,,SURFACE_FOAMING
+27,219,5,100.472,3986.1,92.2,18.7,73.5,640.4,10.03,1.5,120.0,,SURFACE_FOAMING
+27,220,5,100.472,3987.2,92.2,18.6,73.6,639.4,10.03,1.5,120.0,,SURFACE_FOAMING
+27,221,5,100.472,3988.3,92.2,18.7,73.5,642.0,10.05,1.5,120.0,,SURFACE_FOAMING
+27,222,5,100.472,3989.4,92.1,18.7,73.4,641.2,10.03,1.5,120.0,,SURFACE_FOAMING
+27,223,5,100.472,3990.5,92.2,18.7,73.5,642.0,10.05,1.5,120.0,,SURFACE_FOAMING
+27,224,5,100.472,3991.5,92.2,18.7,73.5,641.2,10.05,1.5,120.0,,SURFACE_FOAMING
+27,225,6,100.472,3991.5,85.1,70.0,15.1,639.7,9.98,0.4,30.0,,SURFACE_FOAMING
+27,226,6,100.472,3991.5,81.4,69.9,11.5,637.2,9.99,0.386,29.83,,SURFACE_FOAMING
+27,227,6,100.472,3991.5,78.6,69.8,8.8,638.2,10.03,0.372,29.66,,SURFACE_FOAMING
+27,228,6,100.472,3991.5,76.4,69.8,6.6,640.1,10.0,0.359,29.48,,SURFACE_FOAMING
+27,229,6,100.472,3991.5,74.8,69.7,5.1,639.9,10.02,0.345,29.31,,SURFACE_FOAMING
+27,230,6,100.472,3991.5,73.6,69.7,3.9,641.5,9.98,0.331,29.14,,SURFACE_FOAMING
+27,231,6,100.472,3991.5,72.8,69.7,3.1,640.5,9.99,0.317,28.97,,SURFACE_FOAMING
+27,232,6,100.472,3991.5,72.2,69.7,2.5,639.6,9.98,0.303,28.79,,SURFACE_FOAMING
+27,233,6,100.472,3991.5,71.7,69.6,2.1,640.7,10.01,0.29,28.62,,SURFACE_FOAMING
+27,234,6,100.472,3991.5,71.3,69.6,1.7,643.3,10.04,0.276,28.45,,SURFACE_FOAMING
+27,235,6,100.472,3991.5,71.0,69.7,1.3,644.1,10.07,0.262,28.28,,SURFACE_FOAMING
+27,236,6,100.472,3991.5,70.6,69.7,0.9,640.6,10.05,0.248,28.1,,SURFACE_FOAMING
+27,237,6,100.472,3991.5,70.5,69.8,0.7,640.1,10.01,0.234,27.93,,SURFACE_FOAMING
+27,238,6,100.472,3991.5,70.4,69.7,0.7,641.4,10.01,0.221,27.76,,SURFACE_FOAMING
+27,239,6,100.472,3991.5,70.4,69.6,0.8,641.7,10.01,0.207,27.59,,SURFACE_FOAMING
+27,240,6,100.472,3991.5,70.3,69.5,0.8,641.2,10.03,0.193,27.41,,SURFACE_FOAMING
+27,241,6,100.472,3991.5,70.2,69.6,0.6,644.0,10.0,0.179,27.24,,SURFACE_FOAMING
+27,242,6,100.472,3991.5,70.2,69.6,0.6,644.3,10.02,0.166,27.07,,SURFACE_FOAMING
+27,243,6,100.472,3991.5,70.3,69.8,0.5,642.0,10.05,0.152,26.9,,SURFACE_FOAMING
+27,244,6,100.472,3991.5,70.2,69.8,0.4,643.1,10.0,0.138,26.72,,SURFACE_FOAMING
+27,245,6,100.472,3991.5,70.2,69.8,0.4,642.4,9.97,0.124,26.55,,SURFACE_FOAMING
+27,246,6,100.472,3991.5,70.2,69.8,0.4,640.6,10.02,0.11,26.38,,SURFACE_FOAMING
+27,247,6,100.472,3991.5,70.2,69.6,0.6,644.3,10.06,0.097,26.21,,SURFACE_FOAMING
+27,248,6,100.472,3991.5,70.0,69.6,0.4,643.2,10.11,0.083,26.03,,SURFACE_FOAMING
+27,249,6,100.472,3991.5,70.1,69.6,0.5,642.7,10.09,0.069,25.86,,SURFACE_FOAMING
+27,250,6,100.472,3991.5,70.2,69.5,0.7,644.3,10.21,0.055,25.69,,SURFACE_FOAMING
+27,251,6,100.472,3991.5,70.2,69.5,0.7,644.4,10.14,0.041,25.52,,SURFACE_FOAMING
+27,252,6,100.472,3991.5,70.2,69.4,0.8,645.4,10.15,0.028,25.34,,SURFACE_FOAMING
+27,253,6,100.472,3991.5,70.4,69.4,1.0,646.7,10.18,0.014,25.17,,SURFACE_FOAMING
+27,254,6,100.472,3991.5,70.4,69.4,1.0,644.2,10.15,0.0,25.0,,SURFACE_FOAMING
+27,255,7,100.472,3991.5,70.4,14.2,56.2,644.0,10.13,0.0,90.0,,SURFACE_FOAMING
+27,256,7,100.472,3991.5,70.3,14.3,56.0,643.7,9.95,0.0,89.55,,SURFACE_FOAMING
+27,257,7,100.472,3991.5,70.1,14.3,55.8,643.0,9.69,0.0,89.09,,SURFACE_FOAMING
+27,258,7,100.472,3991.5,69.9,14.3,55.6,643.4,9.48,0.0,88.64,,SURFACE_FOAMING
+27,259,7,100.472,3991.5,69.4,14.4,55.0,642.6,9.3,0.0,88.18,,SURFACE_FOAMING
+27,260,7,100.472,3991.5,68.9,14.5,54.4,641.3,9.06,0.0,87.73,,SURFACE_FOAMING
+27,261,7,100.472,3991.5,68.2,14.6,53.6,639.0,8.83,0.0,87.27,,SURFACE_FOAMING
+27,262,7,100.472,3991.5,67.7,14.7,53.0,639.3,8.59,0.0,86.82,,SURFACE_FOAMING
+27,263,7,100.472,3991.5,67.0,14.6,52.4,637.8,8.38,0.0,86.36,,SURFACE_FOAMING
+27,264,7,100.472,3991.5,66.3,14.6,51.7,640.7,8.16,0.0,85.91,,SURFACE_FOAMING
+27,265,7,100.472,3991.5,65.6,14.6,51.0,638.6,7.95,0.0,85.45,,SURFACE_FOAMING
+27,266,7,100.472,3991.5,64.8,14.7,50.1,640.5,7.72,0.0,85.0,,SURFACE_FOAMING
+27,267,7,100.472,3991.5,64.0,14.7,49.3,642.4,7.5,0.0,84.55,,SURFACE_FOAMING
+27,268,7,100.472,3991.5,63.1,14.7,48.4,643.8,7.29,0.0,84.09,,SURFACE_FOAMING
+27,269,7,100.472,3991.5,62.2,14.8,47.4,640.9,7.1,0.0,83.64,,SURFACE_FOAMING
+27,270,7,100.472,3991.5,61.4,14.8,46.6,642.3,6.94,0.0,83.18,,SURFACE_FOAMING
+27,271,7,100.472,3991.5,60.5,14.9,45.6,642.3,6.76,0.0,82.73,,SURFACE_FOAMING
+27,272,7,100.472,3991.5,59.8,14.9,44.9,639.8,6.56,0.0,82.27,,SURFACE_FOAMING
+27,273,7,100.472,3991.5,58.8,14.9,43.9,638.7,6.35,0.0,81.82,,SURFACE_FOAMING
+27,274,7,100.472,3991.5,58.0,14.8,43.2,638.3,6.14,0.0,81.36,,SURFACE_FOAMING
+27,275,7,100.472,3991.5,57.1,14.8,42.3,641.0,5.93,0.0,80.91,,SURFACE_FOAMING
+27,276,7,100.472,3991.5,56.2,14.7,41.5,638.5,5.72,0.0,80.45,,SURFACE_FOAMING
+27,277,7,100.472,3991.5,55.3,14.6,40.7,640.4,5.54,0.0,80.0,,SURFACE_FOAMING
+27,278,7,100.472,3991.5,54.3,14.5,39.8,641.2,5.36,0.0,79.55,,SURFACE_FOAMING
+27,279,7,100.472,3991.5,53.5,14.6,38.9,641.4,5.12,0.0,79.09,,SURFACE_FOAMING
+27,280,7,100.472,3991.5,52.6,14.5,38.1,639.9,4.93,0.0,78.64,,SURFACE_FOAMING
+27,281,7,100.472,3991.5,51.5,14.6,36.9,639.2,4.71,0.0,78.18,,SURFACE_FOAMING
+27,282,7,100.472,3991.5,50.6,14.7,35.9,636.4,4.5,0.0,77.73,,SURFACE_FOAMING
+27,283,7,100.472,3991.5,49.6,14.6,35.0,637.7,4.3,0.0,77.27,,SURFACE_FOAMING
+27,284,7,100.472,3991.5,48.8,14.8,34.0,638.4,4.05,0.0,76.82,,SURFACE_FOAMING
+27,285,7,100.472,3991.5,47.9,14.8,33.1,640.1,3.82,0.0,76.36,,SURFACE_FOAMING
+27,286,7,100.472,3991.5,47.0,14.9,32.1,641.7,3.61,0.0,75.91,,SURFACE_FOAMING
+27,287,7,100.472,3991.5,46.2,14.9,31.3,640.2,3.45,0.0,75.45,,SURFACE_FOAMING
+27,288,7,100.472,3991.5,45.1,14.9,30.2,642.0,3.27,0.0,75.0,,SURFACE_FOAMING
+27,289,7,100.472,3991.5,44.2,14.9,29.3,640.2,3.06,0.0,74.55,,SURFACE_FOAMING
+27,290,7,100.472,3991.5,43.3,14.9,28.4,641.9,2.83,0.0,74.09,,SURFACE_FOAMING
+27,291,7,100.472,3991.5,42.6,15.0,27.6,644.2,2.62,0.0,73.64,,SURFACE_FOAMING
+27,292,7,100.472,3991.5,41.7,15.1,26.6,644.4,2.43,0.0,73.18,,SURFACE_FOAMING
+27,293,7,100.472,3991.5,40.6,15.0,25.6,643.1,2.2,0.0,72.73,,SURFACE_FOAMING
+27,294,7,100.472,3991.5,39.7,15.0,24.7,642.4,2.02,0.0,72.27,,SURFACE_FOAMING
+27,295,7,100.472,3991.5,38.9,15.0,23.9,644.0,1.85,0.0,71.82,,SURFACE_FOAMING
+27,296,7,100.472,3991.5,37.9,15.0,22.9,642.7,1.64,0.0,71.36,,SURFACE_FOAMING
+27,297,7,100.472,3991.5,37.0,15.0,22.0,642.7,1.43,0.0,70.91,,SURFACE_FOAMING
+27,298,7,100.472,3991.5,36.0,15.2,20.8,640.7,1.19,0.0,70.45,,SURFACE_FOAMING
+27,299,7,100.472,3991.5,34.9,15.1,19.8,643.4,0.96,0.0,70.0,,SURFACE_FOAMING
+27,300,8,100.472,3991.5,34.5,25.1,9.4,641.4,1.0,0.0,0.0,,SURFACE_FOAMING
+27,301,8,100.472,3853.9,34.2,25.0,9.2,641.7,1.03,0.0,0.0,,SURFACE_FOAMING
+27,302,8,100.472,3716.3,33.7,24.9,8.8,639.6,1.01,0.0,0.0,,SURFACE_FOAMING
+27,303,8,100.472,3578.6,33.5,24.9,8.6,640.6,0.97,0.0,0.0,,SURFACE_FOAMING
+27,304,8,100.472,3441.0,33.1,24.9,8.2,640.6,0.98,0.0,0.0,,SURFACE_FOAMING
+27,305,8,100.472,3303.3,32.9,24.8,8.1,640.8,0.97,0.0,0.0,,SURFACE_FOAMING
+27,306,8,100.472,3165.7,32.6,24.8,7.8,638.3,0.93,0.0,0.0,,SURFACE_FOAMING
+27,307,8,100.472,3028.1,32.4,24.9,7.5,639.0,0.89,0.0,0.0,,SURFACE_FOAMING
+27,308,8,100.472,2890.4,32.1,25.0,7.1,641.3,0.9,0.0,0.0,,SURFACE_FOAMING
+27,309,8,100.472,2752.8,32.0,24.9,7.1,641.8,0.87,0.0,0.0,,SURFACE_FOAMING
+27,310,8,100.472,2615.2,31.9,24.9,7.0,641.4,0.88,0.0,0.0,,SURFACE_FOAMING
+27,311,8,100.472,2477.5,31.7,25.0,6.7,639.3,0.86,0.0,0.0,,SURFACE_FOAMING
+27,312,8,100.472,2339.9,31.6,25.0,6.6,639.8,0.86,0.0,0.0,,SURFACE_FOAMING
+27,313,8,100.472,2202.2,31.6,25.0,6.6,640.9,0.86,0.0,0.0,,SURFACE_FOAMING
+27,314,8,100.472,2064.6,31.6,25.1,6.5,640.5,0.85,0.0,0.0,,SURFACE_FOAMING
+27,315,8,100.472,1927.0,31.3,25.1,6.2,642.6,0.91,0.0,0.0,,SURFACE_FOAMING
+27,316,8,100.472,1789.3,31.3,25.3,6.0,640.8,0.91,0.0,0.0,,SURFACE_FOAMING
+27,317,8,100.472,1651.7,31.2,25.2,6.0,643.6,0.9,0.0,0.0,,SURFACE_FOAMING
+27,318,8,100.472,1514.0,31.1,25.2,5.9,641.5,0.9,0.0,0.0,,SURFACE_FOAMING
+27,319,8,100.472,1376.4,30.9,25.2,5.7,642.1,0.93,0.0,0.0,,SURFACE_FOAMING
+27,320,8,100.472,1238.8,30.9,25.1,5.8,643.4,0.93,0.0,0.0,,SURFACE_FOAMING
+27,321,8,100.472,1101.1,30.9,25.2,5.7,641.7,0.96,0.0,0.0,,SURFACE_FOAMING
+27,322,8,100.472,963.5,30.9,25.1,5.8,642.1,0.96,0.0,0.0,,SURFACE_FOAMING
+27,323,8,100.472,825.8,30.8,25.2,5.6,640.1,0.95,0.0,0.0,,SURFACE_FOAMING
+27,324,8,100.472,688.2,30.8,25.2,5.6,641.5,0.97,0.0,0.0,,SURFACE_FOAMING
+27,325,8,100.472,550.6,30.7,25.2,5.5,641.5,0.98,0.0,0.0,,SURFACE_FOAMING
+27,326,8,100.472,412.9,30.6,25.2,5.4,0.0,0.97,0.0,0.0,,SURFACE_FOAMING
+27,327,8,100.472,275.3,30.5,25.2,5.3,0.0,0.97,0.0,0.0,,SURFACE_FOAMING
+27,328,8,100.472,137.6,30.5,25.2,5.3,0.0,0.95,0.0,0.0,,SURFACE_FOAMING
+27,329,8,100.472,0.0,30.4,25.2,5.2,0.0,0.94,0.0,0.0,,SURFACE_FOAMING

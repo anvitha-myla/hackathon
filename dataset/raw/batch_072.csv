@@ -1,202 +1,331 @@
-batch_id,time_step_min,raw_material_purity_coa,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
-72,0,98.536,54.8,17.6,37.2,594.2,5.81,0.0,17.575,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,1,98.536,57.1,17.8,39.3,598.2,6.47,0.01,18.638,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,2,98.536,59.1,17.7,41.4,601.3,6.97,0.04,19.569,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,3,98.536,60.8,17.6,43.2,601.5,7.43,0.02,20.375,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,4,98.536,62.2,17.7,44.5,599.1,7.78,0.02,21.03,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,5,98.536,63.5,17.7,45.8,599.0,8.11,0.08,21.635,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,6,98.536,64.5,18.0,46.5,595.2,8.42,0.03,22.097,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,7,98.536,65.4,18.0,47.4,594.4,8.63,0.01,22.54,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,8,98.536,66.1,17.8,48.3,595.6,8.81,0.0,22.911,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,9,98.536,66.6,18.1,48.5,597.9,9.0,0.0,23.16,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,10,98.536,67.2,18.2,49.0,597.6,9.15,0.0,23.463,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,11,98.536,67.6,18.3,49.3,594.7,9.25,0.0,23.635,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,12,98.536,68.0,18.4,49.6,594.2,9.43,0.0,23.83,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,13,98.536,68.2,18.5,49.7,594.3,9.52,0.0,23.999,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,14,98.536,68.4,18.4,50.0,595.4,9.63,0.0,24.133,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,15,98.536,68.7,18.4,50.3,593.2,9.64,0.0,24.226,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,16,98.536,69.0,18.6,50.4,589.6,9.7,0.0,24.302,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,17,98.536,69.2,18.3,50.9,590.6,9.78,0.0,24.414,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,18,98.536,69.4,18.4,51.0,591.2,9.8,0.0,24.45,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,19,98.536,69.5,18.4,51.1,588.1,9.87,0.0,24.524,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,20,98.536,69.5,18.3,51.2,591.0,9.88,0.0,24.638,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,21,98.536,69.5,18.2,51.3,588.8,9.92,3.0,24.603,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,22,98.536,77.6,18.1,59.5,594.8,19.97,2.68,28.315,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,23,98.536,88.5,15.6,72.9,598.4,18.57,2.16,34.434,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,24,98.536,96.0,15.7,80.3,597.4,17.34,1.4,37.966,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,25,98.536,99.4,15.6,83.8,600.0,16.25,1.36,39.587,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,26,98.536,102.3,15.4,86.9,598.9,15.31,1.38,40.951,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,27,98.536,105.0,15.6,89.4,603.3,14.5,1.42,42.24,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,28,98.536,107.6,15.6,92.0,603.0,13.86,1.36,43.509,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,29,98.536,110.2,15.4,94.8,604.2,13.34,1.4,44.657,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,30,98.536,112.6,15.5,97.1,610.2,12.85,1.42,45.828,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,31,98.536,114.6,15.7,98.9,610.0,12.41,1.44,46.763,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,32,98.536,114.6,15.9,98.7,612.0,12.03,1.48,46.723,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,33,98.536,114.6,15.8,98.8,609.6,11.81,1.49,46.77,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,34,98.536,114.6,15.7,98.9,609.3,11.52,1.44,46.79,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,35,98.536,114.8,15.8,99.0,605.6,11.34,1.46,46.754,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,36,98.536,114.9,15.8,99.1,605.9,11.19,1.43,46.721,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,37,98.536,114.9,15.6,99.3,610.8,11.01,1.44,46.782,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,38,98.536,114.8,15.6,99.2,611.9,10.82,1.42,46.813,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,39,98.536,115.0,15.7,99.3,612.4,10.72,1.35,46.782,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,40,98.536,114.9,15.8,99.1,615.9,10.58,1.41,46.766,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,41,98.536,115.0,15.8,99.2,616.6,10.45,1.45,46.774,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,42,98.536,114.9,15.5,99.4,617.1,10.35,1.46,46.839,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,43,98.536,115.0,15.5,99.5,619.3,10.34,1.45,46.809,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,44,98.536,114.8,15.4,99.4,617.7,10.29,1.41,46.774,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,45,98.536,114.8,15.3,99.5,624.1,10.29,1.42,46.828,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,46,98.536,114.9,15.3,99.6,626.0,10.29,1.42,46.835,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,47,98.536,114.8,15.3,99.5,627.3,10.23,1.44,46.849,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,48,98.536,114.8,15.3,99.5,625.7,10.13,1.4,46.846,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,49,98.536,114.8,15.4,99.4,626.2,10.14,1.45,46.862,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,50,98.536,114.8,15.5,99.3,628.7,10.11,1.42,46.848,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,51,98.536,114.9,15.7,99.2,631.6,10.11,1.33,46.847,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,52,98.536,114.9,15.7,99.2,632.4,10.11,1.34,46.884,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,53,98.536,114.9,15.7,99.2,632.8,10.01,1.35,46.87,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,54,98.536,115.0,15.7,99.3,633.3,10.02,1.35,46.829,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,55,98.536,115.1,15.8,99.3,633.1,10.07,1.37,46.9,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,56,98.536,115.0,15.9,99.1,634.9,9.99,1.36,46.88,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,57,98.536,115.0,15.8,99.2,634.1,9.99,1.33,46.877,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,58,98.536,115.0,15.7,99.3,629.9,9.93,1.37,46.989,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,59,98.536,115.1,15.8,99.3,635.3,9.94,1.38,46.964,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,60,98.536,115.1,15.9,99.2,635.9,9.92,1.39,46.914,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,61,98.536,115.0,15.9,99.1,637.3,9.9,1.37,46.92,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,62,98.536,115.0,16.0,99.0,638.4,9.85,1.38,46.916,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,63,98.536,115.0,15.8,99.2,635.9,9.82,1.4,46.988,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,64,98.536,114.9,15.7,99.2,637.5,9.81,1.39,46.975,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,65,98.536,114.9,15.5,99.4,635.2,9.82,1.34,32.878,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,66,98.536,114.9,15.2,99.7,634.2,9.8,1.36,32.899,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,67,98.536,114.8,15.2,99.6,631.5,9.86,1.36,32.894,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,68,98.536,114.9,15.4,99.5,633.1,9.87,1.32,32.87,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,69,98.536,115.0,15.4,99.6,635.4,9.91,1.37,32.897,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,70,98.536,115.0,15.2,99.8,636.4,9.86,1.36,32.894,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,71,98.536,115.0,15.0,100.0,637.0,9.86,1.39,32.901,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,72,98.536,115.0,15.1,99.9,637.0,9.87,1.36,32.884,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,73,98.536,114.8,15.0,99.8,642.7,9.84,1.36,32.921,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,74,98.536,115.0,15.2,99.8,646.2,9.94,1.35,32.893,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,75,98.536,115.0,15.2,99.8,647.9,9.98,1.42,32.909,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,76,98.536,114.9,15.1,99.8,651.1,9.96,1.43,32.917,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,77,98.536,114.8,15.1,99.7,649.0,9.93,1.42,32.941,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,78,98.536,114.8,15.1,99.7,652.0,9.92,1.39,32.914,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,79,98.536,114.9,15.0,99.9,652.4,9.95,1.41,32.96,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,80,98.536,114.9,15.2,99.7,653.4,9.93,1.38,47.034,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,81,98.536,114.9,15.3,99.6,656.2,9.87,1.35,47.032,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,82,98.536,115.0,15.3,99.7,659.2,9.79,1.38,47.049,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,83,98.536,115.0,15.4,99.6,659.6,9.76,1.46,47.049,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,84,98.536,115.0,15.1,99.9,657.6,9.81,1.47,47.115,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,85,98.536,115.1,15.1,100.0,660.1,9.84,1.4,47.064,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,86,98.536,115.1,15.2,99.9,665.4,9.81,1.44,47.04,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,87,98.536,115.0,15.2,99.8,664.8,9.78,1.45,47.029,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,88,98.536,114.9,15.2,99.7,665.8,9.86,1.42,47.021,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,89,98.536,115.0,15.0,100.0,661.8,9.86,1.4,47.081,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,90,98.536,115.0,14.9,100.1,659.5,9.88,1.42,47.044,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,91,98.536,115.0,15.1,99.9,666.2,9.87,1.38,47.059,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,92,98.536,115.0,15.1,99.9,667.2,9.89,1.38,47.066,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,93,98.536,115.0,15.5,99.5,666.6,9.91,1.43,47.004,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,94,98.536,115.1,15.5,99.6,668.1,10.36,1.4,47.044,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,95,98.536,115.2,15.6,99.6,666.9,11.48,1.33,47.035,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,96,98.536,115.3,15.9,99.4,667.1,12.95,1.31,46.998,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,97,98.536,115.3,15.7,99.6,660.8,14.58,1.22,47.039,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,98,98.536,115.2,15.8,99.4,660.5,16.34,1.18,47.001,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,99,98.536,115.3,15.6,99.7,660.7,18.23,1.16,47.034,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,100,98.536,115.4,15.5,99.9,665.1,19.83,1.18,47.024,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,101,98.536,115.3,15.3,100.0,665.0,19.81,1.2,47.011,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,102,98.536,115.4,15.5,99.9,662.2,19.82,1.21,46.956,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,103,98.536,115.1,15.7,99.4,664.2,19.88,1.17,46.762,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,104,98.536,114.5,15.5,99.0,662.2,19.88,1.18,46.5,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,105,98.536,113.8,15.5,98.3,667.6,19.86,1.12,46.133,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,106,98.536,112.9,15.4,97.5,666.3,19.86,1.15,45.655,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,107,98.536,111.6,15.4,96.2,666.2,19.87,1.11,45.061,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,108,98.536,110.2,15.3,94.9,662.3,19.89,1.11,44.396,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,109,98.536,108.6,15.4,93.2,663.6,19.93,1.11,43.694,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,110,98.536,107.0,15.5,91.5,663.8,19.93,1.12,42.908,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,111,98.536,105.1,15.7,89.4,666.3,19.94,1.11,42.122,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,112,98.536,103.4,15.7,87.7,664.6,19.93,1.21,41.27,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,113,98.536,101.5,15.8,85.7,664.2,20.0,1.29,40.458,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,114,98.536,99.7,15.9,83.8,664.4,20.03,1.33,39.534,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,115,98.536,97.9,16.0,81.9,663.4,19.99,1.3,38.658,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,116,98.536,96.1,16.1,80.0,663.9,19.95,1.43,37.805,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,117,98.536,94.2,16.0,78.2,661.7,19.95,1.59,36.982,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,118,98.536,92.5,16.1,76.4,662.1,19.93,1.82,36.077,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,119,98.536,90.7,16.1,74.6,662.2,19.89,2.03,35.261,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,120,98.536,89.0,16.0,73.0,663.0,19.86,2.24,34.453,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,121,98.536,87.3,15.7,71.6,664.6,19.89,2.81,33.709,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,122,98.536,85.8,15.2,70.6,666.1,19.89,2.75,32.96,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,123,98.536,84.2,17.4,66.8,667.4,19.9,2.74,31.223,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,124,98.536,82.8,17.3,65.5,668.1,19.94,2.71,30.523,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,125,98.536,81.3,17.2,64.1,667.3,19.98,2.7,29.889,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,126,98.536,80.0,17.2,62.8,670.3,19.95,2.68,29.279,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,127,98.536,78.7,17.2,61.5,669.9,19.99,2.69,28.642,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,128,98.536,77.3,17.1,60.2,670.0,19.99,2.72,28.001,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,129,98.536,76.2,16.9,59.3,673.2,19.98,2.8,27.488,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,130,98.536,75.1,17.2,57.9,674.3,19.95,2.77,26.899,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,131,98.536,74.0,17.4,56.6,673.8,19.92,2.75,26.338,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,132,98.536,72.9,17.1,55.8,671.9,19.93,2.72,25.948,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,133,98.536,72.1,17.2,54.9,671.1,19.88,2.71,25.448,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,134,98.536,71.1,17.3,53.8,667.4,19.87,2.7,24.953,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,135,98.536,70.3,17.1,53.2,666.3,19.89,2.7,24.591,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,136,98.536,69.4,17.5,51.9,667.5,19.89,2.63,24.115,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,137,98.536,68.6,17.7,50.9,671.0,19.86,2.68,23.751,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,138,98.536,67.7,17.8,49.9,670.5,19.83,2.68,23.345,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,139,98.536,66.9,17.8,49.1,667.7,19.85,2.72,22.973,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,140,98.536,66.2,17.6,48.6,669.6,19.85,2.73,22.631,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,141,98.536,65.5,17.8,47.7,667.2,19.89,2.74,22.371,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,142,98.536,64.8,17.9,46.9,668.9,19.85,2.74,21.975,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,143,98.536,64.1,17.8,46.3,669.0,19.82,2.75,21.744,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,144,98.536,63.5,17.9,45.6,667.5,19.85,2.75,21.488,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,145,98.536,62.8,18.0,44.8,668.6,19.86,2.74,21.211,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,146,98.536,62.4,17.9,44.5,668.8,19.88,2.74,20.975,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,147,98.536,61.9,17.8,44.1,665.6,19.9,2.74,20.731,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,148,98.536,61.4,17.9,43.5,665.8,19.91,2.8,20.469,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,149,98.536,61.0,17.8,43.2,661.4,19.91,2.79,20.307,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,150,98.536,60.6,17.9,42.7,659.8,20.0,2.84,20.098,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,151,98.536,60.1,17.9,42.2,658.4,19.98,2.89,19.869,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,152,98.536,59.6,17.9,41.7,659.6,20.0,2.87,19.698,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,153,98.536,59.2,17.9,41.3,657.3,20.04,2.89,19.578,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,154,98.536,58.9,17.9,41.0,656.6,19.99,2.81,19.387,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,155,98.536,58.6,18.1,40.5,659.4,19.99,2.81,19.222,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,156,98.536,58.2,18.2,40.0,660.8,20.04,2.81,19.079,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,157,98.536,58.0,18.2,39.8,661.9,19.97,2.78,18.985,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,158,98.536,57.7,18.3,39.4,666.4,20.0,2.74,18.787,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,159,98.536,57.4,18.3,39.1,664.4,20.01,2.73,18.688,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,160,98.536,57.0,18.3,38.7,666.4,20.06,2.71,18.599,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,161,98.536,56.7,18.4,38.3,666.4,20.03,2.77,18.512,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,162,98.536,56.5,18.2,38.3,664.8,20.01,2.76,18.407,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,163,98.536,56.2,18.3,37.9,665.3,19.98,2.78,18.258,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,164,98.536,56.0,18.1,37.9,662.7,20.0,2.83,18.163,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,165,98.536,55.8,18.1,37.7,665.6,20.04,2.84,18.074,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,166,98.536,55.5,18.2,37.3,665.1,20.06,2.86,17.981,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,167,98.536,55.2,18.0,37.2,664.3,20.04,2.89,17.962,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,168,98.536,55.0,18.2,36.8,663.7,20.07,2.93,17.859,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,169,98.536,54.7,18.1,36.6,665.8,20.01,2.93,17.781,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,170,98.536,54.5,18.3,36.2,666.8,19.98,2.87,17.697,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,171,98.536,54.5,18.3,36.2,672.5,20.01,2.9,17.68,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,172,98.536,54.3,18.4,35.9,672.9,20.1,2.83,17.574,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,173,98.536,54.2,18.4,35.8,674.0,20.06,2.76,17.549,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,174,98.536,54.1,18.3,35.8,674.7,20.11,2.77,17.478,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,175,98.536,54.0,18.0,36.0,674.1,20.15,2.74,17.475,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,176,98.536,54.0,17.8,36.2,674.3,20.13,2.71,17.414,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,177,98.536,53.8,17.9,35.9,672.3,20.12,2.73,17.322,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,178,98.536,53.8,17.9,35.9,673.2,20.11,2.8,17.28,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,179,98.536,53.7,17.8,35.9,675.4,20.11,2.77,17.265,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,180,98.536,53.6,17.8,35.8,675.6,20.09,2.73,17.216,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,181,98.536,53.5,17.8,35.7,675.3,20.09,2.71,17.148,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,182,98.536,53.5,17.4,36.1,675.8,20.04,2.69,17.14,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,183,98.536,53.4,17.4,36.0,677.8,20.06,2.71,17.061,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,184,98.536,53.3,17.0,36.3,677.8,20.08,2.72,17.109,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,185,98.536,53.3,17.0,36.3,679.2,20.06,2.79,17.022,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,186,98.536,53.3,16.9,36.4,676.5,20.1,2.79,17.0,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,187,98.536,53.3,16.8,36.5,674.7,20.09,2.8,16.94,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,188,98.536,53.2,17.0,36.2,675.8,20.12,2.78,16.896,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,189,98.536,53.0,16.6,36.4,676.6,20.13,2.79,16.934,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,190,98.536,53.0,16.5,36.5,678.2,20.12,2.79,16.887,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,191,98.536,52.8,16.6,36.2,674.5,20.15,2.83,16.82,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,192,98.536,52.8,16.4,36.4,672.0,20.17,2.81,16.841,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,193,98.536,52.7,16.4,36.3,673.5,20.12,2.85,16.802,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,194,98.536,52.5,16.5,36.0,668.7,20.1,2.81,16.776,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,195,98.536,52.4,16.5,35.9,666.8,20.1,2.77,16.741,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,196,98.536,52.4,16.7,35.7,667.3,20.09,2.78,16.738,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,197,98.536,52.3,16.5,35.8,667.3,20.02,2.79,16.732,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,198,98.536,52.2,16.7,35.5,666.5,20.03,2.77,16.688,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,199,98.536,52.2,16.7,35.5,668.4,20.01,2.81,16.651,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
-72,200,98.536,52.2,16.6,35.6,672.9,20.02,2.79,16.617,Cooling utility temp hunting; jacket duty soft for ~20 min then recovered.,COOLING_SPIKE
+batch_id,time_step_min,current_step_id,raw_material_purity_coa,vessel_weight_kg,T_reactor,T_jacket,delta_T,agitator_torque,headspace_pressure,H2_flow_rate,cooling_water_flow,shift_note,anomaly_flag
+72,0,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,1,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,2,1,99.485,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,NONE
+72,3,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,4,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,5,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,6,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,7,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,8,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,9,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,10,1,99.485,0.0,25.1,25.0,0.1,0.0,1.0,0.0,0.0,,NONE
+72,11,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,12,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,13,1,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,14,1,99.485,0.0,24.9,25.0,-0.1,0.0,1.0,0.0,0.0,,NONE
+72,15,2,99.485,0.0,25.0,25.0,0.0,0.0,1.0,0.0,0.0,,NONE
+72,16,2,99.485,88.6,25.4,25.0,0.4,0.0,0.97,0.0,0.0,,NONE
+72,17,2,99.485,177.2,25.3,25.1,0.2,0.0,0.97,0.0,0.0,,NONE
+72,18,2,99.485,265.8,25.3,25.0,0.3,0.0,0.98,0.0,0.0,,NONE
+72,19,2,99.485,354.5,25.4,25.1,0.3,0.0,0.94,0.0,0.0,,NONE
+72,20,2,99.485,443.1,25.4,25.1,0.3,0.0,0.97,0.0,0.0,,NONE
+72,21,2,99.485,531.7,25.3,25.1,0.2,0.0,0.94,0.0,0.0,,NONE
+72,22,2,99.485,620.3,25.2,25.1,0.1,0.0,0.99,0.0,0.0,,NONE
+72,23,2,99.485,708.9,25.1,25.3,-0.2,0.0,1.01,0.0,0.0,,NONE
+72,24,2,99.485,797.5,25.1,25.4,-0.3,0.0,0.99,0.0,0.0,,NONE
+72,25,2,99.485,886.1,25.0,25.4,-0.4,151.5,1.0,0.0,0.0,,NONE
+72,26,2,99.485,974.8,25.1,25.3,-0.2,152.2,0.98,0.0,0.0,,NONE
+72,27,2,99.485,1063.4,25.1,25.3,-0.2,153.5,1.02,0.0,0.0,,NONE
+72,28,2,99.485,1152.0,25.2,25.3,-0.1,150.0,1.01,0.0,0.0,,NONE
+72,29,2,99.485,1240.6,25.1,25.4,-0.3,151.4,1.01,0.0,0.0,,NONE
+72,30,2,99.485,1329.2,25.0,25.4,-0.4,152.1,1.07,0.0,0.0,,NONE
+72,31,2,99.485,1417.8,25.3,25.3,0.0,152.8,1.06,0.0,0.0,,NONE
+72,32,2,99.485,1506.4,25.2,25.3,-0.1,154.5,1.07,0.0,0.0,,NONE
+72,33,2,99.485,1595.0,25.3,25.4,-0.1,154.9,1.04,0.0,0.0,,NONE
+72,34,2,99.485,1683.7,25.3,25.3,0.0,152.4,1.03,0.0,0.0,,NONE
+72,35,2,99.485,1772.3,25.2,25.4,-0.2,153.2,0.98,0.0,0.0,,NONE
+72,36,2,99.485,1860.9,25.2,25.5,-0.3,151.4,0.98,0.0,0.0,,NONE
+72,37,2,99.485,1949.5,25.2,25.4,-0.2,152.0,1.02,0.0,0.0,,NONE
+72,38,2,99.485,2038.1,25.2,25.3,-0.1,151.3,1.02,0.0,0.0,,NONE
+72,39,2,99.485,2126.7,25.2,25.3,-0.1,147.9,1.01,0.0,0.0,,NONE
+72,40,2,99.485,2215.3,25.2,25.2,0.0,150.6,1.04,0.0,0.0,,NONE
+72,41,2,99.485,2304.0,25.2,25.1,0.1,152.9,1.04,0.0,0.0,,NONE
+72,42,2,99.485,2392.6,25.3,25.0,0.3,153.0,1.04,0.0,0.0,,NONE
+72,43,2,99.485,2481.2,25.1,25.1,0.0,152.5,1.05,0.0,0.0,,NONE
+72,44,2,99.485,2569.8,25.1,25.1,0.0,150.9,1.03,0.0,0.0,,NONE
+72,45,2,99.485,2658.4,25.0,25.2,-0.2,150.8,1.08,0.0,0.0,,NONE
+72,46,2,99.485,2747.0,25.0,25.3,-0.3,150.9,1.1,0.0,0.0,,NONE
+72,47,2,99.485,2835.6,25.0,25.2,-0.2,151.6,1.1,0.0,0.0,,NONE
+72,48,2,99.485,2924.2,25.0,25.1,-0.1,150.4,1.08,0.0,0.0,,NONE
+72,49,2,99.485,3012.9,25.1,25.1,0.0,152.5,1.08,0.0,0.0,,NONE
+72,50,2,99.485,3101.5,25.1,25.1,0.0,150.9,1.1,0.0,0.0,,NONE
+72,51,2,99.485,3190.1,25.1,25.1,0.0,146.8,1.12,0.0,0.0,,NONE
+72,52,2,99.485,3278.7,25.2,25.2,0.0,147.2,1.12,0.0,0.0,,NONE
+72,53,2,99.485,3367.3,25.1,24.9,0.2,148.0,1.12,0.0,0.0,,NONE
+72,54,2,99.485,3455.9,25.2,25.0,0.2,148.1,1.12,0.0,0.0,,NONE
+72,55,2,99.485,3544.5,25.1,25.1,0.0,148.8,1.11,0.0,0.0,,NONE
+72,56,2,99.485,3633.2,25.2,24.9,0.3,148.7,1.12,0.0,0.0,,NONE
+72,57,2,99.485,3721.8,25.1,24.9,0.2,147.3,1.1,0.0,0.0,,NONE
+72,58,2,99.485,3810.4,25.2,24.8,0.4,149.0,1.05,0.0,0.0,,NONE
+72,59,2,99.485,3899.0,25.2,24.8,0.4,149.6,1.09,0.0,0.0,,NONE
+72,60,3,99.485,3899.0,25.1,24.8,0.3,150.2,1.09,0.0,0.0,,NONE
+72,61,3,99.485,3899.0,25.1,24.7,0.4,149.4,1.37,0.0,0.0,,NONE
+72,62,3,99.485,3899.0,25.2,24.6,0.6,150.1,1.65,0.0,0.0,,NONE
+72,63,3,99.485,3899.0,25.2,24.6,0.6,150.8,1.89,0.0,0.0,,NONE
+72,64,3,99.485,3899.0,25.1,24.5,0.6,150.5,2.17,0.0,0.0,,NONE
+72,65,3,99.485,3899.0,25.0,24.5,0.5,148.2,2.42,0.0,0.0,,NONE
+72,66,3,99.485,3899.0,24.9,24.5,0.4,149.0,2.67,0.0,0.0,,NONE
+72,67,3,99.485,3899.0,25.0,24.6,0.4,148.8,2.91,0.0,0.0,,NONE
+72,68,3,99.485,3899.0,25.0,24.6,0.4,147.0,2.77,0.0,0.0,,NONE
+72,69,3,99.485,3899.0,25.0,24.7,0.3,149.1,2.51,0.0,0.0,,NONE
+72,70,3,99.485,3899.0,24.9,24.6,0.3,148.8,2.23,0.0,0.0,,NONE
+72,71,3,99.485,3899.0,24.9,24.6,0.3,150.0,1.95,0.0,0.0,,NONE
+72,72,3,99.485,3899.0,24.8,24.6,0.2,148.8,1.67,0.0,0.0,,NONE
+72,73,3,99.485,3899.0,24.8,24.5,0.3,148.8,1.44,0.0,0.0,,NONE
+72,74,3,99.485,3899.0,24.8,24.8,0.0,148.2,1.19,0.0,0.0,,NONE
+72,75,3,99.485,3899.0,24.9,24.9,0.0,151.0,1.2,0.0,0.0,,NONE
+72,76,3,99.485,3899.0,24.9,24.8,0.1,151.7,1.5,0.0,0.0,,NONE
+72,77,3,99.485,3899.0,24.9,24.8,0.1,151.2,1.75,0.0,0.0,,NONE
+72,78,3,99.485,3899.0,24.9,24.7,0.2,149.9,2.05,0.0,0.0,,NONE
+72,79,3,99.485,3899.0,24.8,24.8,0.0,150.8,2.32,0.0,0.0,,NONE
+72,80,3,99.485,3899.0,24.9,24.8,0.1,149.4,2.6,0.0,0.0,,NONE
+72,81,3,99.485,3899.0,25.0,24.6,0.4,148.2,2.89,0.0,0.0,,NONE
+72,82,3,99.485,3899.0,25.0,24.4,0.6,149.9,3.06,0.0,0.0,,NONE
+72,83,3,99.485,3899.0,25.1,24.4,0.7,153.5,2.78,0.0,0.0,,NONE
+72,84,3,99.485,3899.0,24.9,24.5,0.4,153.9,2.48,0.0,0.0,,NONE
+72,85,3,99.485,3899.0,24.9,24.5,0.4,150.8,2.22,0.0,0.0,,NONE
+72,86,3,99.485,3899.0,24.9,24.4,0.5,152.4,1.99,0.0,0.0,,NONE
+72,87,3,99.485,3899.0,24.8,24.4,0.4,153.0,1.7,0.0,0.0,,NONE
+72,88,3,99.485,3899.0,24.9,24.5,0.4,151.6,1.43,0.0,0.0,,NONE
+72,89,3,99.485,3899.0,24.9,24.5,0.4,150.6,1.11,0.0,0.0,,NONE
+72,90,4,99.485,3899.0,24.9,84.6,-59.7,595.7,1.07,0.1,0.0,,NONE
+72,91,4,99.485,3899.0,25.1,84.6,-59.5,594.0,1.34,0.1,0.0,,NONE
+72,92,4,99.485,3899.0,25.4,84.6,-59.2,593.8,1.54,0.1,0.0,,NONE
+72,93,4,99.485,3899.0,26.1,84.7,-58.6,596.2,1.74,0.1,0.0,,NONE
+72,94,4,99.485,3899.0,26.7,84.7,-58.0,594.6,1.95,0.1,0.0,,NONE
+72,95,4,99.485,3899.0,27.3,84.7,-57.4,592.2,2.13,0.1,0.0,,NONE
+72,96,4,99.485,3899.0,28.1,84.7,-56.6,592.2,2.33,0.1,0.0,,NONE
+72,97,4,99.485,3899.0,28.9,84.7,-55.8,589.5,2.46,0.1,0.0,,NONE
+72,98,4,99.485,3899.0,29.7,84.6,-54.9,588.9,2.65,0.1,0.0,,NONE
+72,99,4,99.485,3899.0,30.5,84.5,-54.0,589.4,2.85,0.1,0.0,,NONE
+72,100,4,99.485,3899.0,31.3,84.5,-53.2,591.1,3.09,0.1,0.0,,NONE
+72,101,4,99.485,3899.0,32.1,84.4,-52.3,592.5,3.29,0.1,0.0,,NONE
+72,102,4,99.485,3899.0,33.1,84.4,-51.3,592.8,3.45,0.1,0.0,,NONE
+72,103,4,99.485,3899.0,34.1,84.6,-50.5,590.7,3.67,0.1,0.0,,NONE
+72,104,4,99.485,3899.0,34.9,84.6,-49.7,591.3,3.85,0.1,0.0,,NONE
+72,105,4,99.485,3899.0,35.9,84.5,-48.6,588.5,4.1,0.1,0.0,,NONE
+72,106,4,99.485,3899.0,36.9,84.5,-47.6,590.0,4.29,0.1,0.0,,NONE
+72,107,4,99.485,3899.0,37.8,84.5,-46.7,588.3,4.49,0.1,0.0,,NONE
+72,108,4,99.485,3899.0,38.7,84.6,-45.9,587.8,4.65,0.1,0.0,,NONE
+72,109,4,99.485,3899.0,39.8,84.7,-44.9,588.1,4.86,0.1,0.0,,NONE
+72,110,4,99.485,3899.0,40.8,84.7,-43.9,588.2,5.06,0.1,0.0,,NONE
+72,111,4,99.485,3899.0,41.9,84.7,-42.8,587.8,5.29,0.1,0.0,,NONE
+72,112,4,99.485,3899.0,42.9,84.7,-41.8,592.3,5.47,0.1,0.0,,NONE
+72,113,4,99.485,3899.0,44.0,84.9,-40.9,595.7,5.67,0.1,0.0,,NONE
+72,114,4,99.485,3899.0,45.0,84.9,-39.9,597.4,5.87,0.1,0.0,,NONE
+72,115,4,99.485,3899.0,46.1,84.9,-38.8,596.2,6.06,0.1,0.0,,NONE
+72,116,4,99.485,3899.0,47.1,84.8,-37.7,595.8,6.27,0.1,0.0,,NONE
+72,117,4,99.485,3899.0,48.1,84.8,-36.7,593.8,6.45,0.1,0.0,,NONE
+72,118,4,99.485,3899.0,49.1,84.7,-35.6,595.4,6.65,0.1,0.0,,NONE
+72,119,4,99.485,3899.0,50.2,84.6,-34.4,596.3,6.86,0.1,0.0,,NONE
+72,120,4,99.485,3899.0,51.1,84.6,-33.5,597.6,7.07,0.1,0.0,,NONE
+72,121,4,99.485,3899.0,52.0,84.6,-32.6,595.3,7.29,0.1,0.0,,NONE
+72,122,4,99.485,3899.0,52.8,84.6,-31.8,592.4,7.5,0.1,0.0,,NONE
+72,123,4,99.485,3899.0,53.9,84.7,-30.8,592.2,7.72,0.1,0.0,,NONE
+72,124,4,99.485,3899.0,54.8,84.7,-29.9,590.7,7.93,0.1,0.0,,NONE
+72,125,4,99.485,3899.0,55.9,84.8,-28.9,590.1,8.13,0.1,0.0,,NONE
+72,126,4,99.485,3899.0,56.9,84.8,-27.9,589.3,8.36,0.1,0.0,,NONE
+72,127,4,99.485,3899.0,57.9,84.9,-27.0,589.6,8.57,0.1,0.0,,NONE
+72,128,4,99.485,3899.0,58.8,84.9,-26.1,591.1,8.77,0.1,0.0,,NONE
+72,129,4,99.485,3899.0,59.8,84.8,-25.0,594.4,9.01,0.1,0.0,,NONE
+72,130,4,99.485,3899.0,60.9,84.8,-23.9,593.3,9.23,0.1,0.0,,NONE
+72,131,4,99.485,3899.0,61.9,84.7,-22.8,592.4,9.43,0.1,0.0,,NONE
+72,132,4,99.485,3899.0,62.9,84.7,-21.8,591.1,9.62,0.1,0.0,,NONE
+72,133,4,99.485,3899.0,64.0,84.6,-20.6,591.0,9.81,0.1,0.0,,NONE
+72,134,4,99.485,3899.0,65.0,84.6,-19.6,590.4,9.98,0.1,0.0,,NONE
+72,135,5,99.485,3899.0,67.6,18.7,48.9,590.2,9.97,2.565,50.0,,NONE
+72,136,5,99.485,3899.3,70.0,18.7,51.3,587.2,14.98,2.565,50.92,,NONE
+72,137,5,99.485,3899.8,74.1,18.6,55.5,589.8,15.01,2.565,64.98,,NONE
+72,138,5,99.485,3900.5,79.2,18.5,60.7,590.2,15.01,2.565,82.51,,NONE
+72,139,5,99.485,3901.3,85.0,15.6,69.4,592.5,14.98,2.041,102.88,,NONE
+72,140,5,99.485,3902.1,91.1,15.6,75.5,593.0,15.0,1.5,120.0,,NONE
+72,141,5,99.485,3903.1,91.9,15.7,76.2,593.6,14.97,1.5,120.0,,NONE
+72,142,5,99.485,3904.1,91.9,15.6,76.3,594.5,14.99,1.5,120.0,,NONE
+72,143,5,99.485,3905.4,91.9,15.5,76.4,595.4,14.2,1.5,120.0,,NONE
+72,144,5,99.485,3906.8,92.0,15.6,76.4,595.6,12.4,1.5,120.0,,NONE
+72,145,5,99.485,3908.2,92.0,15.6,76.4,596.1,11.39,1.5,120.0,,NONE
+72,146,5,99.485,3909.6,92.0,15.6,76.4,596.4,10.8,1.5,120.0,,NONE
+72,147,5,99.485,3911.1,91.9,15.7,76.2,596.7,10.42,1.5,120.0,,NONE
+72,148,5,99.485,3912.5,92.0,15.7,76.3,599.9,10.22,1.5,120.0,,NONE
+72,149,5,99.485,3913.9,91.9,15.7,76.2,600.0,10.06,1.5,120.0,,NONE
+72,150,5,99.485,3915.3,92.0,15.9,76.1,602.5,9.98,1.5,120.0,,NONE
+72,151,5,99.485,3916.7,91.9,15.9,76.0,605.4,9.92,1.5,120.0,,NONE
+72,152,5,99.485,3918.1,92.0,15.9,76.1,605.1,9.91,1.5,120.0,,NONE
+72,153,5,99.485,3919.5,92.0,16.0,76.0,606.2,9.87,1.5,120.0,,NONE
+72,154,5,99.485,3920.9,92.0,15.9,76.1,603.4,9.85,1.5,120.0,,NONE
+72,155,5,99.485,3922.3,92.1,15.9,76.2,603.7,9.87,1.5,120.0,,NONE
+72,156,5,99.485,3923.8,92.1,16.0,76.1,604.4,9.88,1.5,120.0,,NONE
+72,157,5,99.485,3925.2,92.2,15.9,76.3,604.0,9.89,1.5,120.0,,NONE
+72,158,5,99.485,3926.6,92.2,16.0,76.2,602.6,9.93,1.5,120.0,,NONE
+72,159,5,99.485,3928.0,92.2,16.0,76.2,602.4,9.91,1.5,120.0,,NONE
+72,160,5,99.485,3929.4,92.3,16.1,76.2,602.0,9.93,1.5,120.0,,NONE
+72,161,5,99.485,3930.8,92.4,16.0,76.4,605.3,9.93,1.5,120.0,,NONE
+72,162,5,99.485,3932.2,92.2,16.0,76.2,605.4,9.92,1.5,120.0,,NONE
+72,163,5,99.485,3933.6,92.3,15.9,76.4,606.9,9.92,1.5,120.0,,NONE
+72,164,5,99.485,3935.0,92.2,16.0,76.2,609.8,9.9,1.5,120.0,,NONE
+72,165,5,99.485,3936.5,92.2,16.1,76.1,610.7,9.93,1.5,120.0,,NONE
+72,166,5,99.485,3937.9,92.3,16.1,76.2,611.9,9.92,1.5,120.0,,NONE
+72,167,5,99.485,3939.3,92.2,16.1,76.1,613.8,9.91,1.5,120.0,,NONE
+72,168,5,99.485,3940.7,92.3,16.2,76.1,616.2,9.91,1.5,120.0,,NONE
+72,169,5,99.485,3942.1,92.3,16.0,76.3,616.7,9.93,1.5,120.0,,NONE
+72,170,5,99.485,3943.5,92.3,16.0,76.3,614.8,9.94,1.5,120.0,,NONE
+72,171,5,99.485,3944.9,92.4,16.0,76.4,616.8,10.0,1.5,120.0,,NONE
+72,172,5,99.485,3946.3,92.4,16.2,76.2,613.8,10.01,1.5,120.0,,NONE
+72,173,5,99.485,3947.7,92.5,16.2,76.3,611.0,10.02,1.5,120.0,,NONE
+72,174,5,99.485,3949.2,92.4,16.3,76.1,611.9,10.03,1.5,120.0,,NONE
+72,175,5,99.485,3950.6,92.3,16.4,75.9,611.2,10.03,1.5,120.0,,NONE
+72,176,5,99.485,3952.0,92.2,16.4,75.8,610.2,10.03,1.5,120.0,,NONE
+72,177,5,99.485,3953.4,92.2,16.3,75.9,612.0,10.01,1.5,120.0,,NONE
+72,178,5,99.485,3954.8,92.2,16.3,75.9,615.7,10.03,1.5,120.0,,NONE
+72,179,5,99.485,3956.2,92.2,16.3,75.9,614.9,10.05,1.5,120.0,,NONE
+72,180,5,99.485,3957.6,92.2,16.3,75.9,613.8,10.05,1.5,120.0,,NONE
+72,181,5,99.485,3959.0,92.2,16.3,75.9,613.3,10.05,1.5,120.0,,NONE
+72,182,5,99.485,3960.4,92.1,16.2,75.9,613.0,10.06,1.5,120.0,,NONE
+72,183,5,99.485,3961.8,92.0,16.2,75.8,614.2,10.08,1.5,120.0,,NONE
+72,184,5,99.485,3963.3,91.9,16.3,75.6,615.3,10.09,1.5,120.0,,NONE
+72,185,5,99.485,3964.7,91.9,16.2,75.7,619.3,10.1,1.5,120.0,,NONE
+72,186,5,99.485,3966.1,91.8,16.3,75.5,619.4,10.08,1.5,120.0,,NONE
+72,187,5,99.485,3967.5,91.7,16.3,75.4,620.6,10.06,1.5,120.0,,NONE
+72,188,5,99.485,3968.9,91.8,16.4,75.4,620.1,10.07,1.5,120.0,,NONE
+72,189,5,99.485,3970.3,91.6,16.4,75.2,621.0,10.08,1.5,120.0,,NONE
+72,190,5,99.485,3971.7,91.6,16.4,75.2,621.7,10.1,1.5,120.0,,NONE
+72,191,5,99.485,3973.1,91.6,16.5,75.1,623.8,10.06,1.5,120.0,,NONE
+72,192,5,99.485,3974.5,91.6,16.5,75.1,623.3,10.04,1.5,120.0,,NONE
+72,193,5,99.485,3976.0,91.5,16.4,75.1,626.1,10.05,1.5,120.0,,NONE
+72,194,5,99.485,3977.4,91.6,16.4,75.2,624.8,10.0,1.5,120.0,,NONE
+72,195,5,99.485,3978.8,91.6,16.4,75.2,623.6,9.98,1.5,120.0,,NONE
+72,196,5,99.485,3980.2,91.7,16.3,75.4,624.4,9.98,1.5,120.0,,NONE
+72,197,5,99.485,3981.6,91.6,16.2,75.4,625.6,9.98,1.5,120.0,,NONE
+72,198,5,99.485,3983.0,91.7,16.2,75.5,625.6,9.97,1.5,120.0,,NONE
+72,199,5,99.485,3984.4,91.6,16.2,75.4,627.8,9.98,1.5,120.0,,NONE
+72,200,5,99.485,3985.8,91.6,16.2,75.4,627.4,10.03,1.5,120.0,,NONE
+72,201,5,99.485,3987.2,91.5,16.0,75.5,626.8,10.04,1.5,120.0,,NONE
+72,202,5,99.485,3988.7,91.6,16.0,75.6,626.9,10.0,1.5,120.0,,NONE
+72,203,5,99.485,3990.1,91.6,16.0,75.6,627.6,10.01,1.5,120.0,,NONE
+72,204,5,99.485,3991.5,91.6,16.0,75.6,628.3,10.01,1.5,120.0,,NONE
+72,205,5,99.485,3992.9,91.6,16.1,75.5,631.2,9.98,1.5,120.0,,NONE
+72,206,5,99.485,3994.3,91.6,16.0,75.6,629.4,9.96,1.5,120.0,,NONE
+72,207,5,99.485,3995.7,91.5,16.1,75.4,631.0,9.97,1.5,120.0,,NONE
+72,208,5,99.485,3997.1,91.5,16.1,75.4,630.2,9.96,1.5,120.0,,NONE
+72,209,5,99.485,3998.5,91.5,16.0,75.5,631.1,9.97,1.5,120.0,,NONE
+72,210,5,99.485,3999.9,91.5,16.1,75.4,630.0,9.98,1.5,120.0,,NONE
+72,211,5,99.485,4001.4,91.7,16.1,75.6,632.9,9.99,1.5,120.0,,NONE
+72,212,5,99.485,4002.8,91.8,16.2,75.6,630.8,10.02,1.5,120.0,,NONE
+72,213,5,99.485,4004.2,91.7,16.2,75.5,632.1,10.0,1.5,120.0,,NONE
+72,214,5,99.485,4005.6,91.6,16.3,75.3,633.8,10.0,1.5,120.0,,NONE
+72,215,5,99.485,4007.0,91.6,16.3,75.3,635.2,9.99,1.5,120.0,,NONE
+72,216,5,99.485,4008.4,91.6,16.2,75.4,636.4,9.96,1.5,120.0,,NONE
+72,217,5,99.485,4009.8,91.7,16.1,75.6,637.5,9.99,1.5,120.0,,NONE
+72,218,5,99.485,4011.2,91.7,16.1,75.6,638.9,10.05,1.5,120.0,,NONE
+72,219,5,99.485,4012.6,91.6,16.0,75.6,639.5,10.06,1.5,120.0,,NONE
+72,220,5,99.485,4014.1,91.7,16.2,75.5,642.1,10.07,1.5,120.0,,NONE
+72,221,5,99.485,4015.5,91.7,16.2,75.5,643.6,10.08,1.5,120.0,,NONE
+72,222,5,99.485,4016.9,91.8,16.2,75.6,641.1,10.07,1.5,120.0,,NONE
+72,223,5,99.485,4018.3,91.8,16.2,75.6,640.9,10.05,1.5,120.0,,NONE
+72,224,5,99.485,4019.7,91.8,16.1,75.7,641.3,10.05,1.5,120.0,,NONE
+72,225,6,99.485,4019.7,84.7,70.1,14.6,641.5,10.06,0.4,30.0,,NONE
+72,226,6,99.485,4019.7,80.9,70.2,10.7,638.8,10.0,0.386,29.83,,NONE
+72,227,6,99.485,4019.7,78.1,70.1,8.0,641.2,10.01,0.372,29.66,,NONE
+72,228,6,99.485,4019.7,76.0,70.1,5.9,641.8,10.05,0.359,29.48,,NONE
+72,229,6,99.485,4019.7,74.5,70.1,4.4,639.8,10.04,0.345,29.31,,NONE
+72,230,6,99.485,4019.7,73.3,70.1,3.2,642.7,10.02,0.331,29.14,,NONE
+72,231,6,99.485,4019.7,72.4,70.1,2.3,643.8,10.01,0.317,28.97,,NONE
+72,232,6,99.485,4019.7,71.6,70.2,1.4,641.4,10.05,0.303,28.79,,NONE
+72,233,6,99.485,4019.7,71.1,70.2,0.9,643.1,10.02,0.29,28.62,,NONE
+72,234,6,99.485,4019.7,70.7,70.1,0.6,640.3,10.04,0.276,28.45,,NONE
+72,235,6,99.485,4019.7,70.5,70.1,0.4,641.0,10.02,0.262,28.28,,NONE
+72,236,6,99.485,4019.7,70.2,70.1,0.1,641.8,9.98,0.248,28.1,,NONE
+72,237,6,99.485,4019.7,70.2,70.1,0.1,641.3,10.01,0.234,27.93,,NONE
+72,238,6,99.485,4019.7,70.1,70.1,0.0,641.6,9.96,0.221,27.76,,NONE
+72,239,6,99.485,4019.7,70.0,70.1,-0.1,643.8,9.99,0.207,27.59,,NONE
+72,240,6,99.485,4019.7,69.9,70.1,-0.2,642.5,10.03,0.193,27.41,,NONE
+72,241,6,99.485,4019.7,69.9,69.9,0.0,642.5,10.04,0.179,27.24,,NONE
+72,242,6,99.485,4019.7,70.0,69.9,0.1,641.7,9.97,0.166,27.07,,NONE
+72,243,6,99.485,4019.7,69.9,70.0,-0.1,642.1,9.99,0.152,26.9,,NONE
+72,244,6,99.485,4019.7,69.9,70.0,-0.1,642.7,10.01,0.138,26.72,,NONE
+72,245,6,99.485,4019.7,69.9,69.9,0.0,640.9,9.99,0.124,26.55,,NONE
+72,246,6,99.485,4019.7,69.9,69.8,0.1,641.6,10.06,0.11,26.38,,NONE
+72,247,6,99.485,4019.7,70.0,69.8,0.2,642.0,10.05,0.097,26.21,,NONE
+72,248,6,99.485,4019.7,70.1,69.8,0.3,643.1,9.97,0.083,26.03,,NONE
+72,249,6,99.485,4019.7,70.1,70.0,0.1,640.9,10.01,0.069,25.86,,NONE
+72,250,6,99.485,4019.7,70.1,70.1,0.0,641.6,10.04,0.055,25.69,,NONE
+72,251,6,99.485,4019.7,70.2,70.0,0.2,641.4,9.98,0.041,25.52,,NONE
+72,252,6,99.485,4019.7,70.2,70.1,0.1,641.3,9.99,0.028,25.34,,NONE
+72,253,6,99.485,4019.7,70.3,70.2,0.1,641.1,9.99,0.014,25.17,,NONE
+72,254,6,99.485,4019.7,70.2,70.3,-0.1,640.1,9.95,0.0,25.0,,NONE
+72,255,7,99.485,4019.7,70.2,15.4,54.8,640.6,9.98,0.0,90.0,,NONE
+72,256,7,99.485,4019.7,70.1,15.3,54.8,639.2,9.77,0.0,89.55,,NONE
+72,257,7,99.485,4019.7,69.9,15.4,54.5,638.6,9.58,0.0,89.09,,NONE
+72,258,7,99.485,4019.7,69.4,15.3,54.1,640.5,9.36,0.0,88.64,,NONE
+72,259,7,99.485,4019.7,69.0,15.3,53.7,641.5,9.17,0.0,88.18,,NONE
+72,260,7,99.485,4019.7,68.5,15.2,53.3,641.0,8.99,0.0,87.73,,NONE
+72,261,7,99.485,4019.7,67.8,15.2,52.6,639.5,8.79,0.0,87.27,,NONE
+72,262,7,99.485,4019.7,67.3,15.2,52.1,639.8,8.57,0.0,86.82,,NONE
+72,263,7,99.485,4019.7,66.5,15.0,51.5,641.4,8.37,0.0,86.36,,NONE
+72,264,7,99.485,4019.7,65.9,15.0,50.9,642.7,8.18,0.0,85.91,,NONE
+72,265,7,99.485,4019.7,65.2,14.9,50.3,644.4,7.98,0.0,85.45,,NONE
+72,266,7,99.485,4019.7,64.3,15.0,49.3,644.8,7.81,0.0,85.0,,NONE
+72,267,7,99.485,4019.7,63.5,15.0,48.5,644.0,7.58,0.0,84.55,,NONE
+72,268,7,99.485,4019.7,62.6,15.0,47.6,645.9,7.37,0.0,84.09,,NONE
+72,269,7,99.485,4019.7,61.7,14.9,46.8,646.1,7.16,0.0,83.64,,NONE
+72,270,7,99.485,4019.7,60.8,14.9,45.9,643.9,6.95,0.0,83.18,,NONE
+72,271,7,99.485,4019.7,60.0,15.0,45.0,642.3,6.8,0.0,82.73,,NONE
+72,272,7,99.485,4019.7,59.2,15.1,44.1,643.0,6.6,0.0,82.27,,NONE
+72,273,7,99.485,4019.7,58.4,15.1,43.3,642.6,6.39,0.0,81.82,,NONE
+72,274,7,99.485,4019.7,57.5,15.0,42.5,641.3,6.18,0.0,81.36,,NONE
+72,275,7,99.485,4019.7,56.7,14.9,41.8,640.7,5.93,0.0,80.91,,NONE
+72,276,7,99.485,4019.7,55.9,14.9,41.0,642.2,5.75,0.0,80.45,,NONE
+72,277,7,99.485,4019.7,55.0,14.8,40.2,643.6,5.55,0.0,80.0,,NONE
+72,278,7,99.485,4019.7,54.2,14.7,39.5,643.3,5.34,0.0,79.55,,NONE
+72,279,7,99.485,4019.7,53.2,14.5,38.7,644.8,5.12,0.0,79.09,,NONE
+72,280,7,99.485,4019.7,52.3,14.5,37.8,643.2,4.92,0.0,78.64,,NONE
+72,281,7,99.485,4019.7,51.5,14.4,37.1,643.6,4.68,0.0,78.18,,NONE
+72,282,7,99.485,4019.7,50.6,14.4,36.2,642.4,4.48,0.0,77.73,,NONE
+72,283,7,99.485,4019.7,49.7,14.5,35.2,643.7,4.29,0.0,77.27,,NONE
+72,284,7,99.485,4019.7,48.9,14.6,34.3,642.4,4.03,0.0,76.82,,NONE
+72,285,7,99.485,4019.7,47.9,14.6,33.3,641.5,3.85,0.0,76.36,,NONE
+72,286,7,99.485,4019.7,47.0,14.6,32.4,639.8,3.63,0.0,75.91,,NONE
+72,287,7,99.485,4019.7,46.0,14.7,31.3,639.9,3.43,0.0,75.45,,NONE
+72,288,7,99.485,4019.7,45.2,14.8,30.4,641.3,3.21,0.0,75.0,,NONE
+72,289,7,99.485,4019.7,44.2,14.9,29.3,640.5,3.01,0.0,74.55,,NONE
+72,290,7,99.485,4019.7,43.2,14.8,28.4,638.4,2.83,0.0,74.09,,NONE
+72,291,7,99.485,4019.7,42.4,14.8,27.6,636.7,2.62,0.0,73.64,,NONE
+72,292,7,99.485,4019.7,41.4,14.8,26.6,637.1,2.38,0.0,73.18,,NONE
+72,293,7,99.485,4019.7,40.5,15.0,25.5,637.6,2.18,0.0,72.73,,NONE
+72,294,7,99.485,4019.7,39.5,15.1,24.4,639.1,1.95,0.0,72.27,,NONE
+72,295,7,99.485,4019.7,38.5,15.0,23.5,638.5,1.75,0.0,71.82,,NONE
+72,296,7,99.485,4019.7,37.7,15.0,22.7,640.5,1.52,0.0,71.36,,NONE
+72,297,7,99.485,4019.7,36.8,15.0,21.8,639.2,1.31,0.0,70.91,,NONE
+72,298,7,99.485,4019.7,35.9,15.0,20.9,643.7,1.12,0.0,70.45,,NONE
+72,299,7,99.485,4019.7,35.0,15.0,20.0,642.3,0.92,0.0,70.0,,NONE
+72,300,8,99.485,4019.7,34.5,24.8,9.7,642.7,0.93,0.0,0.0,,NONE
+72,301,8,99.485,3881.1,34.3,24.7,9.6,642.2,0.93,0.0,0.0,,NONE
+72,302,8,99.485,3742.5,33.9,24.7,9.2,642.6,0.92,0.0,0.0,,NONE
+72,303,8,99.485,3603.9,33.7,24.7,9.0,641.9,0.93,0.0,0.0,,NONE
+72,304,8,99.485,3465.3,33.3,24.6,8.7,641.6,0.95,0.0,0.0,,NONE
+72,305,8,99.485,3326.6,32.9,24.6,8.3,640.9,0.96,0.0,0.0,,NONE
+72,306,8,99.485,3188.0,32.6,24.5,8.1,641.9,1.0,0.0,0.0,,NONE
+72,307,8,99.485,3049.4,32.3,24.5,7.8,643.2,0.99,0.0,0.0,,NONE
+72,308,8,99.485,2910.8,32.1,24.6,7.5,643.0,1.0,0.0,0.0,,NONE
+72,309,8,99.485,2772.2,32.0,24.7,7.3,644.0,1.0,0.0,0.0,,NONE
+72,310,8,99.485,2633.6,31.8,24.8,7.0,643.3,0.97,0.0,0.0,,NONE
+72,311,8,99.485,2495.0,31.7,24.9,6.8,642.5,0.96,0.0,0.0,,NONE
+72,312,8,99.485,2356.4,31.4,24.9,6.5,642.0,0.96,0.0,0.0,,NONE
+72,313,8,99.485,2217.8,31.2,24.9,6.3,643.1,0.98,0.0,0.0,,NONE
+72,314,8,99.485,2079.2,31.1,24.8,6.3,643.4,1.0,0.0,0.0,,NONE
+72,315,8,99.485,1940.5,31.1,24.7,6.4,642.1,0.97,0.0,0.0,,NONE
+72,316,8,99.485,1801.9,31.0,24.7,6.3,639.6,0.98,0.0,0.0,,NONE
+72,317,8,99.485,1663.3,31.0,24.7,6.3,639.2,1.0,0.0,0.0,,NONE
+72,318,8,99.485,1524.7,31.0,24.8,6.2,636.9,1.04,0.0,0.0,,NONE
+72,319,8,99.485,1386.1,30.9,24.7,6.2,637.7,1.01,0.0,0.0,,NONE
+72,320,8,99.485,1247.5,30.8,24.8,6.0,638.9,1.02,0.0,0.0,,NONE
+72,321,8,99.485,1108.9,30.8,24.8,6.0,640.0,0.99,0.0,0.0,,NONE
+72,322,8,99.485,970.3,30.7,24.7,6.0,638.3,0.98,0.0,0.0,,NONE
+72,323,8,99.485,831.7,30.7,24.5,6.2,639.2,0.96,0.0,0.0,,NONE
+72,324,8,99.485,693.1,30.7,24.5,6.2,639.8,0.95,0.0,0.0,,NONE
+72,325,8,99.485,554.4,30.5,24.6,5.9,641.1,0.93,0.0,0.0,,NONE
+72,326,8,99.485,415.8,30.5,24.6,5.9,0.0,0.9,0.0,0.0,,NONE
+72,327,8,99.485,277.2,30.4,24.6,5.8,0.0,0.86,0.0,0.0,,NONE
+72,328,8,99.485,138.6,30.4,24.6,5.8,0.0,0.88,0.0,0.0,,NONE
+72,329,8,99.485,0.0,30.4,24.6,5.8,0.0,0.86,0.0,0.0,,NONE
