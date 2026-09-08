@@ -64,6 +64,13 @@ Implemented reduced-order Monod / Luedeking-Piret sequential model (`solve_ivp` 
 - Constants live in `configs/cleaning.yaml` and are not estimated from test batches.
 - Two-sided Savitzky–Golay, full-batch smoothing, and future-aware interpolation are not used.
 
+
+## Prompt 12 — computational monitoring
+
+- Implemented measured CPU/RAM (`psutil`) and stage latencies (`time.perf_counter`) in `src/monitoring/system.py` and `src/monitoring/timing.py`.
+- Sequential inference loop records cleaning, feature-engineering, mechanistic solver, NN, OOD, and total inference latency, plus throughput, serialized model size, and `nn.Module` parameter count.
+- Sub-150 ms remains a **benchmark target to measure against**, not a hardcoded or claimed latency.
+
 ## Rule
 
 Do not remove or change a locked decision without documenting why.
