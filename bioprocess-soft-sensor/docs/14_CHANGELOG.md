@@ -1,5 +1,12 @@
 # Architecture Changelog
 
+## Prompt 7 — residual MLP implemented
+
+- Residual training target remains `delta_X = X_reference - X_mechanistic`.
+- One PyTorch MLP: Dense 64-ReLU → 32-ReLU → 16-ReLU → scalar `delta_X`.
+- Scaler, feature order, and weights are fit/selected using train/validation batches only.
+- Still rejected: three phase-specific NNs, XGBoost residual, LSTM/Transformer.
+
 ## Initial locked architecture
 
 - Target: biomass X
@@ -44,6 +51,10 @@ Not locked as final because temporal dependence violates simple exchangeability 
 - Seed lives in `configs/split.yaml` and `configs/default.yaml` (`seed: 42`).
 - Manifest written to `data/splits/manifest.json`.
 - If `n != 100`: `n_train = n*60//100`, `n_val = n*20//100`, remainder to test. Exact 60/20/20 is required and tested when `n == 100`.
+
+## Prompt 5 — reduced mechanistic baseline
+
+Implemented reduced-order Monod / Luedeking-Piret sequential model (`solve_ivp` BDF with Radau fallback). Primary live output is biomass `X_mechanistic`. Substrate and optional product are internal states. Dissolved oxygen is an exogenous measurement (no full IndPenSim kLa/OUR oxygen balance). Live `step()` rejects reference-biomass keys and does not initialize from future reference X.
 
 ## Rule
 

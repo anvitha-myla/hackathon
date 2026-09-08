@@ -14,4 +14,4 @@ Locked decisions (do not reverse without an entry in `docs/14_CHANGELOG.md`):
 - OOD: Mahalanobis distance with `beta_trust`; fallback to physics.
 - UI: four Streamlit tabs (Data Cleaning, Feature Engineering, Live Inference, Computational Monitor). Live inference hides reference biomass.
 
-This repository is at Prompt 0 (initialize). Do not implement later prompts unless the user explicitly starts them.
+This repository includes Prompt 0 (scaffold) and Prompt 5 (reduced sequential mechanistic model). Do not implement residual MLP / NN training unless explicitly requested.

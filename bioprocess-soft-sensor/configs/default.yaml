@@ -36,6 +36,8 @@ causal:
 mechanistic:
   family: reduced_order_monod
   use_full_indpensim_equations: false
+  solver: BDF
+  parameters_file: mechanistic.yaml
 
 model:
   residual_mlp:
