@@ -194,14 +194,11 @@ def test_engineering_wrapper_matches_engine() -> None:
 
 
 def test_engine_on_published_fixture_headers() -> None:
-    pytest.importorskip("src.data.loader")
     from src.data.loader import load_fixture
 
-    if not hasattr(load_fixture, "__call__") or "load_fixture" not in dir():
-        pytest.skip("Prompt 1 loader not available")
     try:
         loaded = load_fixture()
-    except Exception as exc:  # loader still a stub or fixture missing
+    except Exception as exc:
         pytest.skip(f"IndPenSim fixture/loader not ready: {exc}")
     if loaded.frame.empty:
         pytest.skip("empty fixture")
