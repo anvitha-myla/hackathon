@@ -1,5 +1,21 @@
 # Architecture Changelog
 
+## Prompt 4 — causal feature engine
+
+- Source of truth: `src/features/feature_engine.py`, `registry.py`, `derivatives.py`, `stoichiometry.py`. `engineering.py` is a wrap.
+- Feature **definitions** are fixed in the registry; **values** update each timestamp.
+- Implemented from IndPenSim-available columns: OUR/CER (off-gas inert balance, dataset OUR/CER fallback), RQ with near-zero OUR guard, dDO/dt, cumulative sugar/oil feed, measured + integrated reactor volume (no evaporation column), causal progress (cumulative feed, not DTW), lags 1/5/10, backward rolling mean/std/slope, soft phase indicators for the **single** residual MLP.
+- Not implemented (missing IndPenSim sensors, not invented): ΔT (no jacket temperature), dτ/dt (no shaft torque). Mechanistic outputs wait for Prompt 5.
+- Live feature tables exclude biomass, penicillin, substrate, and Raman bins. Leakage tests mutate a future raw sample and require features at t to be unchanged.
+
+## Prompt 11 — robustness / stress-testing environment
+
+- Stress testing is a **separate** environment from demo inference (`src/evaluation/stress.py`, `configs/stress.yaml`, `tests/test_stress.py`).
+- Controlled perturbations (in-memory copies only): random noise, spikes, missing values, impossible values, sensor drift, distribution shift, feed interruption, temperature disturbance, combined faults, plus a severe-OOD shift.
+- Clean final-test files are never overwritten; records/plots/tables go under `results/stress`.
+- Each row records prediction, reference, error, OOD distance, `beta_trust`, ML contribution, and physics contribution.
+- Expected fallback (tested, including with hybrid/OOD stubs): normal → ML correction active; severe OOD → `beta_trust` → 0 and `X_hybrid` → `X_mechanistic`; corrupted sensors must not crash.
+
 ## Prompt 7 — residual MLP implemented
 
 - Residual training target remains `delta_X = X_reference - X_mechanistic`.
@@ -64,12 +80,45 @@ Implemented reduced-order Monod / Luedeking-Piret sequential model (`solve_ivp` 
 - Constants live in `configs/cleaning.yaml` and are not estimated from test batches.
 - Two-sided Savitzky–Golay, full-batch smoothing, and future-aware interpolation are not used.
 
+## Prompt 9 — Mahalanobis OOD
+
+- Spec source of truth: `src/inference/ood.py`.
+- Fit `mean_train` / `covariance_train` on **training features only** (Ledoit–Wolf + ridge + `pinv`). Test/validation `split=` is rejected; non-train `batch_id` rows are dropped.
+- `D_M = sqrt((phi - mean)^T Sigma^{-1} (phi - mean))`.
+- `beta_trust = exp(-kappa * max(0, D_M - D_threshold))`, clipped to `[0, 1]`. `D_threshold` defaults to the train D_M 0.95 quantile when unset.
+- Hybrid (one timestamp, sequential): `X_hybrid = X_mechanistic + beta_trust * delta_X_pred`. Injected into Prompt 8 via `MahalanobisTrustHook` without changing `SequentialHybridEngine.step(observation)`. `apply_hybrid` is the equation helper. `src/monitoring/ood.py` re-exports this module (including `beta_trust`).
+- `src/monitoring/ood.py` re-exports the inference module (shim).
+- Invalid/NaN features: `beta_trust = 0` (physics fallback). No production model training.
+
+## Prompt 8 — sequential hybrid inference
+
+- Added `src/inference/pipeline.py`, `state.py`, `result.py` (plus `trust.py` hook and `components.py` adapters).
+- Live equation: `X_hybrid = X_mechanistic + beta_trust * delta_X_pred` with `beta_trust = 1.0` placeholder.
+- Mahalanobis OOD is **not** implemented here. `PlaceholderTrustHook` / injected `trust_hook` is the Prompt 9 insertion point.
+- Reference biomass is stripped before cleaning/features/mechanistic/residual; evaluation may attach it after `step()`.
+- Sequential API: `step(observation)` one timestamp; `run_sequential` only iterates `step` (no prefetch).
+- Wires to `ReducedMechanisticModel` and residual artifacts when present; otherwise causal/hold/zero stubs so tests run before Prompts 3–4 finish.
 
 ## Prompt 12 — computational monitoring
 
 - Implemented measured CPU/RAM (`psutil`) and stage latencies (`time.perf_counter`) in `src/monitoring/system.py` and `src/monitoring/timing.py`.
 - Sequential inference loop records cleaning, feature-engineering, mechanistic solver, NN, OOD, and total inference latency, plus throughput, serialized model size, and `nn.Module` parameter count.
 - Sub-150 ms remains a **benchmark target to measure against**, not a hardcoded or claimed latency.
+
+## Prompt 10 — evaluation framework
+
+- Implemented A vs B vs C metrics (RMSE, MAE, R², phase-wise, early/late, trajectory stability, OOD-stratified error, latency) in `src/evaluation/`.
+- `run_final_test()` refuses if test `batch_id`s appear in train/scaler/OOD artifacts (`test_split_used=true` also fails closed).
+- Final 20-batch IndPenSim scoring is **not** claimed when data or trained models are missing. Hybrid is not assumed to win.
+- Plots label the simulator series **IndPenSim Reference** (not physical ground truth).
+- NN-only: thin `src/models/nn_only.py` interface only; Prompt 6 training was not executed.
+
+## Prompt 1 — ingestion (no architecture change)
+
+- Added batch-aware IndPenSim loader (`src/data/loader.py`), documented-header schema (`src/data/schema.py`), and validation (`src/data/validation.py`).
+- Reference biomass is identified when present and excluded from the live feature subset.
+- Official 100-batch dump is not shipped; `configs/data.yaml` `raw_path` points at `data/raw/`.
+- No model training.
 
 ## Rule
 
