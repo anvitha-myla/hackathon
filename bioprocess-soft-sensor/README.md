@@ -28,7 +28,9 @@ Prompt 0: packages, configs, specs, and import smoke tests.
 
 Prompt 2: reproducible **60/20/20 batch_id split** (`src/data/split.py`, `configs/split.yaml`, leakage tests). Seed `42`. Manifest path `data/splits/manifest.json`. No model training.
 
-Residual training, NN-only training, hybrid inference, OOD, evaluation, stress tests, and Streamlit tab logic are **not** implemented yet.
+Prompt 9: Mahalanobis OOD in `src/inference/ood.py` (`beta_trust`, train-only fit). Sequential hybrid combine is `X_hybrid = X_mechanistic + beta_trust * delta_X_pred` (`src/inference/engine.py` `hybrid_step`). No production training; OOD is not fit on test batches.
+
+Residual NN-only training, full hybrid telemetry pipeline, evaluation, stress tests, and Streamlit tab logic may still be later prompts.
 
 ## Layout
 
@@ -65,3 +67,19 @@ PYTHONPATH=. pytest
 ## Config
 
 [`configs/default.yaml`](configs/default.yaml) encodes the locked split, biomass target, MLP widths, OOD placeholders, and four-tab UI. Load with `src.config.load_default()`.
+
+## IndPenSim data (Prompt 1)
+
+The 100-batch dump is **not** in git (~2.5 GB with Raman). It is a **simulator**, not physical industrial telemetry.
+
+1. Download from [Mendeley `pdnjz7zz5x`](https://data.mendeley.com/datasets/pdnjz7zz5x/1) (CC BY 4.0).
+2. Put files in [`data/raw/`](data/raw/) (for example `100_Batches_IndPenSim_V3.csv`).
+3. Path is configured in [`configs/data.yaml`](configs/data.yaml) (`raw_path`).
+
+Without those files, the loader falls back to a **labeled synthetic fixture** (`tests/fixtures/indpensim_synthetic_fixture.csv`) that uses published IndPenSim column names only.
+
+```bash
+PYTHONPATH=. python -m src.data.inspect
+```
+
+writes `reports/indpensim_ingestion_report.md`.

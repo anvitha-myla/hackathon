@@ -14,4 +14,4 @@ Locked decisions (do not reverse without an entry in `docs/14_CHANGELOG.md`):
 - OOD: Mahalanobis distance with `beta_trust`; fallback to physics.
 - UI: four Streamlit tabs (Data Cleaning, Feature Engineering, Live Inference, Computational Monitor). Live inference hides reference biomass.
 
-This repository includes Prompt 0 (scaffold) and Prompt 5 (reduced sequential mechanistic model). Do not implement residual MLP / NN training unless explicitly requested.
+This repository includes Prompt 0 (scaffold), Prompt 1 (IndPenSim ingestion), and later layer stubs/implementations as requested. Do not silently reverse locked architecture. Do not claim the IndPenSim dump is physical industrial telemetry.

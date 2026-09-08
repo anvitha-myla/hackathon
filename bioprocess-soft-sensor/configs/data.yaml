@@ -9,3 +9,15 @@ split:
   seed: 42
 target: biomass
 reference_hidden_in_live_inference: true
+
+# Prompt 1 ingestion (simulator dump is not shipped in git).
+raw_path: data/raw
+processed_path: data/processed
+source_dataset_id: IndPenSim
+published_url: https://data.mendeley.com/datasets/pdnjz7zz5x/1
+expected_filenames:
+  - 100_Batches_IndPenSim_V3.csv
+  - 100_Batches_IndPenSim_Statistics.csv
+apply_published_v3_batch_ref_pat_swap: true
+infer_batches_from_time_resets: true
+fixture_path: tests/fixtures/indpensim_synthetic_fixture.csv
