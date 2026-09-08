@@ -56,6 +56,14 @@ Not locked as final because temporal dependence violates simple exchangeability 
 
 Implemented reduced-order Monod / Luedeking-Piret sequential model (`solve_ivp` BDF with Radau fallback). Primary live output is biomass `X_mechanistic`. Substrate and optional product are internal states. Dissolved oxygen is an exogenous measurement (no full IndPenSim kLa/OUR oxygen balance). Live `step()` rejects reference-biomass keys and does not initialize from future reference X.
 
+## Prompt 3 — Causal cleaning (implemented)
+
+- Cleaning runs strictly causally: at time t only `x(t), x(t-1), …` are used.
+- Components: bounded forward-fill, missingness indicators, backward Hampel (~5 min conceptual window), causal EMA / one-sided MA, physical-plausibility flags.
+- Raw values, cleaned values, and quality flags are all retained. Impossible readings are flagged, not silently deleted.
+- Constants live in `configs/cleaning.yaml` and are not estimated from test batches.
+- Two-sided Savitzky–Golay, full-batch smoothing, and future-aware interpolation are not used.
+
 ## Rule
 
 Do not remove or change a locked decision without documenting why.

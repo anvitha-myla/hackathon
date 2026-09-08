@@ -1,0 +1,80 @@
+# Causal cleaning constants (docs/03_CLEANING_SPEC.md).
+# Loaded as-is. Do not estimate these from test batches.
+
+sampling:
+  target_grid_minutes: 1
+  # Regrid only when the native median step is at most this (minutes).
+  # Coarser IndPenSim hourly series stay on the native grid (no invented minutes).
+  regrid_when_median_step_minutes_at_most: 1.01
+  numeric_time_unit: hours
+  time_column_candidates:
+    - timestamp
+    - Time
+    - time
+    - t
+
+identity_columns:
+  - batch_id
+  - timestamp
+  - Time
+  - time
+  - t
+  - relative_time
+  - source
+  - dataset
+  - source_dataset
+  - split
+
+missing:
+  forward_fill_max_minutes: 5
+  add_missingness_indicators: true
+
+hampel:
+  window_minutes: 5
+  min_window_samples: 5
+  n_sigmas: 3.0
+  mad_scale: 1.4826
+  min_periods: 3
+
+smoothing:
+  method: ema
+  ema_alpha: 0.3
+  ma_window_minutes: 5
+
+physical_bounds:
+  pH:
+    min: 0.0
+    max: 14.0
+    aliases: [ph, pH_online]
+  dissolved_oxygen:
+    min: 0.0
+    max: 150.0
+    aliases: [DO, do, DO_percent, dissolved_oxygen_concentration]
+  vessel_temperature:
+    min: 0.0
+    max: 80.0
+    aliases: [temperature, temp, T, T_vessel, Temperature]
+  jacket_temperature:
+    min: -20.0
+    max: 150.0
+    aliases: [T_jacket, Tcool, jacket_temp]
+  agitation:
+    min: 0.0
+    max: 2000.0
+    aliases: [RPM, rpm, agitator, stir, agitation_rpm]
+  feed_rate:
+    min: 0.0
+    max: 1000000.0
+    aliases: [sugar_feed, Fs, substrate_feed, feed]
+  gas_flow:
+    min: 0.0
+    max: 1000000.0
+    aliases: [air, aeration, Fg, gas_flow_rate]
+  co2:
+    min: 0.0
+    max: 100.0
+    aliases: [CO2, CO2_out, outlet_CO2]
+  o2:
+    min: 0.0
+    max: 100.0
+    aliases: [O2, O2_out, outlet_O2]
