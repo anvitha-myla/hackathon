@@ -1,0 +1,11 @@
+# See docs/02_DATA_SPEC.md
+dataset: IndPenSim
+n_batches: 100
+split:
+  train_batches: 60
+  validation_batches: 20
+  test_batches: 20
+  unit: complete_batch
+  seed: 42
+target: biomass
+reference_hidden_in_live_inference: true

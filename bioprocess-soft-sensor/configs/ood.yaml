@@ -1,0 +1,6 @@
+# See docs/08_OOD_SPEC.md
+method: mahalanobis
+kappa: null
+d_threshold: null
+beta_trust_formula: "exp(-kappa * max(0, D_M - D_threshold))"
+fallback: physics

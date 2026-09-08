@@ -1,0 +1,9 @@
+# See docs/05_MECHANISTIC_MODEL_SPEC.md
+family: reduced_order_monod
+use_full_indpensim_equations: false
+states:
+  - biomass
+  - substrate
+  - product
+  - volume
+primary_estimate: biomass

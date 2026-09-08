@@ -1,0 +1,8 @@
+# See docs/06_NN_SPEC.md — architecture only; no training in Prompt 0
+framework: pytorch
+architecture: mlp
+hidden: [64, 32, 16]
+activation: relu
+primary_target: biomass
+residual_output: delta_X
+nn_only_output: biomass

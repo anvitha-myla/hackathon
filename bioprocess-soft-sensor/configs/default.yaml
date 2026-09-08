@@ -1,0 +1,81 @@
+# Canonical runtime config. Research decisions are locked in docs/00_MASTER_SPEC.md.
+# Prompt 0: loaders only — do not train models from this file.
+
+project:
+  name: bioprocess-hybrid-soft-sensor
+  master_spec: docs/00_MASTER_SPEC.md
+  dataset_name: IndPenSim
+  dataset_kind: simulator_reference  # not physical industrial ground truth
+  n_batches: 100
+
+target:
+  primary: biomass
+  symbol: X
+  secondary_not_primary: [substrate, product]
+
+split:
+  unit: complete_batch
+  train_batches: 60
+  validation_batches: 20
+  test_batches: 20
+  seed: 42
+  timestamp_split: forbidden
+  test_holdout: untouched_until_final_eval
+
+causal:
+  enabled: true
+  allowed_at_t: [current_measurements, previous_measurements, previous_state, accumulated_quantities]
+  forbidden:
+    - two_sided_filters
+    - full_batch_dtw
+    - future_aware_interpolation
+    - future_derived_normalization
+    - test_batch_statistics
+    - reference_biomass_in_live_inference
+
+mechanistic:
+  family: reduced_order_monod
+  use_full_indpensim_equations: false
+
+model:
+  residual_mlp:
+    hidden: [64, 32, 16]
+    activation: relu
+    output: biomass_residual  # delta_X = X_reference - X_mechanistic
+  nn_only:
+    hidden: [64, 32, 16]
+    activation: relu
+    output: biomass
+  forbidden:
+    - lstm
+    - transformer
+    - neural_ode
+    - xgboost_as_primary_residual
+    - three_phase_nns
+
+ood:
+  method: mahalanobis
+  kappa: null          # placeholder — fit on train features later
+  d_threshold: null    # placeholder — D_M threshold on train
+  beta_trust: "exp(-kappa * max(0, D_M - D_threshold))"
+  fallback: physics
+
+ui:
+  framework: streamlit
+  tabs:
+    - data_cleaning
+    - feature_engineering
+    - live_inference
+    - computational_monitor
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  data_splits: data/splits
+  models: models
+  results: results
+  notebooks: notebooks
+  docs: docs
+
+live_inference:
+  hide_reference_biomass: true

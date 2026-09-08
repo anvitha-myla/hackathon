@@ -1,0 +1,11 @@
+pandas
+numpy
+scipy
+pyyaml
+pytest
+torch
+streamlit
+scikit-learn
+matplotlib
+joblib
+psutil
