@@ -57,8 +57,9 @@ model:
 
 ood:
   method: mahalanobis
-  kappa: null          # placeholder — fit on train features later
-  d_threshold: null    # placeholder — D_M threshold on train
+  kappa: 1.0
+  d_threshold: null    # fitted from train-only D_M quantile (never test)
+  threshold_quantile: 0.95
   beta_trust: "exp(-kappa * max(0, D_M - D_threshold))"
   fallback: physics
 

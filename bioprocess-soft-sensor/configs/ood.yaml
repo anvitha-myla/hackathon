@@ -1,6 +1,12 @@
 # See docs/08_OOD_SPEC.md
 method: mahalanobis
-kappa: null
-d_threshold: null
+kappa: 1.0
+d_threshold: null  # fitted as train D_M quantile; never from test batches
+threshold_quantile: 0.95
+ridge: 1.0e-6
+relative_ridge: 1.0e-4
+shrinkage: ledoit_wolf
+severe_beta: 1.0e-3
+default_kappa: 1.0
 beta_trust_formula: "exp(-kappa * max(0, D_M - D_threshold))"
 fallback: physics
