@@ -1,5 +1,13 @@
 # Architecture Changelog
 
+## Prompt 13 — four-tab Streamlit UI
+
+- Application: `app/streamlit_app.py` (Data Cleaning, Feature Engineering, Live Inference, Computational Monitor).
+- Orchestration in `src/ui` calls `clean_batch`, `FeatureEngine`, `SequentialHybridEngine`, and `run_monitored_inference_loop`. No duplicated residual/ODE/OOD math in the UI.
+- Live tab plots Mechanistic / NN-only / Hybrid vs **IndPenSim Reference** (simulator benchmark, attached after `step`). Reference biomass is stripped before inference.
+- Missing IndPenSim dump: labeled synthetic fixture. Untrained NN-only weights are shown as unavailable, not invented.
+
+
 ## Prompt 4 — causal feature engine
 
 - Source of truth: `src/features/feature_engine.py`, `registry.py`, `derivatives.py`, `stoichiometry.py`. `engineering.py` is a wrap.
