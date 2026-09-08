@@ -87,8 +87,9 @@ def test_numerical_stability_long_horizon() -> None:
     for _ in range(200):
         last = model.step(0.25, _obs(F=0.04, DO=60.0))
     assert last is not None
-    assert last.success
+    assert last.success, last.solver_status
     assert last.solver_status == "success"
+    assert last.S >= -1e-8
     y = model.state_vector
     assert np.all(np.isfinite(y))
     assert np.all(y >= -1e-12)

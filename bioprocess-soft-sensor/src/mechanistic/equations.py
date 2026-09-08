@@ -48,10 +48,11 @@ def instantaneous_rates(
     enable_product: bool = True,
 ) -> dict[str, float]:
     """Mechanistic rates at the current state (not IndPenSim internals)."""
-    X = float(y[IDX_X])
-    S = float(y[IDX_S])
+    X = max(float(y[IDX_X]), 0.0)
+    S_raw = float(y[IDX_S])
+    S = max(S_raw, 0.0)
     V = _volume(float(y[IDX_V]), params)
-    P = float(y[IDX_P])
+    P = max(float(y[IDX_P]), 0.0)
     Sf = params.S_f if S_f is None else float(S_f)
     F = float(F)
     mu = specific_growth_rate(S, DO, params)
@@ -61,7 +62,9 @@ def instantaneous_rates(
     dilution_X = dilution * X
     feed_contrib = (F * Sf) / V
     consumption = (mu / params.Y_xs) * X if params.Y_xs != 0.0 else 0.0
-    maintenance = params.m_s * X
+    # Substrate-limited maintenance so S cannot be driven negative at depletion.
+    maint_lim = S / (params.K_s + S) if (params.K_s + S) != 0.0 else 0.0
+    maintenance = params.m_s * X * maint_lim
     dilution_S = dilution * S
     product_formation = (params.alpha * mu + params.beta) * X if enable_product else 0.0
     dilution_P = dilution * P if enable_product else 0.0

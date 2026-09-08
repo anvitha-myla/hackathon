@@ -47,7 +47,7 @@ stability:
   max_S: 1.0e6
   max_P: 1.0e6
   max_V: 1.0e6
-  negative_tol: 1.0e-12
+  negative_tol: 1.0e-8 # numerical overshoot; larger negatives are flagged
 
 # Live step() must not accept these keys (anti-leakage).
 forbidden_live_keys:
