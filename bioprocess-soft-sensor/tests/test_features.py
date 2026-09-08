@@ -52,7 +52,7 @@ def _mini_batch(n: int = 25, batch_id: int = 1) -> pd.DataFrame:
             T_COL: np.full(n, 298.15),
             PH_COL: 6.5 + 0.01 * np.sin(t),
             FG_COL: np.full(n, 60000.0),
-            FS_COL: np.linspace(8.0, 80.0, n),
+            FS_COL: 8.0 + 40.0 * t,
             RPM_COL: np.full(n, 100.0),
             V_COL: 58000.0 + 2.0 * np.arange(n),
             O2_COL: 20.5 - 0.02 * np.arange(n),
