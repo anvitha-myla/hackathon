@@ -24,7 +24,11 @@ Agent rules: [`AGENTS.md`](AGENTS.md) and [`.cursor/rules/00-master-spec.mdc`](.
 | UI | Four Streamlit tabs |
 | Processing | Causal (no future leakage) |
 
-This commit is **Prompt 0 only**: packages, configs, specs, and import smoke tests. Residual training, NN-only training, hybrid inference, OOD, evaluation, stress tests, Streamlit tab logic, and the IndPenSim loader are **not** implemented yet.
+Prompt 0: packages, configs, specs, and import smoke tests.
+
+Prompt 2: reproducible **60/20/20 batch_id split** (`src/data/split.py`, `configs/split.yaml`, leakage tests). Seed `42`. Manifest path `data/splits/manifest.json`. No model training.
+
+Residual training, NN-only training, hybrid inference, OOD, evaluation, stress tests, and Streamlit tab logic are **not** implemented yet.
 
 ## Layout
 
