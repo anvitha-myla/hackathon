@@ -93,11 +93,11 @@ Implemented reduced-order Monod / Luedeking-Piret sequential model (`solve_ivp` 
 ## Prompt 8 — sequential hybrid inference
 
 - Added `src/inference/pipeline.py`, `state.py`, `result.py` (plus `trust.py` hook and `components.py` adapters).
-- Live equation: `X_hybrid = X_mechanistic + beta_trust * delta_X_pred` with `beta_trust = 1.0` placeholder.
-- Mahalanobis OOD is **not** implemented here. `PlaceholderTrustHook` / injected `trust_hook` is the Prompt 9 insertion point.
+- Live equation: `X_hybrid = X_mechanistic + beta_trust * delta_X_pred` with `beta_trust = 1.0` until a fitted OOD hook is injected.
+- Does not reimplement Mahalanobis. `trust_hook` / `MahalanobisTrustHook` wraps Prompt 9 `MahalanobisOOD` when fitted.
 - Reference biomass is stripped before cleaning/features/mechanistic/residual; evaluation may attach it after `step()`.
 - Sequential API: `step(observation)` one timestamp; `run_sequential` only iterates `step` (no prefetch).
-- Wires to `ReducedMechanisticModel` and residual artifacts when present; otherwise causal/hold/zero stubs so tests run before Prompts 3–4 finish.
+- Wires to causal `clean_series`, `FeatureEngine` (history through t only), `ReducedMechanisticModel`, and residual artifacts when present; otherwise hold/zero stubs.
 
 ## Prompt 12 — computational monitoring
 

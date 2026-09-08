@@ -223,6 +223,11 @@ def _sensor_cols(df: pd.DataFrame, sensor_columns: Sequence[str] | None) -> list
     return [c for c in cols if c in df.columns]
 
 
+def _mutable_numeric(df: pd.DataFrame, column: str) -> np.ndarray:
+    """Writable float copy; pandas to_numpy() may return a read-only view."""
+    return np.array(pd.to_numeric(df[column], errors="coerce").to_numpy(), dtype=float, copy=True)
+
+
 def _window(n: int, start_frac: float, duration_frac: float) -> slice:
     start = int(max(0, min(n - 1, round(start_frac * n))))
     length = max(1, int(round(duration_frac * n)))
@@ -240,7 +245,7 @@ def apply_random_noise(
     out = copy_frame(df)
     rng = rng or _rng(None)
     for col in _sensor_cols(out, sensor_columns):
-        values = pd.to_numeric(out[col], errors="coerce").to_numpy(dtype=float)
+        values = _mutable_numeric(out, col)
         scale = np.nanstd(values)
         if not np.isfinite(scale) or scale == 0.0:
             scale = max(abs(float(np.nanmean(values))), 1.0) * 0.05
@@ -267,7 +272,7 @@ def apply_spikes(
     idx = rng.choice(n, size=n_spikes, replace=False)
     for i in idx:
         col = cols[int(rng.integers(0, len(cols)))]
-        values = pd.to_numeric(out[col], errors="coerce").to_numpy(dtype=float)
+        values = _mutable_numeric(out, col)
         scale = np.nanstd(values)
         if not np.isfinite(scale) or scale == 0.0:
             scale = 1.0
@@ -341,7 +346,7 @@ def apply_sensor_drift(
         return out
     ramp = np.linspace(0.0, 1.0, n)
     for col in _sensor_cols(out, sensor_columns):
-        values = pd.to_numeric(out[col], errors="coerce").to_numpy(dtype=float)
+        values = _mutable_numeric(out, col)
         scale = np.nanstd(values)
         if not np.isfinite(scale) or scale == 0.0:
             scale = 1.0
@@ -360,7 +365,7 @@ def apply_distribution_shift(
     out = copy_frame(df)
     rng = rng or _rng(None)
     for col in _sensor_cols(out, sensor_columns):
-        values = pd.to_numeric(out[col], errors="coerce").to_numpy(dtype=float)
+        values = _mutable_numeric(out, col)
         scale = np.nanstd(values)
         if not np.isfinite(scale) or scale == 0.0:
             scale = 1.0
@@ -383,7 +388,7 @@ def apply_feed_interruption(
     if feed_column not in out.columns:
         return out
     sl = _window(len(out), start_frac, duration_frac)
-    values = pd.to_numeric(out[feed_column], errors="coerce").to_numpy(dtype=float)
+    values = _mutable_numeric(out, feed_column)
     values[sl] = 0.0
     out[feed_column] = values
     return out
@@ -402,13 +407,13 @@ def apply_temperature_disturbance(
         return out
     n = len(out)
     sl = _window(n, start_frac, duration_frac)
-    values = pd.to_numeric(out[temperature_column], errors="coerce").to_numpy(dtype=float)
+    values = _mutable_numeric(out, temperature_column)
     width = max(sl.stop - sl.start, 1)
     ramp = np.sin(np.linspace(0.0, np.pi, width))
     values[sl] = values[sl] + float(delta_C) * ramp
     out[temperature_column] = values
     if "T_jacket" in out.columns:
-        jacket = pd.to_numeric(out["T_jacket"], errors="coerce").to_numpy(dtype=float)
+        jacket = _mutable_numeric(out, "T_jacket")
         jacket[sl] = jacket[sl] + 0.4 * float(delta_C) * ramp
         out["T_jacket"] = jacket
     return out
