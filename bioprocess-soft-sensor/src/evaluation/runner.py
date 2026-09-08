@@ -38,7 +38,8 @@ FIT_ID_KEYS = (
     "validation_batch_ids",
 )
 
-SKIP_NAMES = {".gitkeep", ".gitignore"}
+SKIP_NAMES = {".gitkeep", ".gitignore", "README.md", "README.txt"}
+DATA_TABLE_SUFFIXES = {".csv", ".xlsx", ".xls", ".parquet", ".mat"}
 
 
 def _inference_engine_status(project_root: Path) -> str:
@@ -56,6 +57,8 @@ def _inference_engine_status(project_root: Path) -> str:
 
 class TestSplitLeakageError(RuntimeError):
     """Raised when test batch_ids leaked into train/scaler/OOD artifacts."""
+
+    __test__ = False
 
 
 @dataclass
@@ -232,8 +235,11 @@ def _data_files(directory: Path) -> list[Path]:
         return []
     out: list[Path] = []
     for path in directory.rglob("*"):
-        if path.is_file() and path.name not in SKIP_NAMES:
-            out.append(path)
+        if not path.is_file() or path.name in SKIP_NAMES:
+            continue
+        if path.suffix.lower() not in DATA_TABLE_SUFFIXES:
+            continue
+        out.append(path)
     return out
 
 

@@ -114,6 +114,16 @@ def test_runner_refuses_ood_fit_leak_and_test_split_used_flag(tmp_path: Path) ->
         )
 
 
+def test_readme_only_raw_dir_is_not_indpensim(tmp_path: Path) -> None:
+    from src.evaluation.runner import indpensim_on_disk
+
+    (tmp_path / "data" / "raw").mkdir(parents=True)
+    (tmp_path / "data" / "raw" / "README.md").write_text("place files here\n", encoding="utf-8")
+    (tmp_path / "data" / "processed").mkdir(parents=True)
+    info = indpensim_on_disk(tmp_path)
+    assert info["present"] is False
+
+
 def test_run_final_test_skips_without_indpensim(tmp_path: Path) -> None:
     _write_split(tmp_path, test=list(range(81, 101)), train=list(range(1, 61)))
     (tmp_path / "data" / "raw").mkdir(parents=True)
