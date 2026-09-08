@@ -1,0 +1,6 @@
+---
+description: Always read the locked research spec before changing this project
+alwaysApply: true
+---
+
+Read `docs/00_MASTER_SPEC.md` first, then the relevant numbered spec under `docs/`. Inspect existing code. Do not overwrite working implementations. Do not silently change architecture (biomass-only target, IndPenSim 60/20/20 batch split, causal pipeline, reduced-order physics, residual MLP 64-32-16-ReLU, Mahalanobis `beta_trust`, four-tab UI). Record architecture changes in `docs/14_CHANGELOG.md`. Explain conflicts instead of inventing a new design.

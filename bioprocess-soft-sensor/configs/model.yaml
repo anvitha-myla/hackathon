@@ -1,0 +1,52 @@
+# See docs/06_NN_SPEC.md — residual MLP (Prompt 7). Do not train on the test split.
+framework: pytorch
+architecture: mlp
+hidden: [64, 32, 16]
+activation: relu
+n_networks: 1
+phase_specific: false
+primary_target: biomass
+residual_output: delta_X
+nn_only_output: biomass
+loss: mse
+optimizer: adam
+learning_rate: 0.001
+batch_size: 256
+max_epochs: 100
+early_stopping_patience: 10
+seed: 42
+columns:
+  batch_id: batch_id
+  x_reference: X_reference
+  x_mechanistic: X_mechanistic
+input_features:
+  - pH
+  - DO
+  - T_vessel
+  - T_jacket
+  - agitation
+  - feed_rate
+  - gas_flow
+  - outlet_CO2
+  - outlet_O2
+  - OUR
+  - CER
+  - RQ
+  - delta_T
+  - d_tau_dt
+  - dDO_dt
+  - cumulative_feed
+  - volume
+  - progress
+  - X_mechanistic
+  - mu_mechanistic
+  - product_rate_mechanistic
+  - phase_growth
+  - phase_production
+  - phase_autolysis
+forbidden:
+  - lstm
+  - transformer
+  - neural_ode
+  - xgboost_as_primary_residual
+  - three_phase_nns

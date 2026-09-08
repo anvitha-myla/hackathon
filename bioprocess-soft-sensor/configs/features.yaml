@@ -1,0 +1,34 @@
+# Causal feature-engineering parameters. Definitions are fixed; values vary in time.
+# See docs/04_FEATURE_ENGINEERING_SPEC.md and docs/00_MASTER_SPEC.md.
+
+lags: [1, 5, 10]
+rolling_windows: [5, 10]
+rq_our_epsilon: 1.0e-8
+default_dt_h: 0.2
+
+air:
+  y_o2_in: 0.2095
+  y_co2_in: 0.0004
+  r_l_bar_mol_k: 0.08314462618
+
+history_signals:
+  - do
+  - ph
+  - temperature
+  - our
+  - cer
+  - sugar_feed_rate
+  - agitator_rpm
+
+# Fixed clock thresholds (hours). Not estimated from the current batch (no DTW / no end-time).
+phase:
+  t_production_h: 80.0
+  t_autolysis_h: 180.0
+  our_scale_mol_h: 50.0
+
+# Live inference must never emit these even if present on the frame.
+hidden_from_live:
+  - biomass
+  - penicillin
+  - substrate
+  - raman

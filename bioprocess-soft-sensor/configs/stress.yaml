@@ -1,0 +1,65 @@
+# See docs/10_STRESS_TEST_SPEC.md
+# Stress testing is separate from demo inference. Never write back to clean test data.
+
+seed: 42
+output_dir: results/stress
+clean_data_write: forbidden
+
+# Observable channels used as the OOD feature vector (no reference biomass).
+sensor_columns:
+  - pH
+  - DO
+  - T_vessel
+  - T_jacket
+  - agitation
+  - feed_rate
+  - gas_flow
+  - CO2
+  - O2
+
+ood:
+  method: mahalanobis
+  kappa: 1.0
+  d_threshold: null  # if null, use train 95th percentile of D_M
+  ridge: 1.0e-6
+  missing_is_ood: true
+
+hybrid:
+  formula: "X_hybrid = X_mechanistic + beta_trust * delta_X"
+  physics_contribution: X_mechanistic
+  ml_contribution: "beta_trust * delta_X"
+
+perturbations:
+  random_noise:
+    relative_std: 0.05
+  spikes:
+    n_spikes: 4
+    magnitude_std: 12.0
+  missing_values:
+    fraction: 0.12
+    consecutive: true
+  impossible_values:
+    pH: 19.0
+    DO: -40.0
+    T_vessel: 220.0
+    feed_rate: -80.0
+  sensor_drift:
+    end_bias_std: 8.0
+  distribution_shift:
+    offset_std: 25.0
+  feed_interruption:
+    start_frac: 0.35
+    duration_frac: 0.25
+  temperature_disturbance:
+    delta_C: 18.0
+    start_frac: 0.2
+    duration_frac: 0.4
+  combined_faults:
+    include:
+      - random_noise
+      - spikes
+      - sensor_drift
+      - feed_interruption
+      - temperature_disturbance
+  severe_ood:
+    offset_std: 80.0

@@ -1,0 +1,8 @@
+# See docs/12_UI_SPEC.md — no Streamlit app logic in Prompt 0
+framework: streamlit
+tabs:
+  - data_cleaning
+  - feature_engineering
+  - live_inference
+  - computational_monitor
+hide_reference_biomass_in_live_tab: true

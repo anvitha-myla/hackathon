@@ -1,0 +1,12 @@
+# Batch-level split. See docs/00_MASTER_SPEC.md and docs/02_DATA_SPEC.md.
+# Same seed + same unique batch_id set → identical membership.
+unit: complete_batch
+train_batches: 60
+validation_batches: 20
+test_batches: 20
+seed: 42
+manifest_path: data/splits/manifest.json
+timestamp_split: forbidden
+# If n_batches != 100: n_train = n*60//100, n_val = n*20//100, remainder → test.
+# Tests pin exact 60/20/20 on a 100-id fixture.
+n_not_100: remainder_to_test
